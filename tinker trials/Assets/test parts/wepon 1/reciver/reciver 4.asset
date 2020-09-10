@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a65b3b2b8d9341e2be15f49ee140c9c, type: 3}
+  m_Name: reciver 4
+  m_EditorClassIdentifier: 
+  barrel_fit: {x: -1, y: 0, z: 0}
+  grip_fit: {x: -1, y: -1, z: 0}
+  scope_fit: {x: -0.5, y: 0.7, z: 0}
+  anumition_fit: {x: -0.2, y: -1, z: 0}
+  suport_fit: {x: 1, y: 0, z: 0}
+  wepon_type: 1
+  fire_rate: 4
+  element: 0
+  spciality: 1
+  fit: 0
+  weight: 5
+  mesh: {fileID: 3392410562106822352, guid: 9b1b9cd58afc17c489fe1198c04f900b, type: 3}
+  mat: {fileID: 5561349426305759274, guid: 9b1b9cd58afc17c489fe1198c04f900b, type: 3}

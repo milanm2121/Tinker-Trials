@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b65ad687bc72418882bd688d87c6341, type: 3}
+  m_Name: primer 1
+  m_EditorClassIdentifier: 
+  manual: 1
+  timer: 0
+  speciality: 1
+  mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  mat: {fileID: 2100000, guid: db59bcc038e2a44499fe1253fe8aec28, type: 2}

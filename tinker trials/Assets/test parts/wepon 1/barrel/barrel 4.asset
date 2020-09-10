@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711e1c8c8fef247368c02d634e41c523, type: 3}
+  m_Name: barrel 4
+  m_EditorClassIdentifier: 
+  lenght: 2
+  material: 0
+  fit: 0
+  specalty: 0
+  weight: 2
+  mesh: {fileID: -1128060530427008967, guid: 42453af5e8432974ea7d3b2ff3c598e1, type: 3}
+  mat: {fileID: 2100000, guid: 5ddde8f1fafd7224cbd292c27a6fc8ee, type: 2}

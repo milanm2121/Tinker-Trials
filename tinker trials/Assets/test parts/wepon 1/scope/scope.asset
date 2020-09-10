@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1dc2eabd90345e8b96b4c7994558e3, type: 3}
+  m_Name: scope
+  m_EditorClassIdentifier: 
+  zoom: 2
+  trhermal: 1
+  speciality: 2
+  weight: 1
+  mesh: {fileID: 3861478300804232965, guid: 200fff40c322ea44a829be897d611722, type: 3}
+  mat: {fileID: 2100000, guid: b1bf45c0eea37457e953cbbabea2cc66, type: 2}

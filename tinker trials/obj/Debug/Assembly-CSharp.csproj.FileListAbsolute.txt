@@ -1,0 +1,696 @@
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Assembly-CSharp.pdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Microsoft.Win32.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/mscorlib.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/netstandard.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/nunit.framework.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.AppContext.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Collections.Concurrent.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Collections.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Collections.NonGeneric.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Collections.Specialized.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ComponentModel.Composition.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ComponentModel.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ComponentModel.EventBasedAsync.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ComponentModel.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ComponentModel.TypeConverter.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Console.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Core.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Data.Common.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Data.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.Contracts.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.Debug.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.FileVersionInfo.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.Process.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.StackTrace.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.TextWriterTraceListener.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.Tools.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.TraceSource.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Diagnostics.Tracing.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Drawing.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Drawing.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Dynamic.Runtime.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Globalization.Calendars.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Globalization.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Globalization.Extensions.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.Compression.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.Compression.FileSystem.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.Compression.ZipFile.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.FileSystem.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.FileSystem.DriveInfo.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.FileSystem.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.FileSystem.Watcher.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.IsolatedStorage.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.MemoryMappedFiles.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.Pipes.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.IO.UnmanagedMemoryStream.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Linq.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Linq.Expressions.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Linq.Parallel.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Linq.Queryable.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.Http.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.NameResolution.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.NetworkInformation.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.Ping.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.Requests.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.Security.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.Sockets.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.WebHeaderCollection.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.WebSockets.Client.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Net.WebSockets.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Numerics.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Numerics.Vectors.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ObjectModel.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Reflection.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Reflection.Extensions.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Reflection.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Resources.Reader.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Resources.ResourceManager.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Resources.Writer.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.CompilerServices.VisualC.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Extensions.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Handles.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.InteropServices.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.InteropServices.RuntimeInformation.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.InteropServices.WindowsRuntime.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Numerics.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Serialization.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Serialization.Formatters.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Serialization.Json.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Serialization.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Runtime.Serialization.Xml.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.Claims.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.Cryptography.Algorithms.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.Cryptography.Csp.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.Cryptography.Encoding.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.Cryptography.Primitives.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.Cryptography.X509Certificates.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.Principal.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Security.SecureString.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ServiceModel.Web.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Text.Encoding.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Text.Encoding.Extensions.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Text.RegularExpressions.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Threading.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Threading.Overlapped.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Threading.Tasks.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Threading.Tasks.Parallel.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Threading.Thread.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Threading.ThreadPool.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Threading.Timer.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Transactions.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.ValueTuple.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Web.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Windows.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.Linq.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.ReaderWriter.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.Serialization.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.XDocument.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.XmlDocument.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.XmlSerializer.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.XPath.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/System.Xml.XPath.XDocument.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.DataPrivacy.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.Editor.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.StandardEvents.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.Tracker.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.CollabProxy.Editor.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Locator.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.PackageManagerUI.Editor.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.TextMeshPro.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.TextMeshPro.Editor.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEditor.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AccessibilityModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AIModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AnimationModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ARModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AssetBundleModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AudioModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.BaselibModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClothModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClusterInputModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClusterRendererModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.CoreModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.CrashReportingModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.DirectorModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.FileSystemHttpModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GameCenterModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GridModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.HotReloadModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ImageConversionModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.IMGUIModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.InputModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.JSONSerializeModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.LocalizationModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ParticleSystemModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.PerformanceReportingModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Physics2DModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.PhysicsModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ProfilerModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ScreenCaptureModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SharedInternalsModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpatialTracking.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpriteMaskModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpriteShapeModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.StreamingModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.StyleSheetsModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SubstanceModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TerrainModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TerrainPhysicsModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TestRunner.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TextCoreModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TextRenderingModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TilemapModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Timeline.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TimelineModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TLSModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UIElementsModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UIModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UmbraModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UNETModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityAnalyticsModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityConnectModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityTestProtocolModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestAssetBundleModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestAudioModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestTextureModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestWWWModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VehiclesModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VFXModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VideoModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VRModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.WindModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.XRModule.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Cecil.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.DataContract.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/ExCSS.Unity.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Legacy.NRefactory.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.IvyParser.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Cecil.Pdb.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Cecil.Mdb.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEditor.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEditor.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.TextMeshPro.Editor.pdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.PackageManagerUI.Editor.pdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.CollabProxy.Editor.pdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.TextMeshPro.pdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.DataPrivacy.pdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AIModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AIModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ARModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ARModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AccessibilityModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AccessibilityModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AnimationModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AnimationModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AssetBundleModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AssetBundleModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AudioModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.AudioModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.BaselibModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.BaselibModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClothModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClothModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClusterInputModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClusterInputModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClusterRendererModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ClusterRendererModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.CoreModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.CoreModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.CrashReportingModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.CrashReportingModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.DirectorModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.DirectorModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.FileSystemHttpModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.FileSystemHttpModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GameCenterModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GameCenterModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GridModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GridModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.HotReloadModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.HotReloadModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.IMGUIModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.IMGUIModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ImageConversionModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ImageConversionModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.InputModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.InputModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.JSONSerializeModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.JSONSerializeModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.LocalizationModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.LocalizationModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ParticleSystemModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ParticleSystemModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.PerformanceReportingModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.PerformanceReportingModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.PhysicsModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.PhysicsModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Physics2DModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Physics2DModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ProfilerModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ProfilerModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ScreenCaptureModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.ScreenCaptureModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SharedInternalsModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SharedInternalsModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpriteMaskModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpriteMaskModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpriteShapeModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpriteShapeModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.StreamingModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.StreamingModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.StyleSheetsModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.StyleSheetsModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SubstanceModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SubstanceModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TLSModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TLSModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TerrainModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TerrainModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TerrainPhysicsModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TerrainPhysicsModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TextCoreModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TextCoreModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TextRenderingModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TextRenderingModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TilemapModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TilemapModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TimelineModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TimelineModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UIModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UIModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UIElementsModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UIElementsModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UNETModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UNETModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UmbraModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UmbraModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityAnalyticsModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityAnalyticsModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityConnectModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityConnectModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityTestProtocolModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityTestProtocolModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestAssetBundleModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestAssetBundleModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestAudioModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestAudioModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestTextureModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestTextureModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestWWWModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UnityWebRequestWWWModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VFXModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VFXModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VRModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VRModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VehiclesModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VehiclesModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VideoModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.VideoModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.WindModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.WindModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.XRModule.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.XRModule.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Locator.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UI.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.UI.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TestRunner.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.TestRunner.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/nunit.framework.pdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/nunit.framework.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Timeline.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Timeline.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Networking.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.Networking.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpatialTracking.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/UnityEngine.SpatialTracking.xml
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.Tracker.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.Editor.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.Analytics.StandardEvents.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/Temp/bin/Debug/Unity.IvyParser.dll.mdb
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/obj/Debug/Assembly-CSharp.csproj.CopyComplete
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/obj/Debug/Assembly-CSharp.dll
+/Users/milan.manji/Desktop/my stuff/unity/tinker trials/obj/Debug/Assembly-CSharp.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\com.unity.multiplayer-hlapi.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\com.unity.multiplayer-hlapi.Runtime.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\com.unity.multiplayer-weaver.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\mscorlib.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\netstandard.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.AppContext.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Collections.Concurrent.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Collections.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Collections.NonGeneric.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Collections.Specialized.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ComponentModel.Composition.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ComponentModel.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Console.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Core.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Data.Common.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Data.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.Contracts.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.Debug.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.Process.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.Tools.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Drawing.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Dynamic.Runtime.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Globalization.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.Compression.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.Compression.FileSystem.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.FileSystem.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.IsolatedStorage.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.Pipes.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Linq.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Linq.Expressions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Linq.Parallel.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Linq.Queryable.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.Http.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.NameResolution.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.NetworkInformation.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.Ping.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.Requests.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.Security.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.Sockets.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.WebSockets.Client.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Net.WebSockets.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Numerics.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ObjectModel.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Reflection.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Reflection.Extensions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Reflection.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Resources.Reader.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Resources.ResourceManager.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Resources.Writer.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Handles.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Numerics.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Serialization.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.Claims.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.Principal.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Security.SecureString.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ServiceModel.Web.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Text.Encoding.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Text.RegularExpressions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Threading.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Threading.Tasks.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Threading.Thread.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Threading.ThreadPool.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Threading.Timer.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Transactions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.ValueTuple.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Web.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Windows.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.Linq.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.Serialization.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.XDocument.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.XmlSerializer.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.XPath.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.2D.Sprite.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.2D.Tilemap.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Analytics.DataPrivacy.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Analytics.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Analytics.StandardEvents.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Analytics.Tracker.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.CollabProxy.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Rider.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.TextMeshPro.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.TextMeshPro.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Timeline.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Timeline.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.VSCode.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.SpatialTracking.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.XR.LegacyInputHelpers.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AccessibilityModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AIModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AndroidJNIModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AnimationModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ARModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AssetBundleModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AudioModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ClothModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ClusterInputModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ClusterRendererModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.CoreModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.CrashReportingModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.DirectorModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.DSPGraphModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.GameCenterModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.GridModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.HotReloadModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ImageConversionModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.IMGUIModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.InputLegacyModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.InputModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.JSONSerializeModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.LocalizationModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ParticleSystemModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.PerformanceReportingModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.Physics2DModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.PhysicsModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ProfilerModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SharedInternalsModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SpriteMaskModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SpriteShapeModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.StreamingModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SubstanceModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TerrainModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TerrainPhysicsModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TextCoreModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TextRenderingModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TilemapModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TLSModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UIElementsModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UIModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UmbraModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UNETModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityAnalyticsModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityConnectModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityTestProtocolModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestAudioModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestTextureModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VehiclesModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VFXModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VideoModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VRModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.WindModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.XR.LegacyInputHelpers.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.XRModule.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Cecil.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Legacy.NRefactory.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\ExCSS.Unity.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Timeline.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\com.unity.multiplayer-hlapi.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.VSCode.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.TextMeshPro.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UI.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Timeline.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\com.unity.multiplayer-weaver.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.XR.LegacyInputHelpers.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Rider.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.2D.Sprite.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.2D.Tilemap.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.SpatialTracking.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SpatialTracking.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.TextMeshPro.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Analytics.DataPrivacy.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.XR.LegacyInputHelpers.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEditor.UI.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\com.unity.multiplayer-hlapi.Runtime.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AIModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ARModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AccessibilityModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AndroidJNIModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AnimationModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AssetBundleModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.AudioModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ClothModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ClusterInputModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ClusterRendererModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.CoreModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.CrashReportingModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.DSPGraphModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.DirectorModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.GameCenterModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.GridModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.HotReloadModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.IMGUIModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ImageConversionModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.InputModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.InputLegacyModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.JSONSerializeModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.LocalizationModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ParticleSystemModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.PerformanceReportingModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.PhysicsModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.Physics2DModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ProfilerModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SharedInternalsModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SpriteMaskModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SpriteShapeModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.StreamingModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.SubstanceModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TLSModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TerrainModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TerrainPhysicsModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TextCoreModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TextRenderingModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.TilemapModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UIModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UIElementsModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UNETModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UmbraModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityAnalyticsModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityConnectModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityTestProtocolModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestAudioModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestTextureModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.UnityWebRequestWWWModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VFXModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VRModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VehiclesModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.VideoModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.WindModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\UnityEngine.XRModule.xml
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\obj\Debug\Assembly-CSharp.csproj.CopyComplete
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\obj\Debug\Assembly-CSharp.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\obj\Debug\Assembly-CSharp.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Burst.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Burst.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Burst.Unsafe.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Collections.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.BuildUtils.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.Hybrid.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.Properties.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.StaticTypeRegistry.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Jobs.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Jobs.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.Extensions.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.Extensions.Hybrid.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Properties.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Rendering.Hybrid.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Scenes.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Scenes.Hybrid.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Transforms.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Transforms.Editor.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Transforms.Hybrid.dll
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Burst.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.Properties.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Jobs.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Jobs.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.StaticTypeRegistry.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Burst.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Collections.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Scenes.Hybrid.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Scenes.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.Extensions.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.Extensions.Hybrid.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Rendering.Hybrid.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.BuildUtils.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.Hybrid.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Properties.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Entities.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Transforms.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Transforms.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Mathematics.Editor.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Transforms.Hybrid.pdb
+C:\Users\relle\Documents\GitHub\Tinker-Test\tinker trials\Temp\bin\Debug\Unity.Burst.Unsafe.xml

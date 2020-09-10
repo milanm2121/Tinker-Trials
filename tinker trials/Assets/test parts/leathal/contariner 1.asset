@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97acdff3b847f40fa98e53a595d5443f, type: 3}
+  m_Name: contariner 1
+  m_EditorClassIdentifier: 
+  type: 3
+  weight: 3
+  sticky: 1
+  speciality: 2
+  mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  mat: {fileID: 2100000, guid: 7dfc81de4f8d44123a2be803016d4ffd, type: 2}
