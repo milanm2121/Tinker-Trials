@@ -248,8 +248,16 @@ public class wepon_body_game : MonoBehaviour
         RaycastHit col;
         Physics.Raycast(barrel.transform.position, velosity.normalized, out col, int.MaxValue);
         lazer.SetPosition(0, barrel.transform.position);
-        lazer.SetPosition(1, col.point);
-        lazer.startWidth=0.1f;
+        if (col.collider != null)
+        {
+            lazer.SetPosition(1, col.point);
+        }
+        else
+        {
+            lazer.SetPosition(1, barrel.transform.position + (velosity.normalized * 100));
+        }
+
+            lazer.startWidth = 0.1f;
         lazer.endWidth = 0.1f;
         if (col.rigidbody != null)
         {

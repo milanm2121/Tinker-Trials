@@ -39,7 +39,7 @@ public class projectilemovement : ComponentSystem
                     }
 
 
-                    predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity/10 *projectile.REf.range;
+                    predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity;
                     projectile.Predict_hit = true;
                 }
                 else if(predictedPath.collider != null)
