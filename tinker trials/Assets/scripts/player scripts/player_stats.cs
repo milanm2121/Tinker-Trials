@@ -200,7 +200,7 @@ public class player_stats : MonoBehaviour
         armour = AG.deffence / 10;
         weight = AG.weight + WBG.weight;
         //calculating avrage speed
-        PM.speed = (PM.speed / weight) * 6;
+        PM.speed = PM.speed - (weight/10);
         PM.initalSpeed = PM.speed;
         loaded = true;
     }

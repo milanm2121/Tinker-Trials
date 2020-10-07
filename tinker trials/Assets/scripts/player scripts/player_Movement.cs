@@ -25,7 +25,7 @@ public class player_Movement : MonoBehaviour
     Vector3 right;
 
     //for the AI to interact with the movement script
-    public bool AIForward;
+    bool AIForward;
     bool AIBack;
     bool AILeft;
     bool AIRight;

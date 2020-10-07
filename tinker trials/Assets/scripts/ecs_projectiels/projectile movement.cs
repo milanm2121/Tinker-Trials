@@ -26,6 +26,7 @@ public class projectilemovement : ComponentSystem
             {
                 RaycastHit predictedPath;
                 Physics.Raycast(translation.Value, projectile.velosity, out predictedPath, projectile.velosity.magnitude * Time.deltaTime);
+
                 if (predictedPath.collider != null && predictedPath.collider.gameObject.GetComponent<Rigidbody>()!=null)
                 {
                     if (predictedPath.collider.gameObject.GetComponent<player_stats>())
@@ -38,7 +39,7 @@ public class projectilemovement : ComponentSystem
                     }
 
 
-                    predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity/100 *projectile.REf.damage;
+                    predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity/10 *projectile.REf.range;
                     projectile.Predict_hit = true;
                 }
                 else if(predictedPath.collider != null)

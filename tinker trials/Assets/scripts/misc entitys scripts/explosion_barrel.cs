@@ -35,7 +35,7 @@ public class explosion_barrel : MonoBehaviour
             Physics.Raycast(transform.position, offset, out hit);
             if (hit.collider == col[i] && col[i].GetComponent<Rigidbody>() != null)
             {
-                col[i].attachedRigidbody.velocity += 10 * (new Vector3(1, 1, 1) - (offset / offset.magnitude));
+                col[i].attachedRigidbody.velocity += 10 * (offset / offset.magnitude);
                 if (col[i].GetComponent<player_stats>() != null)
                 {
                     col[i].GetComponent<player_stats>().damage_player(damage * 100, new Vector2Int(element, 0));
