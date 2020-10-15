@@ -584,9 +584,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 067e0400
-      m_LastClickedID: 294406
-      m_ExpandedIDs: 0879ffff3a79ffffb279ffffda7cfffff47cffff327dffff0885ffff4086ffff8087fffff887ffffe691ffff9894ffff9a98ffffcc98ffff4499ffff7aa5fffffadeffff66e4ffffbee4ffff94ecffff6c6d0000f66e00004e6f00000281000084810000708f0000129100008c920000d8920000be6d0400f0750400
+      m_SelectedIDs: 0a070200
+      m_LastClickedID: 0
+      m_ExpandedIDs: 08c6fcffa2d3fcff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -681,9 +681,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.21743011, y: -0.55363, z: 0.15250762, w: 0.7892778}
   m_Size:
-    m_Target: 4.202383
+    m_Target: 60.973442
     speed: 2
-    m_Value: 4.202383
+    m_Value: 60.973442
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -758,10 +758,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 119}
-    m_SelectedIDs: 16550000
-    m_LastClickedID: 21782
-    m_ExpandedIDs: 00000000084e0000404f0000a8500000c4500000f65200004e5300003e540000325600004459000064590000005a0000625a0000e05d00007c600000da62000082630000e46300007a9c00007c9c000000ca9a3b
+    scrollPos: {x: 0, y: 3}
+    m_SelectedIDs: 9e050200
+    m_LastClickedID: 132510
+    m_ExpandedIDs: 00000000469d0000a00202001c0302002e030200d204020066050200e2050200f206020018070200a6070200f00702007e0a0200d80b0200040d02008e0d0200da0d0200fe4002000041020000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -789,7 +789,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000084e0000404f0000a8500000c45000004e5300003e540000325600004459000064590000005a0000625a0000e05d00007c600000da62000082630000e46300007a9c00007c9c0000
+    m_ExpandedIDs: 00000000469d0000a00202001c0302002e030200d204020066050200e2050200f206020018070200a6070200f00702007e0a0200d80b0200040d02008e0d0200da0d0200fe40020000410200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -833,7 +833,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
