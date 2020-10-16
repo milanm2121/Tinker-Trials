@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/main menu.unity
+    path: Assets/Scenes/important sceans ans scean assets/main menu.unity
     guid: c05fef1674a7b4d6eb1cb844eb5e1d58
   - enabled: 1
-    path: Assets/Scenes/gameplay_test.unity
+    path: Assets/Scenes/test sceans/gameplay_test.unity
     guid: 6729b54f68bdd434998390f627bae496
   - enabled: 1
-    path: Assets/Scenes/workshop.unity
+    path: Assets/Scenes/important sceans ans scean assets/workshop.unity
     guid: a001d6e8c46c041e9869ea1dc38550fb
   - enabled: 1
     path: Assets/Scenes/Maps/Map 1.unity
@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Maps/Map 2.unity
     guid: 11dfd655fc60d304dac013f2d1d7e8e6
   - enabled: 1
-    path: Assets/Scenes/Settings.unity
+    path: Assets/Scenes/important sceans ans scean assets/Settings.unity
     guid: e8a9359dbf12f4b8b919ac0c065b31d2
   m_configObjects: {}
