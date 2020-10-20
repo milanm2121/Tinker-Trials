@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 
 public class multiplayer_launcher : MonoBehaviourPunCallbacks
 {
@@ -12,6 +13,12 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     [Tooltip("The maximum number of players per room. When a room is full, it can't be joined by new players, and so new room will be created")]
     [SerializeField]
     private byte maxPlayersPerRoom = 4;
+
+    bool Looking_for_game=false;
+
+    [SerializeField]
+    public TMP_Text party_room_ID;
+    int PartyID;
 
     private void Awake()
     {
@@ -24,10 +31,18 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.GameVersion = "1";
         }
-
         
 
     }
+
+    private void Update()
+    {
+
+        party_room_ID.text = "Party ID: " + PartyID.ToString();
+       
+    }
+
+
     public void ConnectToMasterServer()
     {
         if (PhotonNetwork.IsConnected)
@@ -54,6 +69,7 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.Disconnect();
             Debug.Log("disconecting...");
+            PartyID = 0;
         }
         else
         {
@@ -70,19 +86,70 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
 
     public void Join_Room()
     {
+        Looking_for_game = true;
         PhotonNetwork.JoinRandomRoom();
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         base.OnJoinRandomFailed(returnCode, message);
-        Debug.Log("could not join room, creating room");
-        create_room();
+        if (Looking_for_game == true)
+        {
+            Debug.Log("could not join room, creating room");
+            create_room();
+        }
+        else
+        {
+            Debug.Log("could not join room, because it dosent exist or is full");
+        }
+    }
+
+    public void host_Party()
+    {
+        if (PhotonNetwork.CurrentRoom == null)
+        {
+            Looking_for_game = false;
+            int Party_room_ID_num = Random.Range(0, 10000);
+            RoomOptions roomops = new RoomOptions { IsVisible = false, IsOpen = true, MaxPlayers = maxPlayersPerRoom };
+
+
+            PhotonNetwork.CreateRoom("Party: " + Party_room_ID_num, roomops);
+            party_room_ID.text = "Party: " + Party_room_ID_num;
+            PartyID = Party_room_ID_num;
+        }
+        else
+        {
+            Debug.Log("you are already in a party");
+        }
+
+    }
+
+    public void join_party()
+    {
+        PhotonNetwork.JoinRoom("Party: " + PartyID);
+        Debug.Log("joining party");
+    }
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        base.OnJoinRoomFailed(returnCode, message);
+        Debug.Log("failed to join party" + ", Party: " + PartyID);
+    }
+
+    public override void OnJoinedRoom()
+    {
+        base.OnJoinedRoom();
+        Debug.Log("joined party");
+    }
+
+    public void Set_serch_Party_ID(string value)
+    {
+        PartyID = int.Parse(value);
     }
 
     public void create_room()
     {
-        int roomnum = Random.Range(0, 1000);
+        int roomnum = Random.Range(0, 10000);
         RoomOptions roomops = new RoomOptions { IsVisible = true, IsOpen = true, MaxPlayers = maxPlayersPerRoom };
 
 
@@ -92,7 +159,14 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         base.OnCreateRoomFailed(returnCode, message);
-        create_room();
+        if (Looking_for_game == true)
+        {
+            create_room();
+        }
+        else
+        {
+            host_Party();
+        }
         
     }
 
@@ -100,6 +174,7 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     {
         base.OnCreatedRoom();
         Debug.Log("Created Room");
-        PhotonNetwork.LoadLevel("multiplayer_lobby");
+        if(Looking_for_game==true)
+            PhotonNetwork.LoadLevel("multiplayer_lobby");
     }
 }
