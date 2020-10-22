@@ -49,6 +49,7 @@ public class multiplayer_lobby_maneger : MonoBehaviourPunCallbacks
         {
             playerPannel.SetActive(false);
         }
+
     }
     public override void OnLeftRoom()
     {

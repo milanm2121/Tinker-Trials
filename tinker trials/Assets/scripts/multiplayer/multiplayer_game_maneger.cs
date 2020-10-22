@@ -18,6 +18,7 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks
     public void LeaveLobby()
     {
         PhotonNetwork.LeaveRoom();
+        Destroy(multiplayer_party_maneger.MPM.gameObject);
     }
 
     private void Update()

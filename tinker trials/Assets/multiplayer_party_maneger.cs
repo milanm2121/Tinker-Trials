@@ -16,18 +16,19 @@ public class multiplayer_party_maneger : MonoBehaviourPunCallbacks
 
     public PhotonView PV;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        PV = GetComponent<PhotonView>();
         if (MPM == null)
-        {
+        {        
             DontDestroyOnLoad(this);
+
             MPM = this;
         }
         else
         {
-            Destroy(this);
+            Destroy(MPM.gameObject);
         }
+        PV = GetComponent<PhotonView>();
     }
 
     public void callPartyMachmaking()
@@ -38,6 +39,7 @@ public class multiplayer_party_maneger : MonoBehaviourPunCallbacks
     void StartPartyMachmaking()
     {
         MPM.started_machmaking = true;
+        PhotonNetwork.LeaveRoom();
     }
 
     public override void OnJoinedRoom()
@@ -74,7 +76,30 @@ public class multiplayer_party_maneger : MonoBehaviourPunCallbacks
             }
 
         }
+        else
+        {
+            if(PhotonNetwork.CurrentRoom==null && PhotonNetwork.IsConnectedAndReady && partyhost != PhotonNetwork.NetworkingClient.UserId)
+                PhotonNetwork.FindFriends(new string[1] { MPM.partyhost });
+        }
     }
 
-    
+    public override void OnFriendListUpdate(List<FriendInfo> friendList)
+    {
+        base.OnFriendListUpdate(friendList);
+        if (partyhost != PhotonNetwork.NetworkingClient.UserId)
+        {
+            for (int i = 0; i < friendList.Count; i++)
+            {
+                FriendInfo friend = friendList[i];
+                Debug.LogFormat("{0}", friend);
+                if (friend.UserId == partyhost && friend.Room != null && PhotonNetwork.IsConnectedAndReady)
+                {
+                    started_machmaking = false;
+                    PhotonNetwork.JoinRoom(friend.Room);
+
+                }
+            }
+        }
+    }
+
 }

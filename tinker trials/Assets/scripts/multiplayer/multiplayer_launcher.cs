@@ -9,7 +9,6 @@ using Photon.Chat;
 
 public class multiplayer_launcher : MonoBehaviourPunCallbacks
 {
-    ChatClient chatClient;
 
     public static multiplayer_launcher instance;
     public string gamevirsion;
@@ -246,13 +245,13 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     }
     IEnumerator leave_with_party()
     {
-        ChatAppSettings CAS = new ChatAppSettings();
-        chatClient.ConnectUsingSettings(CAS);
-        chatClient.AddFriends(new string[1] { multiplayer_party_maneger.MPM.partyhost});
 
+   
         multiplayer_party_maneger.MPM.started_machmaking = true;
         multiplayer_party_maneger.MPM.callPartyMachmaking();
-        PhotonNetwork.LeaveRoom();
+        yield return new WaitUntil(() => PhotonNetwork.IsConnectedAndReady == true);
+        if(PhotonNetwork.CurrentRoom!=null)
+            PhotonNetwork.LeaveRoom();
         yield return new WaitUntil(() => PhotonNetwork.IsConnectedAndReady == true);
         PhotonNetwork.JoinRandomRoom(null, maxPlayersPerRoom, MatchmakingMode.FillRoom, null, null, Get_userIDs());
        

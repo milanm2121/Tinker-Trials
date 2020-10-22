@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 344}
   m_MaxSize: {x: 12008, y: 8044}
   vertical: 0
-  controlID: 57
+  controlID: 39
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 344}
   m_MaxSize: {x: 8006, y: 8044}
   vertical: 1
-  controlID: 58
+  controlID: 40
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 59
+  controlID: 41
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,8 +212,8 @@ MonoBehaviour:
     y: 0
     width: 322
     height: 636
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -410,9 +410,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 00690000
-      m_LastClickedID: 26880
-      m_ExpandedIDs: e6faffff
+      m_SelectedIDs: 12560500
+      m_LastClickedID: 349714
+      m_ExpandedIDs: 8456ffffbe56ffffea59ffff105affff2e5affff4e5bffff705cffff5c5dffff9466ffffb266ffffea73ffff2274ffff4a77ffff6c77ffff8677ffffa278ffffc079ffffa87affffdc83fffff683ffffd290ffffec90ffff069bffff909fffff5caeffff94aeffffbcb1ffffdeb1fffff8b1ffff14b3ffff32b4ffff1ab5ffff4ebeffff68beffff16c2ffff4ec2ffff76c5ffff98c5ffffb2c5ffffcec6ffffecc7ffffd4c8ffff08d2ffff22d2ffffaad4ffffe2d4ffff0ad8ffff2cd8ffff46d8ffff62d9ffff80daffff68dbffff9ce4ffffb6e4ffff46e7ffff7ee7ffffa6eaffffc8eaffffe2eafffffeebffff1cedffff04eeffff38f7ffff54f7ffff6efbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -574,20 +574,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/multiplayer
+    - Assets/scripts/multiplayer
   m_ViewMode: 1
   m_StartGridSize: 87
   m_LastFolders:
-  - Assets/Scenes/multiplayer
+  - Assets/scripts/multiplayer
   m_LastFoldersGridSize: 87
   m_LastProjectPath: C:\Users\Milan\Documents\GitHub\Tinker-Trials\tinker trials
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 112}
-    m_SelectedIDs: 1e450000
-    m_LastClickedID: 17694
-    m_ExpandedIDs: 00000000de3e0000a840000098420000b84200005e460000ba480000d24900004c4b0000084c0000a84f0000005000002251000034580000245c0000246000009a6100006c6200005e660000246a0000266a000000ca9a3b
+    scrollPos: {x: 0, y: 124}
+    m_SelectedIDs: 2e410000
+    m_LastClickedID: 16686
+    m_ExpandedIDs: 00000000644000002e4200001e4400003e440000e4470000404a0000584b0000d24c00008e4d00002e51000086510000a8520000ba590000aa5d0000aa61000020630000f2630000e4670000c06c0000c26c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -615,7 +615,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de3e0000a840000098420000b84200005e460000ba4800004c4b0000084c0000a84f0000005000002251000034580000245c0000246000009a6100006c6200005e660000246a0000266a0000
+    m_ExpandedIDs: 00000000644000002e4200001e4400003e440000e4470000404a0000d24c00008e4d00002e51000086510000a8520000ba590000aa5d0000aa61000020630000f2630000e4670000c06c0000c26c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -640,9 +640,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 58350000
+    m_LastClickedInstanceID: 13656
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006a34000000000000043c00003a6e0000984d0000503900009e6f00000cb00000de6e0000cafb0100befb0100c6fb0100c4fb0100ccfb0100b8fb0100b0fb0100bafb0100c8fb0100a6fb0100acfb0100aefb0100a8fb0100b4fb0100c2fb0100c0fb0100bcfb0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
