@@ -40,6 +40,7 @@ ScriptsOnlyBuild:
     - multiplayer_launcher
     - multiplayer_lobby_maneger
     - multiplayer_menue_maneger
+    - multiplayer_party_maneger
     - object_health
     - pathfinding
     - payload
@@ -261,11 +262,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14832}
     - Class: 114
-      Script: {instanceID: 15382}
+      Script: {instanceID: 15384}
     - Class: 114
-      Script: {instanceID: 15546}
+      Script: {instanceID: 15548}
     - Class: 114
-      Script: {instanceID: 27652}
+      Script: {instanceID: 29272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -424,11 +425,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14832}
     - Class: 114
-      Script: {instanceID: 15382}
+      Script: {instanceID: 15384}
     - Class: 114
-      Script: {instanceID: 15546}
+      Script: {instanceID: 15548}
     - Class: 114
-      Script: {instanceID: 27652}
+      Script: {instanceID: 29272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -503,11 +504,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14724}
     - Class: 114
-      Script: {instanceID: 15864}
+      Script: {instanceID: 15866}
     - Class: 114
-      Script: {instanceID: 15938}
+      Script: {instanceID: 15940}
     - Class: 114
-      Script: {instanceID: 27652}
+      Script: {instanceID: 29272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -640,15 +641,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15238}
     - Class: 114
-      Script: {instanceID: 15650}
+      Script: {instanceID: 15652}
     - Class: 114
-      Script: {instanceID: 15864}
+      Script: {instanceID: 15866}
     - Class: 114
-      Script: {instanceID: 15926}
+      Script: {instanceID: 15928}
     - Class: 114
-      Script: {instanceID: 15938}
+      Script: {instanceID: 15940}
     - Class: 114
-      Script: {instanceID: 27652}
+      Script: {instanceID: 29272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -831,13 +832,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14832}
     - Class: 114
-      Script: {instanceID: 15390}
+      Script: {instanceID: 15392}
     - Class: 114
-      Script: {instanceID: 15738}
+      Script: {instanceID: 15740}
     - Class: 114
-      Script: {instanceID: 15852}
+      Script: {instanceID: 15854}
     - Class: 114
-      Script: {instanceID: 15864}
+      Script: {instanceID: 15866}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -896,7 +897,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14724}
     - Class: 114
-      Script: {instanceID: 15864}
+      Script: {instanceID: 15866}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -959,7 +960,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14724}
     - Class: 114
-      Script: {instanceID: 15864}
+      Script: {instanceID: 15278}
+    - Class: 114
+      Script: {instanceID: 15652}
+    - Class: 114
+      Script: {instanceID: 15866}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1088,13 +1093,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14724}
     - Class: 114
-      Script: {instanceID: 15382}
+      Script: {instanceID: 15384}
     - Class: 114
-      Script: {instanceID: 15546}
+      Script: {instanceID: 15548}
     - Class: 114
-      Script: {instanceID: 15582}
+      Script: {instanceID: 15584}
     - Class: 114
-      Script: {instanceID: 15864}
+      Script: {instanceID: 15866}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1418,7 +1423,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 1dec787d0dc916dd8570ce5beaf52f89
+      Hash: 2a22eb5d131e45974cccd756f2cf1a78
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multiplayer_lobby_maneger
@@ -1700,7 +1705,7 @@ ScriptsOnlyBuild:
     className: TimedObjectActivator
   - hash:
       serializedVersion: 2
-      Hash: 054426b92471addd5d563fadabd67dca
+      Hash: ee2080ecf06fb6e4a693158d49ff1b8b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multiplayer_menue_maneger
@@ -3288,6 +3293,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 5c04b4acb1eabd61a17832a367a03baf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: multiplayer_party_maneger
   - hash:
       serializedVersion: 2
       Hash: e6ae40841db498b6e673877ac45ad208

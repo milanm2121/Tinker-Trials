@@ -10,7 +10,7 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
     public GameObject connect_button;
     public GameObject usernameinputfeild;
     public multiplayer_launcher ML;
-
+    public GameObject join_game_button;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,16 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
             }
             connect_button.SetActive(false);
             usernameinputfeild.SetActive(false);
+           
+            
+            if (PhotonNetwork.IsMasterClient == false && PhotonNetwork.CurrentRoom != null)
+            {
+                join_game_button.SetActive(false);
+            }
+            else
+            {
+                join_game_button.SetActive(true);
+            }
         }
         else
         {
@@ -39,6 +49,8 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
             connect_button.SetActive(true);
             usernameinputfeild.SetActive(true);
         }
+
+       
     }
 
     

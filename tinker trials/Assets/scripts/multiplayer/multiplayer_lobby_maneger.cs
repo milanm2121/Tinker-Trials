@@ -8,7 +8,7 @@ using TMPro;
 public class multiplayer_lobby_maneger : MonoBehaviourPunCallbacks
 {
     public TMP_Text[] playerIDs;
-
+    public GameObject playerPannel;
 
     public override void OnJoinedRoom()
     {
@@ -28,7 +28,7 @@ public class multiplayer_lobby_maneger : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.CurrentRoom != null)
         {
-
+            playerPannel.SetActive(true);
 
             for (int i = 0; PhotonNetwork.CurrentRoom.PlayerCount > i; i++)
             {
@@ -44,6 +44,10 @@ public class multiplayer_lobby_maneger : MonoBehaviourPunCallbacks
                 playerIDs[i].text = "finding players...";
             }
          
+        }
+        else
+        {
+            playerPannel.SetActive(false);
         }
     }
     public override void OnLeftRoom()
