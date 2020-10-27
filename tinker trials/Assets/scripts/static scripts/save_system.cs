@@ -11,6 +11,8 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using static player_inventory;
 using System;
+using ExitGames.Client.Photon;
+using System.Xml;
 
 // the player invetory is stored in the files as list of "saved objects" a serilised scriptable object objects and is loaded in to them as well
 //invetery and classes are saved in 2 diffrent files
@@ -136,7 +138,7 @@ public class save_system
 
     }
 
-    public static byte[] SeriliseClasses(List<saved_object> invetoty)
+    public static byte[] SeriliseClasses(object invetoty)
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
