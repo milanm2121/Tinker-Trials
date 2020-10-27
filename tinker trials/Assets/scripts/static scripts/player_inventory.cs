@@ -61,7 +61,7 @@ public static class player_inventory
 
 
     //loads the classes from a list of saved object
-    public static void load_classes(List<saved_object> savedObject)
+    public static class_class.Class[] load_classes(List<saved_object> savedObject)
     {
         
         class_class.Class[] classes = new class_class.Class[4];
@@ -281,11 +281,12 @@ public static class player_inventory
             }
         
         }
-        static_classes.Class1= classes[0];
-        static_classes.Class2= classes[1];
-        static_classes.Class3= classes[2];
-        static_classes.Class4= classes[3];
+        
+        
 
+
+
+        return classes;
     }
 
 
