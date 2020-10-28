@@ -1415,6 +1415,7 @@ GameObject:
   - component: {fileID: 1640553029}
   - component: {fileID: 1640553028}
   - component: {fileID: 1640553030}
+  - component: {fileID: 1640553031}
   m_Layer: 0
   m_Name: multiplayer_game_maneger
   m_TagString: Untagged
@@ -1435,6 +1436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start_game_button: {fileID: 1285577243}
+  MGM: {fileID: 0}
 --- !u!4 &1640553029
 Transform:
   m_ObjectHideFlags: 0
@@ -1462,6 +1464,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PV: {fileID: 0}
+--- !u!114 &1640553031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640553027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!114 &1672680939 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3162615051095996472, guid: f20ce1263b5af6a4fb93ae4ad625432b,

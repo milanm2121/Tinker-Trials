@@ -720,6 +720,7 @@ MonoBehaviour:
   senstivivtyY: 3
   camera_Pause: 0
   P_ID: {fileID: 559346274}
+  LS: {fileID: 0}
 --- !u!1 &5144385758844150485
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,10 +858,10 @@ GameObject:
   - component: {fileID: 5408144417198252977}
   - component: {fileID: 4551209811371177184}
   - component: {fileID: 6860716460900567068}
-  - component: {fileID: 4860922332554076164}
   - component: {fileID: 559346274}
+  - component: {fileID: 8144482694227510271}
   m_Layer: 0
-  m_Name: player (1)
+  m_Name: player (1) 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b2ac0e3c9064d7ea0f98f2e8fcb536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIForward: 0
   keep_Momentum: 0
   player_feet: {fileID: 969084472239136177}
   playerChest: {fileID: 7441307207590288992}
@@ -985,6 +985,7 @@ MonoBehaviour:
   max_Jump_Limit: 2
   grounded: 0
   PA: {fileID: 0}
+  PS: {fileID: 0}
   P_ID: {fileID: 559346274}
 --- !u!114 &6860716460900567068
 MonoBehaviour:
@@ -1001,6 +1002,7 @@ MonoBehaviour:
   AG: {fileID: 1204844818130598478}
   WBG: {fileID: 1763241996100043265}
   PM: {fileID: 4551209811371177184}
+  healthtext: {fileID: 0}
   PC: {fileID: 0}
   health: 0
   armour: 0
@@ -1016,35 +1018,6 @@ MonoBehaviour:
   dirt2: {fileID: 7441307207805166320}
   dirt3: {fileID: 7441307207189794291}
   dirt4: {fileID: 7441307206732274433}
---- !u!114 &4860922332554076164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925415338185106912}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b13f560dbb64f7b9e03756eb4dcf9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterAnimator: {fileID: 0}
-  grounded: 0
-  jumping: 0
-  running: 0
-  sprinting: 0
-  directionalmovement: {x: 0, y: 0}
-  reloading: 0
-  reloading_percent: 0
-  shooting: 0
-  ForwardAmount: 0
-  m_CurrentForward: 0
-  melee: 0
-  melee_percent: 0
-  throwing_leathal: 0
-  PM: {fileID: 4551209811371177184}
-  WBG: {fileID: 1763241996100043265}
-  IsRunning: 0
 --- !u!114 &559346274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,6 +1033,29 @@ MonoBehaviour:
   ID: 0
   is_player: 1
   team: 0
+--- !u!114 &8144482694227510271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925415338185106912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 0
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6074463487214650951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,3 +2344,4 @@ MonoBehaviour:
   reload_time: 0
   P_ID: {fileID: 559346274}
   AI_shooting: 0
+  ammocount: {fileID: 0}

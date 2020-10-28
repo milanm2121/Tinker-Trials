@@ -6,6 +6,7 @@ using Photon.Realtime;
 
 using TMPro;
 using Photon.Chat;
+using ExitGames.Client.Photon;
 
 public class multiplayer_launcher : MonoBehaviourPunCallbacks
 {
@@ -28,7 +29,17 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     //sets the game virsion
     private void Awake()
     {
-        
+        bool x = PhotonPeer.RegisterType(typeof(List<player_inventory.saved_object>), (byte)'A', save_system.SeriliseClasses, save_system.DeSeriliseClassesPUN);
+
+        if (x == true)
+        {
+            Debug.Log("regestered Type");
+        }
+        else
+        {
+            Debug.Log("cant regester Type");
+        }
+
         PhotonNetwork.AutomaticallySyncScene = true;
         if (gamevirsion != "")
         {

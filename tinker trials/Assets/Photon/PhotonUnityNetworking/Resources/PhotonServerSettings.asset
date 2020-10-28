@@ -41,6 +41,9 @@ MonoBehaviour:
   - StartPartyMachmaking
   - load_classes
   - load_classes_RPC
+  - leaveGame
+  - sort_teams
+  - loadstats
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/multiplayer/multiplayer_lobby.unity
     guid: a2f7ff20056b93f4f811afb910b8d6c9
+  - enabled: 1
+    path: Assets/Scenes/multiplayer/multiplayer_gameplay_test.unity
+    guid: 83e89e7f49bdfad4aad82e7f3116c9cc
   m_configObjects: {}

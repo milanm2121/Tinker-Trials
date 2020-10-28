@@ -8,7 +8,6 @@ using ExitGames.Client.Photon;
 public class player_classes_loader : MonoBehaviourPunCallbacks
 {
     public PhotonView PV;
-
     public struct playerclasses
     {
         public class_class.Class class_1;
@@ -18,16 +17,18 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
 
     }
     [SerializeField]
-    public Dictionary<int, playerclasses> playerClasses;
 
+    public Dictionary<int, playerclasses> playerClasses= new Dictionary<int, playerclasses>();
+
+    private void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    }
+    
+   
+        
     
 
-    public override void OnJoinedRoom()
-    {
-        base.OnJoinedRoom();
-        PV.RPC("load_classes_RPC", RpcTarget.AllBufferedViaServer, player_inventory.Class_TO_Saved_object());
-
-    }
     [PunRPC]
     void load_classes_RPC(List<player_inventory.saved_object> saved_Objects)
     {
@@ -36,20 +37,21 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
 
         playerclasses PlayerClass = new playerclasses
         {
-            class_1 = classes[1],
-            class_2 = classes[2],
-            class_3 = classes[3],
-            class_4 = classes[4]
+            class_1 = classes[0],
+            class_2 = classes[1],
+            class_3 = classes[2],
+            class_4 = classes[3]
         };
-
+        Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber);
         playerClasses.Add(PhotonNetwork.LocalPlayer.ActorNumber, PlayerClass);
+        Debug.Log("loadedclasses");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        PV = GetComponent<PhotonView>();
-        PhotonPeer.RegisterType(typeof(List<player_inventory.saved_object>), (byte)'A', save_system.SeriliseClasses, save_system.DeSeriliseClassesPUN);
+
+        PV.RPC("load_classes_RPC", RpcTarget.AllBufferedViaServer, player_inventory.Class_TO_Saved_object());
     }
 
     // Update is called once per frame

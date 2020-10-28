@@ -16,7 +16,7 @@ public class multiplayer_party_maneger : MonoBehaviourPunCallbacks
 
     public PhotonView PV;
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
         if (MPM == null)
         {        
@@ -28,7 +28,7 @@ public class multiplayer_party_maneger : MonoBehaviourPunCallbacks
         {
             Destroy(MPM.gameObject);
         }
-        PV = GetComponent<PhotonView>();
+        PV = photon_View_intance_maneger.PV;
     }
 
     public void callPartyMachmaking()
