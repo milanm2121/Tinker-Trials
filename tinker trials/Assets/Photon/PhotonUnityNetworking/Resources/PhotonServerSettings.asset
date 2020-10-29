@@ -44,6 +44,7 @@ MonoBehaviour:
   - leaveGame
   - sort_teams
   - loadstats
+  - Sync_Stats
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

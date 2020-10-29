@@ -54,6 +54,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
                 TID.roomID = i;
                 TID.team = 1;
                 TID.teamID =team1_count;
+                TID.name = PhotonNetwork.NickName;
                 team1_count++;
             }
             else
@@ -64,6 +65,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
                 TID.roomID = i;
                 TID.team = 2;
                 TID.teamID = team2_count;
+                TID.name = PhotonNetwork.NickName;
                 team2_count++;
             }
             players_in_game++;

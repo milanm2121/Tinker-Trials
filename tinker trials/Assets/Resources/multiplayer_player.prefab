@@ -797,7 +797,7 @@ MonoBehaviour:
   sensitivityX: 3
   senstivivtyY: 3
   camera_Pause: 0
-  P_ID: {fileID: 559346274}
+  P_ID: {fileID: 0}
   LS: {fileID: 948154518455827444}
 --- !u!114 &948154518455827444
 MonoBehaviour:
@@ -949,9 +949,9 @@ GameObject:
   - component: {fileID: 4551209811371177184}
   - component: {fileID: 6860716460900567068}
   - component: {fileID: 4860922332554076164}
-  - component: {fileID: 559346274}
   - component: {fileID: 5794524462063980818}
   - component: {fileID: 9029709079543834044}
+  - component: {fileID: 8260453897837316788}
   m_Layer: 0
   m_Name: multiplayer_player
   m_TagString: Untagged
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   grounded: 0
   PA: {fileID: 0}
   PS: {fileID: 0}
-  P_ID: {fileID: 559346274}
+  P_ID: {fileID: 0}
 --- !u!114 &6860716460900567068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,21 +1139,6 @@ MonoBehaviour:
   PM: {fileID: 4551209811371177184}
   WBG: {fileID: 1763241996100043265}
   IsRunning: 0
---- !u!114 &559346274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925415338185106912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a284778149514dcba0ac28e5d5e54e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 0
-  is_player: 1
-  team: 0
 --- !u!114 &5794524462063980818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,6 +1177,22 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
+--- !u!114 &8260453897837316788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925415338185106912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce06a38f5cbc9ed408bcf58c7ca13cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+  teamID: 0
+  roomID: 0
+  GPM: {fileID: 0}
 --- !u!1 &6074463487214650951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,7 +2561,7 @@ MonoBehaviour:
   Firetype: 0
   lazer: {fileID: 7441307208420162169}
   reload_time: 0
-  P_ID: {fileID: 559346274}
+  P_ID: {fileID: 0}
   AI_shooting: 0
   ammocount: {fileID: 6327816218122758523}
 --- !u!1 &8640758815992847172

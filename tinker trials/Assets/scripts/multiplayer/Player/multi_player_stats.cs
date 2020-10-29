@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityScript.Macros;
 
 public class multi_player_stats : MonoBehaviourPunCallbacks
 {
@@ -56,8 +57,15 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("loadstats", 1);
 
+        Invoke("loadstats_on_network", 1);
+
+    }
+
+    void loadstats_on_network()
+    {
+        if (photonView.IsMine == true)
+            photonView.RPC("loadstats", RpcTarget.AllBufferedViaServer);
     }
 
     // Update is called once per frame
@@ -85,10 +93,14 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             }
         }
+
         dirt();
 
         if (healthtext != null)
             healthtext.text = "health" + ((int)health).ToString();
+
+        Player player = photonView.Owner;
+        photonView.RPC(Sync_Stats(health, fire_meter, frost_meter, dirt_meter, electrucity_meter, player.NickName),RpcTarget.All);
     }
 
     private void FixedUpdate()
@@ -120,9 +132,11 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
             }
 
 
+
         }
 
     }
+
 
 
     public void damage_player(float damage, Vector2Int element)
@@ -195,9 +209,9 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void loadstats(int roomid)
+    private void loadstats(Player player)
     {
-        if (photonView.IsMine == true)
+        if (photonView.Owner == player)
         {
             PM = GetComponent<player_Movement>();
 
@@ -209,9 +223,20 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
             PM.initalSpeed = PM.speed;
             loaded = true;
         }
-        else
+
+    }
+
+
+    [PunRPC]
+    void Sync_Stats(float Health,float Fire,float Ice,float Earth,float Electricity,string player)
+    {
+        if (photonView.Owner.NickName == player)
         {
-         //   PhotonNetwork.
+            health = Health;
+            fire_meter = Fire;
+            frost_meter = Ice;
+            dirt_meter = Earth;
+            electrucity_meter = Electricity;
         }
     }
 

@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class multiplayer_teamID : MonoBehaviourPunCallbacks
 {
+    public string name;
     public int team;
     public int teamID;
     public int roomID;
