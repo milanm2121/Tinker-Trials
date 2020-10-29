@@ -122,7 +122,6 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -137,7 +136,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/Maps/Map 1.unity:
@@ -268,7 +266,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15548}
     - Class: 114
-      Script: {instanceID: 29352}
+      Script: {instanceID: 28590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -431,7 +429,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15548}
     - Class: 114
-      Script: {instanceID: 29352}
+      Script: {instanceID: 28590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -510,7 +508,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15940}
     - Class: 114
-      Script: {instanceID: 29352}
+      Script: {instanceID: 28590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -651,7 +649,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15940}
     - Class: 114
-      Script: {instanceID: 29352}
+      Script: {instanceID: 28590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1513,6 +1511,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Transforms.Hybrid.dll
     namespaceName: Unity.Transforms
     className: CopyTransformToGameObjectProxy
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: b1f26da3046d8b188758169a9d6b1078

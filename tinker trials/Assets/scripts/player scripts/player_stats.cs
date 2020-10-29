@@ -50,6 +50,7 @@ public class player_stats : MonoBehaviour
     public Image dirt3;
     public Image dirt4;
 
+    public Image health_bar;
 
     // Start is called before the first frame update
     void Start()
@@ -84,9 +85,14 @@ public class player_stats : MonoBehaviour
             }
         }
         dirt();
+        
+        health_bar.fillAmount = health / 100;
 
-        if(healthtext!=null)
-            healthtext.text = "health"+((int)health).ToString();
+        if (healthtext != null)
+        {
+            healthtext.text = "health" + ((int)health).ToString();
+           
+        }
     }
 
     private void FixedUpdate()

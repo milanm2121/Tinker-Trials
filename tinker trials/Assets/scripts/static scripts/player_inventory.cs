@@ -61,7 +61,7 @@ public static class player_inventory
 
 
     //loads the classes from a list of saved object
-    public static void load_classes(List<saved_object> savedObject)
+    public static class_class.Class[] load_classes(List<saved_object> savedObject)
     {
         
         class_class.Class[] classes = new class_class.Class[4];
@@ -281,11 +281,12 @@ public static class player_inventory
             }
         
         }
-        static_classes.Class1= classes[0];
-        static_classes.Class2= classes[1];
-        static_classes.Class3= classes[2];
-        static_classes.Class4= classes[3];
+        
+        
 
+
+
+        return classes;
     }
 
 
@@ -1060,5 +1061,277 @@ public static class player_inventory
         Vector3 x = new Vector3(fit[0], fit[1], fit[2]);
 
         return x;
+    }
+
+
+    public static List<saved_object> Class_TO_Saved_object()
+    {
+
+        List<class_class.Class> classes = new List<class_class.Class>();
+        classes.Add(static_classes.Class1);
+        classes.Add(static_classes.Class2);
+        classes.Add(static_classes.Class3);
+        classes.Add(static_classes.Class4);
+
+        List<saved_object> saved_classes = new List<saved_object>();
+
+        for (int i = 0; 4 > i; i++)
+        {
+            if (classes[i].Wepon.barrel != null)
+            {
+
+                //_______________________________________Barrel
+
+
+
+                saved_object x = new saved_object { type = "barrel" };
+                x.stats = new List<int>();
+                x.weight = classes[i].Wepon.barrel.weight;
+                x.name = classes[i].Wepon.barrel.name;
+                GetStats(x).Add(classes[i].Wepon.barrel.lenght);
+                GetStats(x).Add(classes[i].Wepon.barrel.material);
+                GetStats(x).Add(classes[i].Wepon.barrel.specalty);
+
+                Vector2 MAM = mesh_material_IDs.getIntID(classes[i].Wepon.barrel.mesh, classes[i].Wepon.barrel.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+
+                saved_classes.Add(x);
+
+
+
+                //_______________________________________recever
+
+
+                x = new saved_object { type = "reciver" };
+                x.stats = new List<int>();
+                x.fit = new List<float[]>();
+                x.name = classes[i].Wepon.reciver.name;
+                x.weight = classes[i].Wepon.reciver.weight;
+                //reciver fits
+                //amunition
+                float[] fit = new float[3];
+                fit[0] = classes[i].Wepon.reciver.anumition_fit.x;
+                fit[1] = classes[i].Wepon.reciver.anumition_fit.y;
+                fit[2] = classes[i].Wepon.reciver.anumition_fit.z;
+                x.fit.Add(fit);
+                fit = new float[3];
+                //barrel
+                fit[0] = classes[i].Wepon.reciver.barrel_fit.x;
+                fit[1] = classes[i].Wepon.reciver.barrel_fit.y;
+                fit[2] = classes[i].Wepon.reciver.barrel_fit.z;
+                x.fit.Add(fit);
+                fit = new float[3];
+                //grip
+                fit[0] = classes[i].Wepon.reciver.grip_fit.x;
+                fit[1] = classes[i].Wepon.reciver.grip_fit.y;
+                fit[2] = classes[i].Wepon.reciver.grip_fit.z;
+                x.fit.Add(fit);
+                fit = new float[3];
+                //scope
+                fit[0] = classes[i].Wepon.reciver.scope_fit.x;
+                fit[1] = classes[i].Wepon.reciver.scope_fit.y;
+                fit[2] = classes[i].Wepon.reciver.scope_fit.z;
+                x.fit.Add(fit);
+                fit = new float[3];
+                //support
+                fit[0] = classes[i].Wepon.reciver.suport_fit.x;
+                fit[1] = classes[i].Wepon.reciver.suport_fit.y;
+                fit[2] = classes[i].Wepon.reciver.suport_fit.z;
+                x.fit.Add(fit);
+
+                //stats
+                GetStats(x).Add(classes[i].Wepon.reciver.fire_rate);
+                GetStats(x).Add(classes[i].Wepon.reciver.spciality);
+                GetStats(x).Add(classes[i].Wepon.reciver.element);
+                GetStats(x).Add(classes[i].Wepon.reciver.wepon_type);
+
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Wepon.reciver.mesh, classes[i].Wepon.reciver.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+
+                saved_classes.Add(x);
+
+                //_______________________________________scopes
+
+
+                x = new saved_object { type = "scope" };
+                x.stats = new List<int>();
+                x.name = classes[i].Wepon.scope.name;
+                x.weight = classes[i].Wepon.scope.weight;
+                GetStats(x).Add(classes[i].Wepon.scope.speciality);
+                if (classes[i].Wepon.scope.trhermal == true)
+                {
+                    GetStats(x).Add(1);
+                }
+                else
+                {
+                    GetStats(x).Add(0);
+                }
+                GetStats(x).Add(classes[i].Wepon.scope.zoom);
+
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Wepon.scope.mesh, classes[i].Wepon.scope.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+
+                saved_classes.Add(x);
+
+
+                //____________________________________________________amunition
+
+                x = new saved_object { type = "amunition" };
+                x.stats = new List<int>();
+                x.name = classes[i].Wepon.amunition.name;
+                x.weight = classes[i].Wepon.amunition.weight;
+                GetStats(x).Add(classes[i].Wepon.amunition.blast_radius);
+                GetStats(x).Add(classes[i].Wepon.amunition.element);
+                GetStats(x).Add(classes[i].Wepon.amunition.prjectile);
+                GetStats(x).Add(classes[i].Wepon.amunition.range);
+                GetStats(x).Add(classes[i].Wepon.amunition.rounds);
+                GetStats(x).Add(classes[i].Wepon.amunition.speciality);
+                GetStats(x).Add(classes[i].Wepon.amunition.damage);
+
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Wepon.amunition.mesh, classes[i].Wepon.amunition.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+
+                //____________________________________________________grip
+
+                x = new saved_object { type = "grip" };
+                x.stats = new List<int>();
+                x.name = classes[i].Wepon.grip.name;
+                x.weight = classes[i].Wepon.grip.weight;
+                GetStats(x).Add(classes[i].Wepon.grip.grip_angle);
+                GetStats(x).Add(classes[i].Wepon.grip.speciality);
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Wepon.grip.meshshape, classes[i].Wepon.grip.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+
+                //____________________________________________________support
+
+                x = new saved_object { type = "support" };
+                x.stats = new List<int>();
+                x.name = classes[i].Wepon.suport.name;
+                x.weight = classes[i].Wepon.suport.weight;
+                GetStats(x).Add(classes[i].Wepon.suport.speciality);
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Wepon.suport.mesh, classes[i].Wepon.suport.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+
+                //____________________________________________________headgear
+
+                x = new saved_object { type = "headgear" };
+                x.stats = new List<int>();
+                x.name = classes[i].Armour.headpeice.name;
+                x.weight = classes[i].Armour.headpeice.weight;
+                GetStats(x).Add(classes[i].Armour.headpeice.deffence);
+                GetStats(x).Add(classes[i].Armour.headpeice.speciality);
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Armour.headpeice.mesh, classes[i].Armour.headpeice.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+
+                //____________________________________________________cheastplate
+                x = new saved_object { type = "cheastplate" };
+                x.stats = new List<int>();
+                x.name = classes[i].Armour.chestpeice.name;
+                x.weight = classes[i].Armour.chestpeice.weight;
+                GetStats(x).Add(classes[i].Armour.chestpeice.deffence);
+                GetStats(x).Add(classes[i].Armour.chestpeice.specicality);
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Armour.chestpeice.mesh, classes[i].Armour.chestpeice.material);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+
+                //____________________________________________________boots
+                x = new saved_object { type = "boots" };
+                x.stats = new List<int>();
+                x.name = classes[i].Armour.boots.name;
+                x.weight = classes[i].Armour.boots.weight;
+                GetStats(x).Add(classes[i].Armour.boots.deffence);
+                GetStats(x).Add(classes[i].Armour.boots.speciality);
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Armour.boots.mesh, classes[i].Armour.boots.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+
+
+                //____________________________________________________primer
+
+                x = new saved_object { type = "primer" };
+                x.stats = new List<int>();
+                x.name = classes[i].Lethal.primer.name;
+                if (classes[i].Lethal.primer.manual == true)
+                {
+                    GetStats(x).Add(1);
+                }
+                else
+                {
+                    GetStats(x).Add(0);
+                }
+                GetStats(x).Add(classes[i].Lethal.primer.speciality);
+                GetStats(x).Add(classes[i].Lethal.primer.timer);
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Lethal.primer.mesh, classes[i].Lethal.primer.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+
+                //____________________________________________________payload
+                x = new saved_object { type = "payload" };
+                x.stats = new List<int>();
+                x.name = classes[i].Lethal.payload.name;
+                GetStats(x).Add(classes[i].Lethal.payload.damage);
+                GetStats(x).Add(classes[i].Lethal.payload.element);
+                GetStats(x).Add(classes[i].Lethal.payload.radious);
+                saved_classes.Add(x);
+
+
+                //____________________________________________________container
+
+                x = new saved_object { type = "container" };
+                x.stats = new List<int>();
+                x.name = classes[i].Lethal.container.name;
+                GetStats(x).Add(classes[i].Lethal.container.speciality);
+                if (classes[i].Lethal.container.sticky == true)
+                {
+                    GetStats(x).Add(1);
+                }
+                else
+                {
+                    GetStats(x).Add(0);
+                }
+                GetStats(x).Add(classes[i].Lethal.container.type);
+                GetStats(x).Add(classes[i].Lethal.container.weight);
+
+                MAM = mesh_material_IDs.getIntID(classes[i].Lethal.container.mesh, classes[i].Lethal.container.mat);
+                x.mesh = (int)MAM.x;
+                x.mat = (int)MAM.y;
+
+                saved_classes.Add(x);
+            }
+        }
+        return(saved_classes);
     }
 }
