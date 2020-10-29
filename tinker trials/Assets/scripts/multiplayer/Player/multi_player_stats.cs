@@ -100,7 +100,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
             healthtext.text = "health" + ((int)health).ToString();
 
         Player player = photonView.Owner;
-        photonView.RPC(Sync_Stats(health, fire_meter, frost_meter, dirt_meter, electrucity_meter, player.NickName),RpcTarget.All);
+      //  photonView.RPC(Sync_Stats(health, fire_meter, frost_meter, dirt_meter, electrucity_meter, player.NickName),RpcTarget.All);
     }
 
     private void FixedUpdate()
