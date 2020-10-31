@@ -71,6 +71,11 @@ namespace Photon.Pun
             set { this.prefixField = value; }
         }
 
+        public void RPC(object v, RpcTarget all)
+        {
+            throw new NotImplementedException();
+        }
+
         // this field is serialized by unity. that means it is copied when instantiating a persistent obj into the scene
         [FormerlySerializedAs("prefixBackup")]
         public int prefixField = -1;

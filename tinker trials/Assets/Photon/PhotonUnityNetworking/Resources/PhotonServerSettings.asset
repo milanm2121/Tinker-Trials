@@ -45,6 +45,11 @@ MonoBehaviour:
   - sort_teams
   - loadstats
   - Sync_Stats
+  - syncClass
+  - generate_wepon_calss_component
+  - select_class
+  - shoot
+  - shootBuckshot
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

@@ -28,7 +28,7 @@ public class multiplayer_party_maneger : MonoBehaviourPunCallbacks
         {
             Destroy(MPM.gameObject);
         }
-        PV = photon_View_intance_maneger.PV;
+        PV = GetComponent<PhotonView>();
     }
 
     public void callPartyMachmaking()
