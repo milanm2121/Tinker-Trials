@@ -39,11 +39,11 @@ public class multi_Player_Camera : MonoBehaviour
 
             if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine)
             {
-                camlist[i].gameObject.SetActive(true);
+                camlist[i].enabled=true;
             }
             else
             {
-                camlist[i].gameObject.SetActive(false);
+                camlist[i].enabled=false;
             }
         }
 

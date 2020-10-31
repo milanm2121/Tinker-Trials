@@ -43,6 +43,10 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
         Debug.Log(UserID);
         playerClasses.Add(UserID, PlayerClass);
         Debug.Log("loadedclasses");
+        if (playerClasses.Count > 1)
+        {
+            print(playerClasses.Count);
+        }
     }
 
     // Start is called before the first frame update

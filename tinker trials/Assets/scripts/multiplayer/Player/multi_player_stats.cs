@@ -59,6 +59,12 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     {
         PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
         Invoke("loadstats_on_network", 1);
+        Invoke("Startingclass",0.5f);
+    }
+
+    void Startingclass()
+    {
+        selectClass(PhotonNetwork.LocalPlayer.UserId, 1);
     }
 
     public void selectClass(string UserID, int Class)
@@ -227,7 +233,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         PM.speed = PM.speed - (weight / 10);
         PM.initalSpeed = PM.speed;
         loaded = true;
-        selectClass(PhotonNetwork.LocalPlayer.UserId, 1);
+        
 
 
     }
