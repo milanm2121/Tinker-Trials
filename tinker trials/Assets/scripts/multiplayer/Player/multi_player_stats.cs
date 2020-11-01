@@ -142,9 +142,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
                 electrucity_meter = Mathf.Clamp(electrucity_meter - 5, 1, 110);
 
             }
-
-
-
         }
 
     }
@@ -251,4 +248,5 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
 
     }
 
+    
 }

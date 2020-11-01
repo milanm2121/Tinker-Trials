@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class multi_Player_Camera : MonoBehaviour
+public class multi_Player_Camera : MonoBehaviour,IPunObservable
 {
      GameObject perant;//the player gameobject(player modele)
 
@@ -137,5 +137,20 @@ public class multi_Player_Camera : MonoBehaviour
         cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, x, defaltFOV);
         
     }
-    
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+  
+            stream.SendNext(transform.rotation.eulerAngles);
+        }
+        else if (stream.IsReading)
+        {
+            transform.rotation = Quaternion.Euler((Vector3)stream.ReceiveNext());
+        }
+
+
+       // throw new System.NotImplementedException();
+    }
 }

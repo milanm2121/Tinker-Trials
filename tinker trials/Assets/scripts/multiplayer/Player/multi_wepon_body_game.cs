@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class multi_wepon_body_game : MonoBehaviour
+public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 {
     //used for hipfire and ADS positioning
     public Transform hip;
     public Transform ADS;
+    bool is_ADS;
 
     public GameObject barrel;
     public wepon_barrel barrel_script;
@@ -80,7 +81,6 @@ public class multi_wepon_body_game : MonoBehaviour
     bool reloading = false;
     public float reload_time;
 
-    public bool AI_shooting = false;
 
     public Text ammocount;
 
@@ -156,17 +156,26 @@ public class multi_wepon_body_game : MonoBehaviour
 
             if (PV.IsMine == true)
             {
-
+                //i konw this look pointless but its for syincronisation across the network
                 if (Input.GetMouseButton(1))
                 {
-                    transform.position = Vector3.Lerp(transform.position, ADS.position, 1 / weight);
-                    PC.ADSZoom(scope_script.SO.zoom);
+                    is_ADS = true;
                 }
                 else
                 {
-                    transform.position = Vector3.Lerp(transform.position, hip.position, 1 / weight);
-                    PC.ADSZoom(1);
+                    is_ADS = false;
                 }
+            }
+            if (is_ADS)
+            {
+                transform.position = Vector3.Lerp(transform.position, ADS.position, 1 / weight);
+                PC.ADSZoom(scope_script.SO.zoom);
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(transform.position, hip.position, 1 / weight);
+                PC.ADSZoom(1);
+            
             }
 
             //laser stuff
@@ -196,6 +205,8 @@ public class multi_wepon_body_game : MonoBehaviour
     {
         // sets the firereate of the wepon
         firetick += Time.deltaTime;
+        object[] x = { barrel.transform.position, velosity };
+
         if (reloading == false)
         {
             if (Input.GetMouseButton(0) && PV.IsMine == true)
@@ -213,13 +224,13 @@ public class multi_wepon_body_game : MonoBehaviour
 
                     if (Firetype == firetype.projectile)
                     {
-                        PV.RPC("shoot", RpcTarget.MasterClient);
+                        PV.RPC("shoot", RpcTarget.All,x);
                         recoil = new Vector2(Random.Range(-1 + XStability, 1 - XStability), Random.Range(0, 1 - Ystability)).normalized * proREF.damage / 10;
                     }
 
                     if (Firetype == firetype.buckshot)
                     {
-                        shootBuckshot(); 
+                        PV.RPC("shootBuckshot", RpcTarget.All,x); 
                         recoil = new Vector2(Random.Range(-XStability, XStability), Random.Range(0, Ystability)).normalized * proREF.damage;
                     }
 
@@ -227,7 +238,7 @@ public class multi_wepon_body_game : MonoBehaviour
                     {
 
                         if (Firetype == firetype.lazer)
-                            shootLazer();
+                            PV.RPC("shootLazer",RpcTarget.All,x);
                     }
 
                     firetick = 0;
@@ -241,7 +252,8 @@ public class multi_wepon_body_game : MonoBehaviour
 
                 if (Firetype == firetype.gravity && amunition_script.AO.speciality == 2)
                 {
-                    vortex();
+                    PV.RPC("vortex", RpcTarget.All);
+                    
                 }
             }
             else
@@ -251,7 +263,7 @@ public class multi_wepon_body_game : MonoBehaviour
                 if (Firetype == firetype.gravity && blastPrime == true)
                 {
                     blastPrime = false;
-                    blast();
+                    PV.RPC("blast",RpcTarget.All);
                 }
             }
         }
@@ -260,15 +272,15 @@ public class multi_wepon_body_game : MonoBehaviour
 
     // adds recoil penalty for shooting
     [PunRPC]
-    void shoot()
+    void shoot(Vector3 position, Vector3 velosity)
     {
 
-        EM.shootProjectile(transform.position, velosity, proREF, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
+        EM.shootProjectile(position, velosity, proREF, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
 
     }
 
     [PunRPC]
-    void shootBuckshot()
+    void shootBuckshot(Vector3 position, Vector3 velosity)
     {
 
         for (int i = 0; 12 > i; i++)
@@ -276,16 +288,16 @@ public class multi_wepon_body_game : MonoBehaviour
 
             Vector3 randomvelosity = velosity + new Vector3(Random.Range(-7, 8), Random.Range(-7, 8), Random.Range(-7, 8));
 
-            EM.shootProjectile(transform.position, randomvelosity, proREF, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
+            EM.shootProjectile(position, randomvelosity, proREF, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
 
         }
 
     }
-
-    void shootLazer()
+    [PunRPC]
+    void shootLazer(Vector3 position, Vector3 velosity)
     {
         RaycastHit col;
-        Physics.Raycast(barrel.transform.position, velosity.normalized, out col, int.MaxValue);
+        Physics.Raycast(position, velosity.normalized, out col, int.MaxValue);
         lazer.SetPosition(0, barrel.transform.position);
         if (col.collider != null)
         {
@@ -293,7 +305,7 @@ public class multi_wepon_body_game : MonoBehaviour
         }
         else
         {
-            lazer.SetPosition(1, barrel.transform.position + (velosity.normalized * 100));
+            lazer.SetPosition(1, position + (velosity.normalized * 100));
         }
 
         lazer.startWidth = 0.1f;
@@ -315,7 +327,7 @@ public class multi_wepon_body_game : MonoBehaviour
             }
         }
     }
-
+    [PunRPC]
     void vortex()
     {
         if (PhotonNetwork.IsMasterClient)
@@ -335,7 +347,7 @@ public class multi_wepon_body_game : MonoBehaviour
             blastPrime = true;
         }
     }
-
+    [PunRPC]
     void blast()
     {
         if (PhotonNetwork.IsMasterClient)
@@ -456,5 +468,20 @@ public class multi_wepon_body_game : MonoBehaviour
         yield return new WaitForSeconds(reload_time);
         ammoCount = amunition_script.AO.rounds;
         reloading = false;
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(is_ADS);
+        }
+        else if(stream.IsReading)
+        {
+            is_ADS = (bool)stream.ReceiveNext();
+        }
+
+
+        //throw new System.NotImplementedException();
     }
 }

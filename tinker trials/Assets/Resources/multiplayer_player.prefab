@@ -2607,7 +2607,6 @@ MonoBehaviour:
   Firetype: 0
   lazer: {fileID: 7441307208420162169}
   reload_time: 0
-  AI_shooting: 0
   ammocount: {fileID: 6327816218122758523}
   PCL: {fileID: 0}
   PV: {fileID: 1707440950756747871}
