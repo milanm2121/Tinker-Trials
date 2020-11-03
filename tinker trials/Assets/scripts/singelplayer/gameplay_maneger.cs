@@ -28,10 +28,9 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
         MGM = GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>();
 
 
-        if (PhotonNetwork.IsMasterClient)
-        {
-            PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer);
-        }
+
+        PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer, true);
+        
     }
 
     // Update is called once per frame
@@ -41,41 +40,44 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void sort_teams()
+    public void sort_teams( bool initalise)
     {
-        
-        for(int i=players_in_game; PhotonNetwork.PlayerList.Length>i; i++)
-        {
-            if (team)
+
+        for (int i = players_in_game; PhotonNetwork.PlayerList.Length > i; i++)
+        {//need to fix
+            if (PhotonNetwork.PlayerList[i].IsLocal ||initalise==true)
             {
-                GameObject player = PhotonNetwork.Instantiate(this.Player_prefab.name, Vector3.zero + new Vector3(0, 5, 0), Quaternion.identity);
-                multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
-                TID.GPM = this;
-                TID.roomID = i;
-                TID.team = 1;
-                TID.teamID =team1_count;
-                TID.name = PhotonNetwork.NickName;
-                team1_count++;
+                if (team)
+                {
+                    GameObject player = PhotonNetwork.Instantiate(this.Player_prefab.name, Vector3.zero + new Vector3(0, 5, 0), Quaternion.identity);
+                    multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
+                    TID.GPM = this;
+                    TID.roomID = i;
+                    TID.team = 1;
+                    TID.teamID = team1_count;
+                    TID.name = PhotonNetwork.NickName;
+                    team1_count++;
+                }
+                else
+                {
+                    GameObject player = PhotonNetwork.Instantiate(this.Player_prefab.name, Vector3.zero + new Vector3(0, 5, 0), Quaternion.identity);
+                    multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
+                    TID.GPM = this;
+                    TID.roomID = i;
+                    TID.team = 2;
+                    TID.teamID = team2_count;
+                    TID.name = PhotonNetwork.NickName;
+                    team2_count++;
+                }
+                players_in_game++;
             }
-            else
-            {
-                GameObject player = PhotonNetwork.Instantiate(this.Player_prefab.name, Vector3.zero + new Vector3(0, 5, 0), Quaternion.identity);
-                multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
-                TID.GPM = this;
-                TID.roomID = i;
-                TID.team = 2;
-                TID.teamID = team2_count;
-                TID.name = PhotonNetwork.NickName;
-                team2_count++;
-            }
-            players_in_game++;
         }
+
     }
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer);
+        //PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer);
     }
-
 
 }

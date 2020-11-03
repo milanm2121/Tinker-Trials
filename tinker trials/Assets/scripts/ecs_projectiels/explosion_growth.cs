@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Rendering;
+using Photon.Pun;
 
 public class explosion_growth : ComponentSystem
 {
@@ -26,7 +27,7 @@ public class explosion_growth : ComponentSystem
                     Vector3 offset = (gameobject.transform.position - (Vector3)translation.Value);
                     Physics.Raycast(translation.Value, offset, out hit);
 
-                    if (hit.collider != null && hit.collider.gameObject == gameobject && gameobject.GetComponent<Rigidbody>() != null)
+                    if (hit.collider != null && hit.collider.gameObject == gameobject && gameobject.GetComponent<Rigidbody>() != null && (PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)))
                     {
 
                         if (gameobject.GetComponent<player_stats>())

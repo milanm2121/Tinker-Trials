@@ -518,7 +518,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1354,7 +1354,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1416,6 +1416,7 @@ GameObject:
   - component: {fileID: 1640553028}
   - component: {fileID: 1640553030}
   - component: {fileID: 1640553031}
+  - component: {fileID: 1640553032}
   m_Layer: 0
   m_Name: multiplayer_game_maneger
   m_TagString: Untagged
@@ -1437,6 +1438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start_game_button: {fileID: 1285577243}
   MGM: {fileID: 0}
+  LS: {fileID: 1640553032}
 --- !u!4 &1640553029
 Transform:
   m_ObjectHideFlags: 0
@@ -1486,6 +1488,18 @@ MonoBehaviour:
   viewIdField: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1640553032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640553027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a22cc78fee44c64b2d737af8a5ff27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1672680939 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3162615051095996472, guid: f20ce1263b5af6a4fb93ae4ad625432b,

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class explosion_barrel : MonoBehaviour
 {
@@ -27,26 +28,28 @@ public class explosion_barrel : MonoBehaviour
     void explode()
     {
         Collider[] col = Physics.OverlapSphere(transform.position, radious * 2);
-        for (int i = 0; col.Length > i; i++)
+        if ((PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)))
         {
-            RaycastHit hit;
-
-            Vector3 offset = (col[i].transform.position - transform.position);
-            Physics.Raycast(transform.position, offset, out hit);
-            if (hit.collider == col[i] && col[i].GetComponent<Rigidbody>() != null)
+            for (int i = 0; col.Length > i; i++)
             {
-                col[i].attachedRigidbody.velocity += 10 * (offset / offset.magnitude);
-                if (col[i].GetComponent<player_stats>() != null)
+                RaycastHit hit;
+
+                Vector3 offset = (col[i].transform.position - transform.position);
+                Physics.Raycast(transform.position, offset, out hit);
+                if (hit.collider == col[i] && col[i].GetComponent<Rigidbody>() != null)
                 {
-                    col[i].GetComponent<player_stats>().damage_player(damage * 100, new Vector2Int(element, 0));
-                }
-                if (col[i].gameObject.GetComponent<object_health>() != null)
-                {
-                    col[i].gameObject.GetComponent<object_health>().damage_object(damage * 10);
+                    col[i].attachedRigidbody.velocity += 10 * (offset / offset.magnitude);
+                    if (col[i].GetComponent<player_stats>() != null)
+                    {
+                        col[i].GetComponent<player_stats>().damage_player(damage * 100, new Vector2Int(element, 0));
+                    }
+                    if (col[i].gameObject.GetComponent<object_health>() != null)
+                    {
+                        col[i].gameObject.GetComponent<object_health>().damage_object(damage * 10);
+                    }
                 }
             }
         }
-
         GameObject x = Instantiate(live_refrence_maneger.Expolsion, transform.position, Quaternion.identity);
         x.GetComponent<explosion_groth>().raidious = radious * 2;
 

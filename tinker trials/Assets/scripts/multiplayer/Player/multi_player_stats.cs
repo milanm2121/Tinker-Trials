@@ -8,13 +8,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityScript.Macros;
 
 public class multi_player_stats : MonoBehaviourPunCallbacks
 {
     //used to gateherThe layers weight and applay a movement penalty to the player speed
-    public armor_game AG;
-    public wepon_body_game WBG;
+    public multi_armour_game AG;
+    public multi_wepon_body_game WBG;
     public player_Movement PM;
 
     public Text healthtext;
@@ -53,13 +52,25 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     public Image dirt3;
     public Image dirt4;
 
+    public player_classes_loader PCL;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
         Invoke("loadstats_on_network", 1);
+        Invoke("Startingclass",0.5f);
+    }
 
+    void Startingclass()
+    {
+        selectClass(PhotonNetwork.LocalPlayer.UserId, 1);
+    }
+
+    public void selectClass(string UserID, int Class)
+    {
+        AG.loadClass(UserID,Class);
+        WBG.loadClass(UserID, Class);
     }
 
     void loadstats_on_network()
@@ -99,13 +110,14 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         if (healthtext != null)
             healthtext.text = "health" + ((int)health).ToString();
 
-        Player player = photonView.Owner;
-      //  photonView.RPC(Sync_Stats(health, fire_meter, frost_meter, dirt_meter, electrucity_meter, player.NickName),RpcTarget.All);
+        object[] x = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter };
+        if (PhotonNetwork.IsMasterClient)
+            photonView.RPC("Sync_Stats",RpcTarget.All, x );
     }
 
     private void FixedUpdate()
     {
-        if (loaded == true)
+        if (loaded == true && PhotonNetwork.IsMasterClient)
         {
             element_tick += Time.deltaTime;
             while (element_tick > 1)
@@ -130,9 +142,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
                 electrucity_meter = Mathf.Clamp(electrucity_meter - 5, 1, 110);
 
             }
-
-
-
         }
 
     }
@@ -209,35 +218,35 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void loadstats(Player player)
+    private void loadstats()
     {
-        if (photonView.Owner == player)
-        {
-            PM = GetComponent<player_Movement>();
 
-            //calculates the weight and defence at the start of a game
-            armour = AG.deffence / 10;
-            weight = AG.weight + WBG.weight;
-            //calculating avrage speed
-            PM.speed = PM.speed - (weight / 10);
-            PM.initalSpeed = PM.speed;
-            loaded = true;
-        }
+        PM = GetComponent<player_Movement>();
+
+        //calculates the weight and defence at the start of a game
+        armour = AG.deffence / 10;
+        weight = AG.weight + WBG.weight;
+        //calculating avrage speed
+        PM.speed = PM.speed - (weight / 10);
+        PM.initalSpeed = PM.speed;
+        loaded = true;
+        
+
 
     }
 
 
     [PunRPC]
-    void Sync_Stats(float Health,float Fire,float Ice,float Earth,float Electricity,string player)
+    private void Sync_Stats(float Health, float Fire, float Ice, float Earth, float Electricity)
     {
-        if (photonView.Owner.NickName == player)
-        {
-            health = Health;
-            fire_meter = Fire;
-            frost_meter = Ice;
-            dirt_meter = Earth;
-            electrucity_meter = Electricity;
-        }
+
+        health = Health;
+        fire_meter = Fire;
+        frost_meter = Ice;
+        dirt_meter = Earth;
+        electrucity_meter = Electricity;
+
     }
 
+    
 }

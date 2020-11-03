@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
+using Photon.Pun;
 public class projectilemovement : ComponentSystem
 {
     protected override void OnUpdate()
@@ -29,17 +30,18 @@ public class projectilemovement : ComponentSystem
 
                 if (predictedPath.collider != null && predictedPath.collider.gameObject.GetComponent<Rigidbody>()!=null)
                 {
-                    if (predictedPath.collider.gameObject.GetComponent<player_stats>())
+                    if (predictedPath.collider.gameObject.GetComponent<player_stats>() && ( PhotonNetwork.InRoom==false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)))
                     {
                         predictedPath.collider.gameObject.GetComponent<player_stats>().damage_player(projectile.REf.damage,projectile.REf.element);
                     }
-                    if (predictedPath.collider.gameObject.GetComponent<object_health>() != null)
+                    if (predictedPath.collider.gameObject.GetComponent<object_health>() != null && (PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)))
                     {
                         predictedPath.collider.gameObject.GetComponent<object_health>().damage_object(projectile.REf.damage);
                     }
 
+                    if(PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient))
+                        predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity;
 
-                    predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity;
                     projectile.Predict_hit = true;
                 }
                 else if(predictedPath.collider != null)
