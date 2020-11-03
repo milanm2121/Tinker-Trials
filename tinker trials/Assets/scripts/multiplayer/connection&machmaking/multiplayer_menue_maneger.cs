@@ -8,6 +8,7 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
 {
     public GameObject[] active_on_online_buttons;
     public GameObject connect_button;
+    public GameObject main_menu_button;
     public GameObject usernameinputfeild;
     public multiplayer_launcher ML;
     public GameObject join_game_button;
@@ -28,6 +29,7 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
                 active_on_online_buttons[i].SetActive(true);
             }
             connect_button.SetActive(false);
+            main_menu_button.SetActive(false);
             usernameinputfeild.SetActive(false);
            
             
@@ -35,7 +37,7 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
             {
                 join_game_button.SetActive(false);
             }
-            else
+            else 
             {
                 join_game_button.SetActive(true);
             }
@@ -47,6 +49,7 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
                 active_on_online_buttons[i].SetActive(false);
             }
             connect_button.SetActive(true);
+            main_menu_button.SetActive(true);
             usernameinputfeild.SetActive(true);
         }
 

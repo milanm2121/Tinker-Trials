@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class multi_Player_Camera : MonoBehaviour,IPunObservable
 {
@@ -28,7 +29,6 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
     public PhotonView perant_PV;
 
 
-    public load_scean LS;
 
 
     // Start is called before the first frame update
@@ -112,7 +112,9 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
 
         if(camera_Pause==true && Input.GetKeyDown(KeyCode.R))
         {
-            LS.loadScean("main menu");
+            if (GameObject.Find("multiplayer_game_maneger"))
+                GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>().LeaveLobby();
+            
         }
 
         //used to relock the mouse to effect the game
@@ -151,6 +153,5 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
         }
 
 
-       // throw new System.NotImplementedException();
     }
 }

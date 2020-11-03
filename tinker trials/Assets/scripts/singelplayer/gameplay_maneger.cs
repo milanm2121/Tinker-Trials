@@ -28,10 +28,9 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
         MGM = GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>();
 
 
-        if (PhotonNetwork.IsMasterClient)
-        {
-            PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer);
-        }
+
+        PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer, true);
+        
     }
 
     // Update is called once per frame
@@ -41,12 +40,12 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void sort_teams()
+    public void sort_teams( bool initalise)
     {
 
         for (int i = players_in_game; PhotonNetwork.PlayerList.Length > i; i++)
-        {
-            if (PhotonNetwork.PlayerList[i].IsLocal)
+        {//need to fix
+            if (PhotonNetwork.PlayerList[i].IsLocal ||initalise==true)
             {
                 if (team)
                 {
@@ -73,12 +72,12 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
                 players_in_game++;
             }
         }
+
     }
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer);
+        //PV.RPC("sort_teams", RpcTarget.AllBufferedViaServer);
     }
-
 
 }

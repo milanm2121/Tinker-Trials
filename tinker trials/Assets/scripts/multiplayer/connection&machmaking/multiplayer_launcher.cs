@@ -7,6 +7,7 @@ using Photon.Realtime;
 using TMPro;
 using Photon.Chat;
 using ExitGames.Client.Photon;
+using UnityEngine.SceneManagement;
 
 public class multiplayer_launcher : MonoBehaviourPunCallbacks
 {
@@ -40,7 +41,7 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
             Debug.Log("cant regester Type");
         }
 
-        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.AutomaticallySyncScene = false;
         if (gamevirsion != "")
         {
             PhotonNetwork.GameVersion = gamevirsion;
@@ -49,7 +50,6 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.GameVersion = "1";
         }
-        
 
     }
 
@@ -197,6 +197,8 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         Debug.Log("joined party");
+        if(!PhotonNetwork.IsMasterClient)
+            PhotonNetwork.LoadLevel("multiplayer_lobby");
     }
 
     public void Set_serch_Party_ID(string value)

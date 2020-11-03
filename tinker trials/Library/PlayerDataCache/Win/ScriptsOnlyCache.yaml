@@ -277,7 +277,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15556}
     - Class: 114
-      Script: {instanceID: 28536}
+      Script: {instanceID: 29648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -440,7 +440,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15556}
     - Class: 114
-      Script: {instanceID: 28536}
+      Script: {instanceID: 29648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -519,7 +519,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15952}
     - Class: 114
-      Script: {instanceID: 28536}
+      Script: {instanceID: 29648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -704,7 +704,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15952}
     - Class: 114
-      Script: {instanceID: 28536}
+      Script: {instanceID: 29648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1063,6 +1063,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11990}
     - Class: 114
+      Script: {instanceID: 13040}
+    - Class: 114
       Script: {instanceID: 13354}
     - Class: 114
       Script: {instanceID: 13660}
@@ -1133,6 +1135,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12580}
     - Class: 114
       Script: {instanceID: 13010}
+    - Class: 114
+      Script: {instanceID: 13040}
     - Class: 114
       Script: {instanceID: 13198}
     - Class: 114
@@ -1895,7 +1899,7 @@ ScriptsOnlyBuild:
     className: TimedObjectActivator
   - hash:
       serializedVersion: 2
-      Hash: ee2080ecf06fb6e4a693158d49ff1b8b
+      Hash: 000fb87fa6ed450f694737fcf4c14e8e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multiplayer_menue_maneger
@@ -2921,7 +2925,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: 765d5d763be7e9dd2a3ccd1674a1ca8c
+      Hash: 32ff2b0a4110682b0a7510b34775de0b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multiplayer_game_maneger
@@ -3257,7 +3261,7 @@ ScriptsOnlyBuild:
     className: PlayerLoopDisableManager
   - hash:
       serializedVersion: 2
-      Hash: 69bb032eede0b282c697df80fece366e
+      Hash: 51e95fd8384d4777e222fca05c9f6ae4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multi_Player_Camera
