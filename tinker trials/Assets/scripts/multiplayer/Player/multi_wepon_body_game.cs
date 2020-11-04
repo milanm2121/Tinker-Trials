@@ -89,7 +89,7 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 
     public PhotonView PV;
 
-    public bool loaded=false;
+    public bool loaded = false;
     // generates the stats and wepons
     void Start()
     {
@@ -100,10 +100,15 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
         grip_script = grip.GetComponent<wepon_grip>();
         suport_script = suport.GetComponent<wepon_suport>();
 
+
+        PV = GetComponent<PhotonView>();
+    }
+
+    public void initalise()
+    {
         EM = GameObject.Find("entitymaniger").GetComponent<entity_maneger>();
 
         PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
-        PV = GetComponent<PhotonView>();
     }
 
     public void loadClass(string UserID, int Class)

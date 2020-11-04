@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class multi_player_stats : MonoBehaviourPunCallbacks
 {
@@ -21,7 +22,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     bool loaded = false;
 
     //used to add flinch
-    public player_Camera PC;
+    public multi_Player_Camera PC;
 
 
     //universal stats
@@ -57,9 +58,18 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(waitForGameScean());
+        DontDestroyOnLoad(this);
+    }
+
+    void inialise_player()
+    {
         PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
         Invoke("loadstats_on_network", 1);
-        Invoke("Startingclass",0.5f);
+        Invoke("Startingclass", 0.5f);
+        PC.initalise_cam();
+        WBG.initalise();
+        AG.intalise();
     }
 
     void Startingclass()
@@ -82,6 +92,9 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "multiplayer_gameplay_test")
+            transform.parent = null;
+
         if (animator != null)
         {
             if (health <= 0)
@@ -248,5 +261,9 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
 
     }
 
-    
+    IEnumerator waitForGameScean()
+    {
+        yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "multiplayer_gameplay_test");
+        inialise_player();
+    }
 }

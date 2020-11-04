@@ -28,16 +28,17 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
 
     public PhotonView perant_PV;
 
+    bool initalised=false;
 
 
 
     // Start is called before the first frame update
-    void Start()
+    public void initalise_cam()
     {
         Camera[] camlist = Camera.allCameras;
         for (int i = 0; camlist.Length>i; i++) {
 
-            if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine)
+            if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine==true)
             {
                 camlist[i].enabled=true;
             }
@@ -57,71 +58,74 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
         cam = GetComponent<Camera>();
 
         defaltFOV = cam.fieldOfView;
+        initalised = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        GetComponentInParent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
-
-        if (perant_PV.IsMine == true)
+        if (initalised)
         {
+            GetComponentInParent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
 
-            //clamps the player sensitivity
-            Mathf.Clamp(sensitivityX, 1, 10);
-            Mathf.Clamp(senstivivtyY, 1, 10);
-
-            /*this if statement is used to cheak for the type ofinput initolised at the start of gameplay
-             *and effects what input is read
-             *the else statement is currently unused but could be inplamented on later
-             */
-            if (camera_Pause == false)
+            if (perant_PV.IsMine == true)
             {
-                if (controler_input_Setup_script.contorllerType == 0)
+
+                //clamps the player sensitivity
+                Mathf.Clamp(sensitivityX, 1, 10);
+                Mathf.Clamp(senstivivtyY, 1, 10);
+
+                /*this if statement is used to cheak for the type ofinput initolised at the start of gameplay
+                 *and effects what input is read
+                 *the else statement is currently unused but could be inplamented on later
+                 */
+                if (camera_Pause == false)
                 {
-                    mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX;
-                    mouseY = Input.GetAxisRaw("Mouse Y") * senstivivtyY;
+                    if (controler_input_Setup_script.contorllerType == 0)
+                    {
+                        mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX;
+                        mouseY = Input.GetAxisRaw("Mouse Y") * senstivivtyY;
+                    }
+                    else
+                    {
+                        mouseX = controler_input_manager.Right_Stick.x * sensitivityX;
+                        mouseY = controler_input_manager.Right_Stick.y * senstivivtyY;
+                    }
                 }
-                else
-                {
-                    mouseX = controler_input_manager.Right_Stick.x * sensitivityX;
-                    mouseY = controler_input_manager.Right_Stick.y * senstivivtyY;
-                }
+
+
+                //the math of storing the players next rotation in the mouse position value
+
+                mouseposition = mouseposition + new Vector2(mouseX, mouseY);
+                mouseposition.y = Mathf.Clamp(mouseposition.y, -90, 90);
+
+                //the x axsis changes the player
+                perant.transform.rotation = Quaternion.AngleAxis(mouseposition.x, Vector3.up);
+
+                //while the y axis changes the camera(head)
+                transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
             }
 
+            //used to unlock the mouse in a pause like state
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Cursor.lockState = CursorLockMode.None;
+                camera_Pause = true;
+            }
 
-            //the math of storing the players next rotation in the mouse position value
+            if (camera_Pause == true && Input.GetKeyDown(KeyCode.R))
+            {
+                if (GameObject.Find("multiplayer_game_maneger"))
+                    GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>().LeaveLobby();
 
-            mouseposition = mouseposition + new Vector2(mouseX, mouseY);
-            mouseposition.y = Mathf.Clamp(mouseposition.y, -90, 90);
+            }
 
-            //the x axsis changes the player
-            perant.transform.rotation = Quaternion.AngleAxis(mouseposition.x, Vector3.up);
-
-            //while the y axis changes the camera(head)
-            transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
-        }
-
-        //used to unlock the mouse in a pause like state
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            camera_Pause = true;
-        }
-
-        if(camera_Pause==true && Input.GetKeyDown(KeyCode.R))
-        {
-            if (GameObject.Find("multiplayer_game_maneger"))
-                GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>().LeaveLobby();
-            
-        }
-
-        //used to relock the mouse to effect the game
-        if (Input.GetMouseButton(0) && Input.mousePresent == true)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            camera_Pause = false;
+            //used to relock the mouse to effect the game
+            if (Input.GetMouseButton(0) && Input.mousePresent == true)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                camera_Pause = false;
+            }
         }
     }
 

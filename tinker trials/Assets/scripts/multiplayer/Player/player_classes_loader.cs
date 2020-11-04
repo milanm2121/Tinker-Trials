@@ -25,9 +25,12 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
 
     public Dictionary<string, playerclasses> playerClasses= new Dictionary<string, playerclasses>();
 
+    public multiplayer_game_maneger MGM;
+
     private void Awake()
     {
         PV = GetComponent<PhotonView>();
+        MGM = GetComponent<multiplayer_game_maneger>();
     }
     
     [PunRPC]
@@ -70,6 +73,10 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
     {
         if (playerClasses.Count == PhotonNetwork.CurrentRoom.PlayerCount && true == (bool)PhotonNetwork.CurrentRoom.CustomProperties["started_game"] && SceneManager.GetActiveScene().name!= "multiplayer_gameplay_test")
         {
+            for (int i = 0;MGM.preloaded_player_objects.Count>i; i++)
+            {
+                MGM.preloaded_player_objects[i].SetActive(true);
+            }
             PhotonNetwork.LoadLevel("multiplayer_gameplay_test");
         }
     }

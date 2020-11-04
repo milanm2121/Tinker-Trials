@@ -26,8 +26,12 @@ public class multi_armour_game : MonoBehaviour
     {
         //adds all of the stats of get a defence value
         PV = GetComponent<PhotonView>();
-        PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
 
+    }
+
+    public void intalise()
+    {
+        PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
     }
 
     public void loadClass(string UserID, int Class)

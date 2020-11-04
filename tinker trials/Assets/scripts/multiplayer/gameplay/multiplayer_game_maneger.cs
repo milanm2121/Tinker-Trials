@@ -6,12 +6,13 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 
-public class multiplayer_game_maneger : MonoBehaviourPunCallbacks
+public class multiplayer_game_maneger : MonoBehaviourPunCallbacks, IPunInstantiateMagicCallback
 {
     public Button start_game_button;
     public multiplayer_game_maneger MGM;
     public load_scean LS;
     public ExitGames.Client.Photon.Hashtable room_propertys = new ExitGames.Client.Photon.Hashtable();
+    public List<GameObject> preloaded_player_objects = new List<GameObject>();
 
     private void Awake()
     {
@@ -74,5 +75,16 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks
         PhotonNetwork.CurrentRoom.SetCustomProperties(room_propertys);
         PhotonNetwork.LoadLevel("multiplayer_gameplay_test");
         
+    }
+
+    public void OnPhotonInstantiate(PhotonMessageInfo info)
+    {
+        if (SceneManager.GetActiveScene().name != "multiplayer_gameplay_test") {
+            GameObject instaniatedplayer = info.photonView.gameObject;
+            DontDestroyOnLoad(instaniatedplayer);
+            preloaded_player_objects.Add(instaniatedplayer);
+            instaniatedplayer.SetActive(false);
+        }
+
     }
 }
