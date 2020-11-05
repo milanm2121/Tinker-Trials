@@ -27,9 +27,13 @@ public class projectilemovement : ComponentSystem
             {
                 RaycastHit predictedPath;
                 Physics.Raycast(translation.Value, projectile.velosity, out predictedPath, projectile.velosity.magnitude * Time.deltaTime);
-
+                
                 if (predictedPath.collider != null && predictedPath.collider.gameObject.GetComponent<Rigidbody>()!=null)
                 {
+                    if (predictedPath.collider.gameObject.GetComponent<multi_player_stats>() && (PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)))
+                    {
+                        predictedPath.collider.gameObject.GetComponent<multi_player_stats>().damage_player(projectile.REf.damage, projectile.REf.element);
+                    }
                     if (predictedPath.collider.gameObject.GetComponent<player_stats>() && ( PhotonNetwork.InRoom==false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)))
                     {
                         predictedPath.collider.gameObject.GetComponent<player_stats>().damage_player(projectile.REf.damage,projectile.REf.element);
@@ -47,6 +51,23 @@ public class projectilemovement : ComponentSystem
                 else if(predictedPath.collider != null)
                 {
                     projectile.Predict_hit = true;
+                    //metal
+                    if (predictedPath.collider.gameObject.layer==11)
+                    {
+                        Audio_Maneger.create_sound(translation.Value, Audio_Maneger.AM.metalImpactSounsd[Random.Range(0, Audio_Maneger.AM.metalImpactSounsd.Length)]);
+                    }
+                    //wood
+                    if (predictedPath.collider.gameObject.layer == 12)
+                    {
+                        Audio_Maneger.create_sound(translation.Value, Audio_Maneger.AM.woodImpactSounsd[Random.Range(0, Audio_Maneger.AM.woodImpactSounsd.Length)]);
+
+                    }
+                    //stone/concret
+                    if (predictedPath.collider.gameObject.layer == 13)
+                    {
+                        Audio_Maneger.create_sound(translation.Value, Audio_Maneger.AM.stoneImpactSounsd[Random.Range(0, Audio_Maneger.AM.stoneImpactSounsd.Length)]);
+
+                    }
                 }
             }
 
