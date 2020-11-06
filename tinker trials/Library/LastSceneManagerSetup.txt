@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/test sceans/gameplay_test.unity
+- path: Assets/Remis Stuff/Camp/Canyoon.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
