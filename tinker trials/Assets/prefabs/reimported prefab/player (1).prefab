@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 5980479606644151279}
   - component: {fileID: 1264273030692913545}
   - component: {fileID: 6435502137335181929}
+  - component: {fileID: 1372458141468090577}
   m_Layer: 0
   m_Name: player (1)
   m_TagString: Untagged
@@ -742,6 +743,9 @@ MonoBehaviour:
   PA: {fileID: 0}
   PS: {fileID: 0}
   P_ID: {fileID: 1264273030692913545}
+  Sounds: {fileID: 0}
+  running: 0
+  inital_running_multiplyer: 0
 --- !u!114 &5673885559538285559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,6 +918,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1372458141468090577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877631786172323339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc9cb33e36ac21409a5c30aa999b135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walking: 0
+  running: 0
+  AS: {fileID: 0}
+  playerLanding_sounds: []
+  wallking_sound: []
+  running_Sounds: []
 --- !u!1 &5028073016552764844
 GameObject:
   m_ObjectHideFlags: 0

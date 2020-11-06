@@ -14,17 +14,19 @@ public class Audio_Maneger : MonoBehaviour
     public static List<AudioSource> AudioSources= new List<AudioSource>();
     public GameObject audio_object;
 
+
     // Start is called before the first frame update
     void Start()
     {
         AM = this;
     }
 
-    public static void create_sound(Vector3 position, AudioClip AC)
+    public static void create_sound(Vector3 position, AudioClip AC, float voliume = 1 )
     {
         GameObject Audio_object=Instantiate(AM.audio_object,position,Quaternion.identity);
         AudioSource AS =Audio_object.GetComponent<AudioSource>();
         AS.clip = AC;
+        AS.volume = voliume;
         AS.Play();
         AudioSources.Add(AS);
         AS.loop = false;
@@ -40,7 +42,7 @@ public class Audio_Maneger : MonoBehaviour
             {
                 AudioSource ObservedAudioSource = AudioSources[i];
                 AudioSources.RemoveAt(i);
-               // Destroy(ObservedAudioSource.gameObject);
+                Destroy(ObservedAudioSource.gameObject);
             }
         }
     }

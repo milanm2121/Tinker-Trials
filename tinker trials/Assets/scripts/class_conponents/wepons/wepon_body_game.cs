@@ -89,6 +89,18 @@ public class wepon_body_game : MonoBehaviour
 
     public Text ammocount;
 
+    //shooting sounds
+    public AudioClip surpressed_Fire;
+    public AudioClip nerf_Fire;
+    public AudioClip buckshot_Fire;
+    public AudioClip lazer_Fire;
+
+    public AudioClip gravity_start;
+    public AudioClip gravity_hold;
+
+
+
+
     // generates the stats and wepons
     void Start()
     {
@@ -183,16 +195,48 @@ public class wepon_body_game : MonoBehaviour
                         PA.shooting = true;
 
                     if (Firetype == firetype.projectile)
+                    {
                         shoot(out recoil);
+                        if (barrel_script.BO.specalty == 1)
+                        {
+                            Audio_Maneger.create_sound(transform.position,surpressed_Fire,0.5f);
+                        }
+                        else
+                        {
+                            Audio_Maneger.create_sound(transform.position,nerf_Fire,0.5f);
+
+                        }
+                    }
 
                     if (Firetype == firetype.buckshot)
+                    {
                         shootBuckshot();
+                        if (barrel_script.BO.specalty == 1)
+                        {
+                            Audio_Maneger.create_sound(transform.position,surpressed_Fire,0.5f);
+                        }
+                        else
+                        {
+                            Audio_Maneger.create_sound(transform.position,buckshot_Fire,0.5f);
+
+                        }
+
+                    }
 
                     if (amunition_script.AO.speciality == 2)
                     {
                        
                         if (Firetype == firetype.lazer)
                             shootLazer();
+                        if (barrel_script.BO.specalty == 1)
+                        {
+                            Audio_Maneger.create_sound(transform.position, surpressed_Fire,0.5f);
+                        }
+                        else
+                        {
+                            Audio_Maneger.create_sound(transform.position, lazer_Fire,0.5f);
+
+                        }
                     }
 
                     firetick = 0;

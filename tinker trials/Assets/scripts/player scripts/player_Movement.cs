@@ -168,7 +168,7 @@ public class player_Movement : MonoBehaviour
             {
                 direction = Vector3.zero;
                 direction = (directionX + directionY) * Time.deltaTime;
-                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, RB.velocity.y, direction.z) * running_multiplyer;
+                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, 0, direction.z) * running_multiplyer;
             }
             else
             {
@@ -181,7 +181,7 @@ public class player_Movement : MonoBehaviour
             if (keep_Momentum == false)
             {
                 direction = (forward + back + left + right) * Time.deltaTime;
-                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, RB.velocity.y, direction.z) * running_multiplyer;
+                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, 0, direction.z) * running_multiplyer;
 
 
             }
@@ -302,6 +302,7 @@ public class player_Movement : MonoBehaviour
         if (col.gameObject.tag == "ground")
         {
             grounded = false;
+            Sounds.grounded = false;
   //          keep_Momentum = true;
         }
     }
