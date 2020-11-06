@@ -4,6 +4,7 @@ script descrition: moves the player based off the player rotation and uses unity
 this script is used to allow for player to move with velosity and added vectors which allows movement to be smooth
 and slide if needed
 */
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,6 +64,7 @@ public class player_Movement : MonoBehaviour
 
     public player_animation PA;
 
+
     public player_stats PS;
 
     Vector3 SwingOffset;
@@ -71,6 +73,10 @@ public class player_Movement : MonoBehaviour
 
     public player_ID P_ID;
 
+    public player_sounds Sounds;
+    public bool running;
+    public float inital_running_multiplyer;
+    private float running_multiplyer;
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -80,6 +86,32 @@ public class player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            running = true;
+            running_multiplyer = inital_running_multiplyer;
+        }
+        else
+        {
+            running = false;
+            running_multiplyer = 0;
+        }
+
+        if(RB.velocity!=Vector3.zero && grounded == true)
+        {
+            if (running == true)
+            {
+                Sounds.running = true;
+                Sounds.walking = false;
+
+            }
+            else
+            {
+                Sounds.walking = true;
+                Sounds.running = false;
+
+            }
+        }
 
         //keyboard
         if (controler_input_Setup_script.contorllerType == 0)
@@ -111,7 +143,7 @@ public class player_Movement : MonoBehaviour
                 forward = new Vector3((transform.forward).normalized.x * speed * 100, RB.velocity.y, (transform.forward).normalized.z * speed * 100);
                 if (PA != null)
                     PA.moving();//Rem
-
+   
             }
 
 
@@ -136,7 +168,7 @@ public class player_Movement : MonoBehaviour
             {
                 direction = Vector3.zero;
                 direction = (directionX + directionY) * Time.deltaTime;
-                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z);
+                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, RB.velocity.y, direction.z) * running_multiplyer;
             }
             else
             {
@@ -149,7 +181,7 @@ public class player_Movement : MonoBehaviour
             if (keep_Momentum == false)
             {
                 direction = (forward + back + left + right) * Time.deltaTime;
-                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z);
+                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, RB.velocity.y, direction.z) * running_multiplyer;
 
 
             }

@@ -15,6 +15,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     //used to gateherThe layers weight and applay a movement penalty to the player speed
     public multi_armour_game AG;
     public multi_wepon_body_game WBG;
+    public multi_lethal_thrower LT;
     public player_Movement PM;
 
     public Text healthtext;
@@ -69,7 +70,8 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         Invoke("Startingclass", 0.5f);
         PC.initalise_cam();
         WBG.initalise();
-        AG.intalise();
+        AG.initalise();
+        LT.initalise();
     }
 
     void Startingclass()
@@ -81,6 +83,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     {
         AG.loadClass(UserID,Class);
         WBG.loadClass(UserID, Class);
+        LT.loadClass(UserID, Class);
     }
 
     void loadstats_on_network()

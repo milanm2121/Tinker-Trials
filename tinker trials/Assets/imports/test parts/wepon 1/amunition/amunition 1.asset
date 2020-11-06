@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   prjectile: 3
-  blast_radius: 1
+  blast_radius: 0
   element: 0
   damage: 5
   speciality: 2

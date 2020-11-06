@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8565026481835388741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24559993859093591}
+  - component: {fileID: 3817553600977279944}
+  m_Layer: 0
+  m_Name: audio_maneger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24559993859093591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8565026481835388741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8677886687165443047}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3817553600977279944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8565026481835388741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10641165e62d3be4f8f9e8f5f315827a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionsounds:
+  - {fileID: 8300000, guid: c596ff21b77d45549bae248de2ecaf9b, type: 3}
+  metalImpactSounsd:
+  - {fileID: 8300000, guid: 9ee5caee38c1bce4ea92707f953d1816, type: 3}
+  - {fileID: 8300000, guid: e4ed1669c4a3453489548475e9ca3f50, type: 3}
+  - {fileID: 8300000, guid: 419e2d76dd3c2b24b99721088c5b42b6, type: 3}
+  - {fileID: 8300000, guid: 5f0ba27d1ba0edb4498de20c03b714e9, type: 3}
+  - {fileID: 8300000, guid: bcbd7974b2bdf614e8c68cddcf332533, type: 3}
+  woodImpactSounsd:
+  - {fileID: 8300000, guid: 54b658d6e216b0948adb16c7dc9941e6, type: 3}
+  - {fileID: 8300000, guid: dcd2ddcf7616c7e44943f3d1552268de, type: 3}
+  - {fileID: 8300000, guid: 2e790057909c1644985df8d911731b54, type: 3}
+  - {fileID: 8300000, guid: 975c463dea2e6304787924a4c4b2eab6, type: 3}
+  - {fileID: 8300000, guid: 1e1bd7f5c77ff7849ae9b9a65b218eab, type: 3}
+  stoneImpactSounsd:
+  - {fileID: 8300000, guid: 252df9da9376d604a815b721f04d0e5e, type: 3}
+  audio_object: {fileID: 832781988350474385, guid: 609642b5e8cfc864c878a2699e54d77e,
+    type: 3}
 --- !u!1 &8677886685910527762
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,6 +141,7 @@ Transform:
   - {fileID: 8677886687440782816}
   - {fileID: 1904099555116308109}
   - {fileID: 8677886685910527763}
+  - {fileID: 24559993859093591}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

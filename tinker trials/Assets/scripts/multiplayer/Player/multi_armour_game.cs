@@ -29,7 +29,7 @@ public class multi_armour_game : MonoBehaviour
 
     }
 
-    public void intalise()
+    public void initalise()
     {
         PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
     }

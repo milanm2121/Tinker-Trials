@@ -67,6 +67,8 @@ public class entity_maneger : MonoBehaviour
                     EM.SetComponentData(entity, new Translation { Value = EM.GetComponentData<Translation>(enititys[i]).Value });
                     EM.SetSharedComponentData(entity, new RenderMesh { material = explosinMaterial, mesh = explosinMesh });
                     EM.SetComponentData(entity, new projectile_explosion { tick = false, element = EM.GetComponentData<projectile>(enititys[i]).REf.element, damage = EM.GetComponentData<projectile>(enititys[i]).REf.damage, blast_radious = EM.GetComponentData<projectile>(enititys[i]).REf.blast_radious });
+                   
+                    Audio_Maneger.create_sound(EM.GetComponentData<Translation>(enititys[i]).Value, Audio_Maneger.AM.explosionsounds[Random.Range(0,Audio_Maneger.AM.explosionsounds.Length)]);
 
                     StartCoroutine(delayed_destory_entity(entity, 0.2f));
                 }
