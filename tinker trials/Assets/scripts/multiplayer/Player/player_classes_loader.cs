@@ -55,7 +55,7 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
             Debug.Log("loadedclasses");
             if (playerClasses.Count > 1)
             {
-                print(playerClasses.Count);
+                print("they are: "+playerClasses.Count +"player classes");
             }
         }
         

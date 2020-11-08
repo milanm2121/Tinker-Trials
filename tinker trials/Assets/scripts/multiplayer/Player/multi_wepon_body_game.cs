@@ -120,34 +120,36 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
     [PunRPC]
     void syncClass(string UserID, int Class)
     {
+    
 
-        if (Class == 1)
-        {
-            select_class(PCL.playerClasses[UserID].class_1);
-        }
-        else if (Class == 2)
-        {
-            select_class(PCL.playerClasses[UserID].class_2);
-        }
-        else if (Class == 3)
-        {
-            select_class(PCL.playerClasses[UserID].class_3);
-        }
-        else if (Class == 4)
-        {
-            select_class(PCL.playerClasses[UserID].class_4);
-        }
+            if (Class == 1)
+            {
+                select_class(PCL.playerClasses[UserID].class_1);
+            }
+            else if (Class == 2)
+            {
+                select_class(PCL.playerClasses[UserID].class_2);
+            }
+            else if (Class == 3)
+            {
+                select_class(PCL.playerClasses[UserID].class_3);
+            }
+            else if (Class == 4)
+            {
+                select_class(PCL.playerClasses[UserID].class_4);
+            }
 
-        weight += reciver_script.RO.weight;
-        weight += barrel_script.BO.weight;
-        weight += scope_script.SO.weight;
-        weight += amunition_script.AO.weight;
-        weight += grip_script.GO.weight;
-        weight += suport_script.SO.weight;
+            weight += reciver_script.RO.weight;
+            weight += barrel_script.BO.weight;
+            weight += scope_script.SO.weight;
+            weight += amunition_script.AO.weight;
+            weight += grip_script.GO.weight;
+            weight += suport_script.SO.weight;
 
-        //the order is important so dont change it
-        generateGunStats();
-        generateProjectile();
+            //the order is important so dont change it
+            generateGunStats();
+            generateProjectile();
+        
     } 
 
     // Update is called once per frame

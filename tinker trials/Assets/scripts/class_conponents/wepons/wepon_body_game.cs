@@ -401,7 +401,7 @@ public class wepon_body_game : MonoBehaviour
             blast_radious = amunition_script.AO.blast_radius,
             element = new Vector2Int(amunition_script.AO.element, reciver_script.RO.element),
             range = (range)*10,
-            damage = amunition_script.AO.damage,
+            damage = amunition_script.AO.damage*10,
        //     Mat = defaltMat,
        //     mesh = defaltMesh
         };

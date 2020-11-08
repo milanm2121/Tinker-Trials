@@ -76,7 +76,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
 
     void Startingclass()
     {
-        selectClass(PhotonNetwork.LocalPlayer.UserId, 1);
+        selectClass(photonView.Owner.UserId, 1);
     }
 
     public void selectClass(string UserID, int Class)

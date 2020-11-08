@@ -86,7 +86,8 @@ public class player_stats : MonoBehaviour
         }
         dirt();
         
-        health_bar.fillAmount = health / 100;
+        if(health_bar!=null)
+            health_bar.fillAmount = health / 100;
 
         if (healthtext != null)
         {

@@ -1103,6 +1103,9 @@ MonoBehaviour:
   PA: {fileID: 0}
   PS: {fileID: 0}
   P_ID: {fileID: 0}
+  Sounds: {fileID: 0}
+  running: 0
+  inital_running_multiplyer: 0
 --- !u!114 &-1265186254209585093
 MonoBehaviour:
   m_ObjectHideFlags: 0
