@@ -77,7 +77,7 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
             {
                 MGM.preloaded_player_objects[i].SetActive(true);
             }
-            PhotonNetwork.LoadLevel("multiplayer_gameplay_test");
+//            PhotonNetwork.LoadLevel("multiplayer_gameplay_test");
         }
     }
 }

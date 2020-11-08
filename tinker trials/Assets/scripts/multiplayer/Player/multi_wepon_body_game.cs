@@ -322,9 +322,9 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
         {
             if (col.rigidbody != null)
             {
-                if (col.collider.GetComponent<player_stats>() != null)
+                if (col.collider.GetComponent<multi_player_stats>() != null)
                 {
-                    col.collider.GetComponent<player_stats>().damage_player(proREF.damage, proREF.element);
+                    col.collider.GetComponent<multi_player_stats>().damage_player(proREF.damage, proREF.element);
                 }
                 if (col.collider.gameObject.GetComponent<object_health>() != null)
                 {

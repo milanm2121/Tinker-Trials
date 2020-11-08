@@ -135,7 +135,7 @@ public class AI_state_machine : MonoBehaviour
         if (shooting_target == null)
         {
             WBG.AI_shooting = false;
-            Collider[] col = Physics.OverlapSphere(transform.position, 15);
+            Collider[] col = Physics.OverlapSphere(transform.position, 10);
             for (int i = 0; col.Length > i; i++)
             {
                 if (col[i].GetComponent<player_ID>() != null && col[i].GetComponent<player_ID>().team != P_ID.team && col[i].GetComponent<player_stats>().health>0)
