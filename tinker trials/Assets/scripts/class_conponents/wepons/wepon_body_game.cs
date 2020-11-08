@@ -80,7 +80,7 @@ public class wepon_body_game : MonoBehaviour
 
     //used for dictating amoucount and reloading
     int ammoCount=0;
-    bool reloading=false;
+    public bool reloading=false;
     public float reload_time;
 
     public player_ID P_ID;
@@ -145,11 +145,13 @@ public class wepon_body_game : MonoBehaviour
             {
                 transform.position = Vector3.Lerp(transform.position, ADS.position, 1 / weight);
                 PC.ADSZoom(scope_script.SO.zoom);
+                PA.Aim = true;
             }
             else
             {
                 transform.position = Vector3.Lerp(transform.position, hip.position, 1 / weight);
                 PC.ADSZoom(1);
+                PA.Aim = false;
             }
         }
 

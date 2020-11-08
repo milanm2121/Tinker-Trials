@@ -6,13 +6,14 @@ public class player_animation : MonoBehaviour
 {
     //legs and movement
     public Animator characterAnimator;//Add the animator 
-    public bool grounded;//
+   // public bool grounded;//
     public bool jumping;//
     public bool running;//
     public bool sprinting;//
     //directional;
     public Vector2 directionalmovement;//
     //wepon stuff
+    public bool Aim;
     public bool reloading;
     public float reloading_percent;
     public bool shooting;//
@@ -28,7 +29,37 @@ public class player_animation : MonoBehaviour
     public wepon_body_game WBG;
     public int IsRunning;
 
+    /*
+   READ ME AT REMI: below is all of the old code that i have put into a regon commented off NOT Deleted if you want to resume the code talk to me first 
 
+ //  i pit a "-" in between your "*-/"
+
+   --Milan
+   */
+
+    private void Update()
+    {
+        characterAnimator.SetBool("grounded", PM.grounded);
+        characterAnimator.SetBool("running", PM.running);
+        characterAnimator.SetBool("walking", PM.walking);
+        characterAnimator.SetFloat("X-direction", directionalmovement.x);
+        characterAnimator.SetFloat("Y-direction", directionalmovement.y);
+        characterAnimator.SetBool("reloading", WBG.reloading);
+        characterAnimator.SetBool("aim",Aim);
+
+    }
+
+    #region oldcode    
+    /*
+    READ ME AT REMI: below is all of the old code that i have put into a regon commented off NOT Deleted if you want to resume the code talk to me first 
+    
+  //  i pit a "-" in between your "*-/"
+
+    --Milan
+    */
+
+    //start of comment- milan
+    /*
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +72,7 @@ public class player_animation : MonoBehaviour
         // characterAnimator = GetComponent<Animator>();// make sure the animator is active 
 
 
-        /*
+        /-*
          protected virtual void InputRun()
 	{
 
@@ -55,7 +86,7 @@ public class player_animation : MonoBehaviour
 	}
 
 
-         */
+         *-/
          
 
     }
@@ -130,7 +161,7 @@ public class player_animation : MonoBehaviour
 
     }
 
-    /*
+    /-*
        //Inputs for Animation from OG import 
     // floats
 		ForwardAmount = Animator.StringToHash("Forward");
@@ -195,6 +226,9 @@ public class player_animation : MonoBehaviour
 				Animator.SetFloat(VerticalMoveAmount, Player.MotorThrottle.Get().y * 10.0f);
 		}
 
-    */
+    *-/
 
+    end of comment-milan
+   */
+    #endregion
 }

@@ -75,6 +75,7 @@ public class player_Movement : MonoBehaviour
 
     public player_sounds Sounds;
     public bool running;
+    public bool walking;
     public float inital_running_multiplyer;
     private float running_multiplyer;
     void Start()
@@ -90,11 +91,20 @@ public class player_Movement : MonoBehaviour
         {
             running = true;
             running_multiplyer = inital_running_multiplyer;
+            walking = false;
         }
         else
         {
             running = false;
             running_multiplyer = 0;
+            if (RB.velocity != Vector3.zero)
+            {
+                walking = true;
+            }
+            else
+            {
+                walking = false;
+            }
         }
 
         if(RB.velocity!=Vector3.zero && grounded == true)
@@ -141,8 +151,8 @@ public class player_Movement : MonoBehaviour
             {
 
                 forward = new Vector3((transform.forward).normalized.x * speed * 100, RB.velocity.y, (transform.forward).normalized.z * speed * 100);
-                if (PA != null)
-                    PA.moving();//Rem
+               // if (PA != null)
+               //     PA.moving();//Rem
    
             }
 

@@ -100,8 +100,8 @@ public class multi_Player_Movement : MonoBehaviour
             {
 
                 forward = new Vector3((transform.forward).normalized.x * speed * 100, RB.velocity.y, (transform.forward).normalized.z * speed * 100);
-                if (PA != null)
-                    PA.moving();//Rem
+             //   if (PA != null)
+              //      PA.moving();//Rem
 
             }
 
