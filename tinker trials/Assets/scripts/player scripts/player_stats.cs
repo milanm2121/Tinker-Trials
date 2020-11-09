@@ -52,6 +52,8 @@ public class player_stats : MonoBehaviour
 
     public Image health_bar;
 
+    public Collider[] ragdoll;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,13 +69,22 @@ public class player_stats : MonoBehaviour
             if (health <= 0)
             {
                 animator.enabled = false;
-                Skeleton.SetActive(true);
+                foreach (Collider collider in ragdoll)
+                {
+                    collider.enabled = true;
+                }
                 Destroy(GetComponent<Rigidbody>());
+                Destroy(gameObject, 3);
+
             }
             else
             {
                 animator.enabled = true;
-                Skeleton.SetActive(false);
+                foreach (Collider collider in ragdoll)
+                {
+                    collider.enabled = false;
+                }
+                // Skeleton.SetActive(false);
             }
         }
         else

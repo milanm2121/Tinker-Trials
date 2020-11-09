@@ -49,6 +49,7 @@ public class player_animation : MonoBehaviour
         characterAnimator.SetFloat("Y-direction", directionalmovement.y);
         characterAnimator.SetBool("reloading", WBG.reloading);
         characterAnimator.SetBool("aim",Aim);
+        characterAnimator.SetFloat("speed", PM.RB.velocity.magnitude/3);
 
     }
     private void LateUpdate()
