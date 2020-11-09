@@ -29,6 +29,9 @@ public class player_animation : MonoBehaviour
     public wepon_body_game WBG;
     public int IsRunning;
 
+    public Quaternion spinerotation;
+
+    public Transform spine;
     /*
    READ ME AT REMI: below is all of the old code that i have put into a regon commented off NOT Deleted if you want to resume the code talk to me first 
 
@@ -47,6 +50,10 @@ public class player_animation : MonoBehaviour
         characterAnimator.SetBool("reloading", WBG.reloading);
         characterAnimator.SetBool("aim",Aim);
 
+    }
+    private void LateUpdate()
+    {
+        spine.transform.rotation *= spinerotation;
     }
 
     #region oldcode    

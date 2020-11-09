@@ -34,7 +34,11 @@ public class player_Camera : MonoBehaviour
 
     public load_scean LS;
 
+    public GameObject head;
 
+    public player_animation animator;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -89,8 +93,29 @@ public class player_Camera : MonoBehaviour
             //the x axsis changes the player
             perant.transform.rotation = Quaternion.AngleAxis(mouseposition.x, Vector3.up);
 
-            //while the y axis changes the camera(head)
-            transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
+
+            if (animator == null)
+            {
+                //while the y axis changes the camera(head)
+                transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
+            }
+            else
+            {
+                int spinalAdgustment=1;
+                if (0>-mouseposition.y)
+                {
+                    spinalAdgustment = -1;
+                }
+                else
+                {
+                    spinalAdgustment = 1;
+                }
+                animator.spinerotation = Quaternion.AngleAxis(-mouseposition.y,new Vector3(1,0.5f *spinalAdgustment,0));
+                transform.position = head.transform.position +new Vector3(0,0.2f,0);
+                transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
+
+            }
+
         }
 
         //used to unlock the mouse in a pause like state

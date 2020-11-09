@@ -12,9 +12,9 @@ AvatarMask:
   - m_Path: 
     m_Weight: 1
   - m_Path: Alpha_Joints
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Alpha_Surface
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: mixamorig:Hips
     m_Weight: 0
   - m_Path: mixamorig:Hips/mixamorig:LeftUpLeg
@@ -38,7 +38,7 @@ AvatarMask:
   - m_Path: mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase/mixamorig:RightToe_End
     m_Weight: 1
   - m_Path: mixamorig:Hips/mixamorig:Spine
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1
     m_Weight: 0
   - m_Path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2
