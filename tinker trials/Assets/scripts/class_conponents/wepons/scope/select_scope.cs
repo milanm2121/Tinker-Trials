@@ -35,11 +35,12 @@ public class select_scope : MonoBehaviour
         {
             decription += "speciality: " + "none" + "\n";
         }
-        else if (WS.SO.speciality == 1)
+    /*    else if (WS.SO.speciality == 1)
         {
             decription += "speciality: " + "Alert, adds a visual effect to alert the player when they are being aimed at." + "\n";
         }
-        else if (WS.SO.speciality == 2)
+    */
+        else if (WS.SO.speciality == 1)
         {
             decription += "speciality: " + "distance measurement, adds a measurement of how far the target aimed at is" + "\n";
         }

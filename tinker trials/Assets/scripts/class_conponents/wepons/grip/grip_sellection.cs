@@ -41,7 +41,7 @@ public class grip_sellection : MonoBehaviour
             {
                 grips[i].GetComponent<wepon_grip>().GO = WC.grips[(9 * page) + i];
                 grips[i].GetComponent<wepon_grip>().generateGip();
-                grips[i].gameObject.GetComponent<MeshCollider>().sharedMesh = WC.recevers[(9 * page) + i].mesh;
+                grips[i].gameObject.GetComponent<MeshCollider>().sharedMesh = WC.grips[(9 * page) + i].meshshape;
                 grips[i].SetActive(true);
             }
             else

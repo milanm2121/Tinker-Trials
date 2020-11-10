@@ -8,7 +8,7 @@ public class AI_state_machine : MonoBehaviour
     public player_stats PS;
 
     public player_Movement PM;
-    public player_Camera PC;
+    public GameObject playerSpine;
 
     public wepon_body_game WBG;
 
@@ -149,7 +149,7 @@ public class AI_state_machine : MonoBehaviour
         else
         {
             transform.LookAt(new Vector3(shooting_target.transform.position.x, transform.position.y, shooting_target.transform.position.z));
-            PC.gameObject.transform.LookAt(shooting_target.transform.position);
+            playerSpine.gameObject.transform.LookAt(shooting_target.transform.position);
 
             RaycastHit hit;
             Physics.Raycast(WBG.transform.position,shooting_target.transform.position- WBG.transform.position, out hit);

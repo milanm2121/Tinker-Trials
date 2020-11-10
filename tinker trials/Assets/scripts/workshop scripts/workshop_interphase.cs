@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class workshop_interphase : MonoBehaviour
 {
@@ -56,6 +57,7 @@ public class workshop_interphase : MonoBehaviour
         // used to load scriptable objects from the player staric invetory
         Debug.Log("load_data");
         //load_inventory();//before loading in new parts turn off
+        generate_parts(30);
     }
 
     // Update is called once per frame
@@ -270,5 +272,237 @@ public class workshop_interphase : MonoBehaviour
 
 
         player_inventory.saveinventory();
+    }
+
+    public void generate_parts(int NumToGen)
+    {
+        for (int i = 0; NumToGen > i; i++)
+        {
+            int PartToGen =Random.Range(1, 7);
+            //barrels
+            if (PartToGen == 1)
+            {
+                barrel_object x = ScriptableObject.CreateInstance<barrel_object>();
+
+
+                x.lenght = Random.Range(1, 10);
+                x.material = Random.Range(0, 2);
+                x.specalty = Random.Range(0, 3);
+                x.name = "barrel";
+                x.weight = x.lenght + x.specalty;
+
+                if (x.specalty == 0)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Barrel/Generic_Barrel.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Barrel/Generic_Barrel.fbx", typeof(Material));
+                }
+                if (x.specalty == 1)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Barrel/PaintCanSupressor_Barrel.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Barrel/PaintCanSupressor_Barrel.fbx", typeof(Material));
+                }
+                if (x.specalty == 2)
+                {
+                   
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Barrel/OverheatDisplay_Barrel.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Barrel/OverheatDisplay_Barrel.fbx", typeof(Material));
+                }
+                wc.barrels.Add(x);
+            }
+            //amunition
+            if (PartToGen == 2)
+            {
+                amunition_object x = ScriptableObject.CreateInstance<amunition_object>();
+
+
+                
+                x.blast_radius = Random.Range(0,5);
+                x.element = Random.Range(0,5);
+                x.prjectile = 1;
+                x.range = Random.Range(1,5);
+                x.rounds = Random.Range(1,100);
+                x.speciality = Random.Range(0,4);
+                x.damage = Random.Range(1,10);
+
+                x.name = "amunition";
+                x.weight = x.blast_radius +x.range+x.rounds/10+x.damage/2;
+
+                if (x.speciality == 0 || x.speciality==1)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Ammo/GenericMag_Ammo.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Ammo/GenericMag_Ammo.fbx", typeof(Material));
+                }
+                if (x.speciality == 2)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Ammo/Energy_Ammo.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Ammo/Energy_Ammo.fbx", typeof(Material));
+                }
+                if (x.speciality == 3)
+                {
+
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Ammo/FastMag_Ammo.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Ammo/FastMag_Ammo.fbx", typeof(Material));
+                }
+                wc.amunition_types.Add(x);
+            }
+
+            //grips
+            if (PartToGen == 3)
+            {
+                grip_object x = ScriptableObject.CreateInstance<grip_object>();
+
+
+
+                x.name = "grip";
+                x.grip_angle = Random.Range(0,90);
+                x.speciality = Random.Range(0,3);
+
+             
+                x.weight = 2+x.speciality;
+                
+                if (x.speciality == 0)
+                {
+                    x.meshshape = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Grip/Generic_Grip.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Grip/Generic_Grip.fbx", typeof(Material));
+                }
+                if (x.speciality == 1)
+                {
+                    x.meshshape = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Grip/StunBash_Grip.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Grip/StunBash_Grip.fbx", typeof(Material));
+                }
+                if (x.speciality == 2)
+                {
+                    x.meshshape = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Grip/AutoAdjust_Grip.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Grip/AutoAdjust_Grip.fbx", typeof(Material));
+                }
+                
+                wc.grips.Add(x);
+            }
+            //reciver
+            if (PartToGen == 4)
+            {
+                weponReciver_object x = ScriptableObject.CreateInstance<weponReciver_object>();
+
+
+
+                x.name = "reciver";
+   
+
+                x.fire_rate = Random.Range(1,5);
+                x.spciality = Random.Range(1,4);
+                x.element = Random.Range(0,5);
+                x.wepon_type = 1;
+
+      
+                x.weight = x.fire_rate;
+
+                x.anumition_fit = new Vector3(0.2f, -0.5f, 0);
+                x.barrel_fit = new Vector3(-1.5f, 0, 0);
+                x.grip_fit = new Vector3(-.7f, -0.8f, 0);
+                x.scope_fit = new Vector3(0, 0.5f, 0);
+                x.suport_fit = new Vector3(1.5f, -0.3f, 0);
+
+                if (x.spciality == 0)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Generic_Receiver.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Generic_Receiver.fbx", typeof(Material));
+                    x.anumition_fit = new Vector3(0.2f, -0.5f, 0);
+                    x.barrel_fit = new Vector3(-1.5f, 0, 0);
+                    x.grip_fit = new Vector3(-.7f, -0.8f, 0);
+                    x.scope_fit = new Vector3(0, 0.5f, 0);
+                    x.suport_fit = new Vector3(1.5f, -0.3f, 0);
+                }
+                if (x.spciality == 1)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Physics_Receiver.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Physics_Receiver.fbx", typeof(Material));
+                }
+                if (x.spciality == 2)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Laser_Receiver.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Laser_Receiver.fbxx", typeof(Material));
+                }
+                if (x.spciality == 3)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Rotary_Receiver.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Receiver/Rotary_Receiver.fbx", typeof(Material));          
+                }
+
+
+                wc.recevers.Add(x);
+            }
+            //scopes
+            if (PartToGen == 5)
+            {
+                scope_object x = ScriptableObject.CreateInstance<scope_object>();
+
+                
+                x.speciality = Random.Range(0,2);
+                if (Random.Range(0, 1) == 0) {
+                    x.trhermal = false;
+                }
+                else
+                {
+                    x.trhermal = true;
+                }
+                x.zoom = Random.Range(1,10);
+
+                
+
+                x.name = "optic";
+                x.weight = 2 + x.zoom;
+
+                if (x.zoom < 9)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Aim/Distance_Aim.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Aim/Distance_Aim.fbx", typeof(Material));
+                }
+                else if (x.zoom < 6 || x.trhermal==true)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Aim/Alert_Aim.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Aim/Alert_Aim.fbx", typeof(Material));
+                }
+                else if (x.zoom < 3)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Aim/Generic_Aim.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Aim/Generic_Aim.fbx", typeof(Material));
+                }
+
+                wc.scopes.Add(x);
+            }
+
+            //support/stock
+            if (PartToGen == 6)
+            {
+                Suport_object x = ScriptableObject.CreateInstance<Suport_object>();
+
+
+                x.speciality = Random.Range(0,3);
+
+                x.name = "stock";
+                x.weight = 2;
+                
+
+                if (x.speciality == 0)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Stock/Generic_Stock.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Stock/Generic_Stock.fbx", typeof(Material));
+                }
+                if (x.speciality == 1)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Stock/LowGravityThruster_Stock.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Stock/LowGravityThruster_Stock.fbx", typeof(Material));
+                }
+                if (x.speciality == 2)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Stock/Boot_Stock.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Stock/Boot_Stock.fbx", typeof(Material));
+                }
+                
+
+                wc.supports.Add(x);
+            }
+        }
+
     }
 }
