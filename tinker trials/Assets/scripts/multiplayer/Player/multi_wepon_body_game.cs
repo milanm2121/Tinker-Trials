@@ -436,15 +436,16 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
         firerrate = 1f / reciver_script.RO.fire_rate * 2;
         print(firerrate);
         intialfirerate = firerrate;
-        if (reciver_script.RO.spciality == 1)
+        if (reciver_script.RO.spciality == 1 && amunition_script.AO.speciality == 2)
         {
             Firetype = firetype.gravity;
         }
-        if (reciver_script.RO.spciality == 2)
+        if (reciver_script.RO.spciality == 2 && amunition_script.AO.speciality == 2)
         {
             Firetype = firetype.lazer;
         }
         if (amunition_script.AO.speciality == 1)
+            if (amunition_script.AO.speciality == 1)
         {
             Firetype = firetype.buckshot;
         }

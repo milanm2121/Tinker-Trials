@@ -44,13 +44,13 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
     [PunRPC]
     public void sort_teams( bool initalise)
     {
-        if (instantaded_player == false)
-        {
-            for (int i = players_in_game; PhotonNetwork.PlayerList.Length > i; i++)
+        
+        for (int i = players_in_game; PhotonNetwork.PlayerList.Length > i; i++)
             {//need to fix
+            if (instantaded_player == false)
+            {
                 if (PhotonNetwork.PlayerList[i].IsLocal)
                 {
-                    instantaded_player = true;
                     if (team)
                     {
                         GameObject player = PhotonNetwork.Instantiate(this.Player_prefab.name, Vector3.zero + new Vector3(0, 5, 0), Quaternion.identity);
@@ -61,8 +61,10 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
                         TID.teamID = team1_count;
                         TID.name = PhotonNetwork.NickName;
                         team1_count++;
+                        instantaded_player = true;
+
                     }
-                    else
+                    else if(!team)
                     {
                         GameObject player = PhotonNetwork.Instantiate(this.Player_prefab.name, Vector3.zero + new Vector3(0, 5, 0), Quaternion.identity);
                         multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
@@ -72,6 +74,8 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
                         TID.teamID = team2_count;
                         TID.name = PhotonNetwork.NickName;
                         team2_count++;
+                        instantaded_player = true;
+
                     }
                     players_in_game++;
                 }
