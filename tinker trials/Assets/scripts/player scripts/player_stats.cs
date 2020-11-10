@@ -216,7 +216,7 @@ public class player_stats : MonoBehaviour
 
         //calculates the weight and defence at the start of a game
         armour = AG.deffence / 10;
-        weight = AG.weight + WBG.weight;
+        weight = AG.weight + WBG.weight/3;
         //calculating avrage speed
         PM.speed = PM.speed - (weight/10);
         PM.initalSpeed = PM.speed;

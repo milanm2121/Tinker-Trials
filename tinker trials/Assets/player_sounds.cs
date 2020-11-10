@@ -28,7 +28,7 @@ public class player_sounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PM.RB.velocity != Vector3.zero && PM.grounded == true)
+        if (PM.RB!=null && PM.RB.velocity != Vector3.zero && PM.grounded == true)
         {
             if (PM.running == true)
             {

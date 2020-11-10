@@ -57,7 +57,7 @@ public class workshop_interphase : MonoBehaviour
         // used to load scriptable objects from the player staric invetory
         Debug.Log("load_data");
         //load_inventory();//before loading in new parts turn off
-        generate_parts(30);
+        generate_parts(100);
     }
 
     // Update is called once per frame
@@ -278,7 +278,7 @@ public class workshop_interphase : MonoBehaviour
     {
         for (int i = 0; NumToGen > i; i++)
         {
-            int PartToGen =Random.Range(1, 7);
+            int PartToGen =Random.Range(1, 10);
             //barrels
             if (PartToGen == 1)
             {
@@ -501,6 +501,99 @@ public class workshop_interphase : MonoBehaviour
                 
 
                 wc.supports.Add(x);
+            }
+
+            if (PartToGen == 7)
+            {
+                headgear_object x = ScriptableObject.CreateInstance<headgear_object>();
+
+
+                x.name = "headgear";
+                
+                x.deffence = Random.Range(1,10);
+                x.speciality = Random.Range(0, 3);
+                x.weight = x.deffence + x.speciality;
+
+                if (x.speciality == 0)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Helmet.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Helmet.fbx", typeof(Material));
+                }
+                if (x.speciality == 1)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Helmet.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Helmet.fbx", typeof(Material));
+                }
+                if (x.speciality == 2)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Helmet.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Helmet.fbx", typeof(Material));
+                }
+
+
+                ac.headgear.Add(x);
+            }
+
+            if (PartToGen == 8)
+            {
+                cheastplate_object x = ScriptableObject.CreateInstance<cheastplate_object>();
+
+
+                x.name = "chestplate";
+
+                x.deffence = Random.Range(1, 10);
+                x.specicality = Random.Range(0, 4);
+                x.weight = x.deffence + x.specicality;
+
+                if (x.specicality == 0)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/LauncherPads_Chest.fbx", typeof(Mesh));
+                    x.material = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/LauncherPads_Chest.fbx", typeof(Material));
+                }
+                if (x.specicality == 1)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/LauncherPads_Chest.fbx", typeof(Mesh));
+                    x.material = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/LauncherPads_Chest.fbx", typeof(Material));
+                }
+                if (x.specicality == 2)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/LauncherPads_Chest.fbx", typeof(Mesh));
+                    x.material = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/LauncherPads_Chest.fbx", typeof(Material));
+                }
+
+
+                ac.cheastplates.Add(x);
+            }
+
+            if (PartToGen == 9)
+            {
+                boots_object x = ScriptableObject.CreateInstance<boots_object>();
+
+
+                x.name = "chestplate";
+
+                x.deffence = Random.Range(1, 10);
+                x.speciality = Random.Range(0, 3);
+                x.weight = x.deffence + x.speciality;
+
+                if (x.speciality == 0)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Boot.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Generic_Boot.fbx", typeof(Material));
+                }
+                if (x.speciality == 1)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/HorseKick_Boot.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/HorseKick_Boot.fbx", typeof(Material));
+                }
+                if (x.speciality == 2)
+                {
+                    x.mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Speed_Boot.fbx", typeof(Mesh));
+                    x.mat = (Material)AssetDatabase.LoadAssetAtPath("Assets/imports/AssetsFixed_Exported/Armour/Speed_Boot.fbx", typeof(Material));
+                }
+
+
+                ac.boots.Add(x);
             }
         }
 

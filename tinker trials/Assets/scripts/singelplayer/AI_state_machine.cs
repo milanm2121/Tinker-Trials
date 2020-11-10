@@ -29,7 +29,7 @@ public class AI_state_machine : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (PS.health > 0)
         {
