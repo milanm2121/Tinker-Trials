@@ -37,7 +37,7 @@ public class reciver_sellection : MonoBehaviour
     {
         for (int i = 0; 9 > i; i++)
         {
-            if (WC.recevers.Count >= (9 * page) + i)
+            if (WC.recevers.Count > (9 * page) + i)
             {
                 recivers[i].GetComponent<wepon_reciver>().RO = WC.recevers[(9 * page) + i];
                 recivers[i].GetComponent<wepon_reciver>().generateRecever();

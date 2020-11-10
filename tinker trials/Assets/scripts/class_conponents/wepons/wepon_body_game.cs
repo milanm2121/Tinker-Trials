@@ -284,7 +284,7 @@ public class wepon_body_game : MonoBehaviour
            
             Vector3 randomvelosity = velosity+ new Vector3(Random.Range(-7, 8), Random.Range(-7, 8), Random.Range(-7, 8));
             EM.shootProjectile(transform.position, randomvelosity, proREF, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
-            recoil = new Vector2(Random.Range(-XStability, XStability), Random.Range(0, Ystability)).normalized * proREF.damage;
+            recoil = new Vector2(Random.Range(-XStability, XStability), Random.Range(0, Ystability)).normalized * proREF.damage/10;
         }
         
     }

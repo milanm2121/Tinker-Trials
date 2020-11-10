@@ -21,11 +21,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_1CD501BD:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5ffab3d71d73049698037240ca7343fd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 32efe992c71814cb8abe9c7546a8290e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonShade:
@@ -33,16 +33,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2C9F6E3A: -0.06
-    - Vector1_2F2E85E7: 0.405
+    - Vector1_2C9F6E3A: -0.085
+    - Vector1_2F2E85E7: 0
     - _Outline: 0.007018868
     - _Shininess: 0.7
+    - _outline_With: 1.0669
     m_Colors:
     - Color_81C7D31: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.46268654, g: 0.46268654, b: 0.46268654, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _colour: {r: 0, g: 0, b: 0, a: 0}
+    - _outline_Colour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

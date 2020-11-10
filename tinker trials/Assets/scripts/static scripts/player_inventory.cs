@@ -58,7 +58,7 @@ public static class player_inventory
         public int mat;
     }
 
-
+    
 
     //loads the classes from a list of saved object
     public static class_class.Class[] load_classes(List<saved_object> savedObject)
