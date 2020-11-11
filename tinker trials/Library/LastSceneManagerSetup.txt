@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Remis Stuff/Camp/Mines.unity
+- path: Assets/Scenes/multiplayer/multiplayer_menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -56,8 +56,8 @@ public class player_Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        GetComponentInParent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
+        if(GetComponent<Rigidbody>()!=null)
+            GetComponentInParent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
 
         if (P_ID.is_player == true)
         {

@@ -42,15 +42,17 @@ public class player_animation : MonoBehaviour
 
     private void Update()
     {
-        characterAnimator.SetBool("grounded", PM.grounded);
-        characterAnimator.SetBool("running", PM.running);
-        characterAnimator.SetBool("walking", PM.walking);
-        characterAnimator.SetFloat("X-direction", directionalmovement.x);
-        characterAnimator.SetFloat("Y-direction", directionalmovement.y);
-        characterAnimator.SetBool("reloading", WBG.reloading);
-        characterAnimator.SetBool("aim",Aim);
-        characterAnimator.SetFloat("speed", PM.RB.velocity.magnitude/3);
-
+        if (PM.RB != null)
+        {
+            characterAnimator.SetBool("grounded", PM.grounded);
+            characterAnimator.SetBool("running", PM.running);
+            characterAnimator.SetBool("walking", PM.walking);
+            characterAnimator.SetFloat("X-direction", directionalmovement.x);
+            characterAnimator.SetFloat("Y-direction", directionalmovement.y);
+            characterAnimator.SetBool("reloading", WBG.reloading);
+            characterAnimator.SetBool("aim", Aim);
+            characterAnimator.SetFloat("speed", PM.RB.velocity.magnitude / 3);
+        }
     }
     private void LateUpdate()
     {

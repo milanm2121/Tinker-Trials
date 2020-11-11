@@ -27,8 +27,9 @@ public class sellect_amunition : MonoBehaviour
     {
         string decription = "";
         decription += "name: " + WG.AO.name + "\n";
+        decription += "damage: " + WG.AO.damage + "\n";
         decription += "blast radious: " + WG.AO.blast_radius + "\n";
-
+        
         if (WG.AO.element == 0)
         {
             decription += "element: " + "none" + "\n";

@@ -315,7 +315,7 @@ public class wepon_body_game : MonoBehaviour
             {
                 col.collider.gameObject.GetComponent<object_health>().damage_object(proREF.damage);
             }
-            col.rigidbody.velocity += velosity.normalized * 5 *proREF.damage;
+            col.rigidbody.velocity += velosity.normalized *5* proREF.damage/10;
         }
     }
 
@@ -416,11 +416,11 @@ public class wepon_body_game : MonoBehaviour
         firerrate = 1f/reciver_script.RO.fire_rate*2;
         print(firerrate);
         intialfirerate = firerrate;
-        if (reciver_script.RO.spciality == 1)
+        if (reciver_script.RO.spciality == 1 && amunition_script.AO.speciality==2)
         {
             Firetype = firetype.gravity;
         }
-        if (reciver_script.RO.spciality == 2)
+        if (reciver_script.RO.spciality == 2 && amunition_script.AO.speciality == 2)
         {
             Firetype = firetype.lazer;
         }
