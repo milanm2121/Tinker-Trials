@@ -89,6 +89,9 @@ public class wepon_body_game : MonoBehaviour
 
     public Text ammocount;
 
+
+    bool can_shoot;
+
     //shooting sounds
     public AudioClip surpressed_Fire;
     public AudioClip nerf_Fire;
@@ -174,6 +177,11 @@ public class wepon_body_game : MonoBehaviour
         {
             lazer.gameObject.SetActive(false);
         }
+        //melee
+        if (Input.GetKeyDown(KeyCode.V) &&PA.melee==false)
+        {
+            StartCoroutine(melee());
+        }
         
     }
 
@@ -183,7 +191,7 @@ public class wepon_body_game : MonoBehaviour
         firetick += Time.deltaTime;
         if (reloading == false)
         {
-            if (Input.GetMouseButton(0) && P_ID.is_player==true ||AI_shooting==true)
+            if ((Input.GetMouseButton(0) && P_ID.is_player==true ||AI_shooting==true) && can_shoot==true)
             {
                 if (firetick >= firerrate && Firetype != firetype.gravity && ammoCount > 0)
                 {
@@ -455,5 +463,31 @@ public class wepon_body_game : MonoBehaviour
         yield return new WaitForSeconds(reload_time);
         ammoCount = amunition_script.AO.rounds;
         reloading = false;
+    }
+
+    IEnumerator melee()
+    {
+        can_shoot = false;
+        reloading = false;
+        StopCoroutine(reload());
+        PA.melee = true;
+        yield return new WaitForSeconds(0.2f);
+        RaycastHit[] targets=Physics.BoxCastAll(transform.parent.position, new Vector3(1f, 1f, 1f), transform.parent.forward, transform.parent.rotation, 0.3f);
+        for (int i = 0; targets.Length > i; i++)
+        {
+            if (targets[i].collider.gameObject != PA.gameObject)
+            {
+                if (targets[i].rigidbody != null)
+                {
+                    targets[i].rigidbody.velocity += velosity/proREF.range*10;
+                    if (targets[i].collider.gameObject.GetComponent<player_stats>() != null)
+                    {
+                        targets[i].collider.gameObject.GetComponent<player_stats>().damage_player(50, Vector2Int.zero);
+                    }
+                }
+
+            }
+        }
+        PA.melee = false;
     }
 }

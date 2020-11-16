@@ -521,13 +521,13 @@ public class workshop_interphase : MonoBehaviour
                 }
                 if (x.speciality == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
                 }
 
 
@@ -547,13 +547,14 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.specicality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Mesh));
-                    x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Material));
+                    
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Mesh));
+                    x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Material));
                 }
                 if (x.specicality == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Mesh));
-                    x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Mesh));
+                    x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Material));
                 }
                 if (x.specicality == 2)
                 {
@@ -570,7 +571,7 @@ public class workshop_interphase : MonoBehaviour
                 boots_object x = ScriptableObject.CreateInstance<boots_object>();
 
 
-                x.name = "chestplate";
+                x.name = "boots";
 
                 x.deffence = Random.Range(1, 10);
                 x.speciality = Random.Range(0, 3);
@@ -594,6 +595,105 @@ public class workshop_interphase : MonoBehaviour
 
 
                 ac.boots.Add(x);
+            }
+            if (PartToGen == 10)
+            {
+                primer_object x = ScriptableObject.CreateInstance<primer_object>();
+
+
+                x.name = "primer";
+
+                if (Random.Range(0,2) == 1)
+                    x.manual = true;
+                x.speciality = Random.Range(0,4);
+                x.timer = Random.Range(1,5);
+
+                if (x.speciality == 0)
+                {
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Material));
+                }
+                if (x.speciality == 1)
+                {
+                    //vortex
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                }
+                if (x.speciality == 2)
+                {
+                    //mine
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                }
+                if (x.speciality == 3)
+                {
+                    //impact
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
+                }
+
+
+                lc.primers.Add(x);
+            }
+
+            if (PartToGen == 11)
+            {
+                payload_object x = ScriptableObject.CreateInstance<payload_object>();
+
+
+
+                x.name = "payload";
+                int stat_point=10;
+                int stat = Random.Range(1,Mathf.Clamp(5,1,stat_point));
+                x.damage = stat;
+                stat_point -= stat;
+                stat = Random.Range(1, Mathf.Clamp(5, 1, stat_point));
+                x.element = stat;
+                stat_point -= stat;
+                stat = Random.Range(1, Mathf.Clamp(5, 1, stat_point));
+                x.radious = stat;
+           
+                lc.payloads.Add(x);
+            }
+
+            if (PartToGen == 12)
+            {
+                container_object x = ScriptableObject.CreateInstance<container_object>();
+
+
+                x.name = "container";
+
+                x.speciality = Random.Range(0,4);
+                if (Random.Range(0,2) == 1)
+                    x.sticky = true;
+                x.weight = x.speciality + 3;
+
+                if (x.speciality == 0)
+                {
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Material));
+                }
+                if (x.speciality == 1)
+                {
+                    //knife
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
+                }
+                if (x.speciality == 2)
+                {
+                    //seeker
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                }
+                if (x.speciality == 3)
+                {
+                    //shrapnel
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                }
+
+
+                lc.containers.Add(x);
             }
         }
 
