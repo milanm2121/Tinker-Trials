@@ -90,7 +90,7 @@ public class wepon_body_game : MonoBehaviour
     public Text ammocount;
 
 
-    bool can_shoot;
+    bool can_shoot=true;
 
     //shooting sounds
     public AudioClip surpressed_Fire;
@@ -489,5 +489,6 @@ public class wepon_body_game : MonoBehaviour
             }
         }
         PA.melee = false;
+        can_shoot = true;
     }
 }

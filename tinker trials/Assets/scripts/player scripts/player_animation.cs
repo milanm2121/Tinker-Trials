@@ -32,6 +32,12 @@ public class player_animation : MonoBehaviour
     public Quaternion spinerotation;
 
     public Transform spine;
+
+    public Transform left_hand;
+    public Transform right_hand;
+
+    public Transform wepon_barrel_hand_position;
+    public Transform wepon_reciver_hand_position;
     /*
    READ ME AT REMI: below is all of the old code that i have put into a regon commented off NOT Deleted if you want to resume the code talk to me first 
 
@@ -58,6 +64,8 @@ public class player_animation : MonoBehaviour
     private void LateUpdate()
     {
         spine.transform.rotation *= spinerotation;
+       // left_hand.position = wepon_barrel_hand_position.position;
+       // right_hand.position = wepon_reciver_hand_position.position;
     }
 
     #region oldcode    

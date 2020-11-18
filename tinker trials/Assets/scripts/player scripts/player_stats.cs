@@ -72,6 +72,7 @@ public class player_stats : MonoBehaviour
                 foreach (Collider collider in ragdoll)
                 {
                     collider.enabled = true;
+                    
                 }
                 Destroy(GetComponent<Rigidbody>());
                 Destroy(gameObject, 3);
