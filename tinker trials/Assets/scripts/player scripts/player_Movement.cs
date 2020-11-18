@@ -78,6 +78,10 @@ public class player_Movement : MonoBehaviour
     public bool walking;
     public float inital_running_multiplyer;
     private float running_multiplyer;
+
+
+    public bool low_gravity = false;
+
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -87,6 +91,11 @@ public class player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (low_gravity == true)
+        {
+            RB.AddForce(new Vector3(0,5f,0));
+        }
+
         if (RB != null)
         {
             if (Input.GetKey(KeyCode.LeftShift))
