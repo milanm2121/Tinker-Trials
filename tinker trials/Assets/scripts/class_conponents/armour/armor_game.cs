@@ -6,6 +6,7 @@ script descrition: this script is used for generating armour in game and all of 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class armor_game : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class armor_game : MonoBehaviour
 
     public float weight=0;
     public int deffence;
+
+    public AudioMixer SFX;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,12 +39,22 @@ public class armor_game : MonoBehaviour
         deffence += cheastplate_script.CPO.deffence;
         deffence += L_boots_script.BO.deffence;
         deffence = deffence / 3 * 10;
+
+        
+
     }
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        if (headgear_script.HGO.speciality == 2)
+        {
+            Debug.Log(SFX.SetFloat("SFX Volume",10));
+        }
+        else
+        {
+            Debug.Log(SFX.SetFloat("SFX Volume", 0));
+        }
     }
     public void selectclass(class_class.Class Class_)
     {

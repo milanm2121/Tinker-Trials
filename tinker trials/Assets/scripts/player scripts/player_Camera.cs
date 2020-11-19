@@ -38,6 +38,8 @@ public class player_Camera : MonoBehaviour
 
     public player_animation animator;
 
+    bool stun;
+    float stuntime;
     
     // Start is called before the first frame update
     void Start()
@@ -51,11 +53,14 @@ public class player_Camera : MonoBehaviour
         cam = GetComponent<Camera>();
 
         defaltFOV = cam.fieldOfView;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if(GetComponent<Rigidbody>()!=null)
             GetComponentInParent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
 
@@ -72,6 +77,7 @@ public class player_Camera : MonoBehaviour
              */
             if (camera_Pause == false)
             {
+
                 if (controler_input_Setup_script.contorllerType == 0)
                 {
                     mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX;
@@ -82,12 +88,21 @@ public class player_Camera : MonoBehaviour
                     mouseX = controler_input_manager.Right_Stick.x * sensitivityX;
                     mouseY = controler_input_manager.Right_Stick.y * senstivivtyY;
                 }
+
+
             }
 
 
             //the math of storing the players next rotation in the mouse position value
 
-            mouseposition = mouseposition + new Vector2(mouseX, mouseY);
+            if (stun == true)
+            {
+                mouseposition = mouseposition + new Vector2(mouseX, mouseY).normalized;
+            }
+            else
+            {
+                mouseposition = mouseposition + new Vector2(mouseX, mouseY);
+            }
             mouseposition.y = Mathf.Clamp(mouseposition.y, -90, 90);
 
             //the x axsis changes the player
@@ -136,6 +151,17 @@ public class player_Camera : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             camera_Pause = false;
         }
+
+        if (stuntime > 0)
+        {
+            stun = true;
+            stuntime -= Time.deltaTime;
+        }
+        else
+        {
+            stun = false;
+            stuntime = 0;
+        }
     }
 
     //added for shooting recoil in game
@@ -153,4 +179,9 @@ public class player_Camera : MonoBehaviour
         
     }
     
+    public void stun_player()
+    {
+        stuntime = 3;
+    }
+
 }

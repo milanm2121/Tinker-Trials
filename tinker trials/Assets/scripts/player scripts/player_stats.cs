@@ -13,6 +13,7 @@ public class player_stats : MonoBehaviour
     public armor_game AG;
     public wepon_body_game WBG;
     public player_Movement PM;
+    public lethal_thrower LT;
 
     public Text healthtext;
 
@@ -53,6 +54,9 @@ public class player_stats : MonoBehaviour
     public Image health_bar;
 
     public Collider[] ragdoll;
+
+    public GameObject damage_numbers_UI_Canvas;
+    public GameObject damage_numbers;
 
     // Start is called before the first frame update
     void Start()
@@ -146,7 +150,62 @@ public class player_stats : MonoBehaviour
     {
         //damage armour calculation
         damage /= armour;
-        health -= damage;
+        health -= (int)damage;
+        GameObject UI_can = Instantiate(damage_numbers_UI_Canvas, transform.position,Quaternion.identity);
+        GameObject base_damage=Instantiate(damage_numbers, UI_can.transform);
+        base_damage.GetComponent<damage_numbers>().damage((int)damage, 0);
+        
+        if (element.x == 1)
+        {
+            fire_meter += damage*2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage*2, 1);
+        }
+        if (element.x == 2)
+        {
+            frost_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage, 2);
+        }
+        if (element.x == 3)
+        {
+            dirt_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage*2, 3);
+        }
+        if (element.x == 4)
+        {
+            electrucity_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage*2, 4);
+        }
+        
+
+        if (element.y == 1)
+        {
+            fire_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage*2, 1);
+        }
+        if (element.y == 2)
+        {
+            frost_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage*2, 2);
+        }
+        if (element.y == 3)
+        {
+            dirt_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage*2, 3);
+        }
+        if (element.y == 4)
+        {
+            electrucity_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage*2, 4);
+        }
+
     }
     public void OnCollisionEnter(Collision col)
     {
@@ -218,10 +277,26 @@ public class player_stats : MonoBehaviour
         //calculates the weight and defence at the start of a game
         armour = AG.deffence / 10;
         weight = AG.weight + WBG.weight/3;
+        if (WBG.suport_script.SO.speciality == 1)
+        {
+            weight = AG.weight;
+            PM.low_gravity = true;
+        }
+
         //calculating avrage speed
         PM.speed = PM.speed - (weight/10);
         PM.initalSpeed = PM.speed;
         loaded = true;
+
+        if (AG.cheastplate_script.CPO.specicality == 1)
+        {
+            WBG.reserve_ammo *= 2;
+        }
+
+        if (AG.cheastplate_script.CPO.specicality == 2)
+        {
+            LT.sholder_launcher = true;
+        }
     }
 
 }
