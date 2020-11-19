@@ -985,6 +985,7 @@ MonoBehaviour:
   R_boots_script: {fileID: 6757041725002678166}
   weight: 0
   deffence: 0
+  SFX: {fileID: 24100000, guid: 22fb5bdea04b1b4458e2de52e56e52cf, type: 2}
 --- !u!114 &2054605246031634913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,6 +1769,7 @@ MonoBehaviour:
   AG: {fileID: 1204844818130598478}
   WBG: {fileID: 1763241996100043265}
   PM: {fileID: 4551209811371177184}
+  LT: {fileID: 7441307208463227320}
   healthtext: {fileID: 635501916053762365}
   PC: {fileID: 3630795647439232329}
   health: 100
@@ -2908,6 +2910,8 @@ MonoBehaviour:
   lethal: {fileID: 8672707718440348977, guid: 999f088f74f5d494689e19ce8a361fb3, type: 3}
   currentLeathal: {fileID: 0}
   tapped_lethal: 0
+  PM: {fileID: 0}
+  sholder_launcher: 0
 --- !u!1 &7543760273380982236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,10 +3211,12 @@ MonoBehaviour:
   lazer: {fileID: 7441307208420162169}
   reloading: 0
   reload_time: 0
+  reserve_ammo: 0
   P_ID: {fileID: 559346274}
   AI_shooting: 0
   ammocount: {fileID: 6327816218122758523}
   megerment: {fileID: 669144629}
+  recoil_reduction: 0
   surpressed_Fire: {fileID: 8300000, guid: 3cb214a5aa54a17478f73c121a8d07ad, type: 3}
   nerf_Fire: {fileID: 8300000, guid: 0807542a545b7f149bffe7512f9687e9, type: 3}
   buckshot_Fire: {fileID: 8300000, guid: df58e22d892e33748bbe933d4de4557a, type: 3}

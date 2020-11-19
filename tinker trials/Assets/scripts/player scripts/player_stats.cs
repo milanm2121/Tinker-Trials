@@ -13,6 +13,7 @@ public class player_stats : MonoBehaviour
     public armor_game AG;
     public wepon_body_game WBG;
     public player_Movement PM;
+    public lethal_thrower LT;
 
     public Text healthtext;
 
@@ -286,6 +287,16 @@ public class player_stats : MonoBehaviour
         PM.speed = PM.speed - (weight/10);
         PM.initalSpeed = PM.speed;
         loaded = true;
+
+        if (AG.cheastplate_script.CPO.specicality == 1)
+        {
+            WBG.reserve_ammo *= 2;
+        }
+
+        if (AG.cheastplate_script.CPO.specicality == 2)
+        {
+            LT.sholder_launcher = true;
+        }
     }
 
 }

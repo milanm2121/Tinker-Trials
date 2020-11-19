@@ -91,13 +91,15 @@ public class player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (low_gravity == true)
-        {
-            RB.AddForce(new Vector3(0,5f,0));
-        }
+        
 
         if (RB != null)
         {
+            if (low_gravity == true)
+            {
+                RB.AddForce(new Vector3(0, 5f, 0));
+            }
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 running = true;

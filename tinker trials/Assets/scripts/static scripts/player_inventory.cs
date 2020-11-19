@@ -185,7 +185,7 @@ public static class player_inventory
                     x.name = SO.name;
                     x.weight = SO.weight;
                     x.deffence = SO.stats[0];
-                    x.speciality = SO.stats[0];
+                    x.speciality = SO.stats[1];
                     //
                     //mesh and material go here
                     //
@@ -203,7 +203,7 @@ public static class player_inventory
                     x.name = SO.name;
                     x.weight = SO.weight;
                     x.deffence = SO.stats[0];
-                    x.specicality = SO.stats[0];
+                    x.specicality = SO.stats[1];
                     //
                     //mesh and material go here
                     //
@@ -221,7 +221,7 @@ public static class player_inventory
                     x.name = SO.name;
                     x.weight = SO.weight;
                     x.deffence = SO.stats[0];
-                    x.speciality = SO.stats[0];
+                    x.speciality = SO.stats[1];
                     //
                     //mesh and material go here
                     //

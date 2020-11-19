@@ -84,6 +84,8 @@ public class wepon_body_game : MonoBehaviour
     int ammoCount=0;
     public bool reloading=false;
     public float reload_time;
+    public int reserve_ammo;
+    
 
     public player_ID P_ID;
 
@@ -93,6 +95,7 @@ public class wepon_body_game : MonoBehaviour
 
     float overheat_damage_multiplyer;
     public TMP_Text megerment;
+    public float recoil_reduction;
 
     bool can_shoot=true;
 
@@ -142,7 +145,7 @@ public class wepon_body_game : MonoBehaviour
     void Update()
     {
         if (ammocount != null)
-            ammocount.text = ammoCount + " / " + amunition_script.AO.rounds;
+            ammocount.text = ammoCount + " / " + reserve_ammo;
         velosity = -transform.right.normalized * proREF.range;
 
         if (P_ID.is_player == true)
@@ -193,6 +196,11 @@ public class wepon_body_game : MonoBehaviour
         {
             StartCoroutine(melee());
         }
+        //reload
+        if (Input.GetKeyDown(KeyCode.R)&& reloading==false &&reserve_ammo>0)
+        {
+            StartCoroutine(reload());
+        }
         
     }
 
@@ -234,7 +242,7 @@ public class wepon_body_game : MonoBehaviour
                         }
                         if(suport_script.SO.speciality == 1)
                         {
-                            PM.RB.AddForce(-velosity/2);
+                            PM.RB.AddForce(-velosity);
                         }
 
 
@@ -276,10 +284,20 @@ public class wepon_body_game : MonoBehaviour
                     }
 
                     firetick = 0;
-                    PC.Flinch_Recoil(recoil);
+
+                    if (grip_script.GO.speciality == 2)
+                    {
+                        
+                        PC.Flinch_Recoil(recoil/recoil_reduction);
+                        recoil_reduction += 0.2f;
+                    }
+                    else
+                    {
+                        PC.Flinch_Recoil(recoil);
+                    }
                 }
 
-                if (ammoCount <= 0 && reloading == false)
+                if (ammoCount <= 0 && reloading == false &&reserve_ammo>0)
                 {
                     StartCoroutine(reload());
                 }
@@ -291,6 +309,8 @@ public class wepon_body_game : MonoBehaviour
             }
             else
             {
+                recoil_reduction = 1;
+                overheat_damage_multiplyer = 1;
                 firerrate = Mathf.Clamp(firerrate * 1.2f, 0.01f, intialfirerate);
 
                 if (Firetype == firetype.gravity && blastPrime == true)
@@ -475,6 +495,8 @@ public class wepon_body_game : MonoBehaviour
             range += 5;
 
         ammoCount = amunition_script.AO.rounds;
+        reserve_ammo = ammoCount * 5;
+
         reload_time = weight/4;
 
         if (amunition_script.AO.speciality == 3)
@@ -487,7 +509,10 @@ public class wepon_body_game : MonoBehaviour
     {
         reloading = true;
         yield return new WaitForSeconds(reload_time);
-        ammoCount = amunition_script.AO.rounds;
+        int usedRounds =amunition_script.AO.rounds - ammoCount;
+        
+        ammoCount += Mathf.Clamp(usedRounds,0,reserve_ammo);
+        reserve_ammo -= usedRounds;
         reloading = false;
     }
 
@@ -508,8 +533,15 @@ public class wepon_body_game : MonoBehaviour
                     targets[i].rigidbody.velocity += velosity/proREF.range*10;
                     if (targets[i].collider.gameObject.GetComponent<player_stats>() != null)
                     {
-                        targets[i].collider.gameObject.GetComponent<player_stats>().damage_player(50, Vector2Int.zero);
+                        player_stats target = targets[i].collider.gameObject.GetComponent<player_stats>();
+                        target.damage_player(50, Vector2Int.zero);
+
+                        if (grip_script.GO.speciality == 1)
+                        {
+                            target.PC.stun_player();
+                        }
                     }
+                    
                 }
 
             }

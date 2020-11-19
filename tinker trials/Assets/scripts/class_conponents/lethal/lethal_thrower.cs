@@ -11,6 +11,9 @@ public class lethal_thrower : MonoBehaviour
 
     public bool tapped_lethal;
 
+    public player_Movement PM;
+
+    public bool sholder_launcher=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,7 @@ public class lethal_thrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G) && currentLeathal == null)
+        if (Input.GetKeyDown(KeyCode.G) && currentLeathal == null && (PM.running==false || sholder_launcher==true))
         {
             GameObject x = Instantiate(lethal, transform.position, Quaternion.identity);
             IGL.primed = false;
@@ -29,7 +32,7 @@ public class lethal_thrower : MonoBehaviour
             tapped_lethal = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && tapped_lethal==false)
+        if (Input.GetKeyDown(KeyCode.G) && tapped_lethal== false && (PM.running == false || sholder_launcher == true))
         {
             if (currentLeathal != null && IGL.manual == true)
             {
