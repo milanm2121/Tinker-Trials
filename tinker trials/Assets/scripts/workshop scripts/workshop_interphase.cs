@@ -57,7 +57,7 @@ public class workshop_interphase : MonoBehaviour
         // used to load scriptable objects from the player staric invetory
         Debug.Log("load_data");
         //load_inventory();//before loading in new parts turn off
-        generate_parts(100);
+        generate_parts(150);
     }
 
     // Update is called once per frame
@@ -278,7 +278,7 @@ public class workshop_interphase : MonoBehaviour
     {
         for (int i = 0; NumToGen > i; i++)
         {
-            int PartToGen =Random.Range(1, 10);
+            int PartToGen =Random.Range(1, 13);
             //barrels
             if (PartToGen == 1)
             {

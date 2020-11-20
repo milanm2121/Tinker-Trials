@@ -14,6 +14,7 @@ public class player_stats : MonoBehaviour
     public wepon_body_game WBG;
     public player_Movement PM;
     public lethal_thrower LT;
+    public player_ID PID;
 
     public Text healthtext;
 
@@ -100,7 +101,8 @@ public class player_stats : MonoBehaviour
                 GetComponent<Rigidbody>().constraints=RigidbodyConstraints.None;
             }
         }
-        dirt();
+        if(PID.is_player==true)
+            dirt();
         
         if(health_bar!=null)
             health_bar.fillAmount = health / 100;
@@ -285,10 +287,31 @@ public class player_stats : MonoBehaviour
 
         //calculating avrage speed
         PM.speed = PM.speed - (weight/10);
+
+        if (AG.L_boots_script.BO.speciality == 1)
+        {
+            PM.speed *= 1.5f;
+        }
+
         PM.initalSpeed = PM.speed;
         loaded = true;
 
-        if (AG.cheastplate_script.CPO.specicality == 1)
+        if (AG.L_boots_script.BO.speciality == 2)
+        {
+            PM.multi_Jump = true;
+        }
+        else
+        {
+            PM.multi_Jump = false;
+        }
+
+        if (AG.L_boots_script.BO.speciality == 3)
+        {
+            WBG.melee_range *= 2;
+        }
+
+
+         if (AG.cheastplate_script.CPO.specicality == 1)
         {
             WBG.reserve_ammo *= 2;
         }

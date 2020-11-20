@@ -297,7 +297,8 @@ public class player_Movement : MonoBehaviour
             node = col.gameObject;
             SwingOffset = node.transform.position - transform.position;
             swinging = true;
-            node.GetComponent<Rigidbody>().velocity = RB.velocity;
+            if(RB)
+                node.GetComponent<Rigidbody>().velocity = RB.velocity;
         }
     }
 

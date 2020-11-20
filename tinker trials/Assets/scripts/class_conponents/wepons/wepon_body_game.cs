@@ -99,6 +99,7 @@ public class wepon_body_game : MonoBehaviour
 
     bool can_shoot=true;
 
+    public float melee_range=0.3f;
     //shooting sounds
     public AudioClip surpressed_Fire;
     public AudioClip nerf_Fire;
@@ -120,7 +121,6 @@ public class wepon_body_game : MonoBehaviour
         amunition_script = amunition.GetComponent<wepon_anumition>();
         grip_script = grip.GetComponent<wepon_grip>();
         suport_script = suport.GetComponent<wepon_suport>();
-
 
         select_class(static_classes.Class1);
 
@@ -523,7 +523,7 @@ public class wepon_body_game : MonoBehaviour
         StopCoroutine(reload());
         PA.melee = true;
         yield return new WaitForSeconds(0.2f);
-        RaycastHit[] targets=Physics.BoxCastAll(transform.parent.position, new Vector3(1f, 1f, 1f), transform.parent.forward, transform.parent.rotation, 0.3f);
+        RaycastHit[] targets=Physics.BoxCastAll(transform.parent.position, new Vector3(1f, 1f, 1f), transform.parent.forward, transform.parent.rotation, melee_range);
         for (int i = 0; targets.Length > i; i++)
         {
             if (targets[i].collider.gameObject != PA.gameObject)

@@ -16,9 +16,21 @@ public class in_game_leathal : MonoBehaviour
     public bool manual=true;
     public bool primed=false;
 
-
+    bool player_in_range;
 
     float fuze=0;
+
+    public player_stats ps;
+
+    bool exploded;
+
+    GameObject empty;
+
+    public GameObject target;
+
+    Rigidbody rb;
+
+    public GameObject junk_explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +45,7 @@ public class in_game_leathal : MonoBehaviour
         {
             manual = true;
         }
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -42,17 +55,49 @@ public class in_game_leathal : MonoBehaviour
         {
             fuze -= Time.deltaTime;
         }
-        if (fuze <= 0 && manual==false)
+        if (fuze <= 0 && manual == false)
         {
-            explode();
+            StartCoroutine(primerPhase());
             print("boom");
         }
-        if(manual==true && primed == true)
+        if (manual == true && primed == true)
         {
-            explode();
+            StartCoroutine(primerPhase());
             print("boom1");
         }
-        
+
+
+        if (primer_script.PO.speciality == 2)
+        {
+            Collider[] player_Target = Physics.OverlapSphere(transform.position, 5,LayerMask.GetMask("player"));
+            for(int i=0;player_Target.Length>i; i++)
+            {
+                if (player_Target[i].GetComponent<player_stats>() != ps)
+                    player_in_range = true;
+            }
+            if (player_Target.Length == 0)
+            {
+                player_in_range = false;
+            }
+        }
+
+        if (container_script.CO.speciality == 2)
+        {
+            if (target == null)
+            {
+                Collider[] player_Target = Physics.OverlapSphere(transform.position, 20, LayerMask.GetMask("player"));
+                for (int i = 0; player_Target.Length > i; i++)
+                {
+                    if (player_Target[i].GetComponent<player_stats>() != ps)
+                        target = player_Target[i].gameObject;
+                }
+            }
+            else
+            {
+                rb.AddForce((target.transform.position - transform.position).normalized * 100);
+            }
+        }
+
     }
     void generate()
     {
@@ -62,53 +107,67 @@ public class in_game_leathal : MonoBehaviour
     } 
     void explode()
     {
-        Collider[] col = Physics.OverlapSphere(transform.position, payload_script.PO.radious*2);
-        for(int i=0;col.Length>i; i++)
+        if (exploded == false)
         {
-            RaycastHit hit;
-
-            Vector3 offset = (col[i].transform.position - transform.position);
-            Physics.Raycast(transform.position, offset,out hit);
-            if (hit.collider == col[i] && col[i].GetComponent<Rigidbody>()!=null)
+            exploded = true;
+            Collider[] col = Physics.OverlapSphere(transform.position, payload_script.PO.radious * 2);
+            for (int i = 0; col.Length > i; i++)
             {
-                col[i].attachedRigidbody.velocity += 10*(new Vector3(1,1,1)-(offset/offset.magnitude));
-                if (col[i].GetComponent<player_stats>() != null)
+                RaycastHit hit;
+
+                Vector3 offset = (col[i].transform.position - transform.position);
+                Physics.Raycast(transform.position, offset, out hit);
+                if (hit.collider == col[i] && col[i].GetComponent<Rigidbody>() != null)
                 {
-                    col[i].GetComponent<player_stats>().damage_player(payload_script.PO.damage*100, new Vector2Int(payload_script.PO.element, 0));
-                }
-                if (col[i].gameObject.GetComponent<object_health>() != null)
-                {
-                    col[i].gameObject.GetComponent<object_health>().damage_object(payload_script.PO.damage * 10);
+                    col[i].attachedRigidbody.velocity += (new Vector3(1, 1, 1) - (offset / offset.magnitude));
+                    if (col[i].GetComponent<player_stats>() != null)
+                    {
+                        col[i].GetComponent<player_stats>().damage_player(payload_script.PO.damage * 100, new Vector2Int(payload_script.PO.element, 0));
+                    }
+                    if (col[i].gameObject.GetComponent<object_health>() != null)
+                    {
+                        col[i].gameObject.GetComponent<object_health>().damage_object(payload_script.PO.damage * 10);
+                    }
                 }
             }
-        }
 
-        GameObject x =Instantiate(live_refrence_maneger.Expolsion,transform.position,Quaternion.identity);
-        x.GetComponent<explosion_groth>().raidious = payload_script.PO.radious*2;
+            GameObject x = Instantiate(live_refrence_maneger.Expolsion, transform.position, Quaternion.identity);
+            x.GetComponent<explosion_groth>().raidious = payload_script.PO.radious * 2;
 
-        if (payload_script.PO.element == 0)
-        {
-            x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPdefalt;
-        }
-        else if (payload_script.PO.element == 1)
-        {
-            x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPFire;
-        }
-        else if(payload_script.PO.element == 2)
-        {
-            x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPice;
-        }
-        else if (payload_script.PO.element == 3)
-        {
-            x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPearth;
-        }
-        else if (payload_script.PO.element == 4)
-        {
-            x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPEelctrisity;
-        }
+            if (payload_script.PO.element == 0)
+            {
+                x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPdefalt;
+            }
+            else if (payload_script.PO.element == 1)
+            {
+                x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPFire;
+            }
+            else if (payload_script.PO.element == 2)
+            {
+                x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPice;
+            }
+            else if (payload_script.PO.element == 3)
+            {
+                x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPearth;
+            }
+            else if (payload_script.PO.element == 4)
+            {
+                x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPEelctrisity;
+            }
 
+            if (container_script.CO.speciality == 3)
+            {
+                Instantiate(junk_explosion,transform.position, Quaternion.identity);
+            }
 
-        Destroy(gameObject);
+            if (empty != null)
+            {
+                Destroy(empty);
+            }
+            Destroy(gameObject);
+
+           
+        }
     }
 
     IEnumerator primerPhase()
@@ -119,15 +178,48 @@ public class in_game_leathal : MonoBehaviour
             yield return new WaitForSeconds(2);
             vortex();
         }
+
+        if (primer_script.PO.speciality == 2)
+        {
+            yield return new WaitWhile(()=>player_in_range==false);
+                
+        }
         explode();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (empty != null)
+        {
+            Destroy(empty);
+        }
+
         if (container_script.CO.sticky == true)
         {
-            transform.parent = collision.transform;
+            empty = new GameObject();
+            transform.parent = empty.transform;
+            empty.transform.parent = collision.transform;
+            transform.position= collision.GetContact(0).point;
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+
+        if (primer_script.PO.speciality == 3)
+        {
+            StartCoroutine(primerPhase());
+        }
+
+        if (container_script.CO.speciality == 1)
+        {
+            if (collision.gameObject.layer == LayerMask.GetMask("player"))
+            {
+                empty = new GameObject();
+                transform.parent = empty.transform;
+                empty.transform.parent = collision.transform;
+                transform.position = collision.GetContact(0).point;
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+                collision.gameObject.GetComponent<player_stats>().damage_player(50, Vector2Int.zero);
+            }
         }
     }
 
@@ -144,7 +236,7 @@ public class in_game_leathal : MonoBehaviour
         for (int i = 0; targets.Count > i; i++)
         {
             Vector3 offest = (transform.position - targets[i].transform.position);
-            targets[i].velocity += offest.normalized * ( 10 * offest.magnitude);
+            targets[i].velocity += offest.normalized * ( offest.magnitude);
         }
         
     }

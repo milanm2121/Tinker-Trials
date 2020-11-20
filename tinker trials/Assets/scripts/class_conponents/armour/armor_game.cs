@@ -26,12 +26,24 @@ public class armor_game : MonoBehaviour
     public int deffence;
 
     public AudioMixer SFX;
-    
+
+    public player_ID PID;
+
     // Start is called before the first frame update
     void Awake()
     {
         //adds all of the stats of get a defence value
-        selectclass(static_classes.Class1);
+        if (PID.is_player == true)
+        {
+            selectclass(static_classes.Class1);
+        }
+        else
+        {
+            headgear_script.Generate_headGear();
+            cheastplate_script.gerateCheastPlate();
+            L_boots_script.generateBoots();
+            R_boots_script.generateBoots();
+        }
         weight += headgear_script.HGO.weight;
         weight += cheastplate_script.CPO.weight;
         weight += L_boots_script.BO.weight;
@@ -59,7 +71,7 @@ public class armor_game : MonoBehaviour
     public void selectclass(class_class.Class Class_)
     {
         //defalt armour
-
+        
 
         headgear_script.HGO = Class_.Armour.headpeice;
         cheastplate_script.CPO = Class_.Armour.chestpeice;
