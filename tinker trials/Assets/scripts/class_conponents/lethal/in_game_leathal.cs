@@ -31,6 +31,9 @@ public class in_game_leathal : MonoBehaviour
     Rigidbody rb;
 
     public GameObject junk_explosion;
+
+    bool stuck=false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -189,13 +192,15 @@ public class in_game_leathal : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         if (empty != null)
         {
             Destroy(empty);
         }
 
-        if (container_script.CO.sticky == true)
+        if (container_script.CO.sticky == true && stuck==false)
         {
+            stuck = true;
             empty = new GameObject();
             transform.parent = empty.transform;
             empty.transform.parent = collision.transform;
@@ -210,8 +215,9 @@ public class in_game_leathal : MonoBehaviour
 
         if (container_script.CO.speciality == 1)
         {
-            if (collision.gameObject.layer == LayerMask.GetMask("player"))
-            {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("player") && stuck == false)
+        {
+                stuck = true;
                 empty = new GameObject();
                 transform.parent = empty.transform;
                 empty.transform.parent = collision.transform;

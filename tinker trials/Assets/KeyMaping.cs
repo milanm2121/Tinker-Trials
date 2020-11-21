@@ -24,15 +24,15 @@ public class KeyMaping : MonoBehaviour
         for(int i = 0; i < 5; i++)
         {
             if (keyMap.GetChild(i).name == "ForwardKey")// finding the namew of the buttons inside the panel obejct
-                keyMap.GetChild(i).GetComponent<Text>().text = KeyInputs.KP.forward.ToString();
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.forward.ToString();
             else if (keyMap.GetChild(i).name == "BackwardsKey")
-                keyMap.GetChild(i).GetComponent<Text>().text = KeyInputs.KP.backwards.ToString();
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.backwards.ToString();
             else if (keyMap.GetChild(i).name == "LeftKey")
-                keyMap.GetChild(i).GetComponent<Text>().text = KeyInputs.KP.left.ToString();
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.left.ToString();
             else if (keyMap.GetChild(i).name == "RightKey")
-                keyMap.GetChild(i).GetComponent<Text>().text = KeyInputs.KP.right.ToString();
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.right.ToString();
             else if (keyMap.GetChild(i).name == "JumpKey")
-                keyMap.GetChild(i).GetComponent<Text>().text = KeyInputs.KP.jump.ToString();
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.jump.ToString();
         }
 
     }
