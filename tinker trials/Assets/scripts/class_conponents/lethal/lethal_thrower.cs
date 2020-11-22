@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class lethal_thrower : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class lethal_thrower : MonoBehaviour
     public bool sholder_launcher=false;
 
     public player_ID PID;
+
+    public bool throwing_lethal;
+
+    public Rig right_arm_constaints;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,16 +33,16 @@ public class lethal_thrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (throwing_lethal == true)
+            throwing_lethal = false;
+
         if (PID.is_player && Input.GetKeyDown(KeyCode.G) && currentLeathal == null && (PM.running==false || sholder_launcher==true))
         {
-            GameObject x = Instantiate(lethal, transform.position, Quaternion.identity);
-            IGL.primed = false;
-            x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight*10;
-            x.GetComponent<in_game_leathal>().ps = ps;
-
-            currentLeathal = x;
+            right_arm_constaints.weight = 0;
+            StartCoroutine(delaythrow());
             
             tapped_lethal = true;
+            throwing_lethal = true;
         }
 
         if (PID.is_player && Input.GetKeyDown(KeyCode.G) && tapped_lethal== false && (PM.running == false || sholder_launcher == true))
@@ -58,6 +64,17 @@ public class lethal_thrower : MonoBehaviour
         IGL.primer_script.PO = class_.Lethal.primer;
         IGL.container_script.CO = class_.Lethal.container;
         IGL.payload_script.PO = class_.Lethal.payload;
+        
     }
-    
+    IEnumerator delaythrow()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject x = Instantiate(lethal, transform.position, Quaternion.identity);
+        IGL.primed = false;
+        x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight * 10;
+        x.GetComponent<in_game_leathal>().ps = ps;
+
+        currentLeathal = x;
+        right_arm_constaints.weight = 1;
+    }
 }

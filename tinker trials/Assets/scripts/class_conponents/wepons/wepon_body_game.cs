@@ -100,6 +100,9 @@ public class wepon_body_game : MonoBehaviour
     bool can_shoot=true;
 
     public float melee_range=0.3f;
+    public Transform cam;
+    public Transform rigthand;
+
     //shooting sounds
     public AudioClip surpressed_Fire;
     public AudioClip nerf_Fire;
@@ -109,7 +112,7 @@ public class wepon_body_game : MonoBehaviour
     public AudioClip gravity_start;
     public AudioClip gravity_hold;
 
-
+    
 
 
     // generates the stats and wepons
@@ -148,9 +151,9 @@ public class wepon_body_game : MonoBehaviour
             ammocount.text = ammoCount + " / " + reserve_ammo;
         velosity = -transform.right.normalized * proREF.range;
 
-        if (P_ID.is_player == true)
+        if (P_ID.is_player == true && can_shoot==true)
         {
-
+            transform.localRotation=Quaternion.Euler(0,90,0);
             if (Input.GetMouseButton(1))
             {
                 transform.position = Vector3.Lerp(transform.position, ADS.position, 1 / weight);
@@ -522,6 +525,8 @@ public class wepon_body_game : MonoBehaviour
         reloading = false;
         StopCoroutine(reload());
         PA.melee = true;
+
+        transform.parent = rigthand;
         yield return new WaitForSeconds(0.2f);
         RaycastHit[] targets=Physics.BoxCastAll(transform.parent.position, new Vector3(1f, 1f, 1f), transform.parent.forward, transform.parent.rotation, melee_range);
         for (int i = 0; targets.Length > i; i++)
@@ -546,7 +551,9 @@ public class wepon_body_game : MonoBehaviour
 
             }
         }
+        yield return new WaitForSeconds(0.2f);
         PA.melee = false;
         can_shoot = true;
+        transform.parent = cam;
     }
 }
