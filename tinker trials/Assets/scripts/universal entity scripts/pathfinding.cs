@@ -123,7 +123,7 @@ public class pathfinding : MonoBehaviour
         if (allPathsCheacked == true || reched_target == false)
         {
 
-            print("can't reach target, moves taken: " + moves);
+         //   print("can't reach target, moves taken: " + moves);
             reset_pathfinding();
 
             target = null;
@@ -453,7 +453,7 @@ public class pathfinding : MonoBehaviour
         {
             reched_target = true;
 
-            print("path:" + paths.Count + " " + "reched target in: " + (moves + 1) + "moves");
+          //  print("path:" + paths.Count + " " + "reched target in: " + (moves + 1) + "moves");
 
             bestPath.Add(new node { pos = pos, moves = move, value = move + (int)distance_from_targt });
             if (moves + 1 == 0)

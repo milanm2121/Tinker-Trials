@@ -81,6 +81,9 @@ public class player_stats : MonoBehaviour
                 }
                 Destroy(GetComponent<Rigidbody>());
                 Destroy(gameObject, 3);
+                WBG.enabled = false;
+                LT.enabled = false;
+
 
             }
             else
