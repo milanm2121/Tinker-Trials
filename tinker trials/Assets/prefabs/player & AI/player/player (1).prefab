@@ -2935,10 +2935,7 @@ MonoBehaviour:
   PM: {fileID: 4551209811371177184}
   WBG: {fileID: 1763241996100043265}
   LT: {fileID: 7441307208463227320}
-  left_hand: {fileID: 1333543770113509173}
-  right_hand: {fileID: 8432658030698419438}
-  wepon_barrel_hand_position: {fileID: 8863934215536032172}
-  wepon_reciver_hand_position: {fileID: 2197809358540074889}
+  rightarm: {fileID: 2128079355226836700}
 --- !u!114 &559346274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4516,6 +4513,8 @@ MonoBehaviour:
   megerment: {fileID: 669144629}
   recoil_reduction: 0
   melee_range: 0.3
+  cam: {fileID: 5602216443361495795}
+  rigthand: {fileID: 8432658030698419438}
   surpressed_Fire: {fileID: 8300000, guid: 3cb214a5aa54a17478f73c121a8d07ad, type: 3}
   nerf_Fire: {fileID: 8300000, guid: 0807542a545b7f149bffe7512f9687e9, type: 3}
   buckshot_Fire: {fileID: 8300000, guid: df58e22d892e33748bbe933d4de4557a, type: 3}
