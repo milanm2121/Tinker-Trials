@@ -1107,6 +1107,7 @@ MonoBehaviour:
   running: 0
   walking: 0
   inital_running_multiplyer: 0
+  low_gravity: 0
 --- !u!114 &-1265186254209585093
 MonoBehaviour:
   m_ObjectHideFlags: 0

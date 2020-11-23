@@ -8,7 +8,6 @@ public class AI_state_machine : MonoBehaviour
     public player_stats PS;
 
     public player_Movement PM;
-    public GameObject playerSpine;
 
     public wepon_body_game WBG;
 
@@ -21,6 +20,7 @@ public class AI_state_machine : MonoBehaviour
 
     public game_maneger GM;
 
+    public GameObject Camera;
     float time = 0;
     // Start is called before the first frame update
     void Start()
@@ -33,9 +33,10 @@ public class AI_state_machine : MonoBehaviour
     {
         if (PS.health > 0)
         {
-            if (shooting_target == null || Vector3.Distance(transform.position,shooting_target.transform.position)>10)
+            if (shooting_target==null || Vector3.Distance(transform.position,shooting_target.transform.position)>10)
             {
                 movement();
+                Debug.Log("moving");
             }
             shoot();
         }
@@ -48,11 +49,13 @@ public class AI_state_machine : MonoBehaviour
         {
             if (P_ID.team == 2)
             {
-                pathfindingTarget = GM.team1[Random.Range(0, GM.team1.Count)].transform;
+                if(GM.team1[Random.Range(0, GM.team1.Count)]!=null)
+                    pathfindingTarget = GM.team1[Random.Range(0, GM.team1.Count)].transform;
             }
             else
             {
-                pathfindingTarget = GM.team2[Random.Range(0, GM.team2.Count)].transform;
+                if(GM.team2[Random.Range(0, GM.team2.Count)]!=null)
+                    pathfindingTarget = GM.team2[Random.Range(0, GM.team2.Count)].transform;
             }
         }
 
@@ -149,13 +152,14 @@ public class AI_state_machine : MonoBehaviour
         else
         {
             transform.LookAt(new Vector3(shooting_target.transform.position.x, transform.position.y, shooting_target.transform.position.z));
-            playerSpine.gameObject.transform.LookAt(shooting_target.transform.position);
-
+            Camera.transform.LookAt(new Vector3(shooting_target.transform.position.x, shooting_target.transform.position.y, shooting_target.transform.position.z));
             RaycastHit hit;
             Physics.Raycast(WBG.transform.position,shooting_target.transform.position- WBG.transform.position, out hit);
+            Debug.DrawRay(WBG.transform.position, shooting_target.transform.position - WBG.transform.position,Color.green,1);
             if (hit.collider.gameObject == shooting_target)
             {
                 WBG.AI_shooting = true;
+                Debug.Log("shooting");
             }
             else
             {

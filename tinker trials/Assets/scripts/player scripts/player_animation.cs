@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class player_animation : MonoBehaviour
 {
@@ -21,23 +22,16 @@ public class player_animation : MonoBehaviour
     public float m_CurrentForward = 0;//
     //melee
     public bool melee;
-    public bool melee_percent;
+
     //
-    public bool throwing_leathal;
+    
     //
     public player_Movement PM;
     public wepon_body_game WBG;
-    public int IsRunning;
+    public lethal_thrower LT;
+    //public int IsRunning;
 
-    public Quaternion spinerotation;
-
-    public Transform spine;
-
-    public Transform left_hand;
-    public Transform right_hand;
-
-    public Transform wepon_barrel_hand_position;
-    public Transform wepon_reciver_hand_position;
+    public Rig rightarm;
     /*
    READ ME AT REMI: below is all of the old code that i have put into a regon commented off NOT Deleted if you want to resume the code talk to me first 
 
@@ -59,11 +53,22 @@ public class player_animation : MonoBehaviour
             characterAnimator.SetBool("aim", Aim);
             characterAnimator.SetFloat("speed", PM.RB.velocity.magnitude / 3);
             characterAnimator.SetBool("melee", melee);
+            characterAnimator.SetBool("throw lethal", LT.throwing_lethal);
+
+            if (melee == true)
+            {
+                rightarm.weight = 0;
+            }
+            else
+            {
+                rightarm.weight = 1;
+            }
+
         }
     }
     private void LateUpdate()
     {
-        spine.transform.rotation *= spinerotation;
+       // spine.transform.rotation *= spinerotation;
        // left_hand.position = wepon_barrel_hand_position.position;
        // right_hand.position = wepon_reciver_hand_position.position;
     }

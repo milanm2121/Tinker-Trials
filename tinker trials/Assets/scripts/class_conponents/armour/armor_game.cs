@@ -3,6 +3,7 @@ by:Milan Manji
 script descrition: this script is used for generating armour in game and all of its stats
 
 */
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +40,7 @@ public class armor_game : MonoBehaviour
         }
         else
         {
+            Generate_armour();
             headgear_script.Generate_headGear();
             cheastplate_script.gerateCheastPlate();
             L_boots_script.generateBoots();
@@ -55,6 +57,8 @@ public class armor_game : MonoBehaviour
         
 
     }
+
+    
 
     // Update is called once per frame
     void Start()
@@ -85,5 +89,103 @@ public class armor_game : MonoBehaviour
         L_boots_script.generateBoots();
         R_boots_script.generateBoots();
 
+    }
+    
+    private void Generate_armour()
+    {
+        if (true)
+        {
+            headgear_object x = ScriptableObject.CreateInstance<headgear_object>();
+
+
+            x.name = "headgear";
+
+            x.deffence = Random.Range(1, 10);
+            x.speciality = Random.Range(0, 3);
+            x.weight = x.deffence + x.speciality;
+
+            if (x.speciality == 0)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Mesh));
+                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Material));
+            }
+            if (x.speciality == 1)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
+                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
+            }
+            if (x.speciality == 2)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
+                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
+            }
+
+
+            headgear_script.HGO=x;
+        }
+
+        if (true)
+        {
+            cheastplate_object x = ScriptableObject.CreateInstance<cheastplate_object>();
+
+
+            x.name = "chestplate";
+
+            x.deffence = Random.Range(1, 10);
+            x.specicality = Random.Range(0, 4);
+            x.weight = x.deffence + x.specicality;
+
+            if (x.specicality == 0)
+            {
+
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Mesh));
+                x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Material));
+            }
+            if (x.specicality == 1)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Mesh));
+                x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Material));
+            }
+            if (x.specicality == 2)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Mesh));
+                x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Material));
+            }
+
+
+            cheastplate_script.CPO = x;
+        }
+
+        if (true)
+        {
+            boots_object x = ScriptableObject.CreateInstance<boots_object>();
+
+
+            x.name = "boots";
+
+            x.deffence = Random.Range(1, 10);
+            x.speciality = Random.Range(0, 3);
+            x.weight = x.deffence + x.speciality;
+
+            if (x.speciality == 0)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Mesh));
+                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Material));
+            }
+            if (x.speciality == 1)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Mesh));
+                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
+            }
+            if (x.speciality == 2)
+            {
+                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
+                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+            }
+
+
+            L_boots_script.BO = x;
+            R_boots_script.BO = x;
+        }
     }
 }

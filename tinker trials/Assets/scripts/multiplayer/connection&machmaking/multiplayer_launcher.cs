@@ -197,7 +197,7 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         Debug.Log("joined party");
-        if(!PhotonNetwork.IsMasterClient)
+        if(!PhotonNetwork.IsMasterClient && Looking_for_game==true)
             PhotonNetwork.LoadLevel("multiplayer_lobby");
     }
 

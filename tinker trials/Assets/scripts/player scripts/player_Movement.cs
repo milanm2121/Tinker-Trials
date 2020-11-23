@@ -91,7 +91,7 @@ public class player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         if (RB != null)
         {
@@ -137,104 +137,103 @@ public class player_Movement : MonoBehaviour
             }
 
             //keyboard
-            if (controler_input_Setup_script.contorllerType == 0)
+
+            //sets all the vecters to 0 for the input calculation
+            forward = Vector3.zero;
+            back = Vector3.zero;
+            left = Vector3.zero;
+            right = Vector3.zero;
+
+
+            //used to calculate the directional vector based off the rotaional offetof the player
+            if ((P_ID.is_player == true && Input.GetKey(KeyCode.A)) || AILeft == true)
             {
-                //sets all the vecters to 0 for the input calculation
-                forward = Vector3.zero;
-                back = Vector3.zero;
-                left = Vector3.zero;
-                right = Vector3.zero;
+                left = new Vector3((-transform.right).normalized.x * speed * 100, RB.velocity.y, (-transform.right).normalized.z * speed * 100);
+            }
+            if ((P_ID.is_player == true && Input.GetKey(KeyCode.D)) || AIRight == true)
+            {
+                right = new Vector3((transform.right).normalized.x * speed * 100, RB.velocity.y, (transform.right).normalized.z * speed * 100);
+            }
+
+            if ((P_ID.is_player == true && Input.GetKey(KeyCode.S)) || AIBack == true)
+            {
+                back = new Vector3((-transform.forward).normalized.x * speed * 100, RB.velocity.y, (-transform.forward).normalized.z * speed * 100);
+            }
+            if ((P_ID.is_player == true && Input.GetKey(KeyCode.W)) || AIForward == true)
+            {
+
+                forward = new Vector3((transform.forward).normalized.x * speed * 100, RB.velocity.y, (transform.forward).normalized.z * speed * 100);
+                // if (PA != null)
+                //     PA.moving();//Rem
+
+            }
 
 
-                //used to calculate the directional vector based off the rotaional offetof the player
-                if ((P_ID.is_player == true && Input.GetKey(KeyCode.A)) || AILeft == true)
-                {
-                    left = new Vector3((-transform.right).normalized.x * speed * 100, RB.velocity.y, (-transform.right).normalized.z * speed * 100);
-                }
-                if ((P_ID.is_player == true && Input.GetKey(KeyCode.D)) || AIRight == true)
-                {
-                    right = new Vector3((transform.right).normalized.x * speed * 100, RB.velocity.y, (transform.right).normalized.z * speed * 100);
-                }
+            //momentum
+            //this calculation is used only if the keep mometum bool it ticked,
+            //this calculation is used to allow the player to influence the directional velosity based of the previous freames velosity
+            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            {
 
-                if ((P_ID.is_player == true && Input.GetKey(KeyCode.S)) || AIBack == true)
-                {
-                    back = new Vector3((-transform.forward).normalized.x * speed * 100, RB.velocity.y, (-transform.forward).normalized.z * speed * 100);
-                }
-                if ((P_ID.is_player == true && Input.GetKey(KeyCode.W)) || AIForward == true)
-                {
-
-                    forward = new Vector3((transform.forward).normalized.x * speed * 100, RB.velocity.y, (transform.forward).normalized.z * speed * 100);
-                    // if (PA != null)
-                    //     PA.moving();//Rem
-
-                }
+                directionX = left + right;
+            }
 
 
-                //momentum
-                //this calculation is used only if the keep mometum bool it ticked,
-                //this calculation is used to allow the player to influence the directional velosity based of the previous freames velosity
-                if (keep_Momentum == true && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
-                {
+            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)))
+            {
 
-                    directionX = left + right;
-                }
+                directionY = forward + back;
+            }
 
 
-                if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)))
-                {
-
-                    directionY = forward + back;
-                }
-
-
-                if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)))
-                {
-                    direction = Vector3.zero;
-                    direction = (directionX + directionY) * Time.deltaTime;
-                    RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, 0, direction.z) * running_multiplyer;
-                }
-                else
-                {
-                    direction = Vector3.zero;
-                    directionY = Vector3.zero;
-                    directionX = Vector3.zero;
-                }
-                //no momentum
-                // this is used to calculate the next velosity of the rigit body and overwright it
-                if (keep_Momentum == false)
-                {
-                    direction = (forward + back + left + right) * Time.deltaTime;
-                    RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, 0, direction.z) * running_multiplyer;
-
-
-                }
+            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)))
+            {
+                direction = Vector3.zero;
+                direction = (directionX + directionY) * Time.deltaTime;
+                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, 0, direction.z) * running_multiplyer;
             }
             else
-            //controler
             {
-                if (keep_Momentum == false)
-                {
-                    directionX = new Vector3((transform.right).normalized.x * speed, RB.velocity.y, (transform.right).normalized.z * speed) * controler_input_manager.Left_Stick.x;
-                    directionY = new Vector3((transform.forward).normalized.x * speed, RB.velocity.y, (transform.forward).normalized.z * speed) * controler_input_manager.Left_Stick.y;
-                    direction = directionX + directionY;
-                    RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z);
-                }
-
-                if (keep_Momentum == true)
-                {
-                    directionX = new Vector3((transform.right).normalized.x * speed, RB.velocity.y, (transform.right).normalized.z * speed) * controler_input_manager.Left_Stick.x;
-                    directionY = new Vector3((transform.forward).normalized.x * speed, RB.velocity.y, (transform.forward).normalized.z * speed) * controler_input_manager.Left_Stick.y;
-                    if (((directionX.x + directionY.x) < RB.velocity.x && (directionX.x + directionY.x) > 0) || ((directionX.x + directionY.x) > RB.velocity.x && (directionX.x + directionY.x) < 0) || ((directionX.y + directionY.y) < RB.velocity.y && (directionX.y + directionY.y) > 0) || ((directionX.y + directionY.y) > RB.velocity.y && (directionX.y + directionY.y) < 0))
-                    {
-                        print("keep_Momentum");
-                    }
-                    else
-                    {
-                        direction = directionX + directionY;
-                        RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z);
-                    }
-                }
+                direction = Vector3.zero;
+                directionY = Vector3.zero;
+                directionX = Vector3.zero;
             }
+            //no momentum
+            // this is used to calculate the next velosity of the rigit body and overwright it
+            if (keep_Momentum == false)
+            {
+                direction = (forward + back + left + right) * Time.deltaTime;
+                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, 0, direction.z) * running_multiplyer;
+
+
+            }
+
+            //controler
+            /*  {
+                  if (keep_Momentum == false)
+                  {
+                      directionX = new Vector3((transform.right).normalized.x * speed, RB.velocity.y, (transform.right).normalized.z * speed) * controler_input_manager.Left_Stick.x;
+                      directionY = new Vector3((transform.forward).normalized.x * speed, RB.velocity.y, (transform.forward).normalized.z * speed) * controler_input_manager.Left_Stick.y;
+                      direction = directionX + directionY;
+                      RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z);
+                  }
+
+                  if (keep_Momentum == true)
+                  {
+                      directionX = new Vector3((transform.right).normalized.x * speed, RB.velocity.y, (transform.right).normalized.z * speed) * controler_input_manager.Left_Stick.x;
+                      directionY = new Vector3((transform.forward).normalized.x * speed, RB.velocity.y, (transform.forward).normalized.z * speed) * controler_input_manager.Left_Stick.y;
+                      if (((directionX.x + directionY.x) < RB.velocity.x && (directionX.x + directionY.x) > 0) || ((directionX.x + directionY.x) > RB.velocity.x && (directionX.x + directionY.x) < 0) || ((directionX.y + directionY.y) < RB.velocity.y && (directionX.y + directionY.y) > 0) || ((directionX.y + directionY.y) > RB.velocity.y && (directionX.y + directionY.y) < 0))
+                      {
+                          print("keep_Momentum");
+                      }
+                      else
+                      {
+                          direction = directionX + directionY;
+                          RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z);
+                      }
+                  }
+           */
+       // }
             if (PA != null)
             {
                 PA.directionalmovement = new Vector2(direction.x, direction.x);

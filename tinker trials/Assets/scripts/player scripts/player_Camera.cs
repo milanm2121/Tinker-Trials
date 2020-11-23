@@ -125,7 +125,6 @@ public class player_Camera : MonoBehaviour
                 {
                     spinalAdgustment = 1;
                 }
-                animator.spinerotation = Quaternion.AngleAxis(-mouseposition.y,new Vector3(1,0.5f *spinalAdgustment,0));
                 transform.position = head.transform.position;
                 transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
 
