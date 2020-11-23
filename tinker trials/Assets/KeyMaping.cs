@@ -16,7 +16,7 @@ public class KeyMaping : MonoBehaviour
 
     void Start()
     {
-        keyMap = transform.FindChild("KeyMap");// finding the panel // not quite working 
+        keyMap = transform.Find("KeyMap");// finding the panel // not quite working 
         //keyMap = transform.Find("KeyMap");
         keyMap.gameObject.SetActive(false); // make sure the panel doenst open 
         waitingForInput = false;
