@@ -393,7 +393,7 @@ Material:
     - _Int0: 0
     - _Keyword1: 0
     - _MainSmoothness: 0.426
-    - _Metallic: 1
+    - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 0
     - _Offset: 1
