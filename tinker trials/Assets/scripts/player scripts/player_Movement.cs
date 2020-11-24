@@ -146,20 +146,20 @@ public class player_Movement : MonoBehaviour
 
 
             //used to calculate the directional vector based off the rotaional offetof the player
-            if ((P_ID.is_player == true && Input.GetKey(KeyCode.A)) || AILeft == true)
+            if ((P_ID.is_player == true && Input.GetKey(KeyInputs.KP.left)) || AILeft == true)
             {
                 left = new Vector3((-transform.right).normalized.x * speed * 100, RB.velocity.y, (-transform.right).normalized.z * speed * 100);
             }
-            if ((P_ID.is_player == true && Input.GetKey(KeyCode.D)) || AIRight == true)
+            if ((P_ID.is_player == true && Input.GetKey(KeyInputs.KP.right)) || AIRight == true)
             {
                 right = new Vector3((transform.right).normalized.x * speed * 100, RB.velocity.y, (transform.right).normalized.z * speed * 100);
             }
 
-            if ((P_ID.is_player == true && Input.GetKey(KeyCode.S)) || AIBack == true)
+            if ((P_ID.is_player == true && Input.GetKey(KeyInputs.KP.backwards)) || AIBack == true)
             {
                 back = new Vector3((-transform.forward).normalized.x * speed * 100, RB.velocity.y, (-transform.forward).normalized.z * speed * 100);
             }
-            if ((P_ID.is_player == true && Input.GetKey(KeyCode.W)) || AIForward == true)
+            if ((P_ID.is_player == true && Input.GetKey(KeyInputs.KP.forward)) || AIForward == true)
             {
 
                 forward = new Vector3((transform.forward).normalized.x * speed * 100, RB.velocity.y, (transform.forward).normalized.z * speed * 100);
@@ -172,21 +172,21 @@ public class player_Movement : MonoBehaviour
             //momentum
             //this calculation is used only if the keep mometum bool it ticked,
             //this calculation is used to allow the player to influence the directional velosity based of the previous freames velosity
-            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyInputs.KP.left) || Input.GetKey(KeyInputs.KP.right)))
             {
 
                 directionX = left + right;
             }
 
 
-            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)))
+            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyInputs.KP.backwards) || Input.GetKey(KeyInputs.KP.forward)))
             {
 
                 directionY = forward + back;
             }
 
 
-            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)))
+            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyInputs.KP.left) || Input.GetKey(KeyInputs.KP.right) || Input.GetKey(KeyInputs.KP.backwards) || Input.GetKey(KeyInputs.KP.forward)))
             {
                 direction = Vector3.zero;
                 direction = (directionX + directionY) * Time.deltaTime;
@@ -244,7 +244,7 @@ public class player_Movement : MonoBehaviour
             // this cheack to see if the player is grounded because the player shoud be able to jump if on the ground
             if (grounded == true)
             {
-                if ((P_ID.is_player == true && Input.GetKeyDown(KeyCode.Space) || controler_input_manager.Bottom_Button))
+                if ((P_ID.is_player == true && Input.GetKeyDown(KeyInputs.KP.jump) || controler_input_manager.Bottom_Button))
                 {
                     if (PA != null)
                         PA.jumping = true;
@@ -253,21 +253,21 @@ public class player_Movement : MonoBehaviour
                 }
             }
             //allows the player to jump if it has multijump and spare jums left
-            if (multi_Jump == true && extra_Jumps > 0 && grounded == false && (P_ID.is_player == true && (Input.GetKeyDown(KeyCode.Space) || controler_input_manager.Bottom_Button)))
+            if (multi_Jump == true && extra_Jumps > 0 && grounded == false && (P_ID.is_player == true && (Input.GetKeyDown(KeyInputs.KP.forward) || controler_input_manager.Bottom_Button)))
             {
                 RB.velocity = new Vector3(RB.velocity.x, jump_Hight, RB.velocity.z);
                 extra_Jumps = extra_Jumps - 1;
             }
 
             //swinging
-            if (swinging == true && Input.GetKey(KeyCode.Space))
+            if (swinging == true && Input.GetKey(KeyInputs.KP.jump))
             {
 
                 node.GetComponent<Rigidbody>().velocity = RB.velocity / 2;
                 transform.position = node.transform.position - SwingOffset;
                 print("swinging");
             }
-            else if (!Input.GetKey(KeyCode.Space) && swinging == true)
+            else if (!Input.GetKey(KeyInputs.KP.jump) && swinging == true)
             {
                 RB.velocity = node.GetComponent<Rigidbody>().velocity;
                 swinging = false;

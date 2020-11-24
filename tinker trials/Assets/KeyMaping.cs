@@ -12,16 +12,19 @@ public class KeyMaping : MonoBehaviour
     KeyCode customKey;// determine what the new key will be 
 
     bool waitingForInput;
-    
+    public bool lock_menu;
 
     void Start()
     {
         keyMap = transform.Find("KeyMap");// finding the panel // not quite working 
         //keyMap = transform.Find("KeyMap");
-        keyMap.gameObject.SetActive(false); // make sure the panel doenst open 
+        if (lock_menu == false)
+        {
+            keyMap.gameObject.SetActive(false); // make sure the panel doenst open 
+        }
         waitingForInput = false;
 
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 8; i++)
         {
             if (keyMap.GetChild(i).name == "ForwardKey")// finding the namew of the buttons inside the panel obejct
                 keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.forward.ToString();
@@ -33,18 +36,27 @@ public class KeyMaping : MonoBehaviour
                 keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.right.ToString();
             else if (keyMap.GetChild(i).name == "JumpKey")
                 keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.jump.ToString();
+            else if (keyMap.GetChild(i).name == "ReloadKey")
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.reload.ToString();
+            else if (keyMap.GetChild(i).name == "ThrowLeathalKey")
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.throw_lethal.ToString();
+            else if (keyMap.GetChild(i).name == "MeleeKey")
+                keyMap.GetChild(i).GetChild(0).GetComponent<Text>().text = KeyInputs.KP.melee.ToString();
         }
 
     }
 
-   
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !keyMap.gameObject.activeSelf)// checikng if the panel is active 
-            keyMap.gameObject.SetActive(true);
-        else if (Input.GetKeyDown(KeyCode.Escape) && keyMap.gameObject.activeSelf)
-            keyMap.gameObject.SetActive(false);
+        if (lock_menu == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) && !keyMap.gameObject.activeSelf)// checikng if the panel is active 
+                keyMap.gameObject.SetActive(true);
+            else if (Input.GetKeyDown(KeyCode.Escape) && keyMap.gameObject.activeSelf)
+                keyMap.gameObject.SetActive(false);
+        }
     }
 
     void OnGUI()
@@ -102,6 +114,21 @@ public class KeyMaping : MonoBehaviour
                 KeyInputs.KP.jump = customKey;
                 buttonText.text = KeyInputs.KP.jump.ToString();
                 PlayerPrefs.SetString("jumpKey", KeyInputs.KP.jump.ToString());
+                break;
+            case "reload":
+                KeyInputs.KP.jump = customKey;
+                buttonText.text = KeyInputs.KP.jump.ToString();
+                PlayerPrefs.SetString("reloadKey", KeyInputs.KP.jump.ToString());
+                break;
+            case "throwLethal":
+                KeyInputs.KP.jump = customKey;
+                buttonText.text = KeyInputs.KP.jump.ToString();
+                PlayerPrefs.SetString("throwLeathalKey", KeyInputs.KP.jump.ToString());
+                break;
+            case "melee":
+                KeyInputs.KP.jump = customKey;
+                buttonText.text = KeyInputs.KP.jump.ToString();
+                PlayerPrefs.SetString("meleelKey", KeyInputs.KP.jump.ToString());
                 break;
         }
         yield return null;

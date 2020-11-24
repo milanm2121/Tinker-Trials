@@ -10,10 +10,12 @@ public class KeyInputs : MonoBehaviour
     public KeyCode left { get; set; }
     public KeyCode right { get; set; }
     public KeyCode backwards { get; set; }
+    public KeyCode reload { get; set; }
+    public KeyCode throw_lethal { get; set; }
+    public KeyCode melee { get; set; }
 
 
-
-     void Awake()
+    void Awake()
     {
         if(KP == null)
         {
@@ -30,7 +32,9 @@ public class KeyInputs : MonoBehaviour
         left = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("leftKey", "A"));
         right = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("rightKey", "D"));
         backwards = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("backwardsKey", "S"));
-
+        reload = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("reloadKey", "R"));
+        throw_lethal = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("throwLeathalKey", "G"));
+        melee = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("meleeKey", "V"));
 
 
 
