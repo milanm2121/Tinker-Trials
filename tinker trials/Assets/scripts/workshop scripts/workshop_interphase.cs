@@ -176,9 +176,13 @@ public class workshop_interphase : MonoBehaviour
     {
         class_class.Class saved_class = new class_class.Class();
 
-        if (workshop_Phase == 1)
+        if (workshop_Phase == 1 && SceneManager.GetActiveScene().name== "workshop")
         {
             SceneManager.LoadScene(0);
+        }
+        else if(workshop_Phase == 1 && SceneManager.GetActiveScene().name == "workshop form firing range")
+        {
+            SceneManager.LoadScene("Range");
         }
 
 
