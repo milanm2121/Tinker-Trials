@@ -92,10 +92,11 @@ public class multiplayer_party_maneger : MonoBehaviourPunCallbacks
             {
                 FriendInfo friend = friendList[i];
                 Debug.LogFormat("{0}", friend);
-                if (friend.UserId == partyhost && friend.Room != null && PhotonNetwork.IsConnectedAndReady)
+                if (friend.UserId == partyhost && friend.IsInRoom == true && PhotonNetwork.IsConnectedAndReady)
                 {
-                    started_machmaking = false;
                     PhotonNetwork.JoinRoom(friend.Room);
+                    started_machmaking = false;
+                    PhotonNetwork.LoadLevel("multiplayer_lobby");
 
                 }
             }
