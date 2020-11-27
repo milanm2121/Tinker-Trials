@@ -69,7 +69,14 @@ public class workshop_interphase : MonoBehaviour
             class2.interactable=true;
             class3.interactable=true;
             class4.interactable=true;
-            back_button_text.text = "main menu";
+            if (SceneManager.GetActiveScene().name == "workshop")
+            {
+                back_button_text.text = "main menu";
+            }
+            else if(SceneManager.GetActiveScene().name == "workshop form firing range")
+            {
+                back_button_text.text = "return to range";
+            }
         }
         else
         {

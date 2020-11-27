@@ -115,6 +115,10 @@ public class player_stats : MonoBehaviour
             healthtext.text = "health" + ((int)health).ToString();
            
         }
+
+        fire_meter = Mathf.Clamp(fire_meter, 1, 110);
+        frost_meter = Mathf.Clamp(frost_meter, 1, 100);
+        electrucity_meter = Mathf.Clamp(electrucity_meter, 1, 110);
     }
 
     private void FixedUpdate()

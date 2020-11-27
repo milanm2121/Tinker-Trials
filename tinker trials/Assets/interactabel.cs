@@ -15,7 +15,7 @@ public class interactabel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Text.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,8 +27,9 @@ public class interactabel : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.E))
+        if (other.tag=="Player" && Input.GetKey(KeyCode.E))
         {
+            Cursor.lockState = CursorLockMode.None;
             if (reload_scean == true)
             {
                 SceneManager.LoadScene("Range");
