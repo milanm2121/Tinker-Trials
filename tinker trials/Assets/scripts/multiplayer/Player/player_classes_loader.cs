@@ -64,20 +64,27 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        object[] x = { player_inventory.Class_TO_Saved_object(), PhotonNetwork.LocalPlayer.UserId };
-        PV.RPC("load_classes_RPC", RpcTarget.AllBufferedViaServer, x);
+        StartCoroutine(wait_for_connection());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerClasses.Count == PhotonNetwork.CurrentRoom.PlayerCount && true == (bool)PhotonNetwork.CurrentRoom.CustomProperties["started_game"] && SceneManager.GetActiveScene().name!= "multiplayer_gameplay_test")
+        if (PhotonNetwork.IsConnectedAndReady && playerClasses.Count == PhotonNetwork.CurrentRoom.PlayerCount && true == (bool)PhotonNetwork.CurrentRoom.CustomProperties["started_game"] && SceneManager.GetActiveScene().name!= "multiplayer_gameplay_test")
         {
             for (int i = 0;MGM.preloaded_player_objects.Count>i; i++)
             {
                 MGM.preloaded_player_objects[i].SetActive(true);
             }
             PhotonNetwork.LoadLevel("multiplayer_gameplay_test");
+        }
+    }
+    IEnumerator wait_for_connection()
+    {
+        yield return new WaitUntil(() => PhotonNetwork.IsConnectedAndReady);
+        {
+            object[] x = { player_inventory.Class_TO_Saved_object(), PhotonNetwork.LocalPlayer.UserId };
+            PV.RPC("load_classes_RPC", RpcTarget.AllBufferedViaServer, x);
         }
     }
 }

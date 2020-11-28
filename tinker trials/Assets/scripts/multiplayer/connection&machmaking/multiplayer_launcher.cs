@@ -203,7 +203,8 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
 
     public void Set_serch_Party_ID(string value)
     {
-        PartyID = int.Parse(value);
+        if(value!="")
+            PartyID = int.Parse(value);
     }
 
     public void create_room()
