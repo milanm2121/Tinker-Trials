@@ -1503,6 +1503,7 @@ MonoBehaviour:
   LS: {fileID: 948154518455827444}
   head: {fileID: 2007260302559326698}
   animator: {fileID: 4860922332554076164}
+  wepon: {fileID: 8238350271320725404}
 --- !u!114 &948154518455827444
 MonoBehaviour:
   m_ObjectHideFlags: 0

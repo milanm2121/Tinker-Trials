@@ -153,7 +153,7 @@ public class wepon_body_game : MonoBehaviour
 
         if (P_ID.is_player == true && can_shoot==true)
         {
-            transform.localRotation=Quaternion.Euler(0,90,0);
+            
             if (Input.GetMouseButton(1))
             {
                 transform.position = Vector3.Lerp(transform.position, ADS.position, 1 / weight);
@@ -174,7 +174,7 @@ public class wepon_body_game : MonoBehaviour
 
             }
         }
-        
+        transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 2);
 
         //laser stuff
         if (Firetype == firetype.lazer)

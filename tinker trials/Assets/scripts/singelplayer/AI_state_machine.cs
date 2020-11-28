@@ -151,11 +151,15 @@ public class AI_state_machine : MonoBehaviour
         }
         else
         {
-            transform.LookAt(new Vector3(shooting_target.transform.position.x, transform.position.y, shooting_target.transform.position.z));
-            Camera.transform.LookAt(new Vector3(shooting_target.transform.position.x, shooting_target.transform.position.y, shooting_target.transform.position.z));
+            Quaternion targetx = Quaternion.LookRotation(-transform.position + new Vector3(shooting_target.transform.position.x, transform.position.y, shooting_target.transform.position.z), Vector3.up);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetx, Time.deltaTime*2);
+
+            Quaternion targety = Quaternion.LookRotation(-Camera.transform.position + new Vector3(shooting_target.transform.position.x, shooting_target.transform.position.y, shooting_target.transform.position.z));
+            Camera.transform.rotation = Quaternion.Lerp(Camera.transform.rotation, targety, Time.deltaTime * 2);
+
             RaycastHit hit;
-            Physics.Raycast(WBG.transform.position,shooting_target.transform.position- WBG.transform.position, out hit);
-            Debug.DrawRay(WBG.transform.position, shooting_target.transform.position - WBG.transform.position,Color.green,1);
+            Physics.Raycast(WBG.transform.position,transform.forward, out hit);
+            Debug.DrawRay(WBG.transform.position, transform.forward,Color.green,1);
             if (hit.collider.gameObject == shooting_target)
             {
                 WBG.AI_shooting = true;

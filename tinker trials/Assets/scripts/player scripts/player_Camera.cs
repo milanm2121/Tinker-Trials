@@ -40,7 +40,8 @@ public class player_Camera : MonoBehaviour
 
     bool stun;
     float stuntime;
-    
+
+    public GameObject wepon;
     // Start is called before the first frame update
     void Start()
     {
@@ -161,6 +162,8 @@ public class player_Camera : MonoBehaviour
             stun = false;
             stuntime = 0;
         }
+
+      //  wepon.transform.rotation = Quaternion.Lerp(wepon.transform.rotation, transform.rotation, Time.deltaTime);
     }
 
     //added for shooting recoil in game
@@ -168,6 +171,7 @@ public class player_Camera : MonoBehaviour
     {
 
         mouseposition += recoil;
+        wepon.transform.Rotate(new Vector3(0,0,1), -recoil.magnitude);
     }
 
     public void ADSZoom(float zoom)
