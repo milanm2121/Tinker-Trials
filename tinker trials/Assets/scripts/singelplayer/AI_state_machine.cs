@@ -160,7 +160,7 @@ public class AI_state_machine : MonoBehaviour
             RaycastHit hit;
             Physics.Raycast(WBG.transform.position,transform.forward, out hit);
             Debug.DrawRay(WBG.transform.position, transform.forward,Color.green,1);
-            if (hit.collider.gameObject == shooting_target)
+            if (hit.collider!=null && hit.collider.gameObject == shooting_target)
             {
                 WBG.AI_shooting = true;
                 Debug.Log("shooting");

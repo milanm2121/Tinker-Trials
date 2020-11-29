@@ -32,6 +32,7 @@ public class player_animation : MonoBehaviour
     //public int IsRunning;
 
     public Rig rightarm;
+    public Rig leftarm;
     /*
    READ ME AT REMI: below is all of the old code that i have put into a regon commented off NOT Deleted if you want to resume the code talk to me first 
 
@@ -39,6 +40,12 @@ public class player_animation : MonoBehaviour
 
    --Milan
    */
+
+    private void Start()
+    {
+        characterAnimator.SetFloat("reload speed",1/WBG.reload_time);
+    }
+
 
     private void Update()
     {
@@ -61,6 +68,17 @@ public class player_animation : MonoBehaviour
             }
             else
             {
+                rightarm.weight = 1;
+            }
+
+            if (WBG.reloading == true)
+            {
+                leftarm.weight =0;
+                rightarm.weight = 0;
+            }
+            else
+            {
+                leftarm.weight = 1;
                 rightarm.weight = 1;
             }
 

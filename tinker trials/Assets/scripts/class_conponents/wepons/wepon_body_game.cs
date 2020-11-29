@@ -151,7 +151,7 @@ public class wepon_body_game : MonoBehaviour
             ammocount.text = ammoCount + " / " + reserve_ammo;
         velosity = -transform.right.normalized * proREF.range;
 
-        if (P_ID.is_player == true && can_shoot==true)
+        if (P_ID.is_player == true && can_shoot==true && reloading==false)
         {
             
             if (Input.GetMouseButton(1))
@@ -173,8 +173,9 @@ public class wepon_body_game : MonoBehaviour
                 megerment.text = "";
 
             }
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 2);
+
         }
-        transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 2);
 
         //laser stuff
         if (Firetype == firetype.lazer)
@@ -196,12 +197,12 @@ public class wepon_body_game : MonoBehaviour
             lazer.gameObject.SetActive(false);
         }
         //melee
-        if (Input.GetKeyDown(KeyCode.V) &&PA.melee==false)
+        if (Input.GetKeyDown(KeyCode.V) &&PA.melee==false && P_ID.is_player==true)
         {
             StartCoroutine(melee());
         }
         //reload
-        if (Input.GetKeyDown(KeyCode.R)&& reloading==false &&reserve_ammo>0)
+        if (Input.GetKeyDown(KeyCode.R)&& reloading==false &&reserve_ammo>0 && P_ID.is_player == true)
         {
             StartCoroutine(reload());
         }
@@ -518,6 +519,7 @@ public class wepon_body_game : MonoBehaviour
 
     IEnumerator reload()
     {
+        transform.parent = rigthand;
         reloading = true;
         yield return new WaitForSeconds(reload_time);
         int usedRounds =amunition_script.AO.rounds - ammoCount;
@@ -525,6 +527,8 @@ public class wepon_body_game : MonoBehaviour
         ammoCount += Mathf.Clamp(usedRounds,0,reserve_ammo);
         reserve_ammo -= usedRounds;
         reloading = false;
+        transform.parent = cam;
+
     }
 
     IEnumerator melee()
