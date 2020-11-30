@@ -46,16 +46,26 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
     // Start is called before the first frame update
     public void initalise_cam()
     {
+        Canvas[] canvas=GameObject.FindObjectsOfType<Canvas>();
         Camera[] camlist = Camera.allCameras;
-        for (int i = 0; camlist.Length>i; i++) {
+        for (int i = 0; camlist.Length > i; i++) {
 
-            if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine==true)
+            if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine == true)
             {
-                camlist[i].enabled=true;
+                camlist[i].enabled = true;
             }
             else
             {
-                camlist[i].enabled=false;
+                camlist[i].enabled = false;
+            }
+
+            if (canvas[i].gameObject.transform.parent.GetComponent<PhotonView>().IsMine)
+            {
+                canvas[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                canvas[i].gameObject.SetActive(false);
             }
         }
 
