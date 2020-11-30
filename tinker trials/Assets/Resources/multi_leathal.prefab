@@ -365,7 +365,8 @@ MonoBehaviour:
   PV: {fileID: 7585149975685305001}
   ps: {fileID: 0}
   target: {fileID: 0}
-  junk_explosion: {fileID: 0}
+  junk_explosion: {fileID: 427749713955903574, guid: 0e2294ca10b361b4d862fa64d6fe0bcd,
+    type: 3}
 --- !u!114 &7585149975685305001
 MonoBehaviour:
   m_ObjectHideFlags: 0

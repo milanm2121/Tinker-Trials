@@ -168,14 +168,14 @@ public class multi_in_game_leathal : MonoBehaviour
 
         if (container_script.CO.speciality == 3)
         {
-            Instantiate(junk_explosion, transform.position, Quaternion.identity);
+            PhotonNetwork.Instantiate("multi_junk explosion", transform.position, Quaternion.identity);
         }
 
         if (empty != null)
         {
-            Destroy(empty);
+            PhotonNetwork.Destroy(empty);
         }
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
     }
 
     IEnumerator primerPhase()

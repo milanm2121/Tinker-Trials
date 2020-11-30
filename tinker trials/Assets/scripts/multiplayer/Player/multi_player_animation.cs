@@ -43,7 +43,7 @@ public class multi_player_animation : MonoBehaviour
 
     private void Start()
     {
-        characterAnimator.SetFloat("reload speed", 1 / WBG.reload_time);
+        StartCoroutine(waitforStats());
     }
 
 
@@ -83,5 +83,11 @@ public class multi_player_animation : MonoBehaviour
             }
 
         }
+    }
+    IEnumerator waitforStats()
+    {
+        yield return new WaitUntil(() => WBG.reload_time != 0);
+        characterAnimator.SetFloat("reload speed", 1 / WBG.reload_time);
+
     }
 }

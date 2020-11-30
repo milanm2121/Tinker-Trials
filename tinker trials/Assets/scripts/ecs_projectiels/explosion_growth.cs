@@ -32,9 +32,14 @@ public class explosion_growth : ComponentSystem
 
                         if (gameobject.GetComponent<player_stats>())
                         {
-                           
                             gameobject.GetComponent<player_stats>().damage_player(explosion.damage, explosion.element);
                         }
+
+                        if (gameobject.GetComponent<multi_player_stats>())
+                        {
+                            gameobject.GetComponent<multi_player_stats>().damage_player(explosion.damage, explosion.element);
+                        }
+
                         if (gameobject.GetComponent<object_health>() != null)
                         {
                             gameobject.GetComponent<object_health>().damage_object((int)explosion.damage * 10);
