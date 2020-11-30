@@ -30,29 +30,14 @@ public class multi_lethal_thrower : MonoBehaviour
     public void loadClass(string UserID, int Class)
     {
         object[] x = { UserID, Class };
-        PV.RPC("syncClass", RpcTarget.AllBuffered, x);
+        PV.RPC("syncClass_call", RpcTarget.AllBuffered, x);
     }
 
 
     [PunRPC]
-    void syncClass(string UserID, int Class)
+    void syncClass_call(string UserID, int Class)
     {
-        if (Class == 1)
-        {
-            generate_leathal(PCL.playerClasses[UserID].class_1);
-        }
-        else if (Class == 2)
-        {
-            generate_leathal(PCL.playerClasses[UserID].class_2);
-        }
-        else if (Class == 3)
-        {
-            generate_leathal(PCL.playerClasses[UserID].class_3);
-        }
-        else if (Class == 4)
-        {
-            generate_leathal(PCL.playerClasses[UserID].class_4);
-        }
+        StartCoroutine(syncClass(UserID, Class));
     }
 
     // Update is called once per frame
@@ -87,5 +72,24 @@ public class multi_lethal_thrower : MonoBehaviour
         IGL.container_script.CO = class_.Lethal.container;
         IGL.payload_script.PO = class_.Lethal.payload;
     }
-    
+    IEnumerator syncClass(string UserID, int Class)
+    {
+        yield return new WaitUntil(() => PCL != null);
+        if (Class == 1)
+        {
+            generate_leathal(PCL.playerClasses[UserID].class_1);
+        }
+        else if (Class == 2)
+        {
+            generate_leathal(PCL.playerClasses[UserID].class_2);
+        }
+        else if (Class == 3)
+        {
+            generate_leathal(PCL.playerClasses[UserID].class_3);
+        }
+        else if (Class == 4)
+        {
+            generate_leathal(PCL.playerClasses[UserID].class_4);
+        }
+    }
 }

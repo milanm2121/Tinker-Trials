@@ -160,6 +160,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -348,7 +356,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16426}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -551,7 +559,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16426}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -636,7 +644,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16900}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -821,7 +829,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16900}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1404,7 +1412,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16426}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1629,7 +1637,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16666}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1836,7 +1844,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16426}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2043,7 +2051,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16798}
     - Class: 114
-      Script: {instanceID: 32236}
+      Script: {instanceID: 47704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -3751,7 +3759,7 @@ ScriptsOnlyBuild:
     className: InputAxisScrollbar
   - hash:
       serializedVersion: 2
-      Hash: 4581f87b48e41d2fe5f533d336d6fc8f
+      Hash: d56de4952a863a84b0f9f4f08b4d5bcd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player_animation
@@ -3907,7 +3915,7 @@ ScriptsOnlyBuild:
     className: amunition_object
   - hash:
       serializedVersion: 2
-      Hash: ba7d300732cfdd74ccd32f99b31486c1
+      Hash: 418d2c8b1efaef5e6f24f59962510ced
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player_Camera

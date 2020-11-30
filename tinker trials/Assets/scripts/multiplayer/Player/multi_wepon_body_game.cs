@@ -114,41 +114,15 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
     public void loadClass(string UserID, int Class)
     {
         object[] x = { UserID, Class };
-        PV.RPC("syncClass", RpcTarget.AllBuffered, x);
+        PV.RPC("syncClass_call", RpcTarget.AllBuffered, x);
     }
 
     [PunRPC]
-    void syncClass(string UserID, int Class)
+    void syncClass_call(string UserID, int Class)
     {
+        StartCoroutine(syncClass(UserID,Class));
     
-
-            if (Class == 1)
-            {
-                select_class(PCL.playerClasses[UserID].class_1);
-            }
-            else if (Class == 2)
-            {
-                select_class(PCL.playerClasses[UserID].class_2);
-            }
-            else if (Class == 3)
-            {
-                select_class(PCL.playerClasses[UserID].class_3);
-            }
-            else if (Class == 4)
-            {
-                select_class(PCL.playerClasses[UserID].class_4);
-            }
-
-            weight += reciver_script.RO.weight;
-            weight += barrel_script.BO.weight;
-            weight += scope_script.SO.weight;
-            weight += amunition_script.AO.weight;
-            weight += grip_script.GO.weight;
-            weight += suport_script.SO.weight;
-
-            //the order is important so dont change it
-            generateGunStats();
-            generateProjectile();
+            
         
     } 
 
@@ -491,5 +465,36 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 
 
         //throw new System.NotImplementedException();
+    }
+    IEnumerator syncClass(string UserID, int Class)
+    {
+        yield return new WaitUntil(() => PCL != null);
+        if (Class == 1)
+        {
+            select_class(PCL.playerClasses[UserID].class_1);
+        }
+        else if (Class == 2)
+        {
+            select_class(PCL.playerClasses[UserID].class_2);
+        }
+        else if (Class == 3)
+        {
+            select_class(PCL.playerClasses[UserID].class_3);
+        }
+        else if (Class == 4)
+        {
+            select_class(PCL.playerClasses[UserID].class_4);
+        }
+
+        weight += reciver_script.RO.weight;
+        weight += barrel_script.BO.weight;
+        weight += scope_script.SO.weight;
+        weight += amunition_script.AO.weight;
+        weight += grip_script.GO.weight;
+        weight += suport_script.SO.weight;
+
+        //the order is important so dont change it
+        generateGunStats();
+        generateProjectile();
     }
 }

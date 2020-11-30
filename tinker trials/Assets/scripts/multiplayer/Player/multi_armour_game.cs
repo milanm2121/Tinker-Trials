@@ -37,12 +37,37 @@ public class multi_armour_game : MonoBehaviour
     public void loadClass(string UserID, int Class)
     {
         object[] x = { UserID, Class };
-        PV.RPC("syncClass", RpcTarget.AllBufferedViaServer,x );
+        PV.RPC("syncClass_call", RpcTarget.AllBufferedViaServer,x );
     }
 
     [PunRPC]
-    void syncClass(string UserID, int Class)
+    void syncClass_call(string UserID, int Class)
     {
+        StartCoroutine(syncClass(UserID, Class));
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+    public void selectclass(class_class.Class Class_)
+    {
+        //defalt armour
+
+
+        headgear_script.HGO = Class_.Armour.headpeice;
+        cheastplate_script.CPO = Class_.Armour.chestpeice;
+        boots_script.BO = Class_.Armour.boots;
+
+        //generate armour
+        headgear_script.Generate_headGear();
+        cheastplate_script.gerateCheastPlate();
+        boots_script.generateBoots();
+    }
+    IEnumerator syncClass(string UserID, int Class)
+    {
+        yield return new WaitUntil(() => PCL != null);
         if (Class == 1)
         {
             selectclass(PCL.playerClasses[UserID].class_1);
@@ -66,25 +91,5 @@ public class multi_armour_game : MonoBehaviour
         deffence += cheastplate_script.CPO.deffence;
         deffence += boots_script.BO.deffence;
         deffence = deffence / 3 * 10;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    public void selectclass(class_class.Class Class_)
-    {
-        //defalt armour
-
-
-        headgear_script.HGO = Class_.Armour.headpeice;
-        cheastplate_script.CPO = Class_.Armour.chestpeice;
-        boots_script.BO = Class_.Armour.boots;
-
-        //generate armour
-        headgear_script.Generate_headGear();
-        cheastplate_script.gerateCheastPlate();
-        boots_script.generateBoots();
     }
 }

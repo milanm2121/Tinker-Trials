@@ -267,6 +267,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     IEnumerator waitForGameScean()
     {
         yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "multiplayer_gameplay_test");
+        yield return new WaitForSeconds(1);
         inialise_player();
     }
 }
