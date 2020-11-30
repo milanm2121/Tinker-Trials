@@ -30,6 +30,17 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
 
     bool initalised=false;
 
+    public load_scean LS;
+
+    public GameObject head;
+
+    public multi_player_animation animator;
+
+    bool stun;
+    float stuntime;
+
+    public GameObject wepon;
+
 
 
     // Start is called before the first frame update
@@ -96,14 +107,40 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
 
                 //the math of storing the players next rotation in the mouse position value
 
-                mouseposition = mouseposition + new Vector2(mouseX, mouseY);
+
+                if (stun == true)
+                {
+                    mouseposition = mouseposition + new Vector2(mouseX, mouseY).normalized;
+                }
+                else
+                {
+                    mouseposition = mouseposition + new Vector2(mouseX, mouseY);
+                }
                 mouseposition.y = Mathf.Clamp(mouseposition.y, -90, 90);
 
                 //the x axsis changes the player
                 perant.transform.rotation = Quaternion.AngleAxis(mouseposition.x, Vector3.up);
 
-                //while the y axis changes the camera(head)
-                transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
+                if (animator == null)
+                {
+                    //while the y axis changes the camera(head)
+                    transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
+                }
+                else
+                {
+                    int spinalAdgustment = 1;
+                    if (0 > -mouseposition.y)
+                    {
+                        spinalAdgustment = -1;
+                    }
+                    else
+                    {
+                        spinalAdgustment = 1;
+                    }
+                    transform.position = head.transform.position;
+                    transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
+
+                }
             }
 
             //used to unlock the mouse in a pause like state
@@ -126,6 +163,16 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
                 Cursor.lockState = CursorLockMode.Locked;
                 camera_Pause = false;
             }
+            if (stuntime > 0)
+            {
+                stun = true;
+                stuntime -= Time.deltaTime;
+            }
+            else
+            {
+                stun = false;
+                stuntime = 0;
+            }
         }
     }
 
@@ -134,6 +181,8 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
     {
 
         mouseposition += recoil;
+        wepon.transform.Rotate(new Vector3(0, 0, 1), -recoil.magnitude);
+
     }
 
     public void ADSZoom(float zoom)

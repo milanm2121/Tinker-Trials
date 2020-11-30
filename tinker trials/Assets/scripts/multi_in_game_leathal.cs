@@ -19,7 +19,23 @@ public class multi_in_game_leathal : MonoBehaviour
 
     public PhotonView PV;
 
+    bool player_in_range;
+
     float fuze = 0;
+
+    public multi_player_stats ps;
+
+    bool exploded;
+
+    GameObject empty;
+
+    public GameObject target;
+
+    Rigidbody rb;
+
+    public GameObject junk_explosion;
+
+    bool stuck = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +76,37 @@ public class multi_in_game_leathal : MonoBehaviour
             PV.RPC("explode", RpcTarget.All);
             print("boom1");
         }
-        
+        if (primer_script.PO.speciality == 2)
+        {
+            Collider[] player_Target = Physics.OverlapSphere(transform.position, 5, LayerMask.GetMask("player"));
+            for (int i = 0; player_Target.Length > i; i++)
+            {
+                if (player_Target[i].GetComponent<multi_player_stats>() != ps)
+                    player_in_range = true;
+            }
+            if (player_Target.Length == 0)
+            {
+                player_in_range = false;
+            }
+        }
+
+        if (container_script.CO.speciality == 2)
+        {
+            if (target == null)
+            {
+                Collider[] player_Target = Physics.OverlapSphere(transform.position, 20, LayerMask.GetMask("player"));
+                for (int i = 0; player_Target.Length > i; i++)
+                {
+                    if (player_Target[i].GetComponent<multi_player_stats>() != ps)
+                        target = player_Target[i].gameObject;
+                }
+            }
+            else
+            {
+                rb.AddForce((target.transform.position - transform.position).normalized * 100);
+            }
+        }
+
     }
     [PunRPC]
     void generate()
@@ -120,7 +166,15 @@ public class multi_in_game_leathal : MonoBehaviour
             x.GetComponent<MeshRenderer>().material = live_refrence_maneger.EXPEelctrisity;
         }
 
+        if (container_script.CO.speciality == 3)
+        {
+            Instantiate(junk_explosion, transform.position, Quaternion.identity);
+        }
 
+        if (empty != null)
+        {
+            Destroy(empty);
+        }
         Destroy(gameObject);
     }
 
@@ -133,18 +187,54 @@ public class multi_in_game_leathal : MonoBehaviour
             PV.RPC("vortex", RpcTarget.All);
         }
         PV.RPC("explode", RpcTarget.All);
+
+        if (primer_script.PO.speciality == 2)
+        {
+            yield return new WaitWhile(() => player_in_range == false);
+
+        }
+        explode();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (container_script.CO.sticky == true)
+        if (empty != null)
         {
-            transform.parent = collision.transform;
+            Destroy(empty);
+        }
+
+        if (container_script.CO.sticky == true && stuck == false)
+        {
+            stuck = true;
+            empty = new GameObject();
+            transform.parent = empty.transform;
+            empty.transform.parent = collision.transform;
+            transform.position = collision.GetContact(0).point;
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+
+        if (primer_script.PO.speciality == 3)
+        {
+            StartCoroutine(primerPhase());
+        }
+
+        if (container_script.CO.speciality == 1)
+        {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("player") && stuck == false)
+            {
+                stuck = true;
+                empty = new GameObject();
+                transform.parent = empty.transform;
+                empty.transform.parent = collision.transform;
+                transform.position = collision.GetContact(0).point;
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+                collision.gameObject.GetComponent<player_stats>().damage_player(50, Vector2Int.zero);
+            }
         }
     }
 
-
+    [PunRPC]
     void vortex()
     {
         if (PhotonNetwork.IsMasterClient)
@@ -159,7 +249,7 @@ public class multi_in_game_leathal : MonoBehaviour
             for (int i = 0; targets.Count > i; i++)
             {
                 Vector3 offest = (transform.position - targets[i].transform.position);
-                targets[i].velocity += offest.normalized * (10 * offest.magnitude);
+                targets[i].velocity += offest.normalized * (offest.magnitude);
             }
         }
     }

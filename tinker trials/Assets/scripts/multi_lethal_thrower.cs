@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.Animations.Rigging;
+
 
 public class multi_lethal_thrower : MonoBehaviour
 {
@@ -11,6 +13,17 @@ public class multi_lethal_thrower : MonoBehaviour
     public GameObject currentLeathal;
 
     public bool tapped_lethal;
+
+    public multi_Player_Movement PM;
+
+    public multi_player_stats ps;
+
+    public bool sholder_launcher = false;
+
+
+    public bool throwing_lethal;
+
+    public Rig right_arm_constaints;
     public PhotonView PV;
     public player_classes_loader PCL;
 
@@ -43,16 +56,19 @@ public class multi_lethal_thrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G) && currentLeathal == null)
+        if (throwing_lethal == true)
+            throwing_lethal = false;
+
+        if (PV.IsMine && Input.GetKeyDown(KeyCode.G) && currentLeathal == null && (PM.running == false || sholder_launcher == true))
         {
-            GameObject x = PhotonNetwork.Instantiate(IGL.name, transform.position, Quaternion.identity);
-            IGL.primed = false;
-            x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight * 10;
-            currentLeathal = x;
+            right_arm_constaints.weight = 0;
+            StartCoroutine(delaythrow());
+
             tapped_lethal = true;
+            throwing_lethal = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && tapped_lethal == false)
+        if (PV.IsMine && Input.GetKeyDown(KeyCode.G) && tapped_lethal == false && (PM.running == false || sholder_launcher == true))
         {
             if (currentLeathal != null && IGL.manual == true)
             {
@@ -91,5 +107,16 @@ public class multi_lethal_thrower : MonoBehaviour
         {
             generate_leathal(PCL.playerClasses[UserID].class_4);
         }
+    }
+    IEnumerator delaythrow()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject x = PhotonNetwork.Instantiate("multi_leathal", transform.position, Quaternion.identity);
+        IGL.primed = false;
+        x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight * 10;
+        x.GetComponent<multi_in_game_leathal>().ps = ps;
+
+        currentLeathal = x;
+        right_arm_constaints.weight = 1;
     }
 }

@@ -4,7 +4,6 @@ script descrition: moves the player based off the player rotation and uses unity
 this script is used to allow for player to move with velosity and added vectors which allows movement to be smooth
 and slide if needed
 */
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

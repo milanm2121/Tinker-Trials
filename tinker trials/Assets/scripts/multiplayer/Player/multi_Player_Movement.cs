@@ -51,9 +51,9 @@ public class multi_Player_Movement : MonoBehaviour
     public bool grounded;
     // Start is called before the first frame update
 
-    public player_animation PA;
+    public multi_player_animation PA;
 
-    public player_stats PS;
+    public multi_player_stats PS;
 
     Vector3 SwingOffset;
     bool swinging = false;
@@ -61,6 +61,15 @@ public class multi_Player_Movement : MonoBehaviour
 
     public PhotonView PV;
 
+
+    public multi_Player_sounds Sounds;
+    public bool running;
+    public bool walking;
+    public float inital_running_multiplyer;
+    private float running_multiplyer;
+
+
+    public bool low_gravity = false;
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -71,9 +80,52 @@ public class multi_Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (RB != null)
+        {
+            if (low_gravity == true)
+            {
+                RB.AddForce(new Vector3(0, 5f, 0));
+            }
 
-        //keyboard
-        if (controler_input_Setup_script.contorllerType == 0)
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                running = true;
+                running_multiplyer = inital_running_multiplyer;
+                walking = false;
+            }
+            else
+            {
+                running = false;
+                running_multiplyer = 0;
+                if (RB.velocity != Vector3.zero)
+                {
+                    walking = true;
+                }
+                else
+                {
+                    walking = false;
+                }
+            }
+
+            if (RB.velocity != Vector3.zero && grounded == true)
+            {
+                if (running == true)
+                {
+                    Sounds.running = true;
+                    Sounds.walking = false;
+
+                }
+                else
+                {
+                    Sounds.walking = true;
+                    Sounds.running = false;
+
+                }
+            }
+        }
+
+            //keyboard
+            if (controler_input_Setup_script.contorllerType == 0)
         {
             //sets all the vecters to 0 for the input calculation
             forward = Vector3.zero;

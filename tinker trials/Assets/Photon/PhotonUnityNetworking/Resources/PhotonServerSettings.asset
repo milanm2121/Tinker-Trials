@@ -56,6 +56,7 @@ MonoBehaviour:
   - explode
   - generate
   - syncClass_call
+  - call_melee
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

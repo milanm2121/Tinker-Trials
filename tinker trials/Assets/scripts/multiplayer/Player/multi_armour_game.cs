@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Realtime;
+using UnityEngine.Audio;
+
 
 public class multi_armour_game : MonoBehaviour
 {
@@ -12,11 +14,16 @@ public class multi_armour_game : MonoBehaviour
     public GameObject cheastplate;
     public cheastplate cheastplate_script;
 
-    public GameObject Boots;
-    public boots_scripts boots_script;
+    public GameObject L_Boots;
+    public boots_scripts L_boots_script;
+
+    public GameObject R_Boots;
+    public boots_scripts R_boots_script;
 
     public float weight = 0;
     public int deffence;
+
+    public AudioMixer SFX;
     public PhotonView PV;
 
     public player_classes_loader PCL;
@@ -58,12 +65,25 @@ public class multi_armour_game : MonoBehaviour
 
         headgear_script.HGO = Class_.Armour.headpeice;
         cheastplate_script.CPO = Class_.Armour.chestpeice;
-        boots_script.BO = Class_.Armour.boots;
+        L_boots_script.BO = Class_.Armour.boots;
+        R_boots_script.BO = Class_.Armour.boots;
+
 
         //generate armour
         headgear_script.Generate_headGear();
         cheastplate_script.gerateCheastPlate();
-        boots_script.generateBoots();
+        L_boots_script.generateBoots();
+        R_boots_script.BO = Class_.Armour.boots;
+
+        if (headgear_script.HGO.speciality == 2)
+        {
+            Debug.Log(SFX.SetFloat("SFX Volume", 10));
+        }
+        else
+        {
+            Debug.Log(SFX.SetFloat("SFX Volume", 0));
+        }
+
     }
     IEnumerator syncClass(string UserID, int Class)
     {
@@ -86,10 +106,10 @@ public class multi_armour_game : MonoBehaviour
         }
         weight += headgear_script.HGO.weight;
         weight += cheastplate_script.CPO.weight;
-        weight += boots_script.BO.weight;
+        weight += L_boots_script.BO.weight;
         deffence += headgear_script.HGO.deffence;
         deffence += cheastplate_script.CPO.deffence;
-        deffence += boots_script.BO.deffence;
+        deffence += L_boots_script.BO.deffence;
         deffence = deffence / 3 * 10;
     }
 }

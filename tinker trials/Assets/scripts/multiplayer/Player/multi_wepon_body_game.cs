@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 
 public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 {
     //used for hipfire and ADS positioning
     public Transform hip;
     public Transform ADS;
-    bool is_ADS;
 
     public GameObject barrel;
     public wepon_barrel barrel_script;
@@ -57,6 +57,8 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
     //a struct that each projectile holds
     public projectileREf proREF;
 
+    public multi_Player_Movement PM;
+
     //the class used to summon pojectiles
     public entity_maneger EM;
 
@@ -67,7 +69,7 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
     //the player camera script
     public multi_Player_Camera PC;
     //the player animation refence script
-    public player_animation PA;
+    public multi_player_animation PA;
 
     //used to dictate the firetype
     public enum firetype { projectile, buckshot, gravity, lazer };
@@ -78,18 +80,39 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 
     //used for dictating amoucount and reloading
     int ammoCount = 0;
-    bool reloading = false;
+    public bool reloading = false;
     public float reload_time;
+    public int reserve_ammo;
 
+    public bool AI_shooting = false;
 
     public Text ammocount;
 
+    float overheat_damage_multiplyer;
+    public TMP_Text megerment;
+    public float recoil_reduction;
 
-    public player_classes_loader PCL;
+    bool can_shoot = true;
+
+    public float melee_range = 0.3f;
+    public Transform cam;
+    public Transform rigthand;
+
+    //shooting sounds
+    public AudioClip surpressed_Fire;
+    public AudioClip nerf_Fire;
+    public AudioClip buckshot_Fire;
+    public AudioClip lazer_Fire;
+
+    public AudioClip gravity_start;
+    public AudioClip gravity_hold;
 
     public PhotonView PV;
+    public player_classes_loader PCL;
 
-    public bool loaded = false;
+    bool loaded;
+
+    bool is_ADS;
     // generates the stats and wepons
     void Start()
     {
@@ -135,7 +158,7 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
                 ammocount.text = ammoCount + " / " + amunition_script.AO.rounds;
             velosity = -transform.right.normalized * proREF.range;
 
-            if (PV.IsMine == true)
+            if (PV.IsMine == true && can_shoot == true && reloading == false)
             {
                 //i konw this look pointless but its for syincronisation across the network
                 if (Input.GetMouseButton(1))
@@ -151,13 +174,23 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
             {
                 transform.position = Vector3.Lerp(transform.position, ADS.position, 1 / weight);
                 PC.ADSZoom(scope_script.SO.zoom);
+                PA.Aim = true;
+                if (scope_script.SO.speciality == 1)
+                {
+                    RaycastHit col;
+                    Physics.Raycast(barrel.transform.position, velosity.normalized, out col, int.MaxValue);
+                    megerment.text = col.distance + "m";
+                }
             }
             else
             {
                 transform.position = Vector3.Lerp(transform.position, hip.position, 1 / weight);
                 PC.ADSZoom(1);
-            
+                PA.Aim = false;
+                megerment.text = "";
             }
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 2);
+
 
             //laser stuff
             if (Firetype == firetype.lazer)
@@ -179,7 +212,23 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
             {
                 lazer.gameObject.SetActive(false);
             }
+            //melee
+            if (Input.GetKeyDown(KeyCode.V) && PA.melee == false && PV.IsMine == true)
+            {
+                PV.RPC("call_melee", RpcTarget.All);
+            }
+            //reload
+            if (Input.GetKeyDown(KeyCode.R) && reloading == false && reserve_ammo > 0 && PV.IsMine == true)
+            {
+                StartCoroutine(reload());
+            }
         }
+    }
+
+    [PunRPC]
+    void call_melee()
+    {
+        StartCoroutine(melee());
     }
 
     private void FixedUpdate()
@@ -190,7 +239,7 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 
         if (reloading == false)
         {
-            if (Input.GetMouseButton(0) && PV.IsMine == true)
+            if (Input.GetMouseButton(0) && PV.IsMine == true && can_shoot == true && (PM.running == false || suport_script.SO.speciality == 2))
             {
                 if (firetick >= firerrate && Firetype != firetype.gravity && ammoCount > 0)
                 {
@@ -202,6 +251,13 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
                     ammoCount -= 1;
                     if (PA != null)
                         PA.shooting = true;
+
+                    if (barrel_script.BO.specalty == 2)
+                    {
+                        overheat_damage_multiplyer = Mathf.Clamp(overheat_damage_multiplyer * 1.1f, 1, int.MaxValue);
+                    }
+
+
 
                     if (Firetype == firetype.projectile)
                     {
@@ -223,10 +279,16 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
                     }
 
                     firetick = 0;
+                    if (grip_script.GO.speciality == 2)
+                    {
+
+                        PC.Flinch_Recoil(recoil / recoil_reduction);
+                        recoil_reduction += 0.2f;
+                    }
                     PC.Flinch_Recoil(recoil);
                 }
 
-                if (ammoCount <= 0 && reloading == false)
+                if (ammoCount <= 0 && reloading == false && reserve_ammo > 0)
                 {
                     StartCoroutine(reload());
                 }
@@ -239,6 +301,8 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
             }
             else
             {
+                recoil_reduction = 1;
+                overheat_damage_multiplyer = 1;
                 firerrate = Mathf.Clamp(firerrate * 1.2f, 0.01f, intialfirerate);
 
                 if (Firetype == firetype.gravity && blastPrime == true)
@@ -256,8 +320,20 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
     void shoot(Vector3 position, Vector3 velosity)
     {
 
-        EM.shootProjectile(position, velosity, proREF, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
+        EM.shootProjectile(transform.position, velosity, new projectileREf { blast_radious = proREF.blast_radious, damage = (int)(proREF.damage * overheat_damage_multiplyer), element = proREF.element, range = proREF.range }, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
+        if (barrel_script.BO.specalty == 1)
+        {
+            Audio_Maneger.create_sound(transform.position, surpressed_Fire, 0.5f);
+        }
+        else
+        {
+            Audio_Maneger.create_sound(transform.position, nerf_Fire, 0.5f);
 
+        }
+        if (suport_script.SO.speciality == 1)
+        {
+            PM.RB.AddForce(-velosity);
+        }
     }
 
     [PunRPC]
@@ -269,8 +345,21 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 
             Vector3 randomvelosity = velosity + new Vector3(Random.Range(-7, 8), Random.Range(-7, 8), Random.Range(-7, 8));
 
-            EM.shootProjectile(position, randomvelosity, proREF, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
+            EM.shootProjectile(transform.position, randomvelosity, new projectileREf { blast_radious = proREF.blast_radious, damage = (int)(proREF.damage * overheat_damage_multiplyer), element = proREF.element, range = proREF.range }, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
 
+        }
+        if (barrel_script.BO.specalty == 1)
+        {
+            Audio_Maneger.create_sound(transform.position, surpressed_Fire, 0.5f);
+        }
+        else
+        {
+            Audio_Maneger.create_sound(transform.position, buckshot_Fire, 0.5f);
+
+        }
+        if (suport_script.SO.speciality == 1)
+        {
+            PM.RB.AddForce(-velosity);
         }
 
     }
@@ -306,6 +395,15 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
                 }
                 col.rigidbody.velocity += velosity.normalized * 5 * proREF.damage;
             }
+        }
+        if (barrel_script.BO.specalty == 1)
+        {
+            Audio_Maneger.create_sound(transform.position, surpressed_Fire, 0.5f);
+        }
+        else
+        {
+            Audio_Maneger.create_sound(transform.position, lazer_Fire, 0.5f);
+
         }
     }
     [PunRPC]
@@ -436,6 +534,8 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
             range += 5;
 
         ammoCount = amunition_script.AO.rounds;
+        reserve_ammo = ammoCount * 5;
+
         reload_time = weight / 4;
 
         if (amunition_script.AO.speciality == 3)
@@ -446,10 +546,53 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
 
     IEnumerator reload()
     {
+        transform.parent = rigthand;
         reloading = true;
         yield return new WaitForSeconds(reload_time);
-        ammoCount = amunition_script.AO.rounds;
+        int usedRounds = amunition_script.AO.rounds - ammoCount;
+
+        ammoCount += Mathf.Clamp(usedRounds, 0, reserve_ammo);
+        reserve_ammo -= usedRounds;
         reloading = false;
+        transform.parent = cam;
+    }
+
+    IEnumerator melee()
+    {
+        can_shoot = false;
+        reloading = false;
+        StopCoroutine(reload());
+        PA.melee = true;
+
+        transform.parent = rigthand;
+        yield return new WaitForSeconds(0.2f);
+        RaycastHit[] targets = Physics.BoxCastAll(transform.parent.position, new Vector3(1f, 1f, 1f), transform.parent.forward, transform.parent.rotation, melee_range);
+        for (int i = 0; targets.Length > i; i++)
+        {
+            if (targets[i].collider.gameObject != PA.gameObject)
+            {
+                if (targets[i].rigidbody != null)
+                {
+                    targets[i].rigidbody.velocity += velosity / proREF.range * 10;
+                    if (targets[i].collider.gameObject.GetComponent<player_stats>() != null)
+                    {
+                        player_stats target = targets[i].collider.gameObject.GetComponent<player_stats>();
+                        target.damage_player(50, Vector2Int.zero);
+
+                        if (grip_script.GO.speciality == 1)
+                        {
+                            target.PC.stun_player();
+                        }
+                    }
+
+                }
+
+            }
+        }
+        yield return new WaitForSeconds(0.2f);
+        PA.melee = false;
+        can_shoot = true;
+        transform.parent = cam;
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -457,10 +600,12 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
         if (stream.IsWriting)
         {
             stream.SendNext(is_ADS);
+            stream.SendNext(reloading);
         }
         else if(stream.IsReading)
         {
             is_ADS = (bool)stream.ReceiveNext();
+            reloading = (bool)stream.ReceiveNext();
         }
 
 

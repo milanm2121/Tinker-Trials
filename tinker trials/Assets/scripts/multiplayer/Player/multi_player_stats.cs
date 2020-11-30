@@ -16,7 +16,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     public multi_armour_game AG;
     public multi_wepon_body_game WBG;
     public multi_lethal_thrower LT;
-    public player_Movement PM;
+    public multi_Player_Movement PM;
 
     public Text healthtext;
 
@@ -53,6 +53,13 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     public Image dirt2;
     public Image dirt3;
     public Image dirt4;
+
+    public Image health_bar;
+
+    public Collider[] ragdoll;
+
+    public GameObject damage_numbers_UI_Canvas;
+    public GameObject damage_numbers;
 
     public player_classes_loader PCL;
 
@@ -103,13 +110,26 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
             if (health <= 0)
             {
                 animator.enabled = false;
-                Skeleton.SetActive(true);
+                foreach (Collider collider in ragdoll)
+                {
+                    collider.enabled = true;
+
+                }
                 Destroy(GetComponent<Rigidbody>());
+                Destroy(gameObject, 3);
+                WBG.enabled = false;
+                LT.enabled = false;
+
+
             }
             else
             {
                 animator.enabled = true;
-                Skeleton.SetActive(false);
+                foreach (Collider collider in ragdoll)
+                {
+                    collider.enabled = false;
+                }
+                // Skeleton.SetActive(false);
             }
         }
         else
@@ -120,11 +140,23 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             }
         }
+    
+        
 
         dirt();
 
+        if (health_bar != null)
+            health_bar.fillAmount = health / 100;
+
         if (healthtext != null)
+        {
             healthtext.text = "health" + ((int)health).ToString();
+
+        }
+
+        fire_meter = Mathf.Clamp(fire_meter, 1, 110);
+        frost_meter = Mathf.Clamp(frost_meter, 1, 100);
+        electrucity_meter = Mathf.Clamp(electrucity_meter, 1, 110);
 
         object[] x = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter };
         if (PhotonNetwork.IsMasterClient)
@@ -168,7 +200,61 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     {
         //damage armour calculation
         damage /= armour;
-        health -= damage;
+        health -= (int)damage;
+        GameObject UI_can = Instantiate(damage_numbers_UI_Canvas, transform.position, Quaternion.identity);
+        GameObject base_damage = Instantiate(damage_numbers, UI_can.transform);
+        base_damage.GetComponent<damage_numbers>().damage((int)damage, 0);
+
+        if (element.x == 1)
+        {
+            fire_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 1);
+        }
+        if (element.x == 2)
+        {
+            frost_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage, 2);
+        }
+        if (element.x == 3)
+        {
+            dirt_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 3);
+        }
+        if (element.x == 4)
+        {
+            electrucity_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 4);
+        }
+
+
+        if (element.y == 1)
+        {
+            fire_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 1);
+        }
+        if (element.y == 2)
+        {
+            frost_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 2);
+        }
+        if (element.y == 3)
+        {
+            dirt_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 3);
+        }
+        if (element.y == 4)
+        {
+            electrucity_meter += damage * 2;
+            GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
+            elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 4);
+        }
     }
     public void OnCollisionEnter(Collision col)
     {
@@ -237,18 +323,45 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     private void loadstats()
     {
 
-        PM = GetComponent<player_Movement>();
+        PM = GetComponent<multi_Player_Movement>();
 
         //calculates the weight and defence at the start of a game
         armour = AG.deffence / 10;
         weight = AG.weight + WBG.weight;
         //calculating avrage speed
         PM.speed = PM.speed - (weight / 10);
+        if (AG.L_boots_script.BO.speciality == 1)
+        {
+            PM.speed *= 1.5f;
+        }
+
         PM.initalSpeed = PM.speed;
         loaded = true;
-        
+
+        if (AG.L_boots_script.BO.speciality == 2)
+        {
+            PM.multi_Jump = true;
+        }
+        else
+        {
+            PM.multi_Jump = false;
+        }
+
+        if (AG.L_boots_script.BO.speciality == 3)
+        {
+            WBG.melee_range *= 2;
+        }
 
 
+        if (AG.cheastplate_script.CPO.specicality == 1)
+        {
+            WBG.reserve_ammo *= 2;
+        }
+
+        if (AG.cheastplate_script.CPO.specicality == 2)
+        {
+            LT.sholder_launcher = true;
+        }
     }
 
 
