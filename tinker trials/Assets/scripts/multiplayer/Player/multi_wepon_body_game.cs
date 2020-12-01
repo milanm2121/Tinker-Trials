@@ -613,6 +613,7 @@ public class multi_wepon_body_game : MonoBehaviour, IPunObservable
     }
     IEnumerator syncClass(string UserID, int Class)
     {
+        yield return new WaitUntil(() => PhotonNetwork.IsConnectedAndReady);
         yield return new WaitUntil(() => PCL != null);
         if (Class == 1)
         {

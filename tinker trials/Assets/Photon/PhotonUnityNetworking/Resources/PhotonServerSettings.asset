@@ -57,6 +57,7 @@ MonoBehaviour:
   - generate
   - syncClass_call
   - call_melee
+  - call_loadstats
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

@@ -68,22 +68,25 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     {
         StartCoroutine(waitForGameScean());
         DontDestroyOnLoad(this);
+        
     }
 
     void inialise_player()
     {
         PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
-        Invoke("loadstats_on_network", 1);
         Invoke("Startingclass", 0.5f);
         PC.initalise_cam();
         WBG.initalise();
         AG.initalise();
         LT.initalise();
+        Invoke("loadstats_on_network", 1);
+
     }
 
     void Startingclass()
     {
         selectClass(photonView.Owner.UserId, 1);
+        
     }
 
     public void selectClass(string UserID, int Class)
@@ -96,7 +99,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     void loadstats_on_network()
     {
         if (photonView.IsMine == true)
-            photonView.RPC("loadstats", RpcTarget.AllBufferedViaServer);
+            photonView.RPC("call_loadstats", RpcTarget.AllBufferedViaServer);
     }
 
     // Update is called once per frame
@@ -320,9 +323,16 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void loadstats()
+    private void call_loadstats()
     {
 
+        
+    }
+
+    IEnumerator loadsetats()
+    {
+        yield return new WaitUntil(() => PhotonNetwork.IsConnectedAndReady);
+        yield return new WaitUntil(() => AG.cheastplate_script.CPO != null);
         PM = GetComponent<multi_Player_Movement>();
 
         //calculates the weight and defence at the start of a game
@@ -363,7 +373,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
             LT.sholder_launcher = true;
         }
     }
-
 
     [PunRPC]
     private void Sync_Stats(float Health, float Fire, float Ice, float Earth, float Electricity)
