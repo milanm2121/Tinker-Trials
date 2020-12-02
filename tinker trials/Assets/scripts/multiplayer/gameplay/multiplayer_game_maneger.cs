@@ -62,6 +62,8 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks, IPunInstantia
         {
             start_game_button.interactable = false;
         }
+    
+        
     }
 
     public void LoadGame()
@@ -87,4 +89,6 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks, IPunInstantia
         }
 
     }
+    
+    
 }
