@@ -58,6 +58,7 @@ MonoBehaviour:
   - syncClass_call
   - call_melee
   - call_loadstats
+  - Update_gameplay_maneger
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

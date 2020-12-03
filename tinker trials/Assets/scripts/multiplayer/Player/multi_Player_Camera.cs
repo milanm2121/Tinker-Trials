@@ -52,19 +52,24 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
             if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine == true)
             {
                 camlist[i].enabled = true;
+                camlist[i].gameObject.transform.parent.transform.SetAsFirstSibling();
             }
             else
             {
                 camlist[i].enabled = false;
             }
 
-            if (canvas[i].gameObject.transform.parent.GetComponent<PhotonView>().IsMine)
+            if (canvas[i].transform.parent.name != "helm")
             {
-                canvas[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                canvas[i].gameObject.SetActive(false);
+                print(canvas[i].transform.parent.name);
+                if (canvas[i].gameObject.transform.parent.GetComponent<PhotonView>().IsMine)
+                {
+                    canvas[i].gameObject.SetActive(true);
+                }
+                else
+                {
+                    canvas[i].gameObject.SetActive(false);
+                }
             }
         }
 

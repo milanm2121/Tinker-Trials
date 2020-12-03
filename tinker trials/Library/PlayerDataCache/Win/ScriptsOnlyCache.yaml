@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     - entity_maneger
     - explosion_barrel
     - explosion_groth
+    - face_camera
     - game_maneger
     - gameplay_maneger
     - grip_object
@@ -358,7 +359,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16428}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -561,7 +562,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16428}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -646,7 +647,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16902}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -857,7 +858,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16984}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 52452}
+    - Class: 114
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1448,7 +1451,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16428}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1673,7 +1676,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16668}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1880,7 +1883,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16428}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2087,7 +2090,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16800}
     - Class: 114
-      Script: {instanceID: 34268}
+      Script: {instanceID: 63714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2263,6 +2266,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 16876}
     - Class: 114
       Script: {instanceID: 16984}
+    - Class: 114
+      Script: {instanceID: 52452}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -3279,7 +3284,7 @@ ScriptsOnlyBuild:
     className: multiplayer_menue_maneger
   - hash:
       serializedVersion: 2
-      Hash: b4ad8ecb33e50f55cf53889f8d08ba14
+      Hash: 386766f5686a6cf7a9447ed0eb259477
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameplay_maneger
@@ -3291,7 +3296,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: f5f63cb92f19c12babb0ea83ca20aa95
+      Hash: edab954b71149bb6a3bd9fa460b2e39b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multi_player_stats
@@ -5397,7 +5402,7 @@ ScriptsOnlyBuild:
     className: WorldGenerator
   - hash:
       serializedVersion: 2
-      Hash: 3382472b52495e9ce3fc783ab76f00e5
+      Hash: 62b97aa1a2b8f656c65e8e8f92939f28
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multiplayer_teamID
@@ -5491,6 +5496,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: face_camera
   platform: 5
   scenePathNames:
   - Assets/Scenes/important sceans ans scean assets/main menu.unity

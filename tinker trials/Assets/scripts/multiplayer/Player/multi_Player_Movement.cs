@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class multi_Player_Movement : MonoBehaviour
+public class multi_Player_Movement : MonoBehaviour, IPunObservable
 {
     //stores the final movement vector
     Vector3 direction;
@@ -322,6 +322,16 @@ public class multi_Player_Movement : MonoBehaviour
 
     }
 
-   
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
 
+            stream.SendNext(RB.velocity);
+        }
+        else if (stream.IsReading)
+        {
+            RB.velocity = (Vector3)stream.ReceiveNext();
+        }
+    }
 }

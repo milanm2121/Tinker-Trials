@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.UI;
 
 public class multiplayer_teamID : MonoBehaviourPunCallbacks
 {
@@ -11,6 +12,7 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
     public int teamID;
     public int roomID;
     public gameplay_maneger GPM;
+    public Image healthbar;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         base.OnLeftRoom();
-        
+        photonView.RPC("leaveGame", RpcTarget.All);
     }
     
     [PunRPC]

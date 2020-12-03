@@ -111,7 +111,7 @@ public class multi_lethal_thrower : MonoBehaviour
     IEnumerator delaythrow()
     {
         yield return new WaitForSeconds(0.5f);
-        GameObject x = PhotonNetwork.Instantiate("multi_leathal", transform.position, Quaternion.identity);
+        GameObject x = PhotonNetwork.InstantiateRoomObject("multi_leathal", transform.position, Quaternion.identity);
         IGL.primed = false;
         x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight * 10;
         x.GetComponent<multi_in_game_leathal>().ps = ps;

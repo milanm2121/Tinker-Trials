@@ -63,9 +63,11 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
 
     public player_classes_loader PCL;
 
+    public Image exterior_healthbar;
     // Start is called before the first frame update
     void Start()
     {
+
         StartCoroutine(waitForGameScean());
         DontDestroyOnLoad(this);
         
@@ -74,13 +76,16 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     void inialise_player()
     {
         PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
-        Invoke("Startingclass", 0.5f);
+
         PC.initalise_cam();
         WBG.initalise();
         AG.initalise();
         LT.initalise();
-        Invoke("loadstats_on_network", 1);
-
+        if (photonView.IsMine)
+        {
+            Invoke("loadstats_on_network", 1);
+            Invoke("Startingclass", 0.5f);
+        }
     }
 
     void Startingclass()
@@ -149,8 +154,10 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         dirt();
 
         if (health_bar != null)
+        {
             health_bar.fillAmount = health / 100;
-
+            exterior_healthbar.fillAmount = health / 100;
+        }
         if (healthtext != null)
         {
             healthtext.text = "health" + ((int)health).ToString();
@@ -325,14 +332,13 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     [PunRPC]
     private void call_loadstats()
     {
-
-        
+        StartCoroutine(loadsetats());
     }
 
     IEnumerator loadsetats()
     {
         yield return new WaitUntil(() => PhotonNetwork.IsConnectedAndReady);
-        yield return new WaitUntil(() => AG.cheastplate_script.CPO != null);
+        yield return new WaitUntil(() => AG.deffence > 0);
         PM = GetComponent<multi_Player_Movement>();
 
         //calculates the weight and defence at the start of a game
