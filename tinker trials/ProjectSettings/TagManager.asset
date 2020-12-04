@@ -6,6 +6,10 @@ TagManager:
   tags:
   - ground
   - rope
+  - SF_Door
+  - Rails
+  - Outside
+  - Cave
   layers:
   - Default
   - TransparentFX

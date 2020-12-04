@@ -9,9 +9,11 @@ public class interactabel : MonoBehaviour
     public bool spawn_dummys;
     public bool load_workshop;
     public bool exit;
+    public bool rail;
     public GameObject Text;
-    GameObject dummy;
-    Transform[] dummyspawns;
+    public GameObject dummy;
+    public Transform[] dummyspawns;
+    public GameObject Rails;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,14 +41,20 @@ public class interactabel : MonoBehaviour
                 SceneManager.LoadScene("workshop form firing range");
 
             }
-            else if (spawn_dummys == true)
+            else if (spawn_dummys == false)
             {
 
+                //Rails.SetActive(false);// turns off rails when dummys spawn
             }
             else if (exit == true)
             {
                 SceneManager.LoadScene("main menu");
 
+            }
+            else if (rail == true)
+            {
+                //Rails.SetActive(true);// turns off rails when dummys spawn
+                turnOff();
             }
         }
     }
@@ -66,4 +74,14 @@ public class interactabel : MonoBehaviour
             Text.SetActive(false);
         }
     }
+   public void turnOff()
+    {
+        if(rail == false)
+        {
+            Rails.SetActive(false);// turns off rails when dummys spawn
+        }
+
+       
+    }
+    
 }
