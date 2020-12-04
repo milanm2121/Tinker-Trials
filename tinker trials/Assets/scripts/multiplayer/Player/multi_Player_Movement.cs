@@ -326,12 +326,13 @@ public class multi_Player_Movement : MonoBehaviour, IPunObservable
     {
         if (stream.IsWriting)
         {
-
-            stream.SendNext(RB.velocity);
+            if(RB)
+                stream.SendNext(RB.velocity);
         }
         else if (stream.IsReading)
         {
-            RB.velocity = (Vector3)stream.ReceiveNext();
+            if(RB)
+                RB.velocity = (Vector3)stream.ReceiveNext();
         }
     }
 }
