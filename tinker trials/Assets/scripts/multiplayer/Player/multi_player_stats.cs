@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class multi_player_stats : MonoBehaviourPunCallbacks
 {
@@ -64,13 +65,14 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     public player_classes_loader PCL;
 
     public Image exterior_healthbar;
+    public TMP_Text Name;
     // Start is called before the first frame update
     void Start()
     {
 
         StartCoroutine(waitForGameScean());
         DontDestroyOnLoad(this);
-        
+        Name.text = PhotonNetwork.NickName;
     }
 
     void inialise_player()
@@ -395,7 +397,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     IEnumerator waitForGameScean()
     {
         yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "multiplayer_gameplay_test");
-        yield return new WaitForSeconds(1);
         inialise_player();
     }
 }

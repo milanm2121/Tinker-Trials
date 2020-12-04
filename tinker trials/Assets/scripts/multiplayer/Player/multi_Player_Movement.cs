@@ -189,7 +189,7 @@ public class multi_Player_Movement : MonoBehaviour, IPunObservable
             }
             //no momentum
             // this is used to calculate the next velosity of the rigit body and overwright it
-            if (keep_Momentum == false)
+            if (keep_Momentum == false && RB)
             {
                 direction = (forward + back + left + right) * Time.deltaTime;
                 RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z);

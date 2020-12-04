@@ -46,7 +46,8 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
     public void initalise_cam()
     {
         Canvas[] canvas=GameObject.FindObjectsOfType<Canvas>();
-        Camera[] camlist = Camera.allCameras;
+        Camera[] camlist= new Camera[Camera.allCamerasCount];
+        Camera.GetAllCameras(camlist);
         for (int i = 0; camlist.Length > i; i++) {
 
             if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine == true)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class multi_in_game_leathal : MonoBehaviour
+public class multi_in_game_leathal : MonoBehaviour,IPunObservable
 {
     public GameObject primer;
     public primer primer_script;
@@ -124,7 +124,6 @@ public class multi_in_game_leathal : MonoBehaviour
             for (int i = 0; col.Length > i; i++)
             {
                 RaycastHit hit;
-
                 Vector3 offset = (col[i].transform.position - transform.position);
                 Physics.Raycast(transform.position, offset, out hit);
                 if (hit.collider == col[i] && col[i].GetComponent<Rigidbody>() != null)
@@ -170,12 +169,14 @@ public class multi_in_game_leathal : MonoBehaviour
         {
             PhotonNetwork.Instantiate("multi_junk explosion", transform.position, Quaternion.identity);
         }
-
-        if (empty != null)
+        if (PV.IsMine)
         {
-            PhotonNetwork.Destroy(empty);
+            if (empty != null)
+            {
+                PhotonNetwork.Destroy(empty);
+            }
+            PhotonNetwork.Destroy(gameObject);
         }
-        PhotonNetwork.Destroy(gameObject);
     }
 
     IEnumerator primerPhase()
@@ -254,4 +255,20 @@ public class multi_in_game_leathal : MonoBehaviour
         }
     }
 
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+
+            stream.SendNext(transform.position);
+            stream.SendNext(rb.velocity);
+
+        }
+        else if (stream.IsReading)
+        {
+            transform.position = (Vector3)stream.ReceiveNext();
+            rb.velocity = (Vector3)stream.ReceiveNext();
+
+        }
+    }
 }
