@@ -44,6 +44,7 @@ public class damage_numbers : MonoBehaviour
     }
     private void Update()
     {
-        transform.parent.LookAt(Camera.allCameras[0].transform);
+        if(Camera.allCamerasCount!=0)
+            transform.parent.LookAt(Camera.allCameras[0].transform);
     }
 }

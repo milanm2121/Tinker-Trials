@@ -119,10 +119,9 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
+    - Photon.Pun.PhotonHandler
     - Photon.Pun.PhotonRigidbodyView
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
@@ -171,7 +170,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -362,7 +360,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -565,7 +563,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -650,7 +648,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16904}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -863,7 +861,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16986}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1454,7 +1452,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1677,7 +1675,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16670}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1884,7 +1882,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2093,7 +2091,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16802}
     - Class: 114
-      Script: {instanceID: 48666}
+      Script: {instanceID: 48066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2391,6 +2389,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10930}
     - Class: 114
       Script: {instanceID: 11006}
+    - Class: 114
+      Script: {instanceID: 11458}
     - Class: 114
       Script: {instanceID: 11484}
     - Class: 114

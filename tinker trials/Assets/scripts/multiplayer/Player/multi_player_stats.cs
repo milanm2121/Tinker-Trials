@@ -73,6 +73,10 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         StartCoroutine(waitForGameScean());
         DontDestroyOnLoad(this);
         Name.text = PhotonNetwork.NickName;
+        if (photonView.IsMine)
+        {
+            exterior_healthbar.gameObject.SetActive(false);
+        }
     }
 
     void inialise_player()
@@ -158,7 +162,12 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         if (health_bar != null)
         {
             health_bar.fillAmount = health / 100;
-            exterior_healthbar.fillAmount = health / 100;
+            if (!photonView.IsMine)
+            {
+                exterior_healthbar.fillAmount = health / 100;
+                exterior_healthbar.transform.parent.LookAt(Camera.allCameras[0].transform);
+            }
+            
         }
         if (healthtext != null)
         {
