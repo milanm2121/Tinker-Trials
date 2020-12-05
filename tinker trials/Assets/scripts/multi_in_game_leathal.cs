@@ -261,13 +261,15 @@ public class multi_in_game_leathal : MonoBehaviour,IPunObservable
         {
 
             stream.SendNext(transform.position);
-            stream.SendNext(rb.velocity);
+            if(rb)
+                stream.SendNext(rb.velocity);
 
         }
         else if (stream.IsReading)
         {
             transform.position = (Vector3)stream.ReceiveNext();
-            rb.velocity = (Vector3)stream.ReceiveNext();
+            if(rb)
+                rb.velocity = (Vector3)stream.ReceiveNext();
 
         }
     }

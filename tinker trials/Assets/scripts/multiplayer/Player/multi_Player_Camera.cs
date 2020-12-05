@@ -40,20 +40,27 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
 
     public GameObject wepon;
 
-
+    public Rigidbody Perant_rb;
 
     // Start is called before the first frame update
+
+    private void Start()
+    {
+        Perant_rb = GetComponentInParent<Rigidbody>();
+    }
+
     public void initalise_cam()
     {
         Canvas[] canvas=GameObject.FindObjectsOfType<Canvas>();
-        Camera[] camlist= new Camera[Camera.allCamerasCount];
-        Camera.GetAllCameras(camlist);
+        Camera[] camlist = Camera.allCameras;
         for (int i = 0; camlist.Length > i; i++) {
 
             if (camlist[i].GetComponent<multi_Player_Camera>().perant_PV.IsMine == true)
             {
                 camlist[i].enabled = true;
                 camlist[i].gameObject.transform.parent.transform.SetAsFirstSibling();
+                camlist[i].tag = "MainCamera";
+
             }
             else
             {
@@ -92,7 +99,8 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
     {
         if (initalised)
         {
-            GetComponentInParent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
+            if (Perant_rb)
+                Perant_rb.angularVelocity = new Vector3(0, 0, 0);
 
             if (perant_PV.IsMine == true)
             {
@@ -215,7 +223,7 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
   
             stream.SendNext(transform.rotation.eulerAngles);
         }
-        else if (stream.IsReading)
+        else if (stream.IsReading && stream.PeekNext() != null)
         {
             transform.rotation = Quaternion.Euler((Vector3)stream.ReceiveNext());
         }

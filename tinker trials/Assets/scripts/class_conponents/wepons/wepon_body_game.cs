@@ -173,9 +173,10 @@ public class wepon_body_game : MonoBehaviour
                 megerment.text = "";
 
             }
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 2);
 
         }
+        if(can_shoot == true && reloading == false)
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 2);
 
         //laser stuff
         if (Firetype == firetype.lazer)

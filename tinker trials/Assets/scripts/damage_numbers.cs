@@ -40,5 +40,10 @@ public class damage_numbers : MonoBehaviour
             GetComponent<TMP_Text>().color = Color.yellow;
         }
         
+        
+    }
+    private void Update()
+    {
+        transform.parent.LookAt(Camera.allCameras[0].transform);
     }
 }

@@ -1438,7 +1438,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5049593014044280867}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -1516,6 +1516,7 @@ MonoBehaviour:
   head: {fileID: 4959698443074321594}
   animator: {fileID: 8882264737965496946}
   wepon: {fileID: 8238350271320725404}
+  Perant_rb: {fileID: 0}
 --- !u!1 &5144385758844150485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,7 +2665,7 @@ RectTransform:
   m_GameObject: {fileID: 6451303565875998499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.005, z: 1}
+  m_LocalScale: {x: -0.02, y: 0.005, z: 1}
   m_Children:
   - {fileID: 8733174337823795335}
   - {fileID: 4518923270359092941}

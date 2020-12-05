@@ -43,7 +43,7 @@ public class player_animation : MonoBehaviour
 
     private void Start()
     {
-        characterAnimator.SetFloat("reload speed",1/WBG.reload_time);
+        StartCoroutine(waitforgunstats());
     }
 
 
@@ -84,11 +84,11 @@ public class player_animation : MonoBehaviour
 
         }
     }
-    private void LateUpdate()
+    IEnumerator waitforgunstats() 
     {
-       // spine.transform.rotation *= spinerotation;
-       // left_hand.position = wepon_barrel_hand_position.position;
-       // right_hand.position = wepon_reciver_hand_position.position;
+        yield return new WaitUntil(() => WBG.reload_time != 0);
+        characterAnimator.SetFloat("reload speed", 1 / WBG.reload_time);
+
     }
 
     #region oldcode    

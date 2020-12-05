@@ -213,6 +213,58 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         //damage armour calculation
         damage /= armour;
         health -= (int)damage;
+       
+        if (element.x == 1)
+        {
+            fire_meter += damage * 2;
+
+        }
+        if (element.x == 2)
+        {
+            frost_meter += damage * 2;
+            ;
+        }
+        if (element.x == 3)
+        {
+            dirt_meter += damage * 2;
+
+        }
+        if (element.x == 4)
+        {
+            electrucity_meter += damage * 2;
+
+        }
+
+
+        if (element.y == 1)
+        {
+            fire_meter += damage * 2;
+
+        }
+        if (element.y == 2)
+        {
+            frost_meter += damage * 2;
+
+        }
+        if (element.y == 3)
+        {
+            dirt_meter += damage * 2;
+
+        }
+        if (element.y == 4)
+        {
+            electrucity_meter += damage * 2;
+
+        }
+
+        object[] x = new object[] { damage, (Vector2)element };
+        photonView.RPC("instantiate_damage_numbers", RpcTarget.All, x);
+
+    }
+
+    [PunRPC]
+    void instantiate_damage_numbers(float damage, Vector2 element)
+    {
         GameObject UI_can = Instantiate(damage_numbers_UI_Canvas, transform.position, Quaternion.identity);
         GameObject base_damage = Instantiate(damage_numbers, UI_can.transform);
         base_damage.GetComponent<damage_numbers>().damage((int)damage, 0);
@@ -241,8 +293,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
             GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
             elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 4);
         }
-
-
         if (element.y == 1)
         {
             fire_meter += damage * 2;
@@ -267,7 +317,9 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
             GameObject elemental_damage = Instantiate(damage_numbers, UI_can.transform);
             elemental_damage.GetComponent<damage_numbers>().damage((int)damage * 2, 4);
         }
+
     }
+
     public void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.layer == 9)
@@ -347,7 +399,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         armour = AG.deffence / 10;
         weight = AG.weight + WBG.weight;
         //calculating avrage speed
-        PM.speed = PM.speed - (weight / 10);
+        PM.speed = PM.speed - (weight / 30);
         if (AG.L_boots_script.BO.speciality == 1)
         {
             PM.speed *= 1.5f;
