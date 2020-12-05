@@ -55,6 +55,7 @@ public class player_stats : MonoBehaviour
     public Image health_bar;
 
     public Collider[] ragdoll;
+    public Rigidbody[] ragdoll2;
 
     public GameObject damage_numbers_UI_Canvas;
     public GameObject damage_numbers;
@@ -78,6 +79,10 @@ public class player_stats : MonoBehaviour
                 {
                     collider.enabled = true;
                     
+                }
+                foreach(Rigidbody rigidbody in ragdoll2)
+                {
+                    rigidbody.isKinematic = false;
                 }
                 Destroy(GetComponent<Rigidbody>());
                 Destroy(gameObject, 3);

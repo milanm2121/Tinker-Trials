@@ -59,6 +59,7 @@ MonoBehaviour:
   - call_melee
   - call_loadstats
   - Update_gameplay_maneger
+  - instantiate_damage_numbers
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
