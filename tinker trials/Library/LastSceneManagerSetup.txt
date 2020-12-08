@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/test sceans/gameplay_test.unity
+=======
+- path: Assets/Scenes/levels/Mines.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
