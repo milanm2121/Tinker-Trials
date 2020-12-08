@@ -64,6 +64,15 @@ public class player_stats : MonoBehaviour
     void Start()
     {
         Invoke("loadstats", 1);
+        foreach (Collider collider in ragdoll)
+        {
+            collider.enabled = false;
+
+        }
+        foreach (Rigidbody rigidbody in ragdoll2)
+        {
+            rigidbody.isKinematic = true;
+        }
 
     }
 
