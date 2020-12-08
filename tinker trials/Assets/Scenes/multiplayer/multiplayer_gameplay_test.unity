@@ -520,12 +520,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PCL: {fileID: 0}
   MGM: {fileID: 0}
-  team1: []
-  team2: []
   Player_prefab: {fileID: 5925415338185106912, guid: ef347c5e5bbb99e488bd821f7a5a8cec,
     type: 3}
-  team1_count: 1
-  team2_count: 1
+  team1_count: 0
+  team2_count: 0
   players_in_game: 0
   team: 0
   PV: {fileID: 1062847284}

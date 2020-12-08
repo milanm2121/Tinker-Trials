@@ -2344,8 +2344,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   team: 0
-  teamID: 0
-  roomID: 0
   GPM: {fileID: 0}
   healthbar: {fileID: 9213443600770377075}
 --- !u!114 &-7041513778447240187

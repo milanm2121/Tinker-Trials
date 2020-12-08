@@ -9,20 +9,22 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
 {
     public string name;
     public int team;
-    public int teamID;
-    public int roomID;
+
     public gameplay_maneger GPM;
     public Image healthbar;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if ((bool)photonView.Owner.CustomProperties["Team"])
+        {
+            team = 1;
+            healthbar.color = Color.red;
+        }
+        else
+        {
+            team = 2;
+            healthbar.color = Color.blue;
+        }
     }
 
     public override void OnLeftRoom()
@@ -38,21 +40,13 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
         if (team == 1)
         {
             GPM.team1_count--;
-            GPM.team1.RemoveAt(teamID);
-            for(int i=teamID;GPM.team1.Count>i; i++)
-            {
-                GPM.team1[i].teamID--;
-            }
+           
 
         }
         else
         {
             GPM.team2_count--;
-            GPM.team2.RemoveAt(teamID);
-            for (int i = teamID; GPM.team2.Count > i; i++)
-            {
-                GPM.team2[i].teamID--;
-            }
+         
         }
 
         
@@ -66,5 +60,6 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
             GPM.team = false;
         }
     }
+
    
 }

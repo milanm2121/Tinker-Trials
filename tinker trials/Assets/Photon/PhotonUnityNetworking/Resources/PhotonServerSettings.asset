@@ -60,6 +60,11 @@ MonoBehaviour:
   - call_loadstats
   - Update_gameplay_maneger
   - instantiate_damage_numbers
+  - syincTeamStats
+  - refreshteams
+  - instasantiate_player
+  - updateGameManegerClient
+  - updateGameManegerMaseter
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

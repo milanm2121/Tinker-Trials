@@ -162,7 +162,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         if (health_bar != null)
         {
             health_bar.fillAmount = health / 100;
-            if (!photonView.IsMine)
+            if (!photonView.IsMine && Camera.allCameras.Length>0)
             {
                 exterior_healthbar.fillAmount = health / 100;
                 exterior_healthbar.transform.parent.LookAt(Camera.allCameras[0].transform);

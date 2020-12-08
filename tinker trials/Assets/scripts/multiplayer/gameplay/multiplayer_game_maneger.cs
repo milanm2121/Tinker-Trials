@@ -35,6 +35,7 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks, IPunInstantia
             room_propertys.Add("started_game", false);
             PhotonNetwork.CurrentRoom.SetCustomProperties(room_propertys);
         }
+        
     }
 
     public override void OnLeftRoom()
