@@ -581,7 +581,7 @@ public class wepon_body_game : MonoBehaviour
             barrel_object x = ScriptableObject.CreateInstance<barrel_object>();
 
 
-            x.lenght = Random.Range(1, 10);
+            x.lenght = Random.Range(1, 5);
             x.material = Random.Range(0, 2);
             x.specalty = Random.Range(0, 3);
             x.name = "barrel";
@@ -618,7 +618,7 @@ public class wepon_body_game : MonoBehaviour
             x.range = Random.Range(1, 5);
             x.rounds = Random.Range(1, 100);
             x.speciality = Random.Range(0, 4);
-            x.damage = Random.Range(1, 10);
+            x.damage = Random.Range(1, 3);
 
             x.name = "amunition";
             x.weight = x.blast_radius + x.range + x.rounds / 10 + x.damage / 2;

@@ -90,10 +90,12 @@ public class player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+        
         if (RB != null)
         {
+            if(RB.velocity.magnitude>20)
+            RB.velocity = RB.velocity/2;
+
             if (low_gravity == true)
             {
                 RB.AddForce(new Vector3(0, 5f, 0));
