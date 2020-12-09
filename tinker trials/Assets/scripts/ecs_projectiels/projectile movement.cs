@@ -42,8 +42,12 @@ public class projectilemovement : ComponentSystem
                     {
                         predictedPath.collider.gameObject.GetComponent<object_health>().damage_object(projectile.REf.damage);
                     }
+                    if (predictedPath.collider.gameObject.GetComponent<dummy_script>() && (PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)))
+                    {
+                        predictedPath.collider.gameObject.GetComponent<dummy_script>().damage_player(projectile.REf.damage, projectile.REf.element);
+                    }
 
-                    if(PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient))
+                    if (PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient))
                         predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity;
 
                     projectile.Predict_hit = true;

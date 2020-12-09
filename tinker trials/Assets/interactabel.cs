@@ -9,7 +9,6 @@ public class interactabel : MonoBehaviour
     public bool spawn_dummys;
     public bool load_workshop;
     public bool exit;
-    public bool rail;
     public GameObject Text;
     public GameObject dummy;
     public Transform[] dummyspawns;
@@ -29,7 +28,7 @@ public class interactabel : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag=="Player" && Input.GetKey(KeyCode.E))
+        if (other.tag=="Player" && Input.GetKeyDown(KeyCode.E))
         {
             Cursor.lockState = CursorLockMode.None;
             if (reload_scean == true)
@@ -41,9 +40,9 @@ public class interactabel : MonoBehaviour
                 SceneManager.LoadScene("workshop form firing range");
 
             }
-            else if (spawn_dummys == false)
+            else if (spawn_dummys == true)
             {
-
+                turnOff();
                 //Rails.SetActive(false);// turns off rails when dummys spawn
             }
             else if (exit == true)
@@ -51,11 +50,7 @@ public class interactabel : MonoBehaviour
                 SceneManager.LoadScene("main menu");
 
             }
-            else if (rail == true)
-            {
-                //Rails.SetActive(true);// turns off rails when dummys spawn
-                turnOff();
-            }
+          
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -76,11 +71,26 @@ public class interactabel : MonoBehaviour
     }
    public void turnOff()
     {
-        if(rail == false)
+        if (Rails.activeSelf)
         {
             Rails.SetActive(false);// turns off rails when dummys spawn
+            
+            for (int i = 0; dummyspawns.Length > i; i++)
+            {
+                Instantiate(dummy, dummyspawns[i]);
+            }
         }
-
+        else
+        {
+            Rails.SetActive(true);
+            for (int i = 0; dummyspawns.Length > i; i++)
+            {
+                if (dummyspawns[i].childCount > 0)
+                {
+                    Destroy(dummyspawns[i].GetChild(0).gameObject);
+                }
+            }
+        }
        
     }
     

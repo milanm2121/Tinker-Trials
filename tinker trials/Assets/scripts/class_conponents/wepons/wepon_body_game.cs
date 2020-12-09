@@ -371,9 +371,13 @@ public class wepon_body_game : MonoBehaviour
             {
                 col.collider.GetComponent<player_stats>().damage_player(proREF.damage*overheat_damage_multiplyer, proREF.element);
             }
-            if (col.collider.gameObject.GetComponent<object_health>() != null)
+            else if (col.collider.gameObject.GetComponent<object_health>() != null)
             {
                 col.collider.gameObject.GetComponent<object_health>().damage_object((int)(proREF.damage * overheat_damage_multiplyer));
+            }
+            else if (col.collider.gameObject.GetComponent<dummy_script>() != null)
+            {
+                col.collider.gameObject.GetComponent<dummy_script>().damage_player(proREF.damage * overheat_damage_multiplyer, proREF.element);
             }
             col.rigidbody.velocity += velosity.normalized *5* proREF.damage/10 * overheat_damage_multiplyer;
         }

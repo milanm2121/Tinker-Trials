@@ -354,7 +354,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -646,7 +646,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -754,7 +754,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -954,7 +954,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1127,7 +1127,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1427,7 +1427,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1598,7 +1598,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1676,7 +1676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1090794305102234249
 Transform:
   m_ObjectHideFlags: 0
@@ -1799,8 +1799,8 @@ Rigidbody:
   m_Mass: 3.125
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1859,7 +1859,7 @@ GameObject:
   - component: {fileID: 1036360135120431933}
   - component: {fileID: 1095184318139611528}
   - component: {fileID: 1095184318139611574}
-  - component: {fileID: 1095184318139611529}
+  - component: {fileID: 8319910384753720961}
   m_Layer: 0
   m_Name: test dummy
   m_TagString: Untagged
@@ -1875,7 +1875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096267201561792937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.843974, y: 0.32746232, z: -9.197779}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 1090479446499416051}
@@ -1932,7 +1932,7 @@ CapsuleCollider:
   m_Height: 1.9099457
   m_Direction: 1
   m_Center: {x: 0.0071497755, y: 0.93283296, z: -0.13606255}
---- !u!114 &1095184318139611529
+--- !u!114 &8319910384753720961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1941,17 +1941,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1096267201561792937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b8c28436ea84a10938353b145a1fde, type: 3}
+  m_Script: {fileID: 11500000, guid: e04351b710a890e45a5a8a81e8d9b0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AG: {fileID: 0}
-  WBG: {fileID: 0}
-  PM: {fileID: 0}
   health: 100
-  armour: 0
-  weight: 0
+  damage_numbers_UI_Canvas: {fileID: 6662000835033775647, guid: 0050c80f392bd9142b58af4b4ce57661,
+    type: 3}
+  damage_numbers: {fileID: 5468976786977086203, guid: 939d27b1a763cad4085b8bc8894547be,
+    type: 3}
+  ragdoll:
+  - {fileID: 1095184318703817937}
+  - {fileID: 1095184317891072761}
+  - {fileID: 1095184318577637037}
+  - {fileID: 1095184318658421024}
+  - {fileID: 1095184318703314315}
+  - {fileID: 1095184317589267054}
+  - {fileID: 1095184317379158537}
+  - {fileID: 1095184317363503639}
+  - {fileID: 1095184317923093880}
+  - {fileID: 1095184319064661264}
+  - {fileID: 1095184319211151072}
+  ragdoll2:
+  - {fileID: 1095184318703817950}
+  - {fileID: 1095184317891072743}
+  - {fileID: 1095184318577637034}
+  - {fileID: 1095184318658421038}
+  - {fileID: 1095184318703314312}
+  - {fileID: 1095184317589267052}
+  - {fileID: 1095184317379158582}
+  - {fileID: 1095184317363503637}
+  - {fileID: 1095184319064661278}
+  - {fileID: 1095184319211151073}
   animator: {fileID: 1036360135120431933}
-  Skeleton: {fileID: 1096220458111964235}
 --- !u!1 &1096277196849557407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,7 +2616,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2704,7 +2725,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2875,7 +2896,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

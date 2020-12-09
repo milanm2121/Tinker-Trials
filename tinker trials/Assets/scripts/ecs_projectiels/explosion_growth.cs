@@ -45,6 +45,11 @@ public class explosion_growth : ComponentSystem
                             gameobject.GetComponent<object_health>().damage_object((int)explosion.damage * 10);
                         }
 
+                        if (gameobject.GetComponent<dummy_script>())
+                        {
+                            gameobject.GetComponent<dummy_script>().damage_player(explosion.damage, explosion.element);
+                        }
+
                         gameobject.GetComponent<Rigidbody>().velocity += (gameobject.transform.position - new Vector3(translation.Value.x, translation.Value.y, translation.Value.z)).normalized * 10;
 
                     }

@@ -168,10 +168,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -192,7 +190,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/Maps/Map 1.unity:
@@ -345,7 +342,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -532,7 +529,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -617,7 +614,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16904}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -830,7 +827,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16986}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1405,7 +1402,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1612,7 +1609,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16670}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1803,7 +1800,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16430}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1996,7 +1993,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16802}
     - Class: 114
-      Script: {instanceID: 47660}
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -5424,5 +5421,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/levels/Canyoon.unity
   - Assets/Scenes/levels/Range.unity
   - Assets/Scenes/important sceans ans scean assets/workshop form firing range.unity
-  playerPath: C:/Users/Milan/Documents/GitHub/Tinker-Trials/tinker trials/builds/tinker
+  playerPath: C:/Users/mmanji2/Documents/GitHub/Tinker-Trials/tinker trials/builds/tinker
     trials.exe

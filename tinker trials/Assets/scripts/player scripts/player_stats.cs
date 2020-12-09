@@ -79,6 +79,11 @@ public class player_stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < -100)
+        {
+            health = 0;
+        }
+
         if (animator != null)
         {
             if (health <= 0)
