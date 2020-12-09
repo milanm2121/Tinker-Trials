@@ -25,7 +25,8 @@ public class AI_state_machine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //  pathfinding.pathfining();
+        //  pathfinding.pathfining();
+        GM = GameObject.Find("game maeger").GetComponent<game_maneger>();
     }
 
     // Update is called once per frame
