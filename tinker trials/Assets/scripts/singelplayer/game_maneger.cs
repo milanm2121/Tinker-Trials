@@ -14,13 +14,16 @@ public class game_maneger : MonoBehaviour
 
     public GameObject player;
 
+    public bool spawn_enemy;
     // Start is called before the first frame update
     void Start()
     {
-
-        for (int i = 0; MaxSpawn > i; i++)
+        if (spawn_enemy)
         {
-            Spawn();
+            for (int i = 0; MaxSpawn > i; i++)
+            {
+                Spawn();
+            }
         }
 
         
@@ -35,20 +38,21 @@ public class game_maneger : MonoBehaviour
             team1[0] = x.GetComponent<player_stats>();
         }
 
-        
-        if (team2.Count < MaxSpawn)
+        if (spawn_enemy)
         {
-            Spawn();
-        }
-        for (int i = 0; team2.Count > i; i++)
-        {
-
-            if (team2[i].health <= 0)
+            if (team2.Count < MaxSpawn)
             {
-                team2.RemoveAt(i);
+                Spawn();
+            }
+            for (int i = 0; team2.Count > i; i++)
+            {
+
+                if (team2[i].health <= 0)
+                {
+                    team2.RemoveAt(i);
+                }
             }
         }
-
     }
 
     void Spawn()

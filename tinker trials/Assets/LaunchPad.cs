@@ -25,7 +25,8 @@ public class LaunchPad : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * pushPower);
+        if(collision.gameObject.GetComponent<Rigidbody>())
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * pushPower);
 
     }
 }
