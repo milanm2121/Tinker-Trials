@@ -151,15 +151,7 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
                 }
                 else
                 {
-                    int spinalAdgustment = 1;
-                    if (0 > -mouseposition.y)
-                    {
-                        spinalAdgustment = -1;
-                    }
-                    else
-                    {
-                        spinalAdgustment = 1;
-                    }
+
                     transform.position = head.transform.position;
                     transform.localRotation = Quaternion.AngleAxis(-mouseposition.y, Vector3.right);
 

@@ -70,7 +70,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
 
                 multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
                 TID.GPM = GameObject.Find("gameplay_maneger").GetComponent<gameplay_maneger>();
-                TID.name = player.GetComponent<PhotonView>().Owner.NickName;
+                TID.shown_name.text = player.GetComponent<PhotonView>().Owner.NickName;
                 team1_count++;
                 print("instantiated player");
                 TID.healthbar.color = Color.blue;
@@ -80,7 +80,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
 
                 multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
                 TID.GPM = GameObject.Find("gameplay_maneger").GetComponent<gameplay_maneger>();
-                TID.name = player.GetComponent<PhotonView>().Owner.NickName;
+                TID.shown_name.text = player.GetComponent<PhotonView>().Owner.NickName;
                 team2_count++;
                 print("instantiated player");
                 TID.healthbar.color = Color.red;
@@ -101,8 +101,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
                 GameObject player = PhotonNetwork.Instantiate(this.Player_prefab.name, spawnpoints_team1[Random.Range(0, spawnpoints_team1.Length)].position + new Vector3(0, 5, 0), Quaternion.identity);
                 multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
                 TID.GPM = this;
-                TID.name = player.GetComponent<PhotonView>().Owner.NickName;
-                TID.name = player.GetComponent<PhotonView>().Owner.NickName;
+                TID.shown_name.text = player.GetComponent<PhotonView>().Owner.NickName;
                 print("instantiated player again");
                 localPlayer = player;
                

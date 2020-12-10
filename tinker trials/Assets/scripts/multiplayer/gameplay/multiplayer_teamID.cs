@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class multiplayer_teamID : MonoBehaviourPunCallbacks
 {
-    public string name;
+    public string _name;
     public int team;
-
+    public TMP_Text shown_name;
     public gameplay_maneger GPM;
     public Image healthbar;
     // Start is called before the first frame update
@@ -25,6 +27,13 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
             team = 2;
             healthbar.color = Color.blue;
         }
+        photonView.RPC("setname", RpcTarget.AllBufferedViaServer, shown_name.text);
+    }
+
+    [PunRPC]
+    void setname(string Name)
+    {
+        shown_name.text = Name;
     }
 
     public override void OnLeftRoom()

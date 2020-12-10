@@ -70,8 +70,11 @@ public class multi_armour_game : MonoBehaviour
 
 
         //generate armour
-        headgear_script.Generate_headGear();
-        cheastplate_script.gerateCheastPlate();
+        if (!PV.IsMine)
+        {
+            headgear_script.Generate_headGear();
+        }
+            cheastplate_script.gerateCheastPlate();
         L_boots_script.generateBoots();
         R_boots_script.BO = Class_.Armour.boots;
 
@@ -110,6 +113,6 @@ public class multi_armour_game : MonoBehaviour
         deffence += headgear_script.HGO.deffence;
         deffence += cheastplate_script.CPO.deffence;
         deffence += L_boots_script.BO.deffence;
-        deffence = deffence / 3 * 10;
+        deffence = deffence / 3 *10;
     }
 }

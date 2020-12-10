@@ -46,8 +46,9 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks, IPunInstantia
 
     public void LeaveLobby()
     {
-        PhotonNetwork.LeaveRoom();
-        Destroy(multiplayer_party_maneger.MPM.gameObject);
+        if(PhotonNetwork.IsConnectedAndReady)
+            PhotonNetwork.LeaveRoom();
+       // Destroy(multiplayer_party_maneger.MPM.gameObject);
        // Destroy(photon_View_intance_maneger.PV.gameObject);
     }
 

@@ -72,7 +72,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
         StartCoroutine(waitForGameScean());
         DontDestroyOnLoad(this);
-        Name.text = PhotonNetwork.NickName;
         if (photonView.IsMine)
         {
             exterior_healthbar.gameObject.SetActive(false);
@@ -180,8 +179,8 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
         electrucity_meter = Mathf.Clamp(electrucity_meter, 1, 110);
 
         object[] x = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter };
-       // if (PhotonNetwork.IsMasterClient)
-       //     photonView.RPC("Sync_Stats",RpcTarget.All, x );
+        if (PhotonNetwork.IsMasterClient)
+            photonView.RPC("Sync_Stats",RpcTarget.All, x );
     }
 
     private void FixedUpdate()
@@ -463,7 +462,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
+    /*    if (stream.IsWriting)
         {
             stream.SendNext(health);
             stream.SendNext(fire_meter);
@@ -479,6 +478,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
             frost_meter = (float)stream.ReceiveNext();
             dirt_meter = (float)stream.ReceiveNext();
             electrucity_meter = (float)stream.ReceiveNext();
-        }
+      */  
     }
 }
