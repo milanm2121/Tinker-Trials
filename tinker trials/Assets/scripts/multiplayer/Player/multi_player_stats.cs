@@ -11,7 +11,7 @@ using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class multi_player_stats : MonoBehaviourPunCallbacks
+public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 {
     //used to gateherThe layers weight and applay a movement penalty to the player speed
     public multi_armour_game AG;
@@ -180,8 +180,8 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
         electrucity_meter = Mathf.Clamp(electrucity_meter, 1, 110);
 
         object[] x = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter };
-        if (PhotonNetwork.IsMasterClient)
-            photonView.RPC("Sync_Stats",RpcTarget.All, x );
+       // if (PhotonNetwork.IsMasterClient)
+       //     photonView.RPC("Sync_Stats",RpcTarget.All, x );
     }
 
     private void FixedUpdate()
@@ -459,5 +459,26 @@ public class multi_player_stats : MonoBehaviourPunCallbacks
     {
         yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "multiplayer_gameplay_test");
         inialise_player();
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(health);
+            stream.SendNext(fire_meter);
+            stream.SendNext(frost_meter);
+            stream.SendNext(dirt_meter);
+            stream.SendNext(electrucity_meter);
+            
+        }
+        else if (stream.IsReading)
+        {
+            health = (float)stream.ReceiveNext();
+            fire_meter = (float)stream.ReceiveNext();
+            frost_meter = (float)stream.ReceiveNext();
+            dirt_meter = (float)stream.ReceiveNext();
+            electrucity_meter = (float)stream.ReceiveNext();
+        }
     }
 }

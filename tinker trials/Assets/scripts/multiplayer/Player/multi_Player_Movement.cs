@@ -148,7 +148,7 @@ public class multi_Player_Movement : MonoBehaviour, IPunObservable
             {
                 back = new Vector3((-transform.forward).normalized.x * speed * 100, RB.velocity.y, (-transform.forward).normalized.z * speed * 100);
             }
-            if ((PV.IsMine == true && Input.GetKey(KeyCode.W)))
+            if ((PV.IsMine == true && Input.GetKey(KeyCode.W) && RB))
             {
 
                 forward = new Vector3((transform.forward).normalized.x * speed * 100, RB.velocity.y, (transform.forward).normalized.z * speed * 100);

@@ -2306,9 +2306,10 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   observableSearch: 2
-  Synchronization: 3
+  Synchronization: 2
   OwnershipTransfer: 0
   ObservedComponents:
+  - {fileID: -1265186254209585093}
   - {fileID: 9029709079543834044}
   - {fileID: -7041513778447240187}
   - {fileID: 1887425653058333853}
@@ -3467,7 +3468,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   observableSearch: 2
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   ObservedComponents: []
   viewIdField: 0

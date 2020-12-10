@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1922399030605571602}
   - component: {fileID: 3532433939506777235}
+  - component: {fileID: 3395588947750458093}
   m_Layer: 0
-  m_Name: multi_junk explosio
+  m_Name: multi_junk explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +59,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   un_perant: 0
+--- !u!114 &3395588947750458093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427749713955903574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 6440308223082212089}
+  - {fileID: 3275749718385696676}
+  - {fileID: 8272667665470011310}
+  - {fileID: 7037827655026951617}
+  - {fileID: 1450156394615016854}
+  - {fileID: 6616797335320013055}
+  - {fileID: 4638324870449492487}
+  - {fileID: 4037009271166562055}
+  - {fileID: 8905883677405157980}
+  - {fileID: 5580922171212391844}
+  - {fileID: 6907340299196435665}
+  - {fileID: 4904368211749842998}
+  - {fileID: 8578182397103987255}
+  - {fileID: 2552793264281488510}
+  - {fileID: 7229688186621371846}
+  - {fileID: 7831890188289469313}
+  - {fileID: 4746367298056270855}
+  - {fileID: 6433230092123531781}
+  - {fileID: 5344983379738748678}
+  - {fileID: 8109314104377339845}
+  - {fileID: 3279401365833372433}
+  - {fileID: 7041880569329071969}
+  - {fileID: 7922893318683002385}
+  - {fileID: 6714305501349665504}
+  - {fileID: 5071822842420992646}
+  - {fileID: 4484310469393641093}
+  - {fileID: 1557378004654468519}
+  - {fileID: 4849512737094602352}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &854712112470757006
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,8 +734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &5155458428632271470
 GameObject:

@@ -223,7 +223,7 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
   
             stream.SendNext(transform.rotation.eulerAngles);
         }
-        else if (stream.IsReading && stream.PeekNext() != null)
+        else if (stream.IsReading && stream.ToArray().Length != 0)
         {
             transform.rotation = Quaternion.Euler((Vector3)stream.ReceiveNext());
         }
