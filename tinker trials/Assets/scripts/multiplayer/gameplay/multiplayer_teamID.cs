@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 using TMPro;
-
+using Photon.Realtime;
 
 public class multiplayer_teamID : MonoBehaviourPunCallbacks
 {
@@ -36,9 +36,8 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
         shown_name.text = Name;
     }
 
-    public override void OnLeftRoom()
+    public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        base.OnLeftRoom();
         photonView.RPC("leaveGame", RpcTarget.All);
     }
     
