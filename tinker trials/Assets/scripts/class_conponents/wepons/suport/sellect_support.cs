@@ -8,6 +8,8 @@ public class sellect_support : MonoBehaviour
     public wepon_suport WS;
     public wepon_Constructor WC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         WS = GetComponent<wepon_suport>();
@@ -19,6 +21,8 @@ public class sellect_support : MonoBehaviour
     }
     public void Support_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + WS.SO.name + "\n";
         

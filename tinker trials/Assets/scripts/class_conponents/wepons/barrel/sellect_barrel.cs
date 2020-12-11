@@ -8,17 +8,22 @@ public class sellect_barrel : MonoBehaviour
     public wepon_barrel WB;
     public wepon_Constructor WC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         WB = GetComponent<wepon_barrel>();
     }
     public void selectBarrel()
     {
+
         WC.barrel_script.BO = WB.BO;
         WC.barrel_script.generateBarrel();
     }
     public void barrel_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: "+ WB.BO.name + "\n";
         decription += "range: "+ WB.BO.lenght + "\n";

@@ -9,6 +9,8 @@ public class sellect_grip : MonoBehaviour
     public wepon_grip WG;
     public wepon_Constructor WC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         WG = GetComponent<wepon_grip>();
@@ -20,6 +22,8 @@ public class sellect_grip : MonoBehaviour
     }
     public void Grip_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + WG.GO.name + "\n";
         decription += "grip angel: " + WG.GO.grip_angle + "\n";

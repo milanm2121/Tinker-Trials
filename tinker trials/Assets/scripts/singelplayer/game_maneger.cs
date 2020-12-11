@@ -15,6 +15,8 @@ public class game_maneger : MonoBehaviour
     public GameObject player;
 
     public bool spawn_enemy;
+
+    public static GameObject playerinstance;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,10 @@ public class game_maneger : MonoBehaviour
                 Spawn();
             }
         }
-
+        if (team1[0] != null)
+        {
+            playerinstance = team1[0].gameObject;
+        }
         
     }
 
@@ -35,6 +40,7 @@ public class game_maneger : MonoBehaviour
         if (team1[0] == null)
         {
             GameObject x= Instantiate(player, SpawnBlue[Random.Range(0, SpawnBlue.Length)].position, Quaternion.identity);
+            playerinstance = x;
             team1[0] = x.GetComponent<player_stats>();
         }
 

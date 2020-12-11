@@ -8,6 +8,8 @@ public class select_scope : MonoBehaviour
     public wepon_scope WS;
     public wepon_Constructor WC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         WS = GetComponent<wepon_scope>();
@@ -19,6 +21,8 @@ public class select_scope : MonoBehaviour
     }
     public void Scope_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + WS.SO.name + "\n";
         decription += "zoom: " + WS.SO.zoom + "\n";

@@ -8,6 +8,8 @@ public class sellect_reciver : MonoBehaviour
     public wepon_reciver WR;
     public wepon_Constructor WC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         WR = GetComponent<wepon_reciver>();
@@ -20,6 +22,8 @@ public class sellect_reciver : MonoBehaviour
     }
     public void recever_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + WR.RO.name + "\n";
 

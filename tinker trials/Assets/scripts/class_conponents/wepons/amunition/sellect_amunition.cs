@@ -14,6 +14,8 @@ public class sellect_amunition : MonoBehaviour
     public wepon_anumition WG;
     public wepon_Constructor WC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         WG = GetComponent<wepon_anumition>();
@@ -25,6 +27,8 @@ public class sellect_amunition : MonoBehaviour
     }
     public void Amunition_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + WG.AO.name + "\n";
         decription += "damage: " + WG.AO.damage + "\n";

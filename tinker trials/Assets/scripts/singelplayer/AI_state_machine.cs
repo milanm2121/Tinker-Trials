@@ -22,22 +22,25 @@ public class AI_state_machine : MonoBehaviour
 
     public GameObject Camera;
     float time = 0;
+    public bool use_GM;
     // Start is called before the first frame update
     void Start()
     {
         //  pathfinding.pathfining();
         GM = GameObject.Find("game maeger").GetComponent<game_maneger>();
+
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (PS.health > 0)
+        if (PS.health > 0 && pathfindingTarget != null)
         {
             if (shooting_target==null || Vector3.Distance(transform.position,shooting_target.transform.position)>10)
             {
                 movement();
                 Debug.Log("moving");
+                shooting_target = null;
             }
             shoot();
         }
@@ -46,7 +49,7 @@ public class AI_state_machine : MonoBehaviour
             WBG.AI_shooting = false;
         }
 
-        if (pathfindingTarget == null)
+        if (pathfindingTarget == null && use_GM)
         {
             if (P_ID.team == 2)
             {
@@ -59,13 +62,16 @@ public class AI_state_machine : MonoBehaviour
                     pathfindingTarget = GM.team2[Random.Range(0, GM.team2.Count)].transform;
             }
         }
-
+        if (use_GM == false && game_maneger.playerinstance!=null)
+        {
+            pathfindingTarget = game_maneger.playerinstance.transform;
+        }
     }
 
     private void FixedUpdate()
     {
         time += Time.deltaTime;
-        if (time > 3)
+        if (time > 3 && pathfindingTarget!=null)
         {
             time = 0;
 
@@ -142,7 +148,14 @@ public class AI_state_machine : MonoBehaviour
             Collider[] col = Physics.OverlapSphere(transform.position, 10);
             for (int i = 0; col.Length > i; i++)
             {
-                if (col[i].GetComponent<player_ID>() != null && col[i].GetComponent<player_ID>().team != P_ID.team && col[i].GetComponent<player_stats>().health>0)
+                
+
+                if (use_GM=true && col[i].GetComponent<player_ID>() != null && col[i].GetComponent<player_ID>().team != P_ID.team && col[i].GetComponent<player_stats>().health>0)
+                {
+                    shooting_target = col[i].gameObject;
+                    target_stats = shooting_target.GetComponent<player_stats>();
+                }
+                else if (col[i].GetComponent<player_ID>() != null && col[i].GetComponent<player_ID>().is_player)
                 {
                     shooting_target = col[i].gameObject;
                     target_stats = shooting_target.GetComponent<player_stats>();
