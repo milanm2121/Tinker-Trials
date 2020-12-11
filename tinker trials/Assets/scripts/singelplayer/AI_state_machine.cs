@@ -27,42 +27,45 @@ public class AI_state_machine : MonoBehaviour
     void Start()
     {
         //  pathfinding.pathfining();
-        GM = GameObject.Find("game maeger").GetComponent<game_maneger>();
+        GM = GameObject.Find("game maneger").GetComponent<game_maneger>();
 
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (PS.health > 0 && pathfindingTarget != null)
+        if (pathfindingTarget!=null && Vector3.Distance(pathfindingTarget.position, gameObject.transform.position) < 100)
         {
-            if (shooting_target==null || Vector3.Distance(transform.position,shooting_target.transform.position)>10)
+            if (PS.health > 0 && pathfindingTarget != null)
             {
-                movement();
-                Debug.Log("moving");
-                shooting_target = null;
-            }
-            shoot();
-        }
-        else
-        {
-            WBG.AI_shooting = false;
-        }
-
-        if (pathfindingTarget == null && use_GM)
-        {
-            if (P_ID.team == 2)
-            {
-                if(GM.team1[Random.Range(0, GM.team1.Count)]!=null)
-                    pathfindingTarget = GM.team1[Random.Range(0, GM.team1.Count)].transform;
+                if (shooting_target == null || Vector3.Distance(transform.position, shooting_target.transform.position) > 10)
+                {
+                    movement();
+                    Debug.Log("moving");
+                    shooting_target = null;
+                }
+                shoot();
             }
             else
             {
-                if(GM.team2[Random.Range(0, GM.team2.Count)]!=null)
-                    pathfindingTarget = GM.team2[Random.Range(0, GM.team2.Count)].transform;
+                WBG.AI_shooting = false;
+            }
+
+            if (pathfindingTarget == null && use_GM)
+            {
+                if (P_ID.team == 2)
+                {
+                    if (GM.team1[Random.Range(0, GM.team1.Count)] != null)
+                        pathfindingTarget = GM.team1[Random.Range(0, GM.team1.Count)].transform;
+                }
+                else
+                {
+                    if (GM.team2[Random.Range(0, GM.team2.Count)] != null)
+                        pathfindingTarget = GM.team2[Random.Range(0, GM.team2.Count)].transform;
+                }
             }
         }
-        if (use_GM == false && game_maneger.playerinstance!=null)
+        if (use_GM == false && game_maneger.playerinstance!=null && Vector3.Distance(game_maneger.playerinstance.transform.position, gameObject.transform.position) < 50)
         {
             pathfindingTarget = game_maneger.playerinstance.transform;
         }
@@ -71,7 +74,7 @@ public class AI_state_machine : MonoBehaviour
     private void FixedUpdate()
     {
         time += Time.deltaTime;
-        if (time > 3 && pathfindingTarget!=null)
+        if (time > 3 && pathfindingTarget!=null && Vector3.Distance(pathfindingTarget.position, gameObject.transform.position)>20)
         {
             time = 0;
 
@@ -161,7 +164,16 @@ public class AI_state_machine : MonoBehaviour
                     target_stats = shooting_target.GetComponent<player_stats>();
                 }
             }
-
+            if (pathfinding.current_node != 0)
+            {
+                Quaternion targetx = Quaternion.LookRotation(-transform.position + new Vector3(pathfinding.bestPath[pathfinding.current_node].pos.x, transform.position.y, pathfinding.bestPath[pathfinding.current_node].pos.z), Vector3.up);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetx, Time.deltaTime * 2);
+            }
+            if (pathfindingTarget!=null) 
+            {
+                Quaternion targety = Quaternion.LookRotation(-Camera.transform.position + new Vector3(pathfindingTarget.position.x, pathfindingTarget.position.y, pathfindingTarget.position.z));
+                Camera.transform.rotation = Quaternion.Lerp(Camera.transform.rotation, targety, Time.deltaTime * 2);
+            }
         }
         else
         {
