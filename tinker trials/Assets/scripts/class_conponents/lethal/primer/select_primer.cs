@@ -8,6 +8,9 @@ public class select_primer : MonoBehaviour
     public primer P;
     public leathal_construcor LC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
+
     private void Start()
     {
         P = GetComponent<primer>();
@@ -19,6 +22,8 @@ public class select_primer : MonoBehaviour
     }
     public void Primer_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + P.PO.name + "\n";
         decription += "fusetime: " + P.PO.timer + "\n";

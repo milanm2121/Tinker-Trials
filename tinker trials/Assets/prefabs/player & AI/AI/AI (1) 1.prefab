@@ -1363,6 +1363,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &49516589
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318905923261901771}
+  serializedVersion: 2
+  m_Mass: 3.125
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &8047957607335715087
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318905923261901771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42524338, y: 0.36194453, z: 0.22520295}
+  m_Center: {x: -0.00007778406, y: 0.13154276, z: -0.010261565}
 --- !u!95 &49516591
 Animator:
   serializedVersion: 3
@@ -1402,35 +1431,6 @@ MonoBehaviour:
   - rig: {fileID: 1847789607}
     active: 0
   m_Effectors: []
---- !u!54 &49516589
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3318905923261901771}
-  serializedVersion: 2
-  m_Mass: 3.125
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &8047957607335715087
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3318905923261901771}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.42524338, y: 0.36194453, z: 0.22520295}
-  m_Center: {x: -0.00007778406, y: 0.13154276, z: -0.010261565}
 --- !u!1 &3427504844226722460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   jump_Hight: 5
   multi_Jump: 1
   max_Jump_Limit: 2
-  grounded: 0
+  grounded: 1
   PA: {fileID: 4860922332554076164}
   PS: {fileID: 6860716460900567068}
   P_ID: {fileID: 559346274}
@@ -2597,6 +2597,7 @@ MonoBehaviour:
   target_stats: {fileID: 0}
   GM: {fileID: 0}
   Camera: {fileID: 5049593014044280867}
+  use_GM: 0
 --- !u!114 &6239936436482167598
 MonoBehaviour:
   m_ObjectHideFlags: 0

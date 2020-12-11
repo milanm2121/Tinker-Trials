@@ -8,6 +8,8 @@ public class select_payload : MonoBehaviour
     public payload PL;
     public leathal_construcor LC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         PL = GetComponent<payload>();
@@ -19,6 +21,8 @@ public class select_payload : MonoBehaviour
     }
     public void Payload_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + PL.PO.name + "\n";
         decription += "damage: " + PL.PO.damage + "\n";

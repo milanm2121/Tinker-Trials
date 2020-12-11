@@ -1064,7 +1064,7 @@ MonoBehaviour:
   jump_Hight: 5
   multi_Jump: 1
   max_Jump_Limit: 2
-  grounded: 0
+  grounded: 1
   PA: {fileID: 4860922332554076164}
   PS: {fileID: 6860716460900567068}
   P_ID: {fileID: 559346274}

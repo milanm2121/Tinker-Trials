@@ -13,6 +13,8 @@ public class select_headgear : MonoBehaviour
     public headgear HG;
     public armour_constructor AC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         HG = GetComponent<headgear>();
@@ -24,6 +26,8 @@ public class select_headgear : MonoBehaviour
     }
     public void headgear_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + HG.HGO.name + "\n";
         decription += "deffence: " + HG.HGO.deffence + "\n";

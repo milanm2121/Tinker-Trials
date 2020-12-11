@@ -13,6 +13,8 @@ public class select_boots : MonoBehaviour
     public boots_scripts BT;
     public armour_constructor AC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         BT = GetComponent<boots_scripts>();
@@ -24,6 +26,8 @@ public class select_boots : MonoBehaviour
     }
     public void Boots_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + BT.BO.name + "\n";
         decription += "deffence: " + BT.BO.deffence + "\n";

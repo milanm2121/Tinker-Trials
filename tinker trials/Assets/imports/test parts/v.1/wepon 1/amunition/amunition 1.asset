@@ -17,8 +17,8 @@ MonoBehaviour:
   blast_radius: 0
   element: 0
   damage: 5
-  speciality: 2
+  speciality: 0
   rounds: 20
   weight: 6
-  mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  mat: {fileID: 2100000, guid: db59bcc038e2a44499fe1253fe8aec28, type: 2}
+  mesh: {fileID: 977585190437695107, guid: 900134c40f9e95440bad8098dfbfda99, type: 3}
+  mat: {fileID: 5561349426305759274, guid: 900134c40f9e95440bad8098dfbfda99, type: 3}

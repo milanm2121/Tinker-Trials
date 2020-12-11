@@ -13,6 +13,9 @@ public class select_cheastplate : MonoBehaviour
     public cheastplate CP;
     public armour_constructor AC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
+
     private void Start()
     {
         CP = GetComponent<cheastplate>();
@@ -24,6 +27,8 @@ public class select_cheastplate : MonoBehaviour
     }
     public void cheastplte_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + CP.CPO.name + "\n";
         decription += "deffence: " + CP.CPO.deffence + "\n";

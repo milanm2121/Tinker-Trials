@@ -15,6 +15,6 @@ MonoBehaviour:
   grip_angle: 1
   speciality: 0
   weight: 2
-  meshshape: {fileID: -7074007238773475336, guid: cde8d49fc2c61c2499654891aaa0d7ba,
+  meshshape: {fileID: 5732447812321310548, guid: bbc385c9b9c59e24ab369fbabee56225,
     type: 3}
-  mat: {fileID: 2100000, guid: a34bf18f86681405aa0f454aceb4bbc3, type: 2}
+  mat: {fileID: 5561349426305759274, guid: bbc385c9b9c59e24ab369fbabee56225, type: 3}

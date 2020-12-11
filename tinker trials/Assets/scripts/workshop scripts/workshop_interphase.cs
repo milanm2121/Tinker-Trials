@@ -400,7 +400,7 @@ public class workshop_interphase : MonoBehaviour
    
 
                 x.fire_rate = Random.Range(1,5);
-                x.spciality = Random.Range(1,4);
+                x.spciality = Random.Range(0,4);
                 x.element = Random.Range(0,5);
                 x.wepon_type = 1;
 
@@ -463,17 +463,17 @@ public class workshop_interphase : MonoBehaviour
                 x.name = "optic";
                 x.weight = 2 + x.zoom;
 
-                if (x.zoom < 9)
+                if (x.zoom > 7)
                 {
                     x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Distance_Aim", typeof(Mesh));
                     x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Distance_Aim", typeof(Material));
                 }
-                else if (x.zoom < 6 || x.trhermal==true)
+                else if (x.zoom > 3 || x.trhermal==true)
                 {
                     x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Alert_Aim", typeof(Mesh));
                     x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Alert_Aim", typeof(Material));
                 }
-                else if (x.zoom < 3)
+                else 
                 {
                     x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Generic_Aim", typeof(Mesh));
                     x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Generic_Aim", typeof(Material));
@@ -553,7 +553,7 @@ public class workshop_interphase : MonoBehaviour
                 x.name = "chestplate";
 
                 x.deffence = Random.Range(1, 10);
-                x.specicality = Random.Range(0, 4);
+                x.specicality = Random.Range(0, 3);
                 x.weight = x.deffence + x.specicality;
 
                 if (x.specicality == 0)
@@ -621,25 +621,25 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Material));
                 }
                 if (x.speciality == 1)
                 {
                     //vortex
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Vortex_Container_Throwable", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Vortex_Container_Throwable", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
                     //mine
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Material));
                 }
                 if (x.speciality == 3)
                 {
                     //impact
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Mesh));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Impact_Primer_Throwable", typeof(Mesh));
                     x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
                 }
 
@@ -681,26 +681,26 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Material));
                 }
                 if (x.speciality == 1)
                 {
                     //knife
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Knife_Container_Throwable", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Knife_Container_Throwable", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
                     //seeker
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Material));
                 }
                 if (x.speciality == 3)
                 {
                     //shrapnel
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Material));
                 }
 
 

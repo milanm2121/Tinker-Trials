@@ -15,5 +15,5 @@ MonoBehaviour:
   deffence: 2
   weight: 1
   speciality: 0
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -7246483634968755604, guid: 57a23f03c4591c048af005850bf140ac, type: 3}
   mat: {fileID: 2100000, guid: a34bf18f86681405aa0f454aceb4bbc3, type: 2}

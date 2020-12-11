@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: reciver
   m_EditorClassIdentifier: 
   barrel_fit: {x: -1.5, y: 0, z: 0}
-  grip_fit: {x: -2, y: -1, z: 0}
-  scope_fit: {x: -0.5, y: 0.5, z: 0}
-  anumition_fit: {x: -0.7, y: -0.7, z: 0}
-  suport_fit: {x: 0.5, y: 0, z: 0}
+  grip_fit: {x: -0.7, y: -0.8, z: 0}
+  scope_fit: {x: 0, y: 0.5, z: 0}
+  anumition_fit: {x: 0.2, y: -0.5, z: 0}
+  suport_fit: {x: 1.5, y: -0.3, z: 0}
   wepon_type: 1
-  fire_rate: 2
+  fire_rate: 3
   element: 0
-  spciality: 3
+  spciality: 0
   fit: 0
-  weight: 1
-  mesh: {fileID: 4712477794023769951, guid: 687822648aa1f5f47853e4e0c1f8cb52, type: 3}
-  mat: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  weight: 4
+  mesh: {fileID: -2102130840032739393, guid: 7d7999d8f38adb4429057474298232f3, type: 3}
+  mat: {fileID: 5561349426305759274, guid: 7d7999d8f38adb4429057474298232f3, type: 3}

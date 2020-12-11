@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manual: 0
   timer: 5
-  speciality: 2
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  speciality: 0
+  mesh: {fileID: 424387673068981057, guid: 4595a4f61a8d5c4488c25c088f9ecd8a, type: 3}
   mat: {fileID: 2100000, guid: e92b20f28fb954836bc14b330395e409, type: 2}

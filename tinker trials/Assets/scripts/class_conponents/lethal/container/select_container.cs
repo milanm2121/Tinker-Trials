@@ -8,6 +8,8 @@ public class select_container : MonoBehaviour
     public container C;
     public leathal_construcor LC;
     public TMP_Text text;
+    public GameObject hover_pannel;
+
     private void Start()
     {
         C = GetComponent<container>();
@@ -19,6 +21,8 @@ public class select_container : MonoBehaviour
     }
     public void Container_decription()
     {
+        hover_pannel.transform.position = transform.position;
+
         string decription = "";
         decription += "name: " + C.CO.name + "\n";
         

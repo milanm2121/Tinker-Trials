@@ -16,5 +16,5 @@ MonoBehaviour:
   weight: 2
   sticky: 1
   speciality: 3
-  mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -332109342675432758, guid: 3209c11570fdfd543ad5bd4b7cc99290, type: 3}
   mat: {fileID: 2100000, guid: e92b20f28fb954836bc14b330395e409, type: 2}
