@@ -28,7 +28,7 @@ public class interactabel : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag=="Player" && Input.GetKeyDown(KeyCode.E))
+        if ((other.tag == "player" || other.tag=="Player" )&& Input.GetKeyDown(KeyCode.E))
         {
             Cursor.lockState = CursorLockMode.None;
             if (reload_scean == true)

@@ -231,8 +231,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -285,8 +285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96.8, y: -39}
-  m_SizeDelta: {x: 161.7, y: 30}
+  m_AnchoredPosition: {x: -56, y: -39}
+  m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6145486
 MonoBehaviour:
@@ -360,8 +360,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -617,8 +617,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -691,6 +691,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &35217550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +738,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 35217549}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1120,8 +1132,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1349,6 +1361,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -1425,6 +1448,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &61440890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,6 +1518,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &66026313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,6 +1565,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 66026312}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1794,6 +1830,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &89266785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,6 +1877,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 89266784}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1966,6 +2014,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &90482683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,6 +2061,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 90482682}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2138,6 +2198,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &93291391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,6 +2250,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 93291390}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2382,7 +2454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2492,6 +2564,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -2568,6 +2651,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &143187846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2709,6 +2793,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154492591}
   m_CullTransparentMesh: 0
+--- !u!1 &155914200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155914203}
+  - component: {fileID: 155914202}
+  - component: {fileID: 155914201}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &155914201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155914200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &155914202
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155914200}
+  m_CullTransparentMesh: 0
+--- !u!224 &155914203
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155914200}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2042836903}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.23339844, y: -0.15229988}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &191252050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,8 +2977,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2921,6 +3078,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -2997,6 +3165,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &191291280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3066,6 +3235,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &195538140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3112,6 +3282,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 195538139}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3182,6 +3363,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195538137}
   m_Mesh: {fileID: 0}
+--- !u!1 &196904809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196904812}
+  - component: {fileID: 196904811}
+  - component: {fileID: 196904810}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &196904810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196904809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &196904811
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196904809}
+  m_CullTransparentMesh: 0
+--- !u!224 &196904812
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196904809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1244681624}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.23339844, y: -0.15229988}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &233480746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,8 +3547,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3394,8 +3648,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3507,6 +3761,7 @@ RectTransform:
   - {fileID: 300453724}
   - {fileID: 1618711224}
   - {fileID: 533991201}
+  - {fileID: 1174991184}
   m_Father: {fileID: 1233844972}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3658,6 +3913,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -3734,6 +4000,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &247422532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3869,6 +4136,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &255727456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3915,6 +4183,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 255727455}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4228,6 +4507,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &258748115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4247,6 +4527,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 258748114}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4316,7 +4607,7 @@ RectTransform:
   m_GameObject: {fileID: 284042702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 2
@@ -4359,6 +4650,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 284042708}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4444,6 +4746,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &284042709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4572,6 +4875,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &300453729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4591,6 +4895,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 300453728}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4712,6 +5027,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -4788,6 +5114,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &308185670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4926,6 +5253,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -5002,6 +5340,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &324798220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5098,6 +5437,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -5174,6 +5524,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &328065644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5302,8 +5653,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5376,6 +5727,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &369916225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,6 +5774,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 369916224}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5548,6 +5911,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &371989892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5594,6 +5958,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 371989891}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5720,6 +6095,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &372841936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5766,6 +6142,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 372841935}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5877,6 +6264,7 @@ RectTransform:
   - {fileID: 1455154433}
   - {fileID: 1688268888}
   - {fileID: 982538912}
+  - {fileID: 737849792}
   m_Father: {fileID: 637727658}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6129,7 +6517,7 @@ RectTransform:
   m_GameObject: {fileID: 396498901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 5
@@ -6172,6 +6560,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 396498907}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6257,6 +6656,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &396498908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6334,8 +6734,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6481,6 +6881,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &428986095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6527,6 +6928,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 428986094}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6638,6 +7050,7 @@ RectTransform:
   - {fileID: 247422526}
   - {fileID: 1068372537}
   - {fileID: 1828004703}
+  - {fileID: 954180312}
   m_Father: {fileID: 637727658}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6789,6 +7202,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -6865,6 +7289,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &461721016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7002,6 +7427,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -7078,6 +7514,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &471403487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7146,7 +7583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: cheast plate
+  m_text: chest plate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7155,8 +7592,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7215,7 +7652,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 472727818}
-    characterCount: 12
+    characterCount: 11
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -7332,6 +7769,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &489377904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7383,6 +7821,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 489377903}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7564,8 +8013,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7774,8 +8223,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7915,7 +8364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8047,7 +8496,7 @@ RectTransform:
   m_GameObject: {fileID: 507381768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 4
@@ -8090,6 +8539,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 507381774}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -8175,6 +8635,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &507381775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8244,6 +8705,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &523556063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8295,6 +8757,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 523556062}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -8482,6 +8955,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -8538,6 +9022,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &533991200
 GameObject:
   m_ObjectHideFlags: 0
@@ -8653,6 +9138,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &533991206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8672,6 +9158,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 533991205}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -8765,7 +9262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: reciver
+  m_text: receiver
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8774,8 +9271,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8793,8 +9290,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.6
-  m_fontSizeBase: 0.6
+  m_fontSize: 0.5
+  m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8834,7 +9331,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 537071109}
-    characterCount: 7
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -8896,7 +9393,7 @@ RectTransform:
   m_GameObject: {fileID: 549088276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 7
@@ -8939,6 +9436,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 549088282}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9024,6 +9532,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &549088283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9078,6 +9587,7 @@ RectTransform:
   - {fileID: 1919918596}
   - {fileID: 1107535280}
   - {fileID: 1050322973}
+  - {fileID: 817473978}
   m_Father: {fileID: 1604161971}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9187,6 +9697,7 @@ RectTransform:
   - {fileID: 997489667}
   - {fileID: 532638849}
   - {fileID: 1304887910}
+  - {fileID: 899457040}
   m_Father: {fileID: 1604161971}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9311,6 +9822,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &563400863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9357,6 +9869,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 563400862}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9666,8 +10189,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -9740,6 +10263,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &584230768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9786,6 +10310,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 584230767}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10067,6 +10602,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -10143,6 +10689,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &609209027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10403,6 +10950,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &623496359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10422,6 +10970,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 623496358}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10575,6 +11134,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &636205928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10594,6 +11154,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 636205927}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10673,6 +11244,7 @@ RectTransform:
   - {fileID: 2069186614}
   - {fileID: 1465670485}
   - {fileID: 1314751975}
+  - {fileID: 829762927}
   m_Father: {fileID: 1233844972}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10805,8 +11377,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10927,7 +11499,7 @@ RectTransform:
   m_GameObject: {fileID: 637412888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 3
@@ -10970,6 +11542,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 637412894}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11055,6 +11638,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &637412895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11165,6 +11749,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &641762685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11211,6 +11796,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 641762684}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11364,6 +11960,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -11440,6 +12047,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &716093837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11643,6 +12251,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -11699,6 +12318,80 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
+--- !u!1 &737849789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737849792}
+  - component: {fileID: 737849791}
+  - component: {fileID: 737849790}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &737849790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737849789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &737849791
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737849789}
+  m_CullTransparentMesh: 0
+--- !u!224 &737849792
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737849789}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 378354089}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.3118515, y: 20.08}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &760330886
 GameObject:
   m_ObjectHideFlags: 0
@@ -11773,6 +12466,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 760330892}
           m_MethodName: selectHeadgear
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11858,6 +12562,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &760330893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11927,6 +12632,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &769511763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11973,6 +12679,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 769511762}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12227,6 +12944,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &795823784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12273,6 +12991,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 795823783}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12399,6 +13128,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &807977229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12445,6 +13175,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 807977228}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12556,6 +13297,7 @@ RectTransform:
   - {fileID: 716093831}
   - {fileID: 1404904702}
   - {fileID: 1136815732}
+  - {fileID: 1430681172}
   m_Father: {fileID: 1604161971}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12624,6 +13366,79 @@ MonoBehaviour:
   - {fileID: 1136815731}
   LC: {fileID: 1419853391}
   selected_object: 0
+--- !u!1 &817473977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817473978}
+  - component: {fileID: 817473980}
+  - component: {fileID: 817473979}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &817473978
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817473977}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 551781048}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -20.41185, y: 21.14}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &817473979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817473977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &817473980
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817473977}
+  m_CullTransparentMesh: 0
 --- !u!1 &817570550
 GameObject:
   m_ObjectHideFlags: 0
@@ -12758,6 +13573,79 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2761366288868476389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &829762924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829762927}
+  - component: {fileID: 829762926}
+  - component: {fileID: 829762925}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &829762925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829762924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &829762926
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829762924}
+  m_CullTransparentMesh: 0
+--- !u!224 &829762927
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829762924}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 636718628}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.23339844, y: -0.15229988}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &845629003
 GameObject:
   m_ObjectHideFlags: 0
@@ -12875,6 +13763,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -12931,6 +13830,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &847007366
 GameObject:
   m_ObjectHideFlags: 0
@@ -12987,6 +13887,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &847007369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13033,6 +13934,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 847007368}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -13396,6 +14308,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -13452,6 +14375,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &857616881
 GameObject:
   m_ObjectHideFlags: 0
@@ -13644,8 +14568,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13891,6 +14815,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &893943874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13942,6 +14867,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 893943873}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14012,6 +14948,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893943871}
   m_Mesh: {fileID: 0}
+--- !u!1 &899457037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899457040}
+  - component: {fileID: 899457039}
+  - component: {fileID: 899457038}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &899457038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899457037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &899457039
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899457037}
+  m_CullTransparentMesh: 0
+--- !u!224 &899457040
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899457037}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 559609053}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -20.41185, y: 21.14}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &920035045
 GameObject:
   m_ObjectHideFlags: 0
@@ -14068,6 +15077,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &920035048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14114,6 +15124,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 920035047}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14184,6 +15205,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920035045}
   m_Mesh: {fileID: 0}
+--- !u!1 &954180309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954180312}
+  - component: {fileID: 954180311}
+  - component: {fileID: 954180310}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &954180310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954180309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &954180311
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954180309}
+  m_CullTransparentMesh: 0
+--- !u!224 &954180312
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954180309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 434544247}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.3118515, y: 20.08}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &957302548
 GameObject:
   m_ObjectHideFlags: 0
@@ -14534,6 +15628,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &966715748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14580,6 +15675,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 966715747}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14763,6 +15869,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -14839,6 +15956,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &982538918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15113,6 +16231,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -15169,6 +16298,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &1002876927
 GameObject:
   m_ObjectHideFlags: 0
@@ -15353,6 +16483,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &1039154568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15399,6 +16530,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1039154567}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15500,7 +16642,7 @@ RectTransform:
   m_GameObject: {fileID: 1050322972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 10
@@ -15543,6 +16685,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1050322978}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15628,6 +16781,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &1050322979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15697,6 +16851,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &1051394859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15748,6 +16903,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1051394858}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15933,6 +17099,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &1056715101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15952,6 +17119,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1056715100}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16073,6 +17251,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -16149,6 +17338,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &1068372543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16218,6 +17408,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 2094912140}
 --- !u!114 &1074543441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16264,6 +17455,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1074543440}
           m_MethodName: selectSupport
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16417,6 +17619,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -16493,6 +17706,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &1077368551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16589,6 +17803,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -16665,6 +17890,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &1078654202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16789,8 +18015,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -16930,8 +18156,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -16979,7 +18205,7 @@ RectTransform:
   m_GameObject: {fileID: 1107535279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 9
@@ -17022,6 +18248,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1107535285}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -17107,6 +18344,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &1107535286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17215,6 +18453,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &1122775637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17261,6 +18500,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1122775636}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -17387,6 +18637,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &1135151099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17433,6 +18684,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1135151098}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -17586,6 +18848,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -17662,6 +18935,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &1136815738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17731,6 +19005,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &1142082065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17782,6 +19057,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1142082064}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -17852,6 +19138,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142082062}
   m_Mesh: {fileID: 0}
+--- !u!1 &1142782197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1142782200}
+  - component: {fileID: 1142782199}
+  - component: {fileID: 1142782198}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1142782198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142782197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1142782199
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142782197}
+  m_CullTransparentMesh: 0
+--- !u!224 &1142782200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142782197}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1990018741}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.23339844, y: -0.15229988}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1150336649
 GameObject:
   m_ObjectHideFlags: 0
@@ -18021,6 +19380,7 @@ RectTransform:
   - {fileID: 324798214}
   - {fileID: 1986584262}
   - {fileID: 1629810611}
+  - {fileID: 1198118851}
   m_Father: {fileID: 637727658}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18089,6 +19449,79 @@ MonoBehaviour:
   - {fileID: 1629810610}
   AC: {fileID: 992765326}
   selected_object: 0
+--- !u!1 &1174991181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174991184}
+  - component: {fileID: 1174991183}
+  - component: {fileID: 1174991182}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1174991182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174991181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1174991183
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174991181}
+  m_CullTransparentMesh: 0
+--- !u!224 &1174991184
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174991181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 239599183}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.2334, y: -0.1523}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1188207112
 GameObject:
   m_ObjectHideFlags: 0
@@ -18206,6 +19639,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -18262,6 +19706,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &1197974151
 GameObject:
   m_ObjectHideFlags: 0
@@ -18293,7 +19738,7 @@ RectTransform:
   m_GameObject: {fileID: 1197974151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 6
@@ -18336,6 +19781,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1197974157}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -18421,6 +19877,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &1197974158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18434,6 +19891,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CO: {fileID: 0}
+--- !u!1 &1198118848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198118851}
+  - component: {fileID: 1198118850}
+  - component: {fileID: 1198118849}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1198118849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198118848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1198118850
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198118848}
+  m_CullTransparentMesh: 0
+--- !u!224 &1198118851
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198118848}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1168747584}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.3118515, y: 20.08}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1216131171
 GameObject:
   m_ObjectHideFlags: 0
@@ -18490,6 +20020,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &1216131174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18536,6 +20067,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1216131173}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -18662,6 +20204,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &1221755798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18708,6 +20251,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1221755797}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -18861,6 +20415,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -18937,6 +20502,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &1225310766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19039,6 +20605,7 @@ RectTransform:
   - {fileID: 1135151097}
   - {fileID: 89266783}
   - {fileID: 641762683}
+  - {fileID: 196904812}
   m_Father: {fileID: 1233844972}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19318,6 +20885,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -19394,6 +20972,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &1251811381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19584,6 +21163,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &1270134064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19630,6 +21210,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1270134063}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -19756,6 +21347,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &1288778530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19802,6 +21394,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1288778529}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -19989,6 +21592,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -20045,6 +21659,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &1304887909
 GameObject:
   m_ObjectHideFlags: 0
@@ -20162,6 +21777,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -20218,6 +21844,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &1314751974
 GameObject:
   m_ObjectHideFlags: 0
@@ -20274,6 +21901,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &1314751977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20320,6 +21948,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1314751976}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -20505,6 +22144,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &1316487137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20524,6 +22164,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1316487136}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -20895,6 +22546,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -20951,6 +22613,7 @@ MonoBehaviour:
   PL: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 899457037}
 --- !u!1 &1360777413
 GameObject:
   m_ObjectHideFlags: 0
@@ -21025,6 +22688,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1360777419}
           m_MethodName: selectPrimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21110,6 +22784,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &1360777420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21179,6 +22854,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &1368678086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21230,6 +22906,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1368678085}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21511,6 +23198,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -21587,6 +23285,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &1394421385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21811,6 +23510,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -21887,6 +23597,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &1404904708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21983,6 +23694,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -22059,6 +23781,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &1418268380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22084,6 +23807,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b095c35cf6ae4ac281e668cc8424d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1430681169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430681172}
+  - component: {fileID: 1430681171}
+  - component: {fileID: 1430681170}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1430681170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430681169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1430681171
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430681169}
+  m_CullTransparentMesh: 0
+--- !u!224 &1430681172
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430681169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 811498870}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -20.41185, y: 21.14}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1434697753
 GameObject:
   m_ObjectHideFlags: 0
@@ -22148,8 +23944,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -22295,6 +24091,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &1448631527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22341,6 +24138,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1448631526}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -22522,8 +24330,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -22623,6 +24431,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -22699,6 +24518,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &1455154439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22772,6 +24592,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &1465670487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22818,6 +24639,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1465670486}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -23314,6 +25146,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -23390,6 +25233,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &1498986106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23514,8 +25358,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -23643,8 +25487,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -23702,6 +25546,7 @@ RectTransform:
   - {fileID: 1039154566}
   - {fileID: 66026311}
   - {fileID: 1074543439}
+  - {fileID: 2094912143}
   m_Father: {fileID: 1233844972}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23887,6 +25732,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -23963,6 +25819,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &1556509922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24072,7 +25929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: support
+  m_text: stock
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24081,8 +25938,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -24141,7 +25998,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1616706638}
-    characterCount: 7
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -24287,6 +26144,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &1618711229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24306,6 +26164,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1618711228}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -24408,8 +26277,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -24582,6 +26451,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -24658,6 +26538,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &1629810617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24928,7 +26809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -25038,6 +26919,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -25114,6 +27006,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &1688268894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25187,6 +27080,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &1696296606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25238,6 +27132,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1696296605}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -25363,7 +27268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: scope
+  m_text: optic
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25372,8 +27277,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -25519,6 +27424,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &1727781714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25565,6 +27471,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1727781713}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -25699,8 +27616,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -25873,6 +27790,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -25949,6 +27877,7 @@ MonoBehaviour:
   P: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 1430681169}
 --- !u!114 &1761863786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26154,8 +28083,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -26328,8 +28257,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -26611,6 +28540,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -26687,6 +28627,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &1828004709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26783,6 +28724,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -26859,6 +28811,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &1842555604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26959,6 +28912,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -27035,6 +28999,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &1857654724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27193,6 +29158,7 @@ MonoBehaviour:
   WB: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1174991181}
 --- !u!114 &1912604274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27212,6 +29178,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1912604273}
           m_MethodName: selectBarrel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27306,6 +29283,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 196904809}
 --- !u!114 &1914941907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27352,6 +29330,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1914941906}
           m_MethodName: selectAmunition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27453,7 +29442,7 @@ RectTransform:
   m_GameObject: {fileID: 1919918595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 551781048}
   m_RootOrder: 8
@@ -27496,6 +29485,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1919918601}
           m_MethodName: selectContainer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27581,6 +29581,7 @@ MonoBehaviour:
   C: {fileID: 0}
   LC: {fileID: 1419853391}
   text: {fileID: 1818670487}
+  hover_pannel: {fileID: 817473977}
 --- !u!114 &1919918602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27705,8 +29706,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -27779,6 +29780,7 @@ MonoBehaviour:
   WR: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 1142782197}
 --- !u!114 &1960787307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27830,6 +29832,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1960787306}
           m_MethodName: selectReciveer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -28239,6 +30252,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -28315,6 +30339,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &1986584268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28369,6 +30394,7 @@ RectTransform:
   - {fileID: 489377902}
   - {fileID: 1696296604}
   - {fileID: 523556061}
+  - {fileID: 1142782200}
   m_Father: {fileID: 1233844972}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28520,6 +30546,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -28596,6 +30633,7 @@ MonoBehaviour:
   CP: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 954180309}
 --- !u!114 &2000460602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28698,6 +30736,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &2017514220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28744,6 +30783,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2017514219}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -28925,8 +30975,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -28999,6 +31049,7 @@ MonoBehaviour:
   WS: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 155914200}
 --- !u!114 &2020752258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29045,6 +31096,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2020752257}
           m_MethodName: selectScope
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -29165,7 +31227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -29233,6 +31295,7 @@ RectTransform:
   - {fileID: 2017514218}
   - {fileID: 371989890}
   - {fileID: 795823782}
+  - {fileID: 155914203}
   m_Father: {fileID: 1233844972}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29351,7 +31414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -29478,6 +31541,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &2069186616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29524,6 +31588,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2069186615}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -29677,6 +31752,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -29753,6 +31839,7 @@ MonoBehaviour:
   BT: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 737849789}
 --- !u!114 &2075336781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29826,6 +31913,7 @@ MonoBehaviour:
   WG: {fileID: 0}
   WC: {fileID: 1093268301}
   text: {fileID: 2113248273}
+  hover_pannel: {fileID: 829762924}
 --- !u!114 &2076848780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29872,6 +31960,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2076848779}
           m_MethodName: selectGrip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -29972,6 +32071,79 @@ Transform:
   m_Father: {fileID: 1552288920}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2094912140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094912143}
+  - component: {fileID: 2094912142}
+  - component: {fileID: 2094912141}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2094912141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094912140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9721788, g: 1, b: 0.43867922, a: 0.21176471}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2094912142
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094912140}
+  m_CullTransparentMesh: 0
+--- !u!224 &2094912143
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094912140}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1548979438}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.23339844, y: -0.15229988}
+  m_SizeDelta: {x: 237.8064, y: 221.5967}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2106653771
 GameObject:
   m_ObjectHideFlags: 0
@@ -30083,8 +32255,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f6fb649bb6713bd49ac345583db76052, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -30184,8 +32356,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -30339,6 +32511,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1490340664}
+          m_MethodName: Back
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 0
     callback:
       m_PersistentCalls:
@@ -30415,6 +32598,7 @@ MonoBehaviour:
   HG: {fileID: 0}
   AC: {fileID: 992765326}
   text: {fileID: 239521403}
+  hover_pannel: {fileID: 1198118848}
 --- !u!114 &2139718943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30450,20 +32634,45 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 2761366287869351234, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2761366287869351234, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2761366287869351234, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287869351234, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2761366287985654698, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
@@ -30473,17 +32682,17 @@ PrefabInstance:
     - target: {fileID: 2761366287985654698, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: primers.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2761366287985654698, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: payloads.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2761366287985654698, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: containers.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2761366287985654698, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
@@ -30765,6 +32974,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2761366287985654709, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287985654709, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287985654709, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2761366288151315828, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -30779,6 +33003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366288151315828, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24392a7e907a8442e8e72b3efc59f452, type: 3}
@@ -31002,7 +33231,7 @@ PrefabInstance:
     - target: {fileID: 3140275093435236405, guid: e24d7c4bf8a0d469faf88a40f34679ff,
         type: 3}
       propertyPath: supports.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3140275093435236405, guid: e24d7c4bf8a0d469faf88a40f34679ff,
         type: 3}
@@ -31876,17 +34105,17 @@ PrefabInstance:
     - target: {fileID: 8919659975971853604, guid: dfbe9818aba5240098284dbf9dc9487c,
         type: 3}
       propertyPath: headgear.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8919659975971853604, guid: dfbe9818aba5240098284dbf9dc9487c,
         type: 3}
       propertyPath: cheastplates.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8919659975971853604, guid: dfbe9818aba5240098284dbf9dc9487c,
         type: 3}
       propertyPath: boots.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8919659975971853604, guid: dfbe9818aba5240098284dbf9dc9487c,
         type: 3}

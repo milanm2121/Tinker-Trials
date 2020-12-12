@@ -27,22 +27,26 @@ public class sellect_barrel : MonoBehaviour
         string decription = "";
         decription += "name: "+ WB.BO.name + "\n";
         decription += "range: "+ WB.BO.lenght + "\n";
-        if (WB.BO.material == 0)
+        decription += "this effects the projectile speed and distance before expirey" + "\n" +"\n";
+        if (WB.BO.material == 1)
         {
             decription += "material: " + "glass" + "\n";
+            decription += "adds extra range with lasers" + "\n" + "\n";
         }
-        else if (WB.BO.material == 1)
+        else if (WB.BO.material == 0)
         {
             decription += "material: " + "wood" + "\n";
-        }
-        else if (WB.BO.material == 2)
-        {
-            decription += "material: " + "plastic" + "\n";
+            decription += "adds extra range to projectiles" + "\n" + "\n";
         }
         else if (WB.BO.material == 3)
         {
+            decription += "material: " + "plastic" + "\n";
+        }
+        else if (WB.BO.material == 2)
+        {
             decription += "material: " + "metal" + "\n";
         }
+        
 
         if (WB.BO.specalty == 0)
         {
@@ -50,13 +54,14 @@ public class sellect_barrel : MonoBehaviour
         }
         else if (WB.BO.specalty == 1)
         {
-            decription += "speciality: " + "Suppressor, suppresses sound" + "\n";
+            decription += "speciality: " + "Suppressor, suppresses sound" + "\n" + "\n";
         }
         else if (WB.BO.specalty == 2)
         {
-            decription += "speciality: " + "Overheat, increases damage over consistent firing" + "\n";
+            decription += "speciality: " + "Overheat, increases damage over consistent firing" + "\n" + "\n";
         }
         decription += "weight: "+WB.BO.weight + "\n";
+        decription += "this effects your players movement speed, reload and aim down sight speed" + "\n" + "\n";
         text.text = decription;
     }
 }

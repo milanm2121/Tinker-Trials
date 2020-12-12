@@ -81,6 +81,8 @@ public class player_Movement : MonoBehaviour
 
     public bool low_gravity = false;
 
+
+    bool leftground=false;
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -280,18 +282,54 @@ public class player_Movement : MonoBehaviour
             AILeft = false;
             AIRight = false;
         }
+        if (leftground == true && grounded == true)
+        {
+            Collider[] col =Physics.OverlapSphere(player_feet.position, 0.2f);
+            bool hitground=false;
+            for (int i = 0; col.Length > i; i++)
+            {
+                if (col[i].tag == "ground")
+                {
+                    hitground = true;
+                    
+                }
+            }
+            if (hitground == false)
+            {
+                grounded = false;
+                Sounds.grounded = false;
+                print("left ground");
+            }
+            
+        }
+        if (grounded == false)
+        {
+            Collider[] col = Physics.OverlapSphere(player_feet.position, 0.2f);
+            for (int i = 0; col.Length > i; i++)
+            {
+                if (col[i].tag == "ground")
+                {
+                    grounded = true;
+                    extra_Jumps = max_Jump_Limit;
+                    keep_Momentum = false;
+                    leftground = false;
+                }
+            }
+        }
+
     }
     
     // used to set the player to be grounded and reset the max jump limit if there is acollioin with a object that it taged gound
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "ground")
+    /*    if (col.gameObject.tag == "ground")
         {
             grounded = true;
             extra_Jumps = max_Jump_Limit;
             keep_Momentum = false;
+            leftground = false;
         }
-
+    */
         if (col.gameObject.tag == "rope")
         {
             node = col.gameObject;
@@ -325,8 +363,8 @@ public class player_Movement : MonoBehaviour
     {
         if (col.gameObject.tag == "ground")
         {
-            grounded = false;
-            Sounds.grounded = false;
+            leftground = true;
+            
   //          keep_Momentum = true;
         }
     }
