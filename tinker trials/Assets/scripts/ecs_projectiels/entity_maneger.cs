@@ -64,7 +64,7 @@ public class entity_maneger : MonoBehaviour
                 if (EM.GetComponentData<projectile>(enititys[i]).REf.blast_radious > 0)
                 {
                     Entity entity = EM.CreateEntity(explosion);
-                    EM.SetComponentData(entity, new Translation { Value = EM.GetComponentData<Translation>(enititys[i]).Value });
+                    EM.SetComponentData(entity, new Translation { Value = EM.GetComponentData<projectile>(enititys[i]).contact_point });
                     EM.SetSharedComponentData(entity, new RenderMesh { material = explosinMaterial, mesh = explosinMesh });
                     EM.SetComponentData(entity, new projectile_explosion { tick = false, element = EM.GetComponentData<projectile>(enititys[i]).REf.element, damage = EM.GetComponentData<projectile>(enititys[i]).REf.damage, blast_radious = EM.GetComponentData<projectile>(enititys[i]).REf.blast_radious });
                    

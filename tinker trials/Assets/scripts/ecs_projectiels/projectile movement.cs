@@ -26,7 +26,7 @@ public class projectilemovement : ComponentSystem
             if (projectile.Predict_hit == false)
             {
                 RaycastHit predictedPath;
-                Physics.Raycast(translation.Value, projectile.velosity, out predictedPath, projectile.velosity.magnitude * Time.deltaTime);
+                Physics.Raycast(translation.Value, projectile.velosity, out predictedPath, projectile.velosity.magnitude * Time.deltaTime*3);
                 
                 if (predictedPath.collider != null && predictedPath.collider.gameObject.GetComponent<Rigidbody>()!=null)
                 {
@@ -51,6 +51,7 @@ public class projectilemovement : ComponentSystem
                         predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity;
 
                     projectile.Predict_hit = true;
+                    projectile.contact_point = predictedPath.point;
                 }
                 else if(predictedPath.collider != null)
                 {
@@ -72,12 +73,16 @@ public class projectilemovement : ComponentSystem
                         Audio_Maneger.create_sound(translation.Value, Audio_Maneger.AM.stoneImpactSounsd[Random.Range(0, Audio_Maneger.AM.stoneImpactSounsd.Length)]);
 
                     }
+                    projectile.contact_point = predictedPath.point;
+
                 }
             }
 
             if (projectile.distance > projectile.REf.range)
             {
                 projectile.Predict_hit = true;
+                projectile.contact_point = translation.Value;
+
             }
         });
 

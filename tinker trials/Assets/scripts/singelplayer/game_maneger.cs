@@ -27,7 +27,7 @@ public class game_maneger : MonoBehaviour
                 Spawn();
             }
         }
-        if (team1[0] != null)
+        if (team1[0]!=null)
         {
             playerinstance = team1[0].gameObject;
         }
@@ -37,7 +37,7 @@ public class game_maneger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (team1[0] == null)
+        if (playerinstance==null)
         {
             GameObject x= Instantiate(player, SpawnBlue[Random.Range(0, SpawnBlue.Length)].position, Quaternion.identity);
             playerinstance = x;

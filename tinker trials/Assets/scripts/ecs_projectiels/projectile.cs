@@ -18,4 +18,5 @@ public struct projectile : IComponentData
     public projectileREf REf;
     public float distance;
     public bool Predict_hit;
+    public Vector3 contact_point;
 }
