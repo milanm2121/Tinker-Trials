@@ -25,33 +25,41 @@ public class select_primer : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + P.PO.name + "\n";
-        decription += "fusetime: " + P.PO.timer + "\n";
+        decription += "Name: " + P.PO.name + "\n" + "\n";
+        
 
         if (P.PO.manual == false)
         {
+            decription += "Fusetime: " + P.PO.timer + "\n";
+            decription += "This dictates time in seconds befre detonation once thrown." + "\n" + "\n";
+
             decription += "manual: " + "no" + "\n";
         }
         else if (P.PO.manual == true)
         {
+            decription += "Fusetime: " + "N/A" + "\n";
+            decription += "This dictates time in seconds befre detonation once thrown." + "\n" + "\n";
+
             decription += "manual: " + "yes" + "\n";
         }
+        decription += "This dictates weither you can detinate your throwable manualy." + "\n" + "\n";
+
 
         if (P.PO.speciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "speciality: " + "none" + "\n" + "\n";
         }
         else if (P.PO.speciality == 1)
         {
-            decription += "speciality: " + "Vortex, sucks enemy in while fuse is going off" + "\n";
+            decription += "speciality: " + "Vortex, sucks enemy in while fuse is going off" + "\n" + "\n";
         }
         else if (P.PO.speciality == 2)
         {
-            decription += "speciality: " + "Mine, set and forget" + "\n";
+            decription += "speciality: " + "Mine, set and forget" + "\n" + "\n";
         }
         else if (P.PO.speciality == 3)
         {
-            decription += "speciality: " + "Impact, explodes on impact" + "\n";
+            decription += "speciality: " + "Impact, explodes on impact" + "\n" + "\n";
         }
         text.text = decription;
     }

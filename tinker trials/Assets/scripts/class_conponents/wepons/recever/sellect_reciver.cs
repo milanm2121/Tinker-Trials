@@ -25,50 +25,58 @@ public class sellect_reciver : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + WR.RO.name + "\n";
+        decription += "Name: " + WR.RO.name + "\n"+"\n";
 
         if (WR.RO.element == 0)
         {
-            decription += "element: " + "none" + "\n";
+            decription += "Element: " + "none" + "\n";
+            decription += "Elemental effect have the abillity to apply statias effect on your targets" + "\n" + "\n";
         }
         else if(WR.RO.element == 1)
         {
-            decription += "element: " + "fire" + "\n";
+            decription += "Element: " + "fire" + "\n";
+            decription += "This elemental effect set your target on fire and applys damage tick of 5" + "\n" + "\n";
         }
         else if (WR.RO.element == 2)
         {
-            decription += "element: " + "frost" + "\n";
+            decription += "Element: " + "frost" + "\n";
+            decription += "This elemental effect slows your target the higher the frost damage is" + "\n" + "\n";
         }
         else if (WR.RO.element == 3)
         {
-            decription += "element: " + "earth" + "\n";
+            decription += "Element: " + "earth" + "\n";
+            decription += "This elemental graduly impaires your targets vision" + "\n" + "\n";
         }
-        else if(WR.RO.element == 0)
+        else if(WR.RO.element == 4)
         {
-            decription += "element: " + "electricity" + "\n";
+            decription += "Element: " + "electricity" + "\n";
+            decription += "This elemental effect applyes a electrified statias effect causing your target to randomy flinch" + "\n" + "\n";
         }
 
 
-        decription += "firerate: " + WR.RO.fire_rate + "\n";
-        decription += "wepontype: " + WR.RO.wepon_type + "\n";
+        decription += "Firerate: " + WR.RO.fire_rate + "\n";
+        decription += "This is the amount of rounds fired a second times x2" + "\n" + "\n";
+
 
         if (WR.RO.spciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
         else if (WR.RO.spciality == 1)
         {
-            decription += "speciality: " + "Suck/Push, turns weapon into a physics gun allowing players to pick up and push junk around, Energy specialization from ammunition is needed to power weapon" + "\n";
+            decription += "Speciality: " + "Suck/Push, turns weapon into a physics gun allowing players to pick up and push junk around, Energy specialization from ammunition is needed to power weapon" + "\n" + "\n";
         }
         else if (WR.RO.spciality == 2)
         {
-            decription += "speciality: " + "Lazers, gun shoots lasers instead of bullet, Energy specialization from ammunition is needed to power weapon" + "\n";
+            decription += "Speciality: " + "Lazers, gun shoots lasers instead of bullet, Energy specialization from ammunition is needed to power weapon" + "\n" + "\n";
         }
         else if (WR.RO.spciality == 3)
         {
-            decription += "speciality: " + "Rotary, fire rate gradually speed up over time of sustained fire, not compatible with Energy specialization from ammunition" + "\n";
+            decription += "Speciality: " + "Rotary, fire rate gradually speed up over time of sustained fire, not compatible with Energy specialization from ammunition" + "\n" + "\n";
         }
-        decription += "weight: " + WR.RO.weight + "\n";
+        decription += "Weight: " + WR.RO.weight + "\n";
+        decription += "This effects your players movement speed, reload and aim down sight speed" ;
+
         text.text = decription;
     }
 }

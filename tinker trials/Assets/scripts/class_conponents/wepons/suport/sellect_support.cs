@@ -24,26 +24,28 @@ public class sellect_support : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + WS.SO.name + "\n";
+        decription += "name: " + WS.SO.name + "\n"+"\n";
         
 
         if (WS.SO.speciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "speciality: " + "none" + "\n"+"\n";
         }
         else if (WS.SO.speciality == 1)
         {
-            decription += "speciality: " + "low gravity, allows for the player to negate weight penalties for kickback from firing weapons and slow falling. Allows a form of flying" + "\n";
+            decription += "speciality: " + "low gravity, allows for the player to negate weight penalties for kickback from firing weapons and slow falling. Allows a form of flying" + "\n" + "\n";
         }
         else if (WS.SO.speciality == 2)
         {
-            decription += "speciality: " + "gun and run, run shoot and aim at the same time" + "\n";
+            decription += "speciality: " + "gun and run, run shoot and aim at the same time" + "\n" + "\n";
         }
         else if (WS.SO.speciality == 3)
         {
-            decription += "speciality: " + "Wheels, allows for the player to negate weight penalties for the cost of momentum and not being able to jump" + "\n";
+            decription += "speciality: " + "Wheels, allows for the player to negate weight penalties for the cost of momentum and not being able to jump" + "\n" + "\n";
         }
         decription += "weight: " + WS.SO.weight + "\n";
+        decription += "This effects your players movement speed, reload and aim down sight speed";
+
         text.text = decription;
     }
 }

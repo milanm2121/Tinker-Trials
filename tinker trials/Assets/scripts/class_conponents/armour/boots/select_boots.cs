@@ -29,27 +29,31 @@ public class select_boots : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + BT.BO.name + "\n";
-        decription += "deffence: " + BT.BO.deffence + "\n";
+        decription += "Name: " + BT.BO.name + "\n";
+
+        decription += "Deffence: " + BT.BO.deffence + "\n";
+        decription += "This effects your players armour rating the higer it is the less damage you take" + "\n" + "\n";
+
 
         if (BT.BO.speciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
         else if (BT.BO.speciality == 1)
         {
-            decription += "speciality: " + "speed boots" + "\n";
+            decription += "Speciality: " + "speed boots, this makes you move faster" + "\n" + "\n";
         }
         else if (BT.BO.speciality == 2)
         {
-            decription += "speciality: " + "dubble jump" + "\n";
+            decription += "Speciality: " + "dubble jump, this allows you to have an extra jump in the air" + "\n" + "\n";
         }
         else if (BT.BO.speciality == 3)
         {
-            decription += "speciality: " + "kick" + "\n";
+            decription += "Speciality: " + "kick, this extends your melee range" + "\n" + "\n";
         }
 
-        decription += "weight: " + BT.BO.weight + "\n";
+        decription += "Weight: " + BT.BO.weight + "\n";
+        decription += "This effects your players movement speed only";
         text.text = decription;
     }
 

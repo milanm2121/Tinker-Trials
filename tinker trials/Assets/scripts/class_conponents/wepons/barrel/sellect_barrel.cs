@@ -25,43 +25,43 @@ public class sellect_barrel : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: "+ WB.BO.name + "\n";
-        decription += "range: "+ WB.BO.lenght + "\n";
-        decription += "this effects the projectile speed and distance before expirey" + "\n" +"\n";
+        decription += "Name: "+ WB.BO.name + "\n" + "\n";
+        decription += "Range: "+ WB.BO.lenght + "\n" + "\n";
+        decription += "This effects the projectile speed and distance before expirey" + "\n" +"\n";
         if (WB.BO.material == 1)
         {
-            decription += "material: " + "glass" + "\n";
-            decription += "adds extra range with lasers" + "\n" + "\n";
+            decription += "Material: " + "glass" + "\n";
+            decription += "Adds extra range with lasers" + "\n" + "\n";
         }
         else if (WB.BO.material == 0)
         {
-            decription += "material: " + "wood" + "\n";
-            decription += "adds extra range to projectiles" + "\n" + "\n";
+            decription += "Material: " + "wood" + "\n";
+            decription += "Adds extra range to projectiles" + "\n" + "\n";
         }
         else if (WB.BO.material == 3)
         {
-            decription += "material: " + "plastic" + "\n";
+            decription += "Material: " + "plastic" + "\n" + "\n";
         }
         else if (WB.BO.material == 2)
         {
-            decription += "material: " + "metal" + "\n";
+            decription += "Material: " + "metal" + "\n" + "\n";
         }
         
 
         if (WB.BO.specalty == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
         else if (WB.BO.specalty == 1)
         {
-            decription += "speciality: " + "Suppressor, suppresses sound" + "\n" + "\n";
+            decription += "Speciality: " + "Suppressor, suppresses sound" + "\n" + "\n";
         }
         else if (WB.BO.specalty == 2)
         {
-            decription += "speciality: " + "Overheat, increases damage over consistent firing" + "\n" + "\n";
+            decription += "Speciality: " + "Overheat, increases damage over consistent firing" + "\n" + "\n";
         }
-        decription += "weight: "+WB.BO.weight + "\n";
-        decription += "this effects your players movement speed, reload and aim down sight speed" + "\n" + "\n";
+        decription += "Weight: "+WB.BO.weight + "\n";
+        decription += "This effects your players movement speed, reload and aim down sight speed" + "\n" + "\n";
         text.text = decription;
     }
 }

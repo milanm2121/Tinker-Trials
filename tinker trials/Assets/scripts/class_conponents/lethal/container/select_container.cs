@@ -24,37 +24,39 @@ public class select_container : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + C.CO.name + "\n";
+        decription += "Name: " + C.CO.name + "\n"+"\n";
         
 
         if (C.CO.sticky == false)
         {
-            decription += "sticky: " + "no" + "\n";
+            decription += "Sticky: " + "no" + "\n";
         }
         else if (C.CO.sticky == true)
         {
-            decription += "sticky: " + "yes" + "\n";
+            decription += "Sticky: " + "yes" + "\n";
         }
+        decription += "This dictaes if your throwabel stick to surfaces " + "\n"+"\n";
 
         if (C.CO.speciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
         else if (C.CO.speciality == 1)
         {
-            decription += "speciality: " + "Knife, damages and sticks to players on collision" + "\n";
+            decription += "Speciality: " + "Knife, damages and sticks to players on collision" + "\n" + "\n";
         }
         else if (C.CO.speciality == 2)
         {
-            decription += "speciality: " + "Seeker, follows the closest enemy" + "\n";
+            decription += "Speciality: " + "Seeker, follows the closest enemy" + "\n" + "\n";
         }
         else if (C.CO.speciality == 3)
         {
-            decription += "speciality: " + "Shrapnel, creates junk on explosion" + "\n";
+            decription += "Speciality: " + "Shrapnel, creates junk on explosion" + "\n" + "\n";
         }
-        decription += "weight: " + C.CO.weight + "\n";
+        decription += "Weight: " + C.CO.weight + "\n";
+        decription += "This effects your projectiles throw distance";
 
-        
+
         text.text = decription;
 
 

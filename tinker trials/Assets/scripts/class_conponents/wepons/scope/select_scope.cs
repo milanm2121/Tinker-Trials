@@ -24,32 +24,23 @@ public class select_scope : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + WS.SO.name + "\n";
-        decription += "zoom: " + WS.SO.zoom + "\n";
-        if (WS.SO.trhermal == false)
-        {
-            decription += "thermal: " + "false" + "\n";
-        }
-        else if (WS.SO.trhermal == false)
-        {
-            decription += "thermal: " + "true" + "\n";
-        }
+        decription += "Name: " + WS.SO.name + "\n"+ "\n";
+        decription += "Zoom: " + WS.SO.zoom + "\n";
+        decription += "This effects zoom distance when aiming" + "\n";
 
         if (WS.SO.speciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
-    /*    else if (WS.SO.speciality == 1)
-        {
-            decription += "speciality: " + "Alert, adds a visual effect to alert the player when they are being aimed at." + "\n";
-        }
-    */
+
         else if (WS.SO.speciality == 1)
         {
-            decription += "speciality: " + "distance measurement, adds a measurement of how far the target aimed at is" + "\n";
+            decription += "Speciality: " + "distance measurement, adds a measurement of how far the target aimed at is" + "\n" + "\n";
         }
         
-        decription += "weight: " + WS.SO.weight + "\n";
+        decription += "Weight: " + WS.SO.weight + "\n";
+        decription += "This effects your players movement speed, reload and aim down sight speed";
+
         text.text = decription;
     }
 }

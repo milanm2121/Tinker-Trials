@@ -25,22 +25,28 @@ public class sellect_grip : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + WG.GO.name + "\n";
-        decription += "grip angel: " + WG.GO.grip_angle + "\n";
+        decription += "Name: " + WG.GO.name + "\n" + "\n";
+
+        decription += "Grip angel: " + WG.GO.grip_angle + "\n";
+        decription += "This effects your wepons recoil stability the closer to 90 is horizontal and the clser to 0 is vertical" + "\n" + "\n";
+
+
 
         if (WG.GO.speciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
         else if (WG.GO.speciality == 1)
         {
-            decription += "speciality: " + "stun bash, melee blows stun enemies" + "\n";
+            decription += "Speciality: " + "stun bash, melee blows stun enemies" + "\n" + "\n";
         }
         else if (WG.GO.speciality == 2)
         {
-            decription += "speciality: " + "auto adjust, recoil is reduced over sustained fire" + "\n";
+            decription += "Speciality: " + "auto adjust, recoil is reduced over sustained fire" + "\n" + "\n";
         }
-        decription += "weight: " + WG.GO.weight + "\n";
+        decription += "Weight: " + WG.GO.weight + "\n" + "\n";
+        decription += "This effects your players movement speed, reload and aim down sight speed" + "\n" + "\n";
+
         text.text = decription;
     }
 }

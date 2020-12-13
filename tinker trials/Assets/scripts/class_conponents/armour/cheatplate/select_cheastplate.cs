@@ -30,27 +30,30 @@ public class select_cheastplate : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + CP.CPO.name + "\n";
-        decription += "deffence: " + CP.CPO.deffence + "\n";
+        decription += "Name: " + CP.CPO.name + "\n"+"\n";
+        decription += "Deffence: " + CP.CPO.deffence + "\n";
+        decription += "This effects your players armour rating the higer it is the less damage you take" + "\n" + "\n";
 
         if (CP.CPO.specicality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
         else if (CP.CPO.specicality == 1)
         {
-            decription += "speciality: " + "More ammo, hold more ammo" + "\n";
+            decription += "Speciality: " + "More ammo, hold more ammo" + "\n" + "\n";
         }
         else if (CP.CPO.specicality == 2)
         {
-            decription += "speciality: " + "Shoulder launcher, launch lethal while shooting or running" + "\n";
+            decription += "Speciality: " + "Shoulder launcher, launch lethal while shooting or running" + "\n" + "\n";
         }
-        else if (CP.CPO.specicality == 3)
+   /*     else if (CP.CPO.specicality == 3)
         {
-            decription += "speciality: " + "Blast resistance, take less explosive damage" + "\n";
+            decription += "Speciality: " + "Blast resistance, take less explosive damage" + "\n";
         }
+   */
+        decription += "Weight: " + CP.CPO.weight + "\n";
+        decription += "This effects your players movement speed only";
 
-        decription += "weight: " + CP.CPO.weight + "\n";
         text.text = decription;
     }
 

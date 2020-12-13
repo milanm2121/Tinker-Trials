@@ -29,23 +29,27 @@ public class select_headgear : MonoBehaviour
         hover_pannel.transform.position = transform.position;
 
         string decription = "";
-        decription += "name: " + HG.HGO.name + "\n";
-        decription += "deffence: " + HG.HGO.deffence + "\n";
+        decription += "Name: " + HG.HGO.name + "\n"+"\n";
+        decription += "Deffence: " + HG.HGO.deffence + "\n";
+        decription += "This effects your players armour rating the higer it is the less damage you take" + "\n" + "\n";
+
 
         if (HG.HGO.speciality == 0)
         {
-            decription += "speciality: " + "none" + "\n";
+            decription += "Speciality: " + "none" + "\n" + "\n";
         }
         else if (HG.HGO.speciality == 1)
         {
-            decription += "speciality: " + "Advanced hud, more UI" + "\n";
+            decription += "Speciality: " + "Advanced hud, more UI" + "\n" + "\n";
         }
         else if (HG.HGO.speciality == 2)
         {
-            decription += "speciality: " + "Sensory boost, hear moar" + "\n";
+            decription += "Speciality: " + "Sensory boost, hear moar" + "\n" + "\n";
         }
 
-        decription += "weight: " + HG.HGO.weight + "\n";
+        decription += "Weight: " + HG.HGO.weight + "\n";
+        decription += "This effects your players movement speed only";
+
         text.text = decription;
     }
 
