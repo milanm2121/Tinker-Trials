@@ -96,7 +96,7 @@ public class player_Movement : MonoBehaviour
         if (RB != null)
         {
             if(RB.velocity.magnitude>30)
-            RB.velocity = RB.velocity/2;
+            RB.velocity -= RB.velocity*0.01f;
 
             if (low_gravity == true)
             {

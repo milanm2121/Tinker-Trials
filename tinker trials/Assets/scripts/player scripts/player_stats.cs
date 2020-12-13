@@ -60,6 +60,7 @@ public class player_stats : MonoBehaviour
     public GameObject damage_numbers_UI_Canvas;
     public GameObject damage_numbers;
 
+    public bool damaged=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -165,7 +166,7 @@ public class player_stats : MonoBehaviour
 
 
                 fire_meter = Mathf.Clamp(fire_meter - 1, 1, 110);
-                frost_meter = Mathf.Clamp(frost_meter - 5, 1, 100);
+                frost_meter = Mathf.Clamp(frost_meter - 15, 1, 100);
                 electrucity_meter = Mathf.Clamp(electrucity_meter - 5, 1, 110);
 
             }
@@ -179,6 +180,8 @@ public class player_stats : MonoBehaviour
     public void damage_player(float damage,Vector2Int element)
     {
         //damage armour calculation
+        damaged = true;
+
         damage /= armour;
         health -= (int)damage;
         GameObject UI_can = Instantiate(damage_numbers_UI_Canvas, transform.position,Quaternion.identity);

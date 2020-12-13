@@ -41,7 +41,6 @@ public class AI_state_machine : MonoBehaviour
                 if (shooting_target == null || Vector3.Distance(transform.position, shooting_target.transform.position) > 10)
                 {
                     movement();
-                    Debug.Log("moving");
                     shooting_target = null;
                 }
                 shoot();
@@ -65,7 +64,11 @@ public class AI_state_machine : MonoBehaviour
                 }
             }
         }
-        if (use_GM == false && game_maneger.playerinstance!=null && Vector3.Distance(game_maneger.playerinstance.transform.position, gameObject.transform.position) < 50)
+        if (pathfindingTarget==null && game_maneger.playerinstance != null && Vector3.Distance(game_maneger.playerinstance.transform.position, gameObject.transform.position) < 20)
+        {
+            pathfindingTarget = game_maneger.playerinstance.transform;
+        }
+        if(pathfindingTarget == null && game_maneger.playerinstance != null && PS.damaged)
         {
             pathfindingTarget = game_maneger.playerinstance.transform;
         }

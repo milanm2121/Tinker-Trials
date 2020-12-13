@@ -556,7 +556,7 @@ public class wepon_body_game : MonoBehaviour
                     if (targets[i].collider.gameObject.GetComponent<player_stats>() != null)
                     {
                         player_stats target = targets[i].collider.gameObject.GetComponent<player_stats>();
-                        target.damage_player(50, Vector2Int.zero);
+                        target.damage_player(10000, Vector2Int.zero);
 
                         if (grip_script.GO.speciality == 1)
                         {
