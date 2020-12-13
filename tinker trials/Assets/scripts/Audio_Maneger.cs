@@ -38,7 +38,7 @@ public class Audio_Maneger : MonoBehaviour
     {
         for(int i=0;AudioSources.Count>i; i++)
         {
-            if (AudioSources[i].isPlaying == false)
+            if (AudioSources[i] && AudioSources[i].isPlaying == false)
             {
                 AudioSource ObservedAudioSource = AudioSources[i];
                 AudioSources.RemoveAt(i);

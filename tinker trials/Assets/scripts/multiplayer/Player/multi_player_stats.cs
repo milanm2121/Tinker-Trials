@@ -178,9 +178,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
         frost_meter = Mathf.Clamp(frost_meter, 1, 100);
         electrucity_meter = Mathf.Clamp(electrucity_meter, 1, 110);
 
-        object[] x = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter };
-        if (PhotonNetwork.IsMasterClient)
-            photonView.RPC("Sync_Stats",RpcTarget.All, x );
+        
     }
 
     private void FixedUpdate()
@@ -267,6 +265,10 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
         object[] x = new object[] { damage, (Vector2)element };
         photonView.RPC("instantiate_damage_numbers", RpcTarget.All, x);
+
+        object[] a = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter, PM.RB.velocity };
+        if (PhotonNetwork.IsMasterClient)
+            photonView.RPC("Sync_Stats", RpcTarget.All, a);
 
     }
 
@@ -443,7 +445,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
     }
 
     [PunRPC]
-    private void Sync_Stats(float Health, float Fire, float Ice, float Earth, float Electricity)
+    private void Sync_Stats(float Health, float Fire, float Ice, float Earth, float Electricity,Vector3 velosity)
     {
 
         health = Health;
@@ -451,6 +453,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
         frost_meter = Ice;
         dirt_meter = Earth;
         electrucity_meter = Electricity;
+        PM.RB.velocity = velosity;
 
     }
 
@@ -462,7 +465,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-    /*    if (stream.IsWriting)
+        if (stream.IsWriting)
         {
             stream.SendNext(health);
             stream.SendNext(fire_meter);
@@ -478,6 +481,6 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
             frost_meter = (float)stream.ReceiveNext();
             dirt_meter = (float)stream.ReceiveNext();
             electrucity_meter = (float)stream.ReceiveNext();
-      */  
+      }  
     }
 }

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: af022cd7a9cf56c4185353a3546ab5e2,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -37197,6 +37197,7 @@ MonoBehaviour:
   ragdoll2: []
   damage_numbers_UI_Canvas: {fileID: 0}
   damage_numbers: {fileID: 0}
+  damaged: 0
 --- !u!54 &1755785441
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54360,6 +54361,7 @@ MonoBehaviour:
   ragdoll2: []
   damage_numbers_UI_Canvas: {fileID: 0}
   damage_numbers: {fileID: 0}
+  damaged: 0
 --- !u!136 &1095184317329343256
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -54428,6 +54430,7 @@ MonoBehaviour:
   ragdoll2: []
   damage_numbers_UI_Canvas: {fileID: 0}
   damage_numbers: {fileID: 0}
+  damaged: 0
 --- !u!54 &1095184317339421412
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54765,6 +54768,7 @@ MonoBehaviour:
   ragdoll2: []
   damage_numbers_UI_Canvas: {fileID: 0}
   damage_numbers: {fileID: 0}
+  damaged: 0
 --- !u!54 &1095184317408354179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -55281,6 +55285,7 @@ MonoBehaviour:
   ragdoll2: []
   damage_numbers_UI_Canvas: {fileID: 0}
   damage_numbers: {fileID: 0}
+  damaged: 0
 --- !u!54 &1095184317659749909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -56351,6 +56356,7 @@ MonoBehaviour:
   ragdoll2: []
   damage_numbers_UI_Canvas: {fileID: 0}
   damage_numbers: {fileID: 0}
+  damaged: 0
 --- !u!54 &1095184318104534229
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -57422,6 +57428,7 @@ MonoBehaviour:
   ragdoll2: []
   damage_numbers_UI_Canvas: {fileID: 0}
   damage_numbers: {fileID: 0}
+  damaged: 0
 --- !u!54 &1095184318597397269
 Rigidbody:
   m_ObjectHideFlags: 0

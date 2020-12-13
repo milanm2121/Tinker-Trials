@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 using Photon.Realtime;
 
-public class multiplayer_teamID : MonoBehaviourPunCallbacks
+public class multiplayer_teamID : MonoBehaviourPunCallbacks,IPunObservable
 {
     public string _name;
     public int team;
@@ -27,19 +27,12 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
             team = 2;
             healthbar.color = Color.blue;
         }
-        photonView.RPC("setname", RpcTarget.AllBufferedViaServer, shown_name.text);
+        
     }
 
-    [PunRPC]
-    void setname(string Name)
-    {
-        shown_name.text = Name;
-    }
+    
 
-    public override void OnPlayerLeftRoom(Player otherPlayer)
-    {
-        photonView.RPC("leaveGame", RpcTarget.All);
-    }
+   
     
     [PunRPC]
     void leaveGame()
@@ -69,5 +62,17 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks
         }
     }
 
-   
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(shown_name.text);
+           
+
+        }
+        else if (stream.IsReading)
+        {
+            shown_name.text = (string)stream.ReceiveNext();
+        }
+    }
 }
