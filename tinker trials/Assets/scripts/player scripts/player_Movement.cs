@@ -82,7 +82,7 @@ public class player_Movement : MonoBehaviour
     public bool low_gravity = false;
 
 
-    bool leftground=false;
+    public bool leftground=false;
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -175,17 +175,19 @@ public class player_Movement : MonoBehaviour
             //momentum
             //this calculation is used only if the keep mometum bool it ticked,
             //this calculation is used to allow the player to influence the directional velosity based of the previous freames velosity
-            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            if (P_ID.is_player == true &&  (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)))
             {
-
-                directionX = left + right;
+                left = Vector3.zero;
+                right = Vector3.zero;
+                directionX = Vector3.zero;
             }
 
 
-            if (P_ID.is_player == true && keep_Momentum == true && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)))
+            if (P_ID.is_player == true &&  (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.W)))
             {
-
-                directionY = forward + back;
+                forward = Vector3.zero;
+                back = Vector3.zero;
+                directionY = Vector3.zero;
             }
 
 
@@ -203,10 +205,11 @@ public class player_Movement : MonoBehaviour
             }
             //no momentum
             // this is used to calculate the next velosity of the rigit body and overwright it
-            if (keep_Momentum == false)
+            if (keep_Momentum == false )
             {
                 direction = (forward + back + left + right) * Time.deltaTime;
-                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + new Vector3(direction.x, 0, direction.z) * running_multiplyer;
+                
+                RB.velocity = new Vector3(direction.x, RB.velocity.y, direction.z) + (new Vector3(direction.x, 0, direction.z) * running_multiplyer);
 
 
             }

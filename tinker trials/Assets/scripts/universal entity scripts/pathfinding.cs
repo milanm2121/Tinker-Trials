@@ -109,7 +109,7 @@ public class pathfinding : MonoBehaviour
             //       Debug.Log("moves:"+testedposition.moves +", pos: "+testedposition.pos +", value:"+ testedposition.value);
             been_to.AddRange(scanSuroundings(testedposition.moves, testedposition.pos, out failed));
             scaned.Add(testedposition);
-            //Instantiate(visualnode, testedposition.pos, Quaternion.identity);
+          //  Instantiate(visualnode, testedposition.pos, Quaternion.identity);
 
 
             //last resort
@@ -449,7 +449,7 @@ public class pathfinding : MonoBehaviour
 
 
         //if the target is reached
-        if (distance_from_targt <= 2 && reched_target == false)
+        if (distance_from_targt <= 4 && reched_target == false)
         {
             reched_target = true;
 

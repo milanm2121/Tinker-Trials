@@ -77,7 +77,7 @@ public class AI_state_machine : MonoBehaviour
     private void FixedUpdate()
     {
         time += Time.deltaTime;
-        if (time > 3 && pathfindingTarget!=null && Vector3.Distance(pathfindingTarget.position, gameObject.transform.position)>20)
+        if (time > 3 && pathfindingTarget!=null && Vector3.Distance(pathfindingTarget.position, gameObject.transform.position)>10)
         {
             time = 0;
 
@@ -175,7 +175,7 @@ public class AI_state_machine : MonoBehaviour
             if (pathfindingTarget!=null) 
             {
                 Quaternion targety = Quaternion.LookRotation(-Camera.transform.position + new Vector3(pathfindingTarget.position.x, pathfindingTarget.position.y, pathfindingTarget.position.z));
-                Camera.transform.rotation = Quaternion.Lerp(Camera.transform.rotation, targety, Time.deltaTime * 2);
+                Camera.transform.rotation = Quaternion.Lerp(Camera.transform.rotation, targety, Time.deltaTime * 5);
             }
         }
         else
@@ -184,10 +184,12 @@ public class AI_state_machine : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, targetx, Time.deltaTime*2);
 
             Quaternion targety = Quaternion.LookRotation(-Camera.transform.position + new Vector3(shooting_target.transform.position.x, shooting_target.transform.position.y, shooting_target.transform.position.z));
-            Camera.transform.rotation = Quaternion.Lerp(Camera.transform.rotation, targety, Time.deltaTime * 2);
+            Camera.transform.rotation = Quaternion.Lerp(Camera.transform.rotation, targety, Time.deltaTime * 5);
+
+            
 
             RaycastHit hit;
-            Physics.Raycast(WBG.transform.position,-WBG.barrel.transform.right, out hit);
+            Physics.Raycast(Camera.transform.position,Camera.transform.forward, out hit);
             Debug.DrawRay(WBG.transform.position, -WBG.barrel.transform.right, Color.green,1);
             if (hit.collider!=null && hit.collider.gameObject == shooting_target)
             {

@@ -28,7 +28,7 @@ public class player_sounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PM.RB!=null && PM.RB.velocity != Vector3.zero && PM.grounded == true)
+        if (PM.RB!=null && PM.RB.velocity.magnitude > 1 && PM.grounded == true)
         {
             if (PM.running == true)
             {
@@ -78,7 +78,7 @@ public class player_sounds : MonoBehaviour
             }
             else
             {
-                if (PM.running == false)
+                if (PM.walking == true)
                 {
                     if (lastGtoundType == groundType.metal)
                     {
@@ -134,7 +134,7 @@ public class player_sounds : MonoBehaviour
     {
         //i know its not in order
         //metal
-        if(col.gameObject.tag=="ground" && col.gameObject.layer == 11)
+        if(col.gameObject.tag=="ground" && col.gameObject.layer == 11 )
         {
             if (grounded == false)
             {

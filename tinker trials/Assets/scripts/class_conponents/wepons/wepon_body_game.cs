@@ -175,6 +175,10 @@ public class wepon_body_game : MonoBehaviour
             }
 
         }
+        else if(P_ID.is_player==false)
+        {
+
+        }
         if(can_shoot == true && reloading == false)
             transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 2);
 
