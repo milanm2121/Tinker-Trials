@@ -19,6 +19,7 @@ using System.Xml;
 
 public class save_system
 {
+    static public bool has_save_data =false;
     static string Path = Application.persistentDataPath + "/inventory_Savedata.txt";
 
     public static void saveData(List<saved_object> invetoty)
@@ -39,26 +40,31 @@ public class save_system
     {
         if (!File.Exists(Path))
         {
-            Debug.Log("path dosent exist");
+            Debug.Log("path dosent exist"); 
+            has_save_data = false;
             return null;
+           
         }
         else
         {
             Debug.Log("path exist");
+            has_save_data = true;
+
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            FileStream stream = new FileStream(Path, FileMode.Open);
+
+            List<saved_object> data = formatter.Deserialize(stream) as List<saved_object>;
+
+            stream.Close();
+
+            player_inventory.Load_inventory(data);
+            Debug.Log("loaded data");
+
+            return data;
         }
 
-        BinaryFormatter formatter = new BinaryFormatter();
-
-        FileStream stream = new FileStream(Path, FileMode.Open);
-
-        List<saved_object> data = formatter.Deserialize(stream) as List<saved_object>;
-
-        stream.Close();
-
-        player_inventory.Load_inventory(data);
-        Debug.Log("loaded data");
-
-        return data;
+        
 
 
     }
@@ -89,32 +95,37 @@ public class save_system
         if (!File.Exists(Path2))
         {
             Debug.Log("path dosent exist");
+            has_save_data = false;
             return null;
+
         }
         else
         {
             Debug.Log("path exist");
+            Debug.Log(Path);
+            has_save_data = true;
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            FileStream stream = new FileStream(Path2, FileMode.Open);
+
+            List<saved_object> data = formatter.Deserialize(stream) as List<saved_object>;
+
+            stream.Close();
+
+            class_class.Class[] classes = player_inventory.load_classes(data);
+
+            static_classes.Class1 = classes[0];
+            static_classes.Class2 = classes[1];
+            static_classes.Class3 = classes[2];
+            static_classes.Class4 = classes[3];
+
+
+            Debug.Log("loaded data");
+
+            return data;
         }
 
-        BinaryFormatter formatter = new BinaryFormatter();
-
-        FileStream stream = new FileStream(Path2, FileMode.Open);
-
-        List<saved_object> data = formatter.Deserialize(stream) as List<saved_object>;
-
-        stream.Close();
-
-        class_class.Class[] classes= player_inventory.load_classes(data);
-
-        static_classes.Class1 = classes[0];
-        static_classes.Class2 = classes[1];
-        static_classes.Class3 = classes[2];
-        static_classes.Class4 = classes[3];
-
-
-        Debug.Log("loaded data");
-
-        return data;
+        
 
 
     }

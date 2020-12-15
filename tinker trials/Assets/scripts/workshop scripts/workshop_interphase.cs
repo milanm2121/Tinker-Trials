@@ -56,8 +56,15 @@ public class workshop_interphase : MonoBehaviour
     {
         // used to load scriptable objects from the player staric invetory
         Debug.Log("load_data");
-        //load_inventory();//before loading in new parts turn off
-        generate_parts(150);
+        if (save_system.has_save_data == false)
+        {
+            generate_parts(300);
+        }
+        else
+        {
+            load_inventory();//before loading in new parts turn off
+        }
+        save_inventory();
     }
 
     // Update is called once per frame
