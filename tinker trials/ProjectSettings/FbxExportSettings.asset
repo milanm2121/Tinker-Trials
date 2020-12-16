@@ -16,6 +16,7 @@
             "."
         ],
         "fbxSavePaths": [
+            "Resources/class paerts/lethal",
             "."
         ],
         "selectedFbxPath": 0,
@@ -34,7 +35,7 @@
         "convertToPrefabSettingsSerialize": {
             "exportFormat": 0,
             "animatedSkinnedMesh": false,
-            "mayaCompatibleNaming": true
+            "mayaCompatibleNaming": false
         }
     }
 }
