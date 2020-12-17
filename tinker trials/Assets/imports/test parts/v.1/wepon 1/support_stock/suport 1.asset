@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 2
   speciality: 2
-  mesh: {fileID: -5766667308145755136, guid: 7cbd6f91ab6cac949bc7c35680967a16, type: 3}
-  mat: {fileID: 5561349426305759274, guid: 7cbd6f91ab6cac949bc7c35680967a16, type: 3}
+  mesh: {fileID: 6469979332859724512, guid: e032c4245c089a8418f7d4e4d8c6b5d6, type: 3}
+  mat: {fileID: 2100000, guid: 0cc11296f5cf83a4ea78a563a6b3e13c, type: 2}

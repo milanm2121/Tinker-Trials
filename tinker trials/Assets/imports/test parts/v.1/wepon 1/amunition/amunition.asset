@@ -20,5 +20,5 @@ MonoBehaviour:
   speciality: 0
   rounds: 45
   weight: 8
-  mesh: {fileID: 977585190437695107, guid: 900134c40f9e95440bad8098dfbfda99, type: 3}
-  mat: {fileID: 5561349426305759274, guid: 900134c40f9e95440bad8098dfbfda99, type: 3}
+  mesh: {fileID: -5202703786791083200, guid: 60cc437dbeb3f8a4abae6572aa579c93, type: 3}
+  mat: {fileID: 2100000, guid: 7d71bd057b6666f47a02f6fff963f857, type: 2}

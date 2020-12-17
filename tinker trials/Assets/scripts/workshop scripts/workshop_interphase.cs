@@ -316,14 +316,14 @@ public class workshop_interphase : MonoBehaviour
                 }
                 if (x.specalty == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Barrel/PaintCanSupressor_Barrel", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Barrel/PaintCanSupressor_Barrel", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/barrel/PaintCan_Supressor_barrel", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/barrel/paintcan barrel 2", typeof(Material));
                 }
                 if (x.specalty == 2)
                 {
                    
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Barrel/OverheatDisplay_Barrel", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Barrel/OverheatDisplay_Barrel", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/barrel/Mesh_OverHeat", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/barrel/overheat barrel", typeof(Material));
                 }
                 wc.barrels.Add(x);
             }
@@ -347,19 +347,19 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0 || x.speciality==1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Ammo/GenericMag_Ammo", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Ammo/GenericMag_Ammo", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/amunition/generic mag", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/amunition/generic mag", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Ammo/Energy_Ammo", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Ammo/Energy_Ammo", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/amunition/EnergyAmmo", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/amunition/energy", typeof(Material));
                 }
                 if (x.speciality == 3)
                 {
 
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Ammo/FastMag_Ammo", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Ammo/FastMag_Ammo", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/amunition/FastMag", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/amunition/fastmag", typeof(Material));
                 }
                 wc.amunition_types.Add(x);
             }
@@ -380,18 +380,18 @@ public class workshop_interphase : MonoBehaviour
                 
                 if (x.speciality == 0)
                 {
-                    x.meshshape = (Mesh)Resources.Load("AssetsFixed_Exported/Grip/Generic_Grip", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Grip/Generic_Grip", typeof(Material));
+                    x.meshshape = (Mesh)Resources.Load("final calss parts/wepons/grip/generic grip", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/grip/generic grip", typeof(Material));
                 }
                 if (x.speciality == 1)
                 {
-                    x.meshshape = (Mesh)Resources.Load("AssetsFixed_Exported/Grip/StunBash_Grip", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Grip/StunBash_Grip", typeof(Material));
+                    x.meshshape = (Mesh)Resources.Load("final calss parts/wepons/grip/Grip_Stun_Bash", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/grip/stun bash", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
-                    x.meshshape = (Mesh)Resources.Load("AssetsFixed_Exported/Grip/AutoAdjust_Grip", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Grip/AutoAdjust_Grip", typeof(Material));
+                    x.meshshape = (Mesh)Resources.Load("final calss parts/wepons/grip/AutoAdjustGrip", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/grip/auto adjust", typeof(Material));
                 }
                 
                 wc.grips.Add(x);
@@ -422,8 +422,8 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.spciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Generic_Receiver", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Generic_Receiver", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/generic reciver", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/generic reciver", typeof(Material));
                     x.anumition_fit = new Vector3(0.2f, -0.5f, 0);
                     x.barrel_fit = new Vector3(-1.5f, 0, 0);
                     x.grip_fit = new Vector3(-.7f, -0.8f, 0);
@@ -432,18 +432,18 @@ public class workshop_interphase : MonoBehaviour
                 }
                 if (x.spciality == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Physics_Receiver", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Physics_Receiver", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/GRAVITY RECIVER", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/suck and push reciver", typeof(Material));
                 }
                 if (x.spciality == 2)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Laser_Receiver", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Laser_Receiver", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/energy reciver", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/energy reciver", typeof(Material));
                 }
                 if (x.spciality == 3)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Rotary_Receiver", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Rotary_Receiver", typeof(Material));          
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/ROTARRY RECIVEWR", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/rotary reciver", typeof(Material));          
                 }
 
 
@@ -472,18 +472,18 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.zoom > 7)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Distance_Aim", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Distance_Aim", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/optic/DistanceScope", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/optic/distance aim", typeof(Material));
                 }
                 else if (x.zoom > 3 || x.trhermal==true)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Alert_Aim", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Alert_Aim", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/optic/AlertScope", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/optic/alert aim", typeof(Material));
                 }
                 else 
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Generic_Aim", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Generic_Aim", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/optic/GenericAim", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/optic/generic aim", typeof(Material));
                 }
 
                 wc.scopes.Add(x);
@@ -503,18 +503,19 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Stock/Generic_Stock", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Stock/Generic_Stock", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/stock/generic_stock", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/stock/generic stock", typeof(Material));
                 }
                 if (x.speciality == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Stock/LowGravityThruster_Stock", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Stock/LowGravityThruster_Stock", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/stock/lowGravity_thruster", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/stock/lowgravity stock", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Stock/Boot_Stock", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Stock/Boot_Stock", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/wepons/stock/RunGun_Stock", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/wepons/stock/rin and gin stock", typeof(Material));
+                    
                 }
                 
 
@@ -534,18 +535,26 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Material));
+                    if (Random.Range(0, 2) == 1)
+                    {
+                        x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Generic_Helmet_1", typeof(Mesh));
+                        x.mat = (Material)Resources.Load("final calss parts/armour/helmit/generic helmit 1", typeof(Material));
+                    }
+                    else
+                    {
+                        x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Generic_Helmet_2", typeof(Mesh));
+                        x.mat = (Material)Resources.Load("final calss parts/armour/helmit/generic helmit 2", typeof(Material));
+                    }
                 }
                 if (x.speciality == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Advanced_helmet", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/armour/helmit/advance hemit", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Sensory_helmet", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/armour/helmit/sensery helm", typeof(Material));
                 }
 
 
@@ -565,19 +574,26 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.specicality == 0)
                 {
-                    
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Mesh));
-                    x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Material));
+                    if (Random.Range(0, 2) == 1)
+                    {
+                        x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/Generic_Chest", typeof(Mesh));
+                        x.material = (Material)Resources.Load("final calss parts/armour/chestplate/generic 1", typeof(Material));
+                    }
+                    else
+                    {
+                        x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/Generic_Chest_1", typeof(Mesh));
+                        x.material = (Material)Resources.Load("final calss parts/armour/chestplate/generic 2", typeof(Material));
+                    }
                 }
                 if (x.specicality == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Mesh));
-                    x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/Ammo_Chest", typeof(Mesh));
+                    x.material = (Material)Resources.Load("final calss parts/armour/chestplate/ammo chestplate", typeof(Material));
                 }
                 if (x.specicality == 2)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Mesh));
-                    x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/LauncherPads_Chest", typeof(Mesh));
+                    x.material = (Material)Resources.Load("final calss parts/armour/chestplate/launcher", typeof(Material));
                 }
 
 
@@ -597,18 +613,18 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/boots/Generic_Boots", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/armour/boots/generic boots", typeof(Material));
                 }
                 if (x.speciality == 1)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/boots/HorseKick_Boots", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/armour/boots/horse kick boots", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/boots/Speed_Boots", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/armour/boots/speed boots", typeof(Material));
                 }
 
 
@@ -628,26 +644,26 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/primer/Lever", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/primer/granade container 2", typeof(Material));
                 }
                 if (x.speciality == 1)
                 {
                     //vortex
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Vortex_Container_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Vortex_Container_Throwable", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/primer/Vortex primer", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/primer/vortex container", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
                     //mine
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Mine_Primer_Throwable", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/primer/Mine primer", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/primer/mine primer", typeof(Material));
                 }
                 if (x.speciality == 3)
                 {
                     //impact
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Impact_Primer_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/primer/impact_container", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/primer/impact primer", typeof(Material));
                 }
 
 
@@ -688,26 +704,26 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.speciality == 0)
                 {
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/container/Body", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/container/granade container", typeof(Material));
                 }
                 if (x.speciality == 1)
                 {
                     //knife
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Knife_Container_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Knife_Container_Throwable", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/container/Knife", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/container/knife container", typeof(Material));
                 }
                 if (x.speciality == 2)
                 {
                     //seeker
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/container/Seeker_container", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/container/seeker container", typeof(Material));
                 }
                 if (x.speciality == 3)
                 {
                     //shrapnel
-                    x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Mesh));
-                    x.mat = (Material)Resources.Load("AssetsFixed_Exported/Throwables/Seeker_Container_Throwable", typeof(Material));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/container/Body", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/lethal/container/granade container", typeof(Material));
                 }
 
 

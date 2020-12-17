@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: wepon barrel
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140275092980111964}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.16, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f921f0014fd3c4cfbbeaf40d79ac9953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BO: {fileID: 11400000, guid: d708b040c38b3447ebb73930509e07bd, type: 2}
+  BO: {fileID: 0}
 --- !u!33 &3140275092980111952
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ GameObject:
   m_Layer: 0
   m_Name: wepon reciver
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -118,13 +118,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140275093017879590}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 1.057, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3140275093435236406}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
 --- !u!114 &3140275093017879576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   scope_fit: {x: 0, y: 0.5, z: 0}
   anumition_fit: {x: 0, y: -0.5, z: 0}
   suport_fit: {x: 0.5, y: 0, z: 0}
-  RO: {fileID: 11400000, guid: 336c502aca697450f81216efd40d34aa, type: 2}
+  RO: {fileID: 0}
 --- !u!33 &3140275093017879578
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -168,6 +168,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -204,7 +207,7 @@ GameObject:
   m_Layer: 0
   m_Name: wepon grip
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -215,7 +218,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140275093064361498}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.39, y: -0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -234,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17b4b781779240e89acd0488268ce63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GO: {fileID: 11400000, guid: 7912910602e634970a57d32bee9a4750, type: 2}
+  GO: {fileID: 0}
 --- !u!33 &3140275093064361502
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -296,7 +299,7 @@ GameObject:
   m_Layer: 0
   m_Name: wepon scope
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -307,7 +310,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140275093257397164}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.07, y: 1.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -326,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70878e65ee26640218eef3cf6fe84732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SO: {fileID: 11400000, guid: 3852da996e1fe4ec0a65425094141ee0, type: 2}
+  SO: {fileID: 0}
 --- !u!33 &3140275093257397152
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -422,6 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edccae4d83bc454ea76fe47f9f5d758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WI: {fileID: 0}
   barrel: {fileID: 0}
   barrel_script: {fileID: 0}
   scope: {fileID: 0}
@@ -435,22 +439,32 @@ MonoBehaviour:
   reciver: {fileID: 0}
   reciver_script: {fileID: 0}
   defalt_class:
-    Wepon:
-      wepon_type: 0
-      barrel: {fileID: 11400000, guid: d708b040c38b3447ebb73930509e07bd, type: 2}
-      grip: {fileID: 11400000, guid: 7912910602e634970a57d32bee9a4750, type: 2}
-      reciver: {fileID: 11400000, guid: 336c502aca697450f81216efd40d34aa, type: 2}
-      amunition: {fileID: 11400000, guid: 0427785b3e2e34a00b76723121c97d64, type: 2}
-      scope: {fileID: 11400000, guid: 3852da996e1fe4ec0a65425094141ee0, type: 2}
-      suport: {fileID: 11400000, guid: 6e1dceb1288a44572aa468bf2beca416, type: 2}
-    Armour:
-      headpeice: 0
-      chestpeice: 0
-      legpeice: 0
-    Lethal:
-      type: 0
-      element: 0
-      material: 0
+    barrel: {fileID: 11400000, guid: 51bac916d57734a509bfd7a2b016d639, type: 2}
+    grip: {fileID: 11400000, guid: ef04767f5af9a4b3a86484533fd5c078, type: 2}
+    reciver: {fileID: 11400000, guid: aae71fdc713884c6eb70578c85eb71b3, type: 2}
+    amunition: {fileID: 11400000, guid: 49b77a10fdd8448e6bfe9bc230d892ab, type: 2}
+    scope: {fileID: 11400000, guid: fa4743a613cf24bf8828c29d22e17228, type: 2}
+    suport: {fileID: 11400000, guid: a621c2d7dd2d04f3b9ad923c2deb9e0a, type: 2}
+  barrel_menu: {fileID: 0}
+  reciver_menue: {fileID: 0}
+  scopes_menue: {fileID: 0}
+  amunition_menue: {fileID: 0}
+  grip_menue: {fileID: 0}
+  suports_menue: {fileID: 0}
+  barrels: []
+  recevers: []
+  scopes: []
+  amunition_types: []
+  grips: []
+  supports: []
+  decription: {fileID: 0}
+  buttons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &3140275093715076155
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +480,7 @@ GameObject:
   m_Layer: 0
   m_Name: wepon anumition
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -478,7 +492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140275093715076155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: -1.62, z: 0}
+  m_LocalPosition: {x: -0.954, y: -1.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3140275093435236406}
@@ -496,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34a83f9b53764c4fb8ef2396e030795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AO: {fileID: 11400000, guid: 0427785b3e2e34a00b76723121c97d64, type: 2}
+  AO: {fileID: 0}
 --- !u!33 &3140275093715076159
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -558,7 +572,7 @@ GameObject:
   m_Layer: 0
   m_Name: wepon suport
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -569,13 +583,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140275093777123934}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.18, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3140275093435236406}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &3140275093777123920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72eb6141e30894b2eac9d31e0e55dd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SO: {fileID: 11400000, guid: 6e1dceb1288a44572aa468bf2beca416, type: 2}
+  SO: {fileID: 0}
 --- !u!33 &3140275093777123922
 MeshFilter:
   m_ObjectHideFlags: 0

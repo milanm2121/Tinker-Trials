@@ -16,5 +16,5 @@ MonoBehaviour:
   trhermal: 1
   speciality: 2
   weight: 1
-  mesh: {fileID: -3700413597224477568, guid: c7c021c52b057d34084255b40d313fa6, type: 3}
-  mat: {fileID: 5561349426305759274, guid: c7c021c52b057d34084255b40d313fa6, type: 3}
+  mesh: {fileID: -3700413597224477568, guid: 09558b9671d437b449b88ecafcf7ef65, type: 3}
+  mat: {fileID: 2100000, guid: 62fe8c2a9ef37d74e8e725425ed38d61, type: 2}

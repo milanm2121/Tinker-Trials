@@ -23,5 +23,5 @@ MonoBehaviour:
   spciality: 0
   fit: 0
   weight: 4
-  mesh: {fileID: -2102130840032739393, guid: 7d7999d8f38adb4429057474298232f3, type: 3}
-  mat: {fileID: 5561349426305759274, guid: 7d7999d8f38adb4429057474298232f3, type: 3}
+  mesh: {fileID: 8025631005480305319, guid: 3f3165e905185c74cb2d77850b4bb0c7, type: 3}
+  mat: {fileID: 2100000, guid: edbaee71efbc7c54f86f04bb95fecc3d, type: 2}

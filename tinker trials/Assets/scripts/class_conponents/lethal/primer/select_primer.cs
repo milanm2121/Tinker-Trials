@@ -22,7 +22,7 @@ public class select_primer : MonoBehaviour
     }
     public void Primer_decription()
     {
-        hover_pannel.transform.position = transform.position;
+        hover_pannel.transform.position = new Vector3(transform.position.x,transform.position.y,hover_pannel.transform.position.z);
 
         string decription = "";
         decription += "Name: " + P.PO.name + "\n" + "\n";

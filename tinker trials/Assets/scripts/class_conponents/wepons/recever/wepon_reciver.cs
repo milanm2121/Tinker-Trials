@@ -34,7 +34,14 @@ public class wepon_reciver : MonoBehaviour
         Reciver.fit = RO.fit;
         Reciver.weight = RO.weight;
         GetComponent<MeshFilter>().mesh = RO.mesh;
-        GetComponent<MeshRenderer>().material = RO.mat;
+        
+        Material[] x = GetComponent<MeshRenderer>().materials;
+        for(int i=0;x.Length>i; i++)
+        {
+            x[i] = RO.mat;
+        }
+        GetComponent<MeshRenderer>().materials = x;
+
     }
     
 }
