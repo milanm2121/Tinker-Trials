@@ -13,21 +13,25 @@
         "integrationSavePath": "C:\\Users\\Milan\\Documents\\GitHub\\Tinker-Trials\\tinker trials",
         "selectedDCCApp": 0,
         "prefabSavePaths": [
+            "Resources/final calss parts/helmit",
             "."
         ],
         "fbxSavePaths": [
-            "Resources/class paerts/lethal",
-            "."
+            "Resources/final calss parts/wepons/amunition",
+            "Resources/final calss parts/wepons/barrel",
+            "Resources/final calss parts/wepons/grip",
+            "Resources/final calss parts/wepons/reciver",
+            "Resources/final calss parts/wepons/stock"
         ],
         "selectedFbxPath": 0,
         "selectedPrefabPath": 0,
         "dccOptionNames": [],
         "dccOptionPaths": [],
         "exportModelSettingsSerialize": {
-            "exportFormat": 0,
+            "exportFormat": 1,
             "animatedSkinnedMesh": false,
             "mayaCompatibleNaming": true,
-            "include": 2,
+            "include": 0,
             "lodLevel": 0,
             "objectPosition": 0,
             "exportUnrendered": true
