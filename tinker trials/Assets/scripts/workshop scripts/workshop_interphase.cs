@@ -311,8 +311,8 @@ public class workshop_interphase : MonoBehaviour
 
                 if (x.specalty == 0)
                 {
-                    x.mesh = Resources.Load("AssetsFixed_Exported/Barrel/Generic_Barrel", typeof(Mesh)) as Mesh;
-                    x.mat = Resources.Load("AssetsFixed_Exported/Barrel/Generic_Barrel", typeof(Material)) as Material;
+                    x.mesh = Resources.Load("final calss parts/wepons/barrel/GenericBarrel", typeof(Mesh)) as Mesh;
+                    x.mat = Resources.Load("final calss parts/wepons/barrel/generic barrel", typeof(Material)) as Material;
                 }
                 if (x.specalty == 1)
                 {

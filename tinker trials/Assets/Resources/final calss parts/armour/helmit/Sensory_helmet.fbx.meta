@@ -3,12 +3,7 @@ guid: 570ced96b6bff4942a604b108594223c
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sensery_helm
-    second: {fileID: 2100000, guid: e9b9727fb2f9ae34eaee4e3b6aa460ce, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

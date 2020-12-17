@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: advance_hemit
+      name: advance_hemit.001
     second: {fileID: 2100000, guid: 3e50b758b4d5fcd41bef861a3afac9e8, type: 2}
   materials:
     importMaterials: 1

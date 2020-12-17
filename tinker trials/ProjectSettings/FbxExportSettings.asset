@@ -17,11 +17,11 @@
             "."
         ],
         "fbxSavePaths": [
+            "Resources/final calss parts/armour/helmit",
             "Resources/final calss parts/wepons/amunition",
             "Resources/final calss parts/wepons/barrel",
             "Resources/final calss parts/wepons/grip",
-            "Resources/final calss parts/wepons/reciver",
-            "Resources/final calss parts/wepons/stock"
+            "Resources/final calss parts/wepons/reciver"
         ],
         "selectedFbxPath": 0,
         "selectedPrefabPath": 0,
