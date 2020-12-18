@@ -48,7 +48,16 @@ public class projectilemovement : ComponentSystem
                     }
 
                     if (PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient))
-                        predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity;
+                    {
+                        if (predictedPath.collider.gameObject.GetComponent<player_stats>() || predictedPath.collider.gameObject.GetComponent<multi_player_stats>())
+                        {
+                            predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity/20;
+                        }
+                        else
+                        {
+                            predictedPath.collider.gameObject.GetComponent<Rigidbody>().velocity += projectile.velosity;
+                        }
+                    }
 
                     projectile.Predict_hit = true;
                     projectile.contact_point = predictedPath.point;

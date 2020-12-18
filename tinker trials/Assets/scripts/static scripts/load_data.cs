@@ -10,7 +10,7 @@ using UnityEngine;
 public class load_data : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         print("loading data");
         save_system.LoadSaveData();

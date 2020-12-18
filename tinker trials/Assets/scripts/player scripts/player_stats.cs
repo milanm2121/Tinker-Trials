@@ -168,7 +168,10 @@ public class player_stats : MonoBehaviour
                 fire_meter = Mathf.Clamp(fire_meter - 1, 1, 110);
                 frost_meter = Mathf.Clamp(frost_meter - 15, 1, 100);
                 electrucity_meter = Mathf.Clamp(electrucity_meter - 5, 1, 110);
-
+                if (PID.is_player == true)
+                {
+                    health =Mathf.Clamp(health + 3, 0, 100); ;
+                }
             }
 
 

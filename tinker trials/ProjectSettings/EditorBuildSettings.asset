@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/important sceans ans scean assets/main menu.unity
     guid: c05fef1674a7b4d6eb1cb844eb5e1d58
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test sceans/gameplay_test.unity
     guid: 6729b54f68bdd434998390f627bae496
   - enabled: 1
@@ -46,5 +46,5 @@ EditorBuildSettings:
     guid: f9a56ecaff5d8374eaefb5c1fe20d1e5
   - enabled: 1
     path: Assets/Scenes/important sceans ans scean assets/workshop form firing range.unity
-    guid: 415dc1d81d637d94fad928b56f187bfd
+    guid: 8c68346f52b7db34faf09db62b2509a2
   m_configObjects: {}
