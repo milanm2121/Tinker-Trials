@@ -15,5 +15,5 @@ MonoBehaviour:
   manual: 0
   timer: 5
   speciality: 0
-  mesh: {fileID: 424387673068981057, guid: 4595a4f61a8d5c4488c25c088f9ecd8a, type: 3}
-  mat: {fileID: 2100000, guid: e92b20f28fb954836bc14b330395e409, type: 2}
+  mesh: {fileID: 2959467708922500008, guid: 7faea78d2b336ac44ba4b6e18c94653a, type: 3}
+  mat: {fileID: 2100000, guid: be74fc2ac750a6748a2b326ef51dc293, type: 2}

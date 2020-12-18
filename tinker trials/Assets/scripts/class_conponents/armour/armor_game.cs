@@ -84,8 +84,8 @@ public class armor_game : MonoBehaviour
 
 
         //generate armour
-        headgear_script.Generate_headGear();
-        cheastplate_script.gerateCheastPlate();
+     //   headgear_script.Generate_headGear();
+     //   cheastplate_script.gerateCheastPlate();
         L_boots_script.generateBoots();
         R_boots_script.generateBoots();
 
@@ -106,18 +106,26 @@ public class armor_game : MonoBehaviour
 
             if (x.speciality == 0)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Helmet", typeof(Material));
+                if (Random.Range(0, 2) == 1)
+                {
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Generic_Helmet_1", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/armour/helmit/generic helmit 1", typeof(Material));
+                }
+                else
+                {
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Generic_Helmet_2", typeof(Mesh));
+                    x.mat = (Material)Resources.Load("final calss parts/armour/helmit/generic helmit 2", typeof(Material));
+                }
             }
             if (x.speciality == 1)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Advanced_helmet", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/armour/helmit/advance hemit", typeof(Material));
             }
             if (x.speciality == 2)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Communication_Helmet", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/armour/helmit/Sensory_helmet", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/armour/helmit/sensery helm", typeof(Material));
             }
 
 
@@ -137,19 +145,26 @@ public class armor_game : MonoBehaviour
 
             if (x.specicality == 0)
             {
-
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Mesh));
-                x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic1_Chest", typeof(Material));
+                if (Random.Range(0, 2) == 1)
+                {
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/Generic_Chest", typeof(Mesh));
+                    x.material = (Material)Resources.Load("final calss parts/armour/chestplate/generic 1", typeof(Material));
+                }
+                else
+                {
+                    x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/Generic_Chest_1", typeof(Mesh));
+                    x.material = (Material)Resources.Load("final calss parts/armour/chestplate/generic 2", typeof(Material));
+                }
             }
             if (x.specicality == 1)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Mesh));
-                x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/Ammo_Chest", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/Ammo_Chest", typeof(Mesh));
+                x.material = (Material)Resources.Load("final calss parts/armour/chestplate/ammo chestplate", typeof(Material));
             }
             if (x.specicality == 2)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Mesh));
-                x.material = (Material)Resources.Load("AssetsFixed_Exported/Armour/LauncherPads_Chest", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/armour/chestplate/LauncherPads_Chest", typeof(Mesh));
+                x.material = (Material)Resources.Load("final calss parts/armour/chestplate/launcher", typeof(Material));
             }
 
 
@@ -169,18 +184,18 @@ public class armor_game : MonoBehaviour
 
             if (x.speciality == 0)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Generic_Boot", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/armour/boots/Generic_Boots", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/armour/boots/generic boots", typeof(Material));
             }
             if (x.speciality == 1)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/HorseKick_Boot", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/armour/boots/HorseKick_Boots", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/armour/boots/horse kick boots", typeof(Material));
             }
             if (x.speciality == 2)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Armour/Speed_Boot", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/armour/boots/Speed_Boots", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/armour/boots/speed boots", typeof(Material));
             }
 
 

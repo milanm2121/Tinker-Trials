@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Transforms;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Audio_Maneger : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Audio_Maneger : MonoBehaviour
     public static Audio_Maneger AM;
     public static List<AudioSource> AudioSources= new List<AudioSource>();
     public GameObject audio_object;
+    public AudioMixer master;
+    public AudioMixer SFX;
+    
 
 
     // Start is called before the first frame update

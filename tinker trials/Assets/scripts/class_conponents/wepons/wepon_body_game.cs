@@ -112,7 +112,8 @@ public class wepon_body_game : MonoBehaviour
     public AudioClip gravity_start;
     public AudioClip gravity_hold;
 
-    
+    public ParticleSystem smoke;
+    public ParticleSystem flash;
 
 
     // generates the stats and wepons
@@ -244,11 +245,13 @@ public class wepon_body_game : MonoBehaviour
                         if (barrel_script.BO.specalty == 1)
                         {
                             Audio_Maneger.create_sound(transform.position,surpressed_Fire,0.5f);
+                            smoke.Play();
                         }
                         else
                         {
                             Audio_Maneger.create_sound(transform.position,nerf_Fire,0.5f);
-
+                            smoke.Play();
+                            flash.Play();
                         }
                         if(suport_script.SO.speciality == 1)
                         {
@@ -336,6 +339,7 @@ public class wepon_body_game : MonoBehaviour
     // adds recoil penalty for shooting
     void shoot(out Vector2 Recoil)
     {
+        
         EM.shootProjectile(transform.position,velosity , new projectileREf { blast_radious = proREF.blast_radious, damage = (int)(proREF.damage * overheat_damage_multiplyer), element = proREF.element, range = proREF.range }, transform.rotation, defaltProjectileMat, defaltProjectileMesh);
         Recoil = new Vector2(Random.Range(-1+XStability, 1-XStability), Random.Range(0, 1-Ystability)).normalized * proREF.damage/10;
     }
@@ -593,19 +597,19 @@ public class wepon_body_game : MonoBehaviour
 
             if (x.specalty == 0)
             {
-                x.mesh = Resources.Load("AssetsFixed_Exported/Barrel/Generic_Barrel", typeof(Mesh)) as Mesh;
-                x.mat = Resources.Load("AssetsFixed_Exported/Barrel/Generic_Barrel", typeof(Material)) as Material;
+                x.mesh = Resources.Load("final calss parts/wepons/barrel/GenericBarrel", typeof(Mesh)) as Mesh;
+                x.mat = Resources.Load("final calss parts/wepons/barrel/generic barrel", typeof(Material)) as Material;
             }
             if (x.specalty == 1)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Barrel/PaintCanSupressor_Barrel", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Barrel/PaintCanSupressor_Barrel", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/barrel/PaintCan_Supressor_barrel", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/barrel/paintcan barrel 2", typeof(Material));
             }
             if (x.specalty == 2)
             {
 
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Barrel/OverheatDisplay_Barrel", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Barrel/OverheatDisplay_Barrel", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/barrel/Mesh_OverHeat", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/barrel/overheat barrel", typeof(Material));
             }
             barrel_script.BO=x;
         }
@@ -629,19 +633,19 @@ public class wepon_body_game : MonoBehaviour
 
             if (x.speciality == 0 || x.speciality == 1)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Ammo/GenericMag_Ammo", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Ammo/GenericMag_Ammo", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/amunition/generic mag", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/amunition/generic mag", typeof(Material));
             }
             if (x.speciality == 2)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Ammo/Energy_Ammo", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Ammo/Energy_Ammo", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/amunition/EnergyAmmo", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/amunition/energy", typeof(Material));
             }
             if (x.speciality == 3)
             {
 
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Ammo/FastMag_Ammo", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Ammo/FastMag_Ammo", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/amunition/FastMag", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/amunition/fastmag", typeof(Material));
             }
             amunition_script.AO = x; ;
         }
@@ -662,18 +666,18 @@ public class wepon_body_game : MonoBehaviour
 
             if (x.speciality == 0)
             {
-                x.meshshape = (Mesh)Resources.Load("AssetsFixed_Exported/Grip/Generic_Grip", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Grip/Generic_Grip", typeof(Material));
+                x.meshshape = (Mesh)Resources.Load("final calss parts/wepons/grip/generic grip", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/grip/generic grip", typeof(Material));
             }
             if (x.speciality == 1)
             {
-                x.meshshape = (Mesh)Resources.Load("AssetsFixed_Exported/Grip/StunBash_Grip", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Grip/StunBash_Grip", typeof(Material));
+                x.meshshape = (Mesh)Resources.Load("final calss parts/wepons/grip/Grip_Stun_Bash", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/grip/stun bash", typeof(Material));
             }
             if (x.speciality == 2)
             {
-                x.meshshape = (Mesh)Resources.Load("AssetsFixed_Exported/Grip/AutoAdjust_Grip", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Grip/AutoAdjust_Grip", typeof(Material));
+                x.meshshape = (Mesh)Resources.Load("final calss parts/wepons/grip/AutoAdjustGrip", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/grip/auto adjust", typeof(Material));
             }
 
             grip_script.GO = x;
@@ -704,8 +708,8 @@ public class wepon_body_game : MonoBehaviour
 
             if (x.spciality == 0)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Generic_Receiver", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Generic_Receiver", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/generic reciver", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/generic reciver", typeof(Material));
                 x.anumition_fit = new Vector3(0.2f, -0.5f, 0);
                 x.barrel_fit = new Vector3(-1.5f, 0, 0);
                 x.grip_fit = new Vector3(-.7f, -0.8f, 0);
@@ -714,18 +718,18 @@ public class wepon_body_game : MonoBehaviour
             }
             if (x.spciality == 1)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Physics_Receiver", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Physics_Receiver", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/GRAVITY RECIVER", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/suck and push reciver", typeof(Material));
             }
             if (x.spciality == 2)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Laser_Receiver", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Laser_Receiver", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/energy reciver", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/energy reciver", typeof(Material));
             }
             if (x.spciality == 3)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Receiver/Rotary_Receiver", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Receiver/Rotary_Receiver", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/reciver/ROTARRY RECIVEWR", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/reciver/rotary reciver", typeof(Material));
             }
 
 
@@ -753,20 +757,20 @@ public class wepon_body_game : MonoBehaviour
             x.name = "optic";
             x.weight = 2 + x.zoom;
 
-            if (x.zoom < 9)
+            if (x.zoom > 7)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Distance_Aim", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Distance_Aim", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/optic/DistanceScope", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/optic/distance aim", typeof(Material));
             }
-            else if (x.zoom < 6 || x.trhermal == true)
+            else if (x.zoom > 3 || x.trhermal == true)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Alert_Aim", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Alert_Aim", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/optic/AlertScope", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/optic/alert aim", typeof(Material));
             }
-            else if (x.zoom < 3)
+            else
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Aim/Generic_Aim", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Aim/Generic_Aim", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/optic/GenericAim", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/optic/generic aim", typeof(Material));
             }
 
             scope_script.SO=x;
@@ -783,21 +787,21 @@ public class wepon_body_game : MonoBehaviour
             x.name = "stock";
             x.weight = 2;
 
-
             if (x.speciality == 0)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Stock/Generic_Stock", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Stock/Generic_Stock", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/stock/generic_stock", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/stock/generic stock", typeof(Material));
             }
             if (x.speciality == 1)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Stock/LowGravityThruster_Stock", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Stock/LowGravityThruster_Stock", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/stock/lowGravity_thruster", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/stock/lowgravity stock", typeof(Material));
             }
             if (x.speciality == 2)
             {
-                x.mesh = (Mesh)Resources.Load("AssetsFixed_Exported/Stock/Boot_Stock", typeof(Mesh));
-                x.mat = (Material)Resources.Load("AssetsFixed_Exported/Stock/Boot_Stock", typeof(Material));
+                x.mesh = (Mesh)Resources.Load("final calss parts/wepons/stock/RunGun_Stock", typeof(Mesh));
+                x.mat = (Material)Resources.Load("final calss parts/wepons/stock/rin and gin stock", typeof(Material));
+
             }
 
 

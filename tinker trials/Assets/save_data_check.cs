@@ -40,8 +40,9 @@ public class save_data_check : MonoBehaviour
             for (int i = 0;buttons_to_activate.Length>i ; i++)
             {
                 buttons_to_activate[i].interactable = false;
-                arrow.gameObject.SetActive(false);
+                
             }
+            
         }
         else
         {
@@ -49,6 +50,7 @@ public class save_data_check : MonoBehaviour
             {
                 buttons_to_activate[i].interactable = true;
             }
+            arrow.gameObject.SetActive(false);
         }
 
         
