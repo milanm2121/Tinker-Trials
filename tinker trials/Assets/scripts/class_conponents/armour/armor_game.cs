@@ -84,7 +84,7 @@ public class armor_game : MonoBehaviour
 
 
         //generate armour
-        headgear_script.Generate_headGear();
+     //   headgear_script.Generate_headGear();
      //   cheastplate_script.gerateCheastPlate();
         L_boots_script.generateBoots();
         R_boots_script.generateBoots();

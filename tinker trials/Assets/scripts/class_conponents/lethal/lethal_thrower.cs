@@ -36,7 +36,7 @@ public class lethal_thrower : MonoBehaviour
         if (throwing_lethal == true)
             throwing_lethal = false;
 
-        if (PID.is_player && Input.GetKeyDown(KeyCode.G) && currentLeathal == null && (PM.running==false || sholder_launcher==true))
+        if (PID.is_player && Input.GetKeyDown(KeyInputs.KP.throw_letal) && currentLeathal == null && (PM.running==false || sholder_launcher==true))
         {
             right_arm_constaints.weight = 0;
             StartCoroutine(delaythrow());
@@ -45,7 +45,7 @@ public class lethal_thrower : MonoBehaviour
             throwing_lethal = true;
         }
 
-        if (PID.is_player && Input.GetKeyDown(KeyCode.G) && tapped_lethal== false && (PM.running == false || sholder_launcher == true))
+        if (PID.is_player && Input.GetKeyDown(KeyInputs.KP.throw_letal) && tapped_lethal== false && (PM.running == false || sholder_launcher == true))
         {
             if (currentLeathal != null && IGL.manual == true)
             {

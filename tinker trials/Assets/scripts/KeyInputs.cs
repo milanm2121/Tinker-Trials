@@ -10,10 +10,14 @@ public class KeyInputs : MonoBehaviour
     public KeyCode left { get; set; }
     public KeyCode right { get; set; }
     public KeyCode backwards { get; set; }
+    public KeyCode melee { get; set; }
+    public KeyCode run { get; set; }
+    public KeyCode reload { get; set; }
+    public KeyCode throw_letal { get; set; }
 
 
 
-     void Awake()
+    void Awake()
     {
         if(KP == null)
         {
@@ -30,23 +34,15 @@ public class KeyInputs : MonoBehaviour
         left = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("leftKey", "A"));
         right = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("rightKey", "D"));
         backwards = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("backwardsKey", "S"));
+        melee = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("meleekey", "V"));
+        run = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("runkey", "LeftShift"));
+        reload = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("reloadkey", "R"));
+        throw_letal = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("throwLethalKey", "G"));
 
 
 
 
 
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-     
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
 }

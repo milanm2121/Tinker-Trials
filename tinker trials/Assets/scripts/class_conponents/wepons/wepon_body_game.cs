@@ -203,12 +203,12 @@ public class wepon_body_game : MonoBehaviour
             lazer.gameObject.SetActive(false);
         }
         //melee
-        if (Input.GetKeyDown(KeyCode.V) &&PA.melee==false && P_ID.is_player==true)
+        if (Input.GetKeyDown(KeyInputs.KP.melee) &&PA.melee==false && P_ID.is_player==true)
         {
             StartCoroutine(melee());
         }
         //reload
-        if (Input.GetKeyDown(KeyCode.R)&& reloading==false &&reserve_ammo>0 && P_ID.is_player == true)
+        if (Input.GetKeyDown(KeyInputs.KP.reload) && reloading==false &&reserve_ammo>0 && P_ID.is_player == true)
         {
             StartCoroutine(reload());
         }
