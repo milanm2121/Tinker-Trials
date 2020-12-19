@@ -10615,7 +10615,7 @@ MonoBehaviour:
   R_boots_script: {fileID: 6757041725002678166}
   weight: 0
   deffence: 0
-  SFX: {fileID: 24100000, guid: 22fb5bdea04b1b4458e2de52e56e52cf, type: 2}
+  SFX: {fileID: 24100000, guid: f9259163031fe458ba08a0ea06f0a5ab, type: 2}
   PID: {fileID: 559346274}
 --- !u!114 &2054605246031634913
 MonoBehaviour:
@@ -11947,7 +11947,8 @@ AudioSource:
   m_GameObject: {fileID: 5925415338185106912}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3518878886176451705, guid: f9259163031fe458ba08a0ea06f0a5ab,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.199

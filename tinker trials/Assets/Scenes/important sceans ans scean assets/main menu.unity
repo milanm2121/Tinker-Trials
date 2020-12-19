@@ -954,6 +954,7 @@ MonoBehaviour:
   - {fileID: 886633193}
   - {fileID: 116956130}
   - {fileID: 166656409}
+  - {fileID: 941484513}
   workshop_button: {fileID: 752146751}
   arrow: {fileID: 1919942783}
   arrow_pos1: {fileID: 1313936022}

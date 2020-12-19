@@ -2332,6 +2332,7 @@ MonoBehaviour:
   walking: 0
   inital_running_multiplyer: 2
   low_gravity: 0
+  leftground: 0
 --- !u!114 &6860716460900567068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,6 +2395,7 @@ MonoBehaviour:
     type: 3}
   damage_numbers: {fileID: 5468976786977086203, guid: 939d27b1a763cad4085b8bc8894547be,
     type: 3}
+  damaged: 0
 --- !u!114 &4860922332554076164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2447,7 +2449,8 @@ AudioSource:
   m_GameObject: {fileID: 5925415338185106912}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3518878886176451705, guid: f9259163031fe458ba08a0ea06f0a5ab,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3654,6 +3657,8 @@ MonoBehaviour:
   lazer_Fire: {fileID: 8300000, guid: 6e34bf4731473e4468476ef047689dcd, type: 3}
   gravity_start: {fileID: 8300000, guid: 0ffe6e42bd324a642a30a20ba2bbc527, type: 3}
   gravity_hold: {fileID: 0}
+  smoke: {fileID: 0}
+  flash: {fileID: 0}
 --- !u!54 &250674930
 Rigidbody:
   m_ObjectHideFlags: 0

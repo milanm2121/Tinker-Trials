@@ -15,7 +15,6 @@ public class Audio_Maneger : MonoBehaviour
     public static List<AudioSource> AudioSources= new List<AudioSource>();
     public GameObject audio_object;
     public AudioMixer master;
-    public AudioMixer SFX;
     
 
 
@@ -49,5 +48,13 @@ public class Audio_Maneger : MonoBehaviour
                 Destroy(ObservedAudioSource.gameObject);
             }
         }
+    }
+    public void setMasterVol(float vol)
+    {
+        master.SetFloat("MasterVol", vol);
+    }
+    public void SetMusicVol(float vol)
+    {
+        master.SetFloat("MusicVol", vol);
     }
 }

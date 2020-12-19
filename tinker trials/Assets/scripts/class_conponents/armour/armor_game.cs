@@ -65,11 +65,11 @@ public class armor_game : MonoBehaviour
     {
         if (headgear_script.HGO.speciality == 2)
         {
-            Debug.Log(SFX.SetFloat("SFX Volume",10));
+            Debug.Log(SFX.SetFloat("SFXVol", 10));
         }
         else
         {
-            Debug.Log(SFX.SetFloat("SFX Volume", 0));
+            Debug.Log(SFX.SetFloat("SFXVol", 0));
         }
     }
     public void selectclass(class_class.Class Class_)
