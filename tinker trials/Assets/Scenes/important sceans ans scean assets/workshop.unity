@@ -22703,6 +22703,7 @@ MonoBehaviour:
   - {fileID: 6469979332859724512, guid: e032c4245c089a8418f7d4e4d8c6b5d6, type: 3}
   - {fileID: -6876115655947097056, guid: f5c193926b55f924ca04023805ec7454, type: 3}
   - {fileID: -5894076203478767107, guid: 3301eebed66ee0045b6b7570e7609e90, type: 3}
+  - {fileID: -2183719134944184998, guid: f2c1ade70b5367045a1639abd9ad9699, type: 3}
   material_list:
   - {fileID: 2100000, guid: b1bf45c0eea37457e953cbbabea2cc66, type: 2}
   - {fileID: 2100000, guid: e92b20f28fb954836bc14b330395e409, type: 2}
@@ -33213,6 +33214,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761366287168741601, guid: 24392a7e907a8442e8e72b3efc59f452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2761366287985654698, guid: 24392a7e907a8442e8e72b3efc59f452,
         type: 3}
       propertyPath: WI

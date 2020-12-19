@@ -118,6 +118,7 @@ MonoBehaviour:
   - {fileID: 6469979332859724512, guid: e032c4245c089a8418f7d4e4d8c6b5d6, type: 3}
   - {fileID: -6876115655947097056, guid: f5c193926b55f924ca04023805ec7454, type: 3}
   - {fileID: -5894076203478767107, guid: 3301eebed66ee0045b6b7570e7609e90, type: 3}
+  - {fileID: -2183719134944184998, guid: f2c1ade70b5367045a1639abd9ad9699, type: 3}
   material_list:
   - {fileID: 2100000, guid: b1bf45c0eea37457e953cbbabea2cc66, type: 2}
   - {fileID: 2100000, guid: e92b20f28fb954836bc14b330395e409, type: 2}

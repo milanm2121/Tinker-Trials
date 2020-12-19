@@ -13281,7 +13281,7 @@ MonoBehaviour:
   team1:
   - {fileID: 1043838703}
   team2: []
-  prefabs: {fileID: 0}
+  prefabs: {fileID: 5925415338185106912, guid: d2127fc34468f486080bfa0739fd0c0b, type: 3}
   SpawnRed:
   - {fileID: 794239866}
   - {fileID: 1841045817}
@@ -13293,7 +13293,7 @@ MonoBehaviour:
   - {fileID: 351108519}
   - {fileID: 351108519}
   MaxSpawn: 5
-  player: {fileID: 1043838702}
+  player: {fileID: 5925415338185106912, guid: d2127fc34468f486080bfa0739fd0c0b, type: 3}
   spawn_enemy: 0
 --- !u!4 &698627762
 Transform:
@@ -19856,19 +19856,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2127fc34468f486080bfa0739fd0c0b, type: 3}
---- !u!1 &1043838702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5925415338185106912, guid: d2127fc34468f486080bfa0739fd0c0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1043838701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1043838703 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6860716460900567068, guid: d2127fc34468f486080bfa0739fd0c0b,
     type: 3}
   m_PrefabInstance: {fileID: 1043838701}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043838702}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24b8c28436ea84a10938353b145a1fde, type: 3}

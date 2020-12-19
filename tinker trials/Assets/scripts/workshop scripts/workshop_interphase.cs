@@ -722,7 +722,7 @@ public class workshop_interphase : MonoBehaviour
                 if (x.speciality == 3)
                 {
                     //shrapnel
-                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/container/Body", typeof(Mesh));
+                    x.mesh = (Mesh)Resources.Load("final calss parts/lethal/container/JunkBall", typeof(Mesh));
                     x.mat = (Material)Resources.Load("final calss parts/lethal/container/granade container", typeof(Material));
                 }
 
