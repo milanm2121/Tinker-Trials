@@ -30,6 +30,7 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     //sets the game virsion
     private void Awake()
     {
+        
         bool x = PhotonPeer.RegisterType(typeof(List<player_inventory.saved_object>), (byte)'A', save_system.SeriliseClasses, save_system.DeSeriliseClassesPUN);
 
         if (x == true)
@@ -77,16 +78,18 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
         }
         else
         {
+           // PhotonNetwork.connect(,, "db026bbb-9ab6-4b5d-9e82-b1f51a0ac295");
             PhotonNetwork.ConnectUsingSettings();
             Debug.Log("connecting...");
         }
     }
-
+    
 
     public override void OnConnectedToMaster()
     {
         base.OnConnectedToMaster();
         Debug.Log("you are connected to the " + PhotonNetwork.CloudRegion + " server");
+
     }
 
     //disconects you from rooms and master server
@@ -212,7 +215,7 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
 
         //quick play
         int roomnum = Random.Range(0, 10000);
-        RoomOptions roomops = new RoomOptions { IsVisible = true, IsOpen = true, MaxPlayers = maxPlayersPerRoom };
+        RoomOptions roomops = new RoomOptions { IsVisible = true, IsOpen = true, MaxPlayers = maxPlayersPerRoom, PublishUserId = true };
         PhotonNetwork.CreateRoom("Room " + roomnum, roomops, null, Get_userIDs());
 
 

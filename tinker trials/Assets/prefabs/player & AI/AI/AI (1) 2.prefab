@@ -15403,6 +15403,7 @@ MonoBehaviour:
   damage_numbers: {fileID: 5468976786977086203, guid: 939d27b1a763cad4085b8bc8894547be,
     type: 3}
   damaged: 0
+  ammoBox: {fileID: 1511322741718144752, guid: 928e72637e7d1614c804be1b6110e20a, type: 3}
 --- !u!114 &4860922332554076164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16374,6 +16375,8 @@ MonoBehaviour:
   PID: {fileID: 559346274}
   throwing_lethal: 0
   right_arm_constaints: {fileID: 0}
+  lethal_count: 3
+  lethal_text: {fileID: 0}
 --- !u!1 &7543760273380982236
 GameObject:
   m_ObjectHideFlags: 0

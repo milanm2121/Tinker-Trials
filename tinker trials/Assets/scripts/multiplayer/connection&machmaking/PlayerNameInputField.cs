@@ -18,7 +18,8 @@ public class PlayerNameInputField : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
+        Debug.Log(PhotonNetwork.LocalPlayer.UserId);
 
         string defaultName = string.Empty;
         TMP_InputField _inputField = this.GetComponent<TMP_InputField>();
@@ -35,7 +36,6 @@ public class PlayerNameInputField : MonoBehaviour
             defaultName = PlayerPrefs.GetString(playerNamePrefKey);
             inputname.text = PlayerPrefs.GetString(playerNamePrefKey);
         }
-
         PhotonNetwork.NickName = defaultName;
     }
 
@@ -47,9 +47,12 @@ public class PlayerNameInputField : MonoBehaviour
             Debug.LogError("Player Name is null or empty");
             return;
         }
+
         PhotonNetwork.NickName = value;
 
         Debug.Log("your nick name is " + value);
+        
+
         PlayerPrefs.SetString(playerNamePrefKey, value);
     }
 

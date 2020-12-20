@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.UI;
 
 public class lethal_thrower : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class lethal_thrower : MonoBehaviour
 
     public Rig right_arm_constaints;
 
+    public int lethal_count=3;
+
+    public Text lethal_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +37,13 @@ public class lethal_thrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(lethal_text!=null)
+            lethal_text.text = "leathals: " + lethal_count;
+
         if (throwing_lethal == true)
             throwing_lethal = false;
 
-        if (PID.is_player && Input.GetKeyDown(KeyInputs.KP.throw_letal) && currentLeathal == null && (PM.running==false || sholder_launcher==true))
+        if (lethal_count>0 && PID.is_player && Input.GetKeyDown(KeyInputs.KP.throw_letal) && currentLeathal == null && (PM.running==false || sholder_launcher==true))
         {
             right_arm_constaints.weight = 0;
             StartCoroutine(delaythrow());
@@ -69,12 +76,16 @@ public class lethal_thrower : MonoBehaviour
     IEnumerator delaythrow()
     {
         yield return new WaitForSeconds(0.5f);
-        GameObject x = Instantiate(lethal, transform.position, Quaternion.identity);
-        IGL.primed = false;
-        x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight * 10;
-        x.GetComponent<in_game_leathal>().ps = ps;
+        if (lethal_count > 0)
+        {
+            GameObject x = Instantiate(lethal, transform.position, Quaternion.identity);
+            lethal_count--;
+            IGL.primed = false;
+            x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight * 10;
+            x.GetComponent<in_game_leathal>().ps = ps;
 
-        currentLeathal = x;
-        right_arm_constaints.weight = 1;
+            currentLeathal = x;
+            right_arm_constaints.weight = 1;
+        }
     }
 }

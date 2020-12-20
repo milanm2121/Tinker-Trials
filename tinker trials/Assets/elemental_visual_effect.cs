@@ -36,11 +36,11 @@ public class elemental_visual_effect : MonoBehaviour
         ParticleSystem.MainModule x = particlel.main;
         x.startColor = elemental_color;
         
-        if(!particlel.isPlaying &&(PS.frost_meter>30 || PS.electrucity_meter > 30 || PS.dirt_meter > 30 || PS.electrucity_meter > 30))
+        if(!particlel.isPlaying &&(PS.fire_meter>70 || PS.frost_meter > 30 || PS.dirt_meter > 30 || PS.electrucity_meter > 60))
         {
             particlel.Play();
         }
-        else if(PS.frost_meter < 30 && PS.electrucity_meter < 30 && PS.dirt_meter < 30 && PS.electrucity_meter < 30)
+        else if(PS.fire_meter < 70 && PS.frost_meter < 30 && PS.dirt_meter < 30 && PS.electrucity_meter < 60)
         {
             particlel.Stop();
         }

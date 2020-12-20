@@ -16,7 +16,16 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        if (PhotonNetwork.AuthValues == null)
+        {
+            PhotonNetwork.AuthValues = new AuthenticationValues(System.Guid.NewGuid().ToString());
+        }
+        else
+        {
+            PhotonNetwork.AuthValues.UserId = System.Guid.NewGuid().ToString();
+        }
         ML = GameObject.Find("multiplayer_launcher").GetComponent<multiplayer_launcher>();
+
     }
 
     // Update is called once per frame

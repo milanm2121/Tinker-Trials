@@ -30,36 +30,17 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks,IPunObservable
         
     }
 
-    
+    public override void OnLeftRoom()
+    {
+        photonView.RPC("leaveGame", RpcTarget.All);
+    }
 
-   
-    
+
+
     [PunRPC]
     void leaveGame()
     {
-        GPM.players_in_game--;
-        if (team == 1)
-        {
-            GPM.team1_count--;
-           
-
-        }
-        else
-        {
-            GPM.team2_count--;
-         
-        }
-
         
-
-        if (GPM.team1.Count > GPM.team2.Count)
-        {
-            GPM.team = true;
-        }
-        else
-        {
-            GPM.team = false;
-        }
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

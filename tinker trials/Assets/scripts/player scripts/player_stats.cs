@@ -61,6 +61,8 @@ public class player_stats : MonoBehaviour
     public GameObject damage_numbers;
 
     public bool damaged=false;
+
+    public GameObject ammoBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -249,8 +251,18 @@ public class player_stats : MonoBehaviour
         {
             if (col.rigidbody.velocity.magnitude > 5)
             {
-                damage_player(col.rigidbody.velocity.magnitude,new Vector2Int(0, 0));
+                damage_player(col.rigidbody.velocity.magnitude*10,new Vector2Int(0, 0));
             }
+        }
+        
+    }
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "ammo box" && PID.is_player)
+        {
+            WBG.reserve_ammo += WBG.amunition_script.AO.rounds;
+            LT.lethal_count += 1;
+            Destroy(col.gameObject);
         }
     }
     void fireDMG()
@@ -353,6 +365,13 @@ public class player_stats : MonoBehaviour
         if (AG.cheastplate_script.CPO.specicality == 2)
         {
             LT.sholder_launcher = true;
+        }
+    }
+    private void OnDestroy()
+    {
+        if(PID.is_player==false && Random.Range(0, 6) == 5)
+        {
+            Instantiate(ammoBox, transform.position+(Vector3.up/2), transform.rotation);
         }
     }
 

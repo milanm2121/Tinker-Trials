@@ -50,8 +50,18 @@ public class explosion_growth : ComponentSystem
                             gameobject.GetComponent<dummy_script>().damage_player(explosion.damage, explosion.element);
                         }
 
-                        gameobject.GetComponent<Rigidbody>().velocity += (gameobject.transform.position - new Vector3(translation.Value.x, translation.Value.y, translation.Value.z)).normalized * 10;
-
+                        
+                        if (PhotonNetwork.InRoom == false || (PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient))
+                        {
+                            if (gameobject.gameObject.GetComponent<player_stats>() || gameobject.gameObject.GetComponent<multi_player_stats>())
+                            {
+                                gameobject.GetComponent<Rigidbody>().velocity += (gameobject.transform.position - new Vector3(translation.Value.x, translation.Value.y, translation.Value.z)).normalized*3;
+                            }
+                            else
+                            {
+                                gameobject.GetComponent<Rigidbody>().velocity += (gameobject.transform.position - new Vector3(translation.Value.x, translation.Value.y, translation.Value.z)).normalized * 10;
+                            }
+                        }
                     }
                 }
             }

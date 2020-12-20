@@ -5,13 +5,13 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 
-public class gameplay_maneger : MonoBehaviourPunCallbacks
+public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
 {
     public player_classes_loader PCL;
     public multiplayer_game_maneger MGM;
 
-    public List<teamID> team1= new List<teamID>();
-    public List<teamID> team2=new List<teamID>();
+    public List<teamID> team1 = new List<teamID>();
+    public List<teamID> team2 = new List<teamID>();
 
     public GameObject Player_prefab;
 
@@ -45,13 +45,20 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+
         PCL = GameObject.Find("multiplayer_game_maneger").GetComponent<player_classes_loader>();
         MGM = GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>();
 
-        if (PhotonNetwork.IsMasterClient)
-        {
-            InvokeRepeating("updateGameManegerMaseter", 2, 2);
-        }
+        //if (PhotonNetwork.IsMasterClient)
+        //{
+        //    InvokeRepeating("updateGameManegerMaseter", 2, 2);
+        //}
+        //if (PhotonNetwork.LocalPlayer.CustomProperties.Count > 0)
+        //{
+        //    pickedteam = true;
+        //    startrespawn = false;
+        //    instantaded_player = true;
+        //}
     }
 
 
@@ -118,7 +125,8 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void LateUpdate()
     {
-   
+      //  photonView.TransferOwnership(PhotonNetwork.MasterClient);
+
         if (pickedteam==false && instantaded_player==false && localPlayer==null)
         {
             pickedteam = true;
@@ -136,6 +144,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
                 }
             }
         }
+        
     }
 
     [PunRPC]
@@ -171,6 +180,31 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
 
     }
 
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        players_in_game--;
+        if ((bool)otherPlayer.CustomProperties[team])
+        {
+            team1_count--;
+
+        }
+        else
+        {
+            team2_count--;
+
+        }
+
+        otherPlayer.CustomProperties.Clear();
+
+        if (team == false)
+        {
+            team = true;
+        }
+        else
+        {
+            team = false;
+        }
+    }
 
     IEnumerator sort_in_order()
     {
@@ -193,10 +227,20 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks
     [PunRPC]
     void updateGameManegerClient(int playerInGame,bool Team)
     {
-        team = Team;
-        players_in_game = playerInGame;
+        
     }
 
-
-
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(team);
+            stream.SendNext(players_in_game);
+        }
+        else if (stream.IsReading)
+        {
+            team=(bool)stream.ReceiveNext();
+            players_in_game=(int)stream.ReceiveNext();
+        }
+    }
 }

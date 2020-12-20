@@ -10,6 +10,7 @@ TagManager:
   - Rails
   - Outside
   - Cave
+  - ammo box
   layers:
   - Default
   - TransparentFX

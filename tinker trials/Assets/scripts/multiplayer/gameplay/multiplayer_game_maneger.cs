@@ -16,6 +16,7 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks, IPunInstantia
 
     private void Awake()
     {
+       
         if (MGM == null)
         {
             DontDestroyOnLoad(this);
@@ -30,6 +31,7 @@ public class multiplayer_game_maneger : MonoBehaviourPunCallbacks, IPunInstantia
 
     private void Start()
     {
+        PhotonNetwork.LocalPlayer.CustomProperties.Clear();
         if (PhotonNetwork.IsMasterClient)
         {
             room_propertys.Add("started_game", false);
