@@ -5,7 +5,6 @@
 --dump=Function
 --float-precision=Standard
 --format=Coff
---debug
 --output=C:\Users\Milan\Documents\GitHub\Tinker-Trials\tinker trials\Temp\StagingArea\Data\Plugins\lib_burst_generated
 --root-assembly=C:\Users\Milan\Documents\GitHub\Tinker-Trials\tinker trials\Temp\StagingArea\Data\Managed\Unity.Postprocessing.Runtime.dll
 --root-assembly=C:\Users\Milan\Documents\GitHub\Tinker-Trials\tinker trials\Temp\StagingArea\Data\Managed\Unity.Collections.dll

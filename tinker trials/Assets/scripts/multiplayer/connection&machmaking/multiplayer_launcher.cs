@@ -25,7 +25,7 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
     public TMP_Text party_room_ID;
     int PartyID;
 
-    
+    public string ServerIP;
 
     //sets the game virsion
     private void Awake()
@@ -78,8 +78,8 @@ public class multiplayer_launcher : MonoBehaviourPunCallbacks
         }
         else
         {
-           // PhotonNetwork.connect(,, "db026bbb-9ab6-4b5d-9e82-b1f51a0ac295");
-            PhotonNetwork.ConnectUsingSettings();
+            PhotonNetwork.ConnectToMaster(ServerIP,5055, "db026bbb-9ab6-4b5d-9e82-b1f51a0ac295");
+          //  PhotonNetwork.ConnectUsingSettings();
             Debug.Log("connecting...");
         }
     }

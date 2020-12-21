@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/important sceans ans scean assets/workshop form firing range.unity
     guid: 8c68346f52b7db34faf09db62b2509a2
+  - enabled: 1
+    path: Assets/Scenes/important sceans ans scean assets/credits.unity
+    guid: 36a8d9fc3f5e5bd4faeb60ddd27e2c1f
   m_configObjects: {}

@@ -10,6 +10,7 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
     public GameObject connect_button;
     public GameObject main_menu_button;
     public GameObject usernameinputfeild;
+    public GameObject serverIPinputfeild;
     public multiplayer_launcher ML;
     public GameObject join_game_button;
 
@@ -40,6 +41,7 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
             connect_button.SetActive(false);
             main_menu_button.SetActive(false);
             usernameinputfeild.SetActive(false);
+            serverIPinputfeild.SetActive(false);
            
             
             if (PhotonNetwork.IsMasterClient == false && PhotonNetwork.CurrentRoom != null)
@@ -60,9 +62,11 @@ public class multiplayer_menue_maneger : MonoBehaviourPunCallbacks
             connect_button.SetActive(true);
             main_menu_button.SetActive(true);
             usernameinputfeild.SetActive(true);
+            serverIPinputfeild.SetActive(true);
+
         }
 
-       
+
     }
 
     

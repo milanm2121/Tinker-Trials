@@ -32,16 +32,12 @@ public class multiplayer_teamID : MonoBehaviourPunCallbacks,IPunObservable
 
     public override void OnLeftRoom()
     {
-        photonView.RPC("leaveGame", RpcTarget.All);
-    }
-
-
-
-    [PunRPC]
-    void leaveGame()
-    {
         
     }
+
+
+
+    
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {

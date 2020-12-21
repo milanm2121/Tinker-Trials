@@ -10,10 +10,13 @@ using Photon.Realtime;
 public class PlayerNameInputField : MonoBehaviour
 {
     const string playerNamePrefKey = "";
+
     public Button connectbutton;
 
 
     public TMP_InputField inputname;
+
+
 
     // Start is called before the first frame update
     void Start()
