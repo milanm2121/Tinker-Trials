@@ -61,7 +61,7 @@ public class multi_in_game_leathal : MonoBehaviour,IPunObservable
         {
             fuze -= Time.deltaTime;
         }
-        if(fuze>=0 && manual == false)
+        if(fuze<=0 && manual == false)
         {
             StartCoroutine(primerPhase());
         }

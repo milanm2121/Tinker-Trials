@@ -198,7 +198,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
     private void FixedUpdate()
     {
-        if (loaded == true && PhotonNetwork.IsMasterClient)
+        if (loaded == true)
         {
             element_tick += Time.deltaTime;
             while (element_tick > 1)

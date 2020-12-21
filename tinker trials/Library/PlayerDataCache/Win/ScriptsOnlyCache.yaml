@@ -126,6 +126,9 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonTransformViewEditor
+    - Photon.Pun.PhotonViewInspector
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonHandler
@@ -201,7 +204,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/Maps/Map 1.unity:
@@ -5011,7 +5013,7 @@ ScriptsOnlyBuild:
     className: FollowTarget
   - hash:
       serializedVersion: 2
-      Hash: 9a12db784c00743cc2da734c4127cac3
+      Hash: 9df8f9a2f590b6757c60d16e0fe849d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multi_lethal_thrower

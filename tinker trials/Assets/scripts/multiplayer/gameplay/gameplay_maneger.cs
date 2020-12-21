@@ -165,11 +165,12 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
                 endText.gameObject.SetActive(true);
                 if ((bool)PhotonNetwork.LocalPlayer.CustomProperties["Team"])
                 {
-                    endText.text = "victory";
+                
+                    endText.text = "defeat";
                 }
                 else
                 {
-                    endText.text = "defeat";
+                    endText.text = "victory";
                 }
             }
 
@@ -188,10 +189,12 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
                 if ((bool)PhotonNetwork.LocalPlayer.CustomProperties["Team"])
                 {
                     endText.text = "defeat";
+                    endText.text = "victory";
                 }
                 else
                 {
-                    endText.text = "victory";
+                    
+                    endText.text = "defeat";
                 }
             }
         }
