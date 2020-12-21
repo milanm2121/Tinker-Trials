@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -42,6 +43,13 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
 
     bool pickedteam=false;
 
+    public int team1_score = 0;
+    public int team2_score = 0;
+
+    bool gameover = false;
+
+    public TMP_Text endText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,7 +82,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
 
             if ((bool)PhotonNetwork.LocalPlayer.CustomProperties["Team"])
             {
-
+                
                 multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
                 TID.GPM = GameObject.Find("gameplay_maneger").GetComponent<gameplay_maneger>();
                 TID.shown_name.text = player.GetComponent<PhotonView>().Owner.NickName;
@@ -84,7 +92,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
             }
             else if (!(bool)PhotonNetwork.LocalPlayer.CustomProperties["Team"])
             {
-
+                player.transform.position = spawnpoints_team2[Random.Range(0, spawnpoints_team2.Length)].transform.position;
                 multiplayer_teamID TID = player.GetComponent<multiplayer_teamID>();
                 TID.GPM = GameObject.Find("gameplay_maneger").GetComponent<gameplay_maneger>();
                 TID.shown_name.text = player.GetComponent<PhotonView>().Owner.NickName;
@@ -144,19 +152,70 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
                 }
             }
         }
-        
+        if (team1_score > 2)
+        {
+            
+            if (gameover==false)
+            {
+                localPlayer.GetComponent<multi_player_stats>().disablePlayer();
+
+                gameover = true;
+                Invoke("endgame", 5);
+                endText.transform.parent.gameObject.SetActive(true);
+                endText.gameObject.SetActive(true);
+                if ((bool)PhotonNetwork.LocalPlayer.CustomProperties["Team"])
+                {
+                    endText.text = "victory";
+                }
+                else
+                {
+                    endText.text = "defeat";
+                }
+            }
+
+        }
+        if (team2_score > 2)
+        {
+            
+            if (gameover == false)
+            {
+                localPlayer.GetComponent<multi_player_stats>().disablePlayer();
+
+                gameover = true;
+                Invoke("endgame", 5);
+                endText.transform.parent.gameObject.SetActive(true);
+                endText.gameObject.SetActive(true);
+                if ((bool)PhotonNetwork.LocalPlayer.CustomProperties["Team"])
+                {
+                    endText.text = "defeat";
+                }
+                else
+                {
+                    endText.text = "victory";
+                }
+            }
+        }
+    }
+
+    void endgame()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        if (GameObject.Find("multiplayer_game_maneger"))
+            GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>().LeaveLobby();
     }
 
     [PunRPC]
     public void sort_teams(int roomdID,string Name)
     {
 
-       
-       
-        ExitGames.Client.Photon.Hashtable Team = new ExitGames.Client.Photon.Hashtable();
-        Team.Add("Team", team);
-        Team.Add("Name", Name);
-        PhotonNetwork.LocalPlayer.SetCustomProperties(Team);
+
+        if (Name == PhotonNetwork.NickName)
+        {
+            ExitGames.Client.Photon.Hashtable Team = new ExitGames.Client.Photon.Hashtable();
+            Team.Add("Team", team);
+            Team.Add("Name", Name);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(Team);
+        }
         
 
         players_in_game++;
@@ -183,7 +242,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         players_in_game--;
-        if ((bool)otherPlayer.CustomProperties[team])
+        if ((bool)otherPlayer.CustomProperties["Team"])
         {
             team1_count--;
 
@@ -225,9 +284,16 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
         PV.RPC("updateGameManegerClient",RpcTarget.OthersBuffered,x);
     }
     [PunRPC]
-    void updateGameManegerClient(int playerInGame,bool Team)
+    void addScore(int team)
     {
-        
+        if (team == 1)
+        {
+            team1_score++;
+        }
+        else
+        {
+            team2_score++;
+        }
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -236,11 +302,15 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
         {
             stream.SendNext(team);
             stream.SendNext(players_in_game);
+            stream.SendNext(team1_score);
+            stream.SendNext(team2_score);
         }
         else if (stream.IsReading)
         {
             team=(bool)stream.ReceiveNext();
             players_in_game=(int)stream.ReceiveNext();
+            team1_score=(int)stream.ReceiveNext();
+            team2_score=(int)stream.ReceiveNext();
         }
     }
 }

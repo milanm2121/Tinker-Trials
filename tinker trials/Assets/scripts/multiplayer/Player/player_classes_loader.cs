@@ -29,6 +29,7 @@ public class player_classes_loader : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+        //multi_player_stats.selectedclass = 1;
         PV = GetComponent<PhotonView>();
         MGM = GetComponent<multiplayer_game_maneger>();
     }

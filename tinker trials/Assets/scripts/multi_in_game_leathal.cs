@@ -21,7 +21,7 @@ public class multi_in_game_leathal : MonoBehaviour,IPunObservable
 
     bool player_in_range;
 
-    float fuze = 0;
+    float fuze = 4;
 
     public multi_player_stats ps;
 

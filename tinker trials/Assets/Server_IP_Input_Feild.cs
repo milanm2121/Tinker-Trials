@@ -38,7 +38,7 @@ public class Server_IP_Input_Feild : MonoBehaviour
             defaultIP = PlayerPrefs.GetString(ServerIPPrefKey);
             ServerIP.text = PlayerPrefs.GetString(ServerIPPrefKey);
         }
-        PhotonNetwork.NickName = defaultIP;
+        ML.ServerIP = defaultIP;
     }
 
     public void SetIPadress(string value)

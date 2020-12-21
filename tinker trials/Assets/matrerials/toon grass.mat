@@ -71,7 +71,7 @@ Material:
     m_Floats:
     - Vector1_139EB547: 0
     - Vector1_2C9F6E3A: 0.55
-    - Vector1_2F2E85E7: 0.026
+    - Vector1_2F2E85E7: 0.404
     - Vector1_6520B70E: 3
     - Vector1_BB0E2FA8: 0
     - Vector1_F4BB15A1: 0
@@ -103,6 +103,7 @@ Material:
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _elementalColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &290561012997070019
 MonoBehaviour:
   m_ObjectHideFlags: 11

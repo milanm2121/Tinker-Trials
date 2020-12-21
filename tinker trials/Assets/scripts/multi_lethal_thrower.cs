@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.Animations.Rigging;
-
+using UnityEngine.UI;
 
 public class multi_lethal_thrower : MonoBehaviour
 {
@@ -27,6 +27,9 @@ public class multi_lethal_thrower : MonoBehaviour
     public PhotonView PV;
     public player_classes_loader PCL;
 
+    public int lethal_count = 3;
+
+    public Text lethalcounter;
     // Start is called before the first frame update
     private void Start()
     {
@@ -56,10 +59,12 @@ public class multi_lethal_thrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lethalcounter.text = "Lethals: "+ lethal_count.ToString();
+
         if (throwing_lethal == true)
             throwing_lethal = false;
 
-        if (PV.IsMine && Input.GetKeyDown(KeyCode.G) && currentLeathal == null && (PM.running == false || sholder_launcher == true))
+        if (lethal_count>0 && PV.IsMine && Input.GetKeyDown(KeyCode.G) && currentLeathal == null && (PM.running == false || sholder_launcher == true))
         {
             right_arm_constaints.weight = 0;
             StartCoroutine(delaythrow());
@@ -112,6 +117,7 @@ public class multi_lethal_thrower : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         GameObject x = PhotonNetwork.Instantiate("multi_leathal", transform.position, Quaternion.identity);
+        lethal_count--;
         IGL.primed = false;
         x.GetComponent<Rigidbody>().velocity = transform.forward * IGL.container_script.CO.weight * 10;
         x.GetComponent<multi_in_game_leathal>().ps = ps;

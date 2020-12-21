@@ -374,5 +374,6 @@ public class player_stats : MonoBehaviour
             Instantiate(ammoBox, transform.position+(Vector3.up/2), transform.rotation);
         }
     }
+    
 
 }

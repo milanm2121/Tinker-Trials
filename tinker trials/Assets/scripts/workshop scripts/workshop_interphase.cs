@@ -59,12 +59,31 @@ public class workshop_interphase : MonoBehaviour
         if (save_system.has_save_data == false)
         {
             generate_parts(300);
+            loadDefalts();
         }
         else
         {
             load_inventory();//before loading in new parts turn off
         }
         save_inventory();
+        
+    }
+    void loadDefalts()
+    {
+        class_class.Class saved_class = new class_class.Class();
+        saved_class.Wepon = wc.defalt_class;
+        saved_class.Armour.boots = ac.defaltBoots;
+        saved_class.Armour.chestpeice = ac.defalt_chestplate;
+        saved_class.Armour.headpeice = ac.defaltHeadGear;
+        saved_class.Lethal.primer = lc.defalt_primer;
+        saved_class.Lethal.payload = lc.defalt_payload;
+        saved_class.Lethal.container = lc.defalt_container;
+
+        static_classes.Class1 = saved_class;
+        static_classes.Class2 = saved_class;
+        static_classes.Class3 = saved_class;
+        static_classes.Class4 = saved_class;
+
     }
 
     // Update is called once per frame

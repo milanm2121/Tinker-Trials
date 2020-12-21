@@ -42,6 +42,7 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
 
     public Rigidbody Perant_rb;
 
+    public GameObject pause_menu;
     // Start is called before the first frame update
 
     private void Start()
@@ -158,8 +159,14 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
                 }
             }
 
+            //used to relock the mouse to effect the game
+            if (Input.GetKeyDown(KeyCode.Escape) && camera_Pause==true && Input.mousePresent == true)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                camera_Pause = false;
+            }
             //used to unlock the mouse in a pause like state
-            if (Input.GetKey(KeyCode.Escape))
+            else if (Input.GetKeyDown(KeyCode.Escape) &&camera_Pause==false)
             {
                 Cursor.lockState = CursorLockMode.None;
                 camera_Pause = true;
@@ -171,13 +178,9 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
                     GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>().LeaveLobby();
 
             }
+            
 
-            //used to relock the mouse to effect the game
-            if (Input.GetMouseButton(0) && Input.mousePresent == true)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                camera_Pause = false;
-            }
+           
             if (stuntime > 0)
             {
                 stun = true;
@@ -188,7 +191,21 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
                 stun = false;
                 stuntime = 0;
             }
+            if (camera_Pause == true)
+            {
+                pause_menu.SetActive(true);
+            }
+            else
+            {
+                pause_menu.SetActive(false);
+            }
         }
+    }
+
+    public void leavegame()
+    {
+        if (GameObject.Find("multiplayer_game_maneger"))
+            GameObject.Find("multiplayer_game_maneger").GetComponent<multiplayer_game_maneger>().LeaveLobby();
     }
 
     //added for shooting recoil in game
@@ -215,8 +232,9 @@ public class multi_Player_Camera : MonoBehaviour,IPunObservable
   
             stream.SendNext(transform.rotation.eulerAngles);
         }
-        else if (stream.IsReading && stream.ToArray().Length != 0)
+        else if (stream.IsReading && stream.ToArray().Length > 0)
         {
+            
             transform.rotation = Quaternion.Euler((Vector3)stream.ReceiveNext());
         }
 

@@ -66,6 +66,11 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
     public Image exterior_healthbar;
     public TMP_Text Name;
+
+    public static int selectedclass=1;
+
+    bool playerdead=false;
+    public multiplayer_teamID TID;
     // Start is called before the first frame update
     void Start()
     {
@@ -95,7 +100,7 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
     void Startingclass()
     {
-        selectClass(photonView.Owner.UserId, 1);
+        selectClass(photonView.Owner.UserId, selectedclass);
         
     }
 
@@ -115,6 +120,11 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
     // Update is called once per frame
     void Update()
     {
+        if (photonView.Owner == null)
+        {
+            PhotonNetwork.Destroy(gameObject);
+        }
+
         if (SceneManager.GetActiveScene().name == "multiplayer_gameplay_test")
             transform.parent = null;
 
@@ -129,9 +139,14 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
                 }
                 Destroy(GetComponent<Rigidbody>());
-                Destroy(gameObject, 3);
-                WBG.enabled = false;
-                LT.enabled = false;
+                if (playerdead == false)
+                {
+                    Invoke("destoryPlayer", 2);
+                    WBG.enabled = false;
+                    LT.enabled = false;
+                    playerdead = true;
+                }
+
 
 
             }
@@ -216,60 +231,63 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
 
     public void damage_player(float damage, Vector2Int element)
     {
-        //damage armour calculation
-        damage /= armour;
-        health -= (int)damage;
-       
-        if (element.x == 1)
+        if (PM.RB)
         {
-            fire_meter += damage * 2;
+            //damage armour calculation
+            damage *= 5;
+            damage /= armour;
+            health -= (int)damage;
 
+            if (element.x == 1)
+            {
+                fire_meter += damage * 2;
+
+            }
+            if (element.x == 2)
+            {
+                frost_meter += damage * 2;
+                ;
+            }
+            if (element.x == 3)
+            {
+                dirt_meter += damage * 2;
+
+            }
+            if (element.x == 4)
+            {
+                electrucity_meter += damage * 2;
+
+            }
+
+
+            if (element.y == 1)
+            {
+                fire_meter += damage * 2;
+
+            }
+            if (element.y == 2)
+            {
+                frost_meter += damage * 2;
+
+            }
+            if (element.y == 3)
+            {
+                dirt_meter += damage * 2;
+
+            }
+            if (element.y == 4)
+            {
+                electrucity_meter += damage * 2;
+
+            }
+
+            object[] x = new object[] { damage, (Vector2)element };
+            photonView.RPC("instantiate_damage_numbers", RpcTarget.All, x);
+
+            object[] a = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter, PM.RB.velocity };
+            if (PhotonNetwork.IsMasterClient)
+                photonView.RPC("Sync_Stats", RpcTarget.All, a);
         }
-        if (element.x == 2)
-        {
-            frost_meter += damage * 2;
-            ;
-        }
-        if (element.x == 3)
-        {
-            dirt_meter += damage * 2;
-
-        }
-        if (element.x == 4)
-        {
-            electrucity_meter += damage * 2;
-
-        }
-
-
-        if (element.y == 1)
-        {
-            fire_meter += damage * 2;
-
-        }
-        if (element.y == 2)
-        {
-            frost_meter += damage * 2;
-
-        }
-        if (element.y == 3)
-        {
-            dirt_meter += damage * 2;
-
-        }
-        if (element.y == 4)
-        {
-            electrucity_meter += damage * 2;
-
-        }
-
-        object[] x = new object[] { damage, (Vector2)element };
-        photonView.RPC("instantiate_damage_numbers", RpcTarget.All, x);
-
-        object[] a = { health, fire_meter, frost_meter, dirt_meter, electrucity_meter, PM.RB.velocity };
-        if (PhotonNetwork.IsMasterClient)
-            photonView.RPC("Sync_Stats", RpcTarget.All, a);
-
     }
 
     [PunRPC]
@@ -482,5 +500,30 @@ public class multi_player_stats : MonoBehaviourPunCallbacks,IPunObservable
             dirt_meter = (float)stream.ReceiveNext();
             electrucity_meter = (float)stream.ReceiveNext();
       }  
+    }
+    public void selectClass(int selected_class)
+    {
+        selectedclass = selected_class;
+    }
+
+    void destoryPlayer()
+    {
+        if (TID.photonView.IsMine)
+        {
+            TID.GPM.photonView.RPC("addScore", RpcTarget.All, TID.team);
+            PhotonNetwork.Destroy(gameObject);
+        }
+    }
+
+    public void disablePlayer()
+    {
+        photonView.RPC("calldisable", RpcTarget.All);
+        
+    }
+    [PunRPC]
+    public void calldisable()
+    {
+        WBG.enabled = false;
+        LT.enabled = false;
     }
 }
