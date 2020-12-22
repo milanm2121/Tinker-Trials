@@ -152,7 +152,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
                 }
             }
         }
-        if (team1_score > 2)
+        if (team1_score > 20)
         {
             
             if (gameover==false)
@@ -175,7 +175,7 @@ public class gameplay_maneger : MonoBehaviourPunCallbacks, IPunObservable
             }
 
         }
-        if (team2_score > 2)
+        if (team2_score > 20)
         {
             
             if (gameover == false)

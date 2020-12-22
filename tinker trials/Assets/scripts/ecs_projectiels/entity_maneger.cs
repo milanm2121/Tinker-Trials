@@ -47,7 +47,8 @@ public class entity_maneger : MonoBehaviour
             typeof(projectile_explosion)
             );
 
-
+        var enititys = EM.GetAllEntities(Allocator.Temp);
+        EM.DestroyEntity(enititys);
     }
 
     // Update is called once per frame
